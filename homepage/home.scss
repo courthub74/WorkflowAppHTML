@@ -57,6 +57,20 @@ $background: #F3F9FF;
                         }
                     }
                 }
+                .logoutbutton {
+                    padding-top: 200px;
+                    height: 20px;
+                    text-align: center;
+                    .logout {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        background-color: white;
+                        border: none;
+                        color: $darkblue;
+                        font-weight: bold;
+                    }
+                }
             }
             .page {
                 display: flex;
@@ -82,7 +96,7 @@ $background: #F3F9FF;
                     }
                     .recentlist {
                         padding-top: 80px;
-                        line-height: 60px;
+                        line-height: 70px;
                         a {
                             font-size: 25px;
                         }
