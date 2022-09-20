@@ -1,0 +1,122 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+// COLORS
+$darkblue: #243F67;
+$background: #F3F9FF;
+
+
+// Whole Page
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    // body
+    body {
+        display: flex;
+        background-color: $background;
+        //Sidebar
+        .sidebar {
+            height: 100vh;
+            width: 280px;
+            background-color: $darkblue;
+            color: white;
+            transition: all 0.5s ease-in;
+            padding: 20px 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 500px;
+            // Sidebar Header
+            .header {
+                font-size: 3vh;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 10px;
+            }
+            // Anonymous Login Button and header
+            .anonlogin {
+                text-align: center;
+                line-height: 40px;
+                p {
+                    font-size: large;
+                }
+                button {
+                    background-color: white;
+                    border: none;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    a {
+                        text-decoration: none;
+                        color: $darkblue;
+                        font-size: 2vh;
+                    }
+                }
+            }
+        }
+        .pagestuff {
+            text-align: center;
+            width: 100%;
+            padding-top: 60px;
+            // border: 1px red solid;
+            .pageheader {
+                // border: 1px green solid;
+                line-height: 50px;
+                p {
+                    font-size: 6vh;
+                    color: $darkblue;
+                }
+                img {
+                    height: 300px;
+                    width: 300px;
+                    // border: 1px yellow solid;
+                }
+            }
+            .loginarea {
+                display: flex;
+                justify-content: center;
+                padding-top: 70px;
+                .login {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 51px;
+                    p {
+                        font-size: 3vh;
+                        text-align: left;
+                        color: $darkblue;
+                    }
+                    input {
+                        width: 250px;
+                        height: 30px;
+                        padding-left: 10px;
+                        background-color: $darkblue;
+                        border: none;
+                        color: white;
+                    }
+                    ::placeholder {
+                        color: whitesmoke;
+                    }
+                }
+                .loginbutton {
+                    // border: 1px green solid;
+                    align-self: center;
+                    padding-top: 50px;
+                    button {
+                        background-color: white;
+                        border: $darkblue 2px solid;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 50%;
+                        font-size: 2vh;
+                        a {
+                            text-decoration: none;
+                            color: $darkblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
