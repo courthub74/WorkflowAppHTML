@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+* body {
+  background-color: #F3F9FF;
+}
+* .sidebar {
+  background-color: #243F67;
+  width: 280px;
+  height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+* .sidebar .header {
+  text-align: center;
+  margin: 20px;
+}
+* .sidebar .header h2 {
+  color: white;
+  padding-bottom: 30px;
+}
+* .sidebar .header img {
+  width: 120px;
+  height: 120px;
+}
+* .sidebar .menu {
+  padding-top: 90px;
+  padding-left: 40px;
+}
+* .sidebar .menu ul li a {
+  padding-left: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  line-height: 70px;
+}
+* .sidebar .menu ul li a .icon img {
+  top: 5px;
+  width: 25px;
+  display: inline-block;
+}
+* .sidebar .menu ul li a .check {
+  height: 20px;
+}
+* .sidebar .menu ul li a .check img {
+  width: 25px;
+  height: 35px;
+}
+* .sidebar .logoutbutton {
+  padding-top: 200px;
+  height: 20px;
+  text-align: center;
+}
+* .sidebar .logoutbutton .logout {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  color: #243F67;
+  font-weight: bold;
+}
+* .page {
+  display: flex;
+  height: 100vh;
+}
+* .page .squares {
+  padding: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 10;
+}
+* .page .squares .html {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares .html img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares .css {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares .css img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares .tailwind {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+* .page .squares .tailwind img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares .sass {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares .sass img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=notes.css.map */
