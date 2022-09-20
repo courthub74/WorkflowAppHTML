@@ -128,4 +128,59 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+* .page .squares2 {
+  padding: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+* .page .squares2 .react {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares2 .react img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares2 .express {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares2 .express img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares2 .git {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares2 .git img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .page .squares2 .github {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .page .squares2 .github img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=notes.css.map */
