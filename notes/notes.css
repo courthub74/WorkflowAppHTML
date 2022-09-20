@@ -69,11 +69,29 @@
   color: #243F67;
   font-weight: bold;
 }
-* .page {
+* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+* .wrapper .title {
+  padding-top: 30px;
+}
+* .wrapper .title h1 {
+  font-size: 6vh;
+  color: #243F67;
+}
+* .wrapper .page {
   display: flex;
   height: 100vh;
 }
-* .page .squares {
+* .wrapper .page .title {
+  padding-left: 500px;
+  font-size: 4vh;
+  width: 100%;
+  color: #243F67;
+}
+* .wrapper .page .squares {
   padding: 350px;
   display: flex;
   justify-content: center;
@@ -81,105 +99,105 @@
   flex-direction: column;
   gap: 10;
 }
-* .page .squares .html {
+* .wrapper .page .squares .html {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares .html img {
+* .wrapper .page .squares .html img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares .css {
+* .wrapper .page .squares .css {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares .css img {
+* .wrapper .page .squares .css img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares .tailwind {
+* .wrapper .page .squares .tailwind {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 20px;
 }
-* .page .squares .tailwind img {
+* .wrapper .page .squares .tailwind img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares .sass {
+* .wrapper .page .squares .sass {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares .sass img {
+* .wrapper .page .squares .sass img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares2 {
+* .wrapper .page .squares2 {
   padding: 350px;
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
 }
-* .page .squares2 .react {
+* .wrapper .page .squares2 .react {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares2 .react img {
+* .wrapper .page .squares2 .react img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares2 .express {
+* .wrapper .page .squares2 .express {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares2 .express img {
+* .wrapper .page .squares2 .express img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares2 .git {
+* .wrapper .page .squares2 .git {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares2 .git img {
+* .wrapper .page .squares2 .git img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-* .page .squares2 .github {
+* .wrapper .page .squares2 .github {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
   padding: 10px;
 }
-* .page .squares2 .github img {
+* .wrapper .page .squares2 .github img {
   display: block;
   margin-left: auto;
   margin-right: auto;
