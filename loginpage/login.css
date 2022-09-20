@@ -1,30 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 * {
+  list-style: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 * body {
   display: flex;
   background-color: #F3F9FF;
 }
 * body .sidebar {
-  height: 100vh;
-  width: 280px;
   background-color: #243F67;
-  color: white;
-  transition: all 0.5s ease-in;
-  padding: 20px 0 20px;
+  width: 280px;
+  height: 100vh;
+  padding: 20px 0;
+  position: fixed;
+  transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  gap: 500px;
+  gap: 550px;
 }
 * body .sidebar .header {
-  font-size: 3vh;
-  font-weight: bold;
   text-align: center;
-  padding-top: 10px;
+  margin: 20px;
+  color: white;
 }
 * body .sidebar .anonlogin {
   text-align: center;
@@ -32,6 +33,7 @@
 }
 * body .sidebar .anonlogin p {
   font-size: large;
+  color: white;
 }
 * body .sidebar .anonlogin button {
   background-color: white;
@@ -48,7 +50,7 @@
 * body .pagestuff {
   text-align: center;
   width: 100%;
-  padding-top: 60px;
+  padding-top: 70px;
 }
 * body .pagestuff .pageheader {
   line-height: 50px;
@@ -56,6 +58,7 @@
 * body .pagestuff .pageheader p {
   font-size: 6vh;
   color: #243F67;
+  padding-top: 50px;
 }
 * body .pagestuff .pageheader img {
   height: 300px;
@@ -78,8 +81,8 @@
   color: #243F67;
 }
 * body .pagestuff .loginarea .login input {
-  width: 250px;
-  height: 30px;
+  width: 300px;
+  height: 40px;
   padding-left: 10px;
   background-color: #243F67;
   border: none;

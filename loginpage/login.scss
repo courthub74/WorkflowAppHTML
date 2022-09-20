@@ -8,31 +8,32 @@ $background: #F3F9FF;
 
 // Whole Page
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter';
+    list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
     // body
     body {
         display: flex;
         background-color: $background;
         //Sidebar
         .sidebar {
-            height: 100vh;
-            width: 280px;
             background-color: $darkblue;
-            color: white;
-            transition: all 0.5s ease-in;
-            padding: 20px 0 20px;
+            width: 280px;
+            height: 100vh;
+            padding: 20px 0;
+            position: fixed;
+            transition: all 0.5s ease;
             display: flex;
             flex-direction: column;
-            gap: 500px;
+            gap: 550px;
             // Sidebar Header
             .header {
-                font-size: 3vh;
-                font-weight: bold;
                 text-align: center;
-                padding-top: 10px;
+                margin: 20px;
+                color: white;
             }
             // Anonymous Login Button and header
             .anonlogin {
@@ -40,6 +41,7 @@ $background: #F3F9FF;
                 line-height: 40px;
                 p {
                     font-size: large;
+                    color: white;
                 }
                 button {
                     background-color: white;
@@ -58,7 +60,7 @@ $background: #F3F9FF;
         .pagestuff {
             text-align: center;
             width: 100%;
-            padding-top: 60px;
+            padding-top: 70px;
             // border: 1px red solid;
             .pageheader {
                 // border: 1px green solid;
@@ -66,6 +68,7 @@ $background: #F3F9FF;
                 p {
                     font-size: 6vh;
                     color: $darkblue;
+                    padding-top: 50px;
                 }
                 img {
                     height: 300px;
@@ -88,8 +91,8 @@ $background: #F3F9FF;
                         color: $darkblue;
                     }
                     input {
-                        width: 250px;
-                        height: 30px;
+                        width: 300px;
+                        height: 40px;
                         padding-left: 10px;
                         background-color: $darkblue;
                         border: none;
