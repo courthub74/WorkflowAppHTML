@@ -68,7 +68,26 @@
   font-size: 65px;
 }
 * body .page .pagestuff .recents {
-  font-size: 4vh;
+  font-size: 45px;
   color: #243F67;
-  background-color: lightgray;
+  background-color: #F5F5F5;
+}
+* body .page .pagestuff .recentlist {
+  padding-top: 80px;
+  line-height: 60px;
+}
+* body .page .pagestuff .recentlist a {
+  font-size: 25px;
+}
+* body .page .pagestuff .recentlist #one {
+  color: green;
+}
+* body .page .pagestuff .recentlist #two {
+  color: orange;
+}
+* body .page .pagestuff .recentlist #three {
+  color: red;
+}
+* body .page .pagestuff .recentlist #four {
+  color: blue;
 }/*# sourceMappingURL=home.css.map */

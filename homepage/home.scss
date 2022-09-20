@@ -76,11 +76,31 @@ $background: #F3F9FF;
                         }
                     }
                     .recents {
-                        font-size: 4vh;
+                        font-size: 45px;
                         color: $darkblue;
-                        background-color: lightgray;
+                        background-color: #F5F5F5;
+                    }
+                    .recentlist {
+                        padding-top: 80px;
+                        line-height: 60px;
+                        a {
+                            font-size: 25px;
+                        }
+                         #one {
+                            color: green;
+                        }
+                        #two {
+                            color: orange;
+                        }
+                        #three {
+                            color: red;
+                        }
+                        #four {
+                            color: blue;
+                        }
                     }
                 }
             }
+        }
     }
-}
+
