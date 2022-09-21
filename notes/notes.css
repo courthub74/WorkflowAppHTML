@@ -92,12 +92,10 @@
   color: #243F67;
 }
 * .wrapper .page .squares {
-  padding: 350px;
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
-  gap: 10;
 }
 * .wrapper .page .squares .html {
   width: 300px;
@@ -148,7 +146,6 @@
   margin-right: auto;
 }
 * .wrapper .page .squares2 {
-  padding: 350px;
   display: flex;
   justify-content: center;
   align-items: left;
@@ -198,6 +195,60 @@
   padding: 10px;
 }
 * .wrapper .page .squares2 .github img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .wrapper .page .squares3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+* .wrapper .page .squares3 .js {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .wrapper .page .squares3 .js img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .wrapper .page .squares3 .python {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+* .wrapper .page .squares3 .python img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* .wrapper .page .squares3 .flask {
+  width: 300px;
+  height: 100px;
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+* .wrapper .page .squares3 .flask img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+}
+* .wrapper .page .squares3 .api {
+  width: 300px;
+  height: 100px;
+  border: 1px darkblue solid;
+  padding: 10px;
+}
+* .wrapper .page .squares3 .api img {
   display: block;
   margin-left: auto;
   margin-right: auto;
