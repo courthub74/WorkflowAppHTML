@@ -86,7 +86,6 @@ $background: #F3F9FF;
     }
 
 
-
     // SQUARES OF NOTES
     .wrapper {
         display: flex;
@@ -101,7 +100,9 @@ $background: #F3F9FF;
         }
         .page {
             display: flex;
+            position: absolute;
             height: 100vh;
+            padding-top: 300px;
             .title {
                 padding-left: 500px;
                 font-size: 4vh;
@@ -110,7 +111,7 @@ $background: #F3F9FF;
                 // background-color: red;
             }
             .squares {
-                display: flex;
+                display: inline-block;
                 justify-content: center;
                 align-items: left;
                 flex-direction: column;
@@ -165,7 +166,7 @@ $background: #F3F9FF;
                 }
             }
             .squares2 {
-                display: flex;
+                display: inline-block;
                 justify-content: center;
                 align-items: left;
                 flex-direction: column;
@@ -220,7 +221,7 @@ $background: #F3F9FF;
                 }
             }
             .squares3 {
-                display: flex;
+                display: inline-block;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;

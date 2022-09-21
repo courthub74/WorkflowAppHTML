@@ -83,7 +83,9 @@
 }
 * .wrapper .page {
   display: flex;
+  position: absolute;
   height: 100vh;
+  padding-top: 300px;
 }
 * .wrapper .page .title {
   padding-left: 500px;
@@ -92,7 +94,7 @@
   color: #243F67;
 }
 * .wrapper .page .squares {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: left;
   flex-direction: column;
@@ -146,7 +148,7 @@
   margin-right: auto;
 }
 * .wrapper .page .squares2 {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: left;
   flex-direction: column;
@@ -200,7 +202,7 @@
   margin-right: auto;
 }
 * .wrapper .page .squares3 {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
