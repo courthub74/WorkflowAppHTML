@@ -80,4 +80,125 @@ $background: #F3F9FF;
             }
         }
     }
+
+    // SQUARES OF TASKS
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        padding-top: 30px;
+        h1 {
+            font-size: 6vh;
+            color: $darkblue;
+        }
+    }
+    .page {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        height: 100vh;
+        padding-top: 30px;
+        .buttons {
+            // background-color: greenyellow;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 700px;
+            width: 1000px;
+            .col1 {
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+                // padding-right: 100px;
+                #deliverables {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid green;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: green;
+                        font-size: 2vh;
+                        font-weight: bolder;
+                    }
+                }
+                #projects {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid black;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 2vh;
+                        font-weight: bold;
+                    }
+                }
+                #practices {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid blue;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: blue;
+                        font-size: 2vh;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .col2 {
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+                // padding-left: 150px;
+                #classes {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid orange;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: orange;
+                        font-size: 2vh;
+                        font-weight: bold;
+                    }
+                }
+                #freelance {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid red;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: red;
+                        font-size: 2vh;
+                        font-weight: bold; 
+                    }
+                }
+                #appointments {
+                    width: 350px;
+                    height: 90px;
+                    border: 3px solid purple;
+                    border-radius: 5px;
+                    background-color: $background;
+                    a {
+                        text-decoration: none;
+                        color: purple;
+                        font-size: 2vh;
+                        font-weight: bold; 
+                    }
+                }
+            }
+        }
+    }
+  }
+
 }

@@ -68,4 +68,119 @@
   border: none;
   color: #243F67;
   font-weight: bold;
+}
+* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+* .wrapper .title {
+  padding-top: 30px;
+}
+* .wrapper .title h1 {
+  font-size: 6vh;
+  color: #243F67;
+}
+* .wrapper .page {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 100vh;
+  padding-top: 30px;
+}
+* .wrapper .page .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 700px;
+  width: 1000px;
+}
+* .wrapper .page .buttons .col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+* .wrapper .page .buttons .col1 #deliverables {
+  width: 350px;
+  height: 90px;
+  border: 3px solid green;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col1 #deliverables a {
+  text-decoration: none;
+  color: green;
+  font-size: 2vh;
+  font-weight: bolder;
+}
+* .wrapper .page .buttons .col1 #projects {
+  width: 350px;
+  height: 90px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col1 #projects a {
+  text-decoration: none;
+  color: black;
+  font-size: 2vh;
+  font-weight: bold;
+}
+* .wrapper .page .buttons .col1 #practices {
+  width: 350px;
+  height: 90px;
+  border: 3px solid blue;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col1 #practices a {
+  text-decoration: none;
+  color: blue;
+  font-size: 2vh;
+  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+* .wrapper .page .buttons .col2 #classes {
+  width: 350px;
+  height: 90px;
+  border: 3px solid orange;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col2 #classes a {
+  text-decoration: none;
+  color: orange;
+  font-size: 2vh;
+  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 #freelance {
+  width: 350px;
+  height: 90px;
+  border: 3px solid red;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col2 #freelance a {
+  text-decoration: none;
+  color: red;
+  font-size: 2vh;
+  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 #appointments {
+  width: 350px;
+  height: 90px;
+  border: 3px solid purple;
+  border-radius: 5px;
+  background-color: #F3F9FF;
+}
+* .wrapper .page .buttons .col2 #appointments a {
+  text-decoration: none;
+  color: purple;
+  font-size: 2vh;
+  font-weight: bold;
 }/*# sourceMappingURL=tasks.css.map */
