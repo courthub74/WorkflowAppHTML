@@ -102,7 +102,7 @@ $background: #F3F9FF;
             display: flex;
             position: absolute;
             height: 100vh;
-            padding-top: 300px;
+            padding-top: 50px;
             .title {
                 padding-left: 500px;
                 font-size: 4vh;
@@ -111,10 +111,12 @@ $background: #F3F9FF;
                 // background-color: red;
             }
             .squares {
-                display: inline-block;
+                display: flex;
                 justify-content: center;
                 align-items: left;
                 flex-direction: column;
+                padding: 20px;
+                gap: 20px;
                 // background-color: green;
                 .html {
                     width: 300px;
@@ -145,7 +147,7 @@ $background: #F3F9FF;
                     height: 100px;
                     border: 1px $darkblue solid;
                     border-radius: 5px;
-                    padding: 20px;
+                    padding: 25px;
                     img {
                         display: block;
                         margin-left: auto;
@@ -166,17 +168,19 @@ $background: #F3F9FF;
                 }
             }
             .squares2 {
-                display: inline-block;
+                display: flex;
                 justify-content: center;
                 align-items: left;
                 flex-direction: column;
+                padding: 20px;
+                gap: 20px;
                 // background-color: yellow;
                 .react {
                     width: 300px;
                     height: 100px;
                     border: 1px $darkblue solid;
                     border-radius: 5px;
-                    padding: 10px;
+                    padding: 5px;
                     img {
                         display: block;
                         margin-left: auto;
@@ -188,7 +192,7 @@ $background: #F3F9FF;
                     height: 100px;
                     border: 1px $darkblue solid;
                     border-radius: 5px;
-                    padding: 10px;
+                    padding: 20px;
                     img {
                         display: block;
                         margin-left: auto;
@@ -221,10 +225,12 @@ $background: #F3F9FF;
                 }
             }
             .squares3 {
-                display: inline-block;
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                padding: 20px;
+                gap: 20px;
                 // background-color: red;
                 .js {
                     width: 300px;

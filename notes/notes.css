@@ -85,7 +85,7 @@
   display: flex;
   position: absolute;
   height: 100vh;
-  padding-top: 300px;
+  padding-top: 50px;
 }
 * .wrapper .page .title {
   padding-left: 500px;
@@ -94,10 +94,12 @@
   color: #243F67;
 }
 * .wrapper .page .squares {
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 * .wrapper .page .squares .html {
   width: 300px;
@@ -128,7 +130,7 @@
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
-  padding: 20px;
+  padding: 25px;
 }
 * .wrapper .page .squares .tailwind img {
   display: block;
@@ -148,17 +150,19 @@
   margin-right: auto;
 }
 * .wrapper .page .squares2 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 * .wrapper .page .squares2 .react {
   width: 300px;
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
 }
 * .wrapper .page .squares2 .react img {
   display: block;
@@ -170,7 +174,7 @@
   height: 100px;
   border: 1px #243F67 solid;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
 }
 * .wrapper .page .squares2 .express img {
   display: block;
@@ -202,10 +206,12 @@
   margin-right: auto;
 }
 * .wrapper .page .squares3 {
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 * .wrapper .page .squares3 .js {
   width: 300px;
