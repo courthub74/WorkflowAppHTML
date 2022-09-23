@@ -121,8 +121,9 @@ $background: #F3F9FF;
                 .html {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 3px 4px 2px grey;
                     padding: 10px;
                     img {
                         display: block;
@@ -133,8 +134,9 @@ $background: #F3F9FF;
                 .css {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -145,8 +147,9 @@ $background: #F3F9FF;
                 .tailwind {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 25px;
                     img {
                         display: block;
@@ -157,8 +160,9 @@ $background: #F3F9FF;
                 .sass {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -178,8 +182,9 @@ $background: #F3F9FF;
                 .react {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 5px;
                     img {
                         display: block;
@@ -190,8 +195,9 @@ $background: #F3F9FF;
                 .express {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 20px;
                     img {
                         display: block;
@@ -202,8 +208,9 @@ $background: #F3F9FF;
                 .git {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -214,8 +221,9 @@ $background: #F3F9FF;
                 .github {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -235,8 +243,9 @@ $background: #F3F9FF;
                 .js {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -247,8 +256,9 @@ $background: #F3F9FF;
                 .python {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
@@ -259,8 +269,9 @@ $background: #F3F9FF;
                 .flask {
                     width: 300px;
                     height: 100px;
-                    border: 1px $darkblue solid;
+                    // border: 1px $darkblue solid;
                     border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px 10px;
                     img {
                         display: block;
@@ -272,7 +283,9 @@ $background: #F3F9FF;
                 .api {
                     width: 300px;
                     height: 100px;
-                    border: 1px darkblue solid;
+                    // border: 1px darkblue solid;
+                    border-radius: 5px;
+                    box-shadow: 1px 5px 7px 2px gray;
                     padding: 10px;
                     img {
                         display: block;
