@@ -48,10 +48,10 @@
   width: 25px;
   display: inline-block;
 }
-* .sidebar .menu ul li a .check {
+* .sidebar .menu ul li .check {
   height: 20px;
 }
-* .sidebar .menu ul li a .check img {
+* .sidebar .menu ul li .check img {
   width: 25px;
   height: 35px;
 }
@@ -95,6 +95,8 @@
   align-items: center;
   height: 700px;
   width: 1000px;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
 }
 * .wrapper .page .buttons .col1 {
   display: flex;

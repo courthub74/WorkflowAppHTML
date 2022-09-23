@@ -54,12 +54,12 @@ $background: #F3F9FF;
                                 display: inline-block;
                             }
                         }
-                        .check {
-                            height: 20px;
-                            img {
-                                width: 25px;
-                                height: 35px;
-                            }
+                    }
+                    .check {
+                        height: 20px;
+                        img {
+                            width: 25px;
+                            height: 35px;
                         }
                     }
                 }
@@ -107,6 +107,7 @@ $background: #F3F9FF;
             align-items: center;
             height: 700px;
             width: 1000px;
+            column-gap: 100px;
             .col1 {
                 display: flex;
                 flex-direction: column;
