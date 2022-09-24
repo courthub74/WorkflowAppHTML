@@ -85,8 +85,8 @@
   display: flex;
   position: absolute;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  padding-top: 30px;
 }
 * .wrapper .page .buttons {
   display: flex;
@@ -98,49 +98,46 @@
   -moz-column-gap: 100px;
        column-gap: 100px;
 }
+* .wrapper .page .buttons .button {
+  border: 3px solid;
+  width: 350px;
+  height: 90px;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bold;
+  line-height: 80px;
+}
 * .wrapper .page .buttons .col1 {
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
 * .wrapper .page .buttons .col1 #deliverables {
-  width: 350px;
-  height: 90px;
   border: 3px solid green;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col1 #deliverables a {
-  text-decoration: none;
   color: green;
-  font-size: 2vh;
-  font-weight: bolder;
+}
+* .wrapper .page .buttons .col1 #deliverables:hover {
+  background-color: green;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col1 #projects {
-  width: 350px;
-  height: 90px;
   border: 3px solid black;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col1 #projects a {
-  text-decoration: none;
   color: black;
-  font-size: 2vh;
-  font-weight: bold;
+}
+* .wrapper .page .buttons .col1 #projects:hover {
+  background-color: black;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col1 #practices {
-  width: 350px;
-  height: 90px;
   border: 3px solid blue;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col1 #practices a {
-  text-decoration: none;
   color: blue;
-  font-size: 2vh;
-  font-weight: bold;
+}
+* .wrapper .page .buttons .col1 #practices:hover {
+  background-color: blue;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 {
   display: flex;
@@ -148,41 +145,29 @@
   gap: 100px;
 }
 * .wrapper .page .buttons .col2 #classes {
-  width: 350px;
-  height: 90px;
   border: 3px solid orange;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col2 #classes a {
-  text-decoration: none;
   color: orange;
-  font-size: 2vh;
-  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 #classes:hover {
+  background-color: orange;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 #freelance {
-  width: 350px;
-  height: 90px;
   border: 3px solid red;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col2 #freelance a {
-  text-decoration: none;
   color: red;
-  font-size: 2vh;
-  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 #freelance:hover {
+  background-color: red;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 #appointments {
-  width: 350px;
-  height: 90px;
   border: 3px solid purple;
-  border-radius: 5px;
-  background-color: #F3F9FF;
-}
-* .wrapper .page .buttons .col2 #appointments a {
-  text-decoration: none;
   color: purple;
-  font-size: 2vh;
-  font-weight: bold;
+}
+* .wrapper .page .buttons .col2 #appointments:hover {
+  background-color: purple;
+  color: #F3F9FF;
+  transition: all 0.5s ease-in;
 }/*# sourceMappingURL=tasks.css.map */

@@ -81,7 +81,7 @@ $background: #F3F9FF;
         }
     }
 
-    // SQUARES OF TASKS
+   // BUTTONS OF TASKS
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -97,8 +97,8 @@ $background: #F3F9FF;
         display: flex;
         position: absolute;
         align-items: center;
+        justify-content: center;
         height: 100vh;
-        padding-top: 30px;
         .buttons {
             // background-color: greenyellow;
             display: flex;
@@ -108,49 +108,45 @@ $background: #F3F9FF;
             height: 700px;
             width: 1000px;
             column-gap: 100px;
+            .button {
+                border: 3px solid;
+                width: 350px;
+                height: 90px;
+                text-align: center;
+                font-size: 2vh;
+                font-weight: bold;
+                line-height: 80px;
+            }
             .col1 {
                 display: flex;
                 flex-direction: column;
                 gap: 100px;
-                // padding-right: 100px;
                 #deliverables {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid green;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: green;
-                        font-size: 2vh;
-                        font-weight: bolder;
-                    }
+                    color: green;
+                }
+                #deliverables:hover {
+                    background-color: green;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
                 #projects {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid black;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: black;
-                        font-size: 2vh;
-                        font-weight: bold;
-                    }
+                    color: black;
+                }
+                #projects:hover {
+                    background-color: black;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
                 #practices {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid blue;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: blue;
-                        font-size: 2vh;
-                        font-weight: bold;
-                    }
+                    color: blue;
+                }
+                #practices:hover {
+                    background-color: blue;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
             }
             .col2 {
@@ -159,45 +155,44 @@ $background: #F3F9FF;
                 gap: 100px;
                 // padding-left: 150px;
                 #classes {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid orange;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: orange;
-                        font-size: 2vh;
-                        font-weight: bold;
-                    }
+                    color: orange;
+                }
+                #classes:hover {
+                    background-color: orange;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
                 #freelance {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid red;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: red;
-                        font-size: 2vh;
-                        font-weight: bold; 
-                    }
+                    color: red;
+                }
+                #freelance:hover {
+                    background-color: red;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
                 #appointments {
-                    width: 350px;
-                    height: 90px;
                     border: 3px solid purple;
-                    border-radius: 5px;
-                    background-color: $background;
-                    a {
-                        text-decoration: none;
-                        color: purple;
-                        font-size: 2vh;
-                        font-weight: bold; 
-                    }
+                    color: purple;
+                }
+                #appointments:hover {
+                    background-color: purple;
+                    color: $background;
+                    transition: all .5s ease-in;
                 }
             }
+            // .button {
+            //     border: 3px solid black;
+            //     width: 350px;
+            //     height: 90px;
+            //     text-decoration: black;
+            //     text-align: center;
+            //     font-size: 2vh;
+            //     font-weight: bold;
+            //     color: black;
+            //     line-height: 80px;
+            // }
         }
     }
   }
