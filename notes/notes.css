@@ -104,8 +104,7 @@
 * .wrapper .page .squares .html {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 3px 4px 2px grey;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares .html img {
@@ -116,8 +115,7 @@
 * .wrapper .page .squares .css {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares .css img {
@@ -128,8 +126,7 @@
 * .wrapper .page .squares .tailwind {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 25px;
 }
 * .wrapper .page .squares .tailwind img {
@@ -140,8 +137,7 @@
 * .wrapper .page .squares .sass {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares .sass img {
@@ -160,8 +156,7 @@
 * .wrapper .page .squares2 .react {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 5px;
 }
 * .wrapper .page .squares2 .react img {
@@ -172,8 +167,7 @@
 * .wrapper .page .squares2 .express {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 20px;
 }
 * .wrapper .page .squares2 .express img {
@@ -184,8 +178,7 @@
 * .wrapper .page .squares2 .git {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares2 .git img {
@@ -196,8 +189,7 @@
 * .wrapper .page .squares2 .github {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares2 .github img {
@@ -216,8 +208,7 @@
 * .wrapper .page .squares3 .js {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares3 .js img {
@@ -228,8 +219,7 @@
 * .wrapper .page .squares3 .python {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares3 .python img {
@@ -240,8 +230,7 @@
 * .wrapper .page .squares3 .flask {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 3px 2px 1px grey;
   padding: 10px 10px;
 }
 * .wrapper .page .squares3 .flask img {
@@ -253,8 +242,7 @@
 * .wrapper .page .squares3 .api {
   width: 300px;
   height: 100px;
-  border-radius: 5px;
-  box-shadow: 1px 5px 7px 2px gray;
+  box-shadow: 1px 1px 2px 1px grey;
   padding: 10px;
 }
 * .wrapper .page .squares3 .api img {
