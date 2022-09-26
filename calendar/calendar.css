@@ -116,15 +116,18 @@
   text-align: center;
   width: 4em;
   font-size: 3vh;
-}
-* .container .calendar table thead tr td a {
   color: #243F67;
-  text-decoration: none;
 }
 * .container .calendar table tbody tr td {
   background-color: #E2F1FF;
   padding: 50px;
   text-align: center;
+}
+* .container .calendar table tbody tr .event {
+  background-color: #243F67;
+}
+* .container .calendar table tbody tr .event a {
+  color: white;
 }
 * .container .calendar table tbody tr .prev-month {
   color: lightgray;

@@ -131,10 +131,7 @@ $background: #F3F9FF;
                             text-align: center;
                             width: 4em;
                             font-size: 3vh;
-                            a {
-                                color: #243F67;
-                                text-decoration: none;
-                            }
+                            color: #243F67;
                         }
                     }
                 }
@@ -144,6 +141,12 @@ $background: #F3F9FF;
                             background-color: #E2F1FF;
                             padding: 50px;
                             text-align: center;
+                        }
+                        .event {
+                            background-color: #243F67;
+                            a {
+                                color: white;
+                            }
                         }
                         .prev-month {
                             color: lightgray;
