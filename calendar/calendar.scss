@@ -98,7 +98,20 @@ $background: #F3F9FF;
             border: 2px $darkblue solid;
             padding-top: 40px;
             header {
+                display: flex;
+                gap: 400px;
                 position: relative;
+                .arrows {
+                    padding-left: 120px;
+                    #left {
+                        border: 1px $darkblue solid;
+                        border-radius: 50%;
+                    }
+                    #right {
+                        border: 1px $darkblue solid;
+                        border-radius: 50%;
+                    }
+                }
                 p {
                     text-transform: uppercase;
                     padding-left: 38px;
@@ -117,7 +130,10 @@ $background: #F3F9FF;
                             text-align: center;
                             width: 4em;
                             font-size: 3vh;
-                            color: $darkblue;
+                            a {
+                                color: #243F67;
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
@@ -127,6 +143,12 @@ $background: #F3F9FF;
                             background-color: #E2F1FF;
                             padding: 50px;
                             text-align: center;
+                        }
+                        .prev-month {
+                            color: lightgray;
+                        }
+                        .next-month {
+                            color: lightgray;
                         }
                     }
                 }

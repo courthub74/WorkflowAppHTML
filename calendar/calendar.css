@@ -84,7 +84,20 @@
   padding-top: 40px;
 }
 * .container .calendar header {
+  display: flex;
+  gap: 400px;
   position: relative;
+}
+* .container .calendar header .arrows {
+  padding-left: 120px;
+}
+* .container .calendar header .arrows #left {
+  border: 1px #243F67 solid;
+  border-radius: 50%;
+}
+* .container .calendar header .arrows #right {
+  border: 1px #243F67 solid;
+  border-radius: 50%;
 }
 * .container .calendar header p {
   text-transform: uppercase;
@@ -102,10 +115,19 @@
   text-align: center;
   width: 4em;
   font-size: 3vh;
+}
+* .container .calendar table thead tr td a {
   color: #243F67;
+  text-decoration: none;
 }
 * .container .calendar table tbody tr td {
   background-color: #E2F1FF;
   padding: 50px;
   text-align: center;
+}
+* .container .calendar table tbody tr .prev-month {
+  color: lightgray;
+}
+* .container .calendar table tbody tr .next-month {
+  color: lightgray;
 }/*# sourceMappingURL=calendar.css.map */
