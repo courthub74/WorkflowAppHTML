@@ -78,6 +78,7 @@
   height: 538px;
   width: 100%;
   padding-top: 400px;
+  padding-left: 200px;
 }
 * .container .calendar {
   border: 2px #243F67 solid;
