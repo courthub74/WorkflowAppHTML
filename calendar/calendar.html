@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="calendar.css">
+
+    <title>Calendar</title>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+        <div class="header">
+            <!-- Sidebar Header -->
+            <h2>Workflow Machine</h2>
+            <img src="../img/white_logo_transparent_background.png" alt="logo">
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu">
+            <ul>
+                <li><a href="../calendar/calendar.html">
+                    <span class="icon"><img src="../img/bxs_calendar.png" alt="calendar"></span>
+                    <span class="item">calendar</span>
+                    <span class="check"><img src="../img/languages/check.png" alt="currentpage"></span> 
+                </a></li>
+
+                <li><a href="../notes/notes.html">
+                    <span class="icon"><img src="../img/charm_notes-tick.png" alt="notes"></span>
+                    <span class="item">notes</span>
+                </a></li>
+
+                <li><a href="../tasks/tasks.html">
+                    <span class="icon"><img src="../img/clarity_tasks-line.png" alt="todos"></span>
+                    <span class="item">tasks</span>
+                </a></li>
+
+                <li><a href="#">
+                    <span class="icon"><img src="../img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
+                    <span class="item">spreadsheet</span>
+                </a></li>
+            </ul>
+        </div>
+        <!-- Logout Button -->
+        <div class="logoutbutton">
+            <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
+        </div>
+    </div>
+
+
+
+    <!-- CALENDAR -->
+
+    <div class="container">
+
+        <div class="calendar">
+
+            <header>
+
+                <p>June</p>
+
+            </header>
+
+            <table>
+ 
+                <thead>
+         
+                  <tr>
+         
+                    <td>Mo</td>
+                    <td>Tu</td>
+                    <td>We</td>
+                    <td>Th</td>
+                    <td>Fr</td>
+                    <td>Sa</td>
+                    <td>Su</td>
+         
+                  </tr>
+         
+                </thead>
+
+                <tbody>
+ 
+                    <tr>
+                      <td class="prev-month">29</td>
+                      <td class="prev-month">30</td>
+                      <td class="prev-month">31</td>
+           
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+           
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td class="event">9</td>
+                      <td class="current-day event">10</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+           
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td class="event">22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                    </tr>
+           
+                    <tr>
+           
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td class="next-month">1</td>
+                      <td class="next-month">2</td>
+                    </tr>
+           
+                  </tbody>
+
+            </table>
+
+        </div>  <!-- end calendar -->
+
+    </div>  <!-- end container -->
+    
+</body>
+</html>

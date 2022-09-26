@@ -75,8 +75,10 @@ $background: #F3F9FF;
                 border-radius: 50%;
                 background-color: white;
                 border: none;
-                color: $darkblue;
                 font-weight: bold;
+                a {
+                    color: $darkblue;
+                }
             }
         }
     }

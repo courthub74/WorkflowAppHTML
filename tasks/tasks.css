@@ -66,8 +66,10 @@
   border-radius: 50%;
   background-color: white;
   border: none;
-  color: #243F67;
   font-weight: bold;
+}
+* .sidebar .logoutbutton .logout a {
+  color: #243F67;
 }
 * .wrapper {
   display: flex;
