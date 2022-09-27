@@ -29,19 +29,19 @@ $background: #F3F9FF;
                 color: $darkblue;
             }
             .apptbox {
-                border: 1px $darkblue solid;
                 border-radius: 5px;
                 line-height: 70px;
                 padding: 20px;
+                background-color: #586E9A;
                 h3 {
                     padding-bottom: 20px;
-                    color: $darkblue;
+                    color: white;
                 }
                 p {
                     a {
                         font-weight: 2VH;
                         text-decoration: none;
-                        color: $darkblue;
+                        color: white;
                     }
                 }
             }

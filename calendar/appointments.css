@@ -25,19 +25,19 @@
   color: #243F67;
 }
 * body .page .apptbox {
-  border: 1px #243F67 solid;
   border-radius: 5px;
   line-height: 70px;
   padding: 20px;
+  background-color: #586E9A;
 }
 * body .page .apptbox h3 {
   padding-bottom: 20px;
-  color: #243F67;
+  color: white;
 }
 * body .page .apptbox p a {
   font-weight: 2VH;
   text-decoration: none;
-  color: #243F67;
+  color: white;
 }
 * body .sidebar {
   background-color: #243F67;
