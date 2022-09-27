@@ -1,0 +1,139 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+// COLORS
+$darkblue: #243F67;
+$background: #F3F9FF;
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    body {
+        background-color: $background;
+        .page {
+            // background-color: red;
+            height: 100vh;
+            width: 100%;
+            padding-top: 100px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                padding-bottom: 100px;
+                color: $darkblue;
+            }
+            .apptbox {
+                border-radius: 5px;
+                line-height: 40px;
+                padding: 20px;
+                background-color: white;
+                width: 400px;
+                height: 400px;
+                h3 {
+                    color: $darkblue;
+                    text-align: left;
+                }
+                p {
+                    a {
+                        font-weight: 2VH;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                .phonenum {
+                    padding-top: 20px;
+                }
+                .topic {
+                    padding-top: 20px;
+                }
+                .buttondiv {
+                    height: 100px;
+                    // background-color: green;
+                    padding-top: 70px;
+                    button {
+                        background-color: $darkblue;
+                        border: 1px solid ;
+                        border-radius: 50%;
+                        width: 70px;
+                        height: 70px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .sidebar {
+            background-color: $darkblue;
+            width: 280px;
+            height: 100vh;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: all 0.5s ease-in;
+            .header {
+                text-align: center;
+                margin: 20px;
+                h2 {
+                    color: white;
+                    padding-bottom: 30px;
+                }
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            .menu {
+                padding-top: 90px;
+                padding-left: 40px;
+                ul {
+                    li {
+                        a {
+                            padding-left: 10px;
+                            font-size: 25px;
+                            color: white;
+                            text-decoration: none;
+                            line-height: 70px;
+                            .icon {
+                                img {
+                                    top: 5px;
+                                    width: 25px;
+                                    display: inline-block;
+                                }
+                            }
+                            .check {
+                                // background-color: red;
+                                height: 20px;
+                                img {
+                                    width: 25px;
+                                    height: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .logoutbutton {
+                padding-top: 200px;
+                height: 20px;
+                text-align: center;
+                .logout {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: white;
+                    border: none;
+                    font-weight: bold;
+                    a {
+                        color: $darkblue;
+                    }
+                }
+            }
+        }
+    }
+}
