@@ -10,7 +10,36 @@
 * body {
   background-color: #F3F9FF;
 }
-* .sidebar {
+* body .page {
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  line-height: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+* body .page h1 {
+  padding-bottom: 100px;
+  color: #243F67;
+}
+* body .page .apptbox {
+  border: 1px #243F67 solid;
+  border-radius: 5px;
+  line-height: 70px;
+  padding: 20px;
+}
+* body .page .apptbox h3 {
+  padding-bottom: 20px;
+  color: #243F67;
+}
+* body .page .apptbox p a {
+  font-weight: 2VH;
+  text-decoration: none;
+  color: #243F67;
+}
+* body .sidebar {
   background-color: #243F67;
   width: 280px;
   height: 100vh;
@@ -20,47 +49,47 @@
   left: 0;
   transition: all 0.5s ease-in;
 }
-* .sidebar .header {
+* body .sidebar .header {
   text-align: center;
   margin: 20px;
 }
-* .sidebar .header h2 {
+* body .sidebar .header h2 {
   color: white;
   padding-bottom: 30px;
 }
-* .sidebar .header img {
+* body .sidebar .header img {
   width: 120px;
   height: 120px;
 }
-* .sidebar .menu {
+* body .sidebar .menu {
   padding-top: 90px;
   padding-left: 40px;
 }
-* .sidebar .menu ul li a {
+* body .sidebar .menu ul li a {
   padding-left: 10px;
   font-size: 25px;
   color: white;
   text-decoration: none;
   line-height: 70px;
 }
-* .sidebar .menu ul li a .icon img {
+* body .sidebar .menu ul li a .icon img {
   top: 5px;
   width: 25px;
   display: inline-block;
 }
-* .sidebar .menu ul li a .check {
+* body .sidebar .menu ul li a .check {
   height: 20px;
 }
-* .sidebar .menu ul li a .check img {
+* body .sidebar .menu ul li a .check img {
   width: 25px;
   height: 35px;
 }
-* .sidebar .logoutbutton {
+* body .sidebar .logoutbutton {
   padding-top: 200px;
   height: 20px;
   text-align: center;
 }
-* .sidebar .logoutbutton .logout {
+* body .sidebar .logoutbutton .logout {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -68,6 +97,6 @@
   border: none;
   font-weight: bold;
 }
-* .sidebar .logoutbutton .logout a {
+* body .sidebar .logoutbutton .logout a {
   color: #243F67;
 }/*# sourceMappingURL=appointments.css.map */

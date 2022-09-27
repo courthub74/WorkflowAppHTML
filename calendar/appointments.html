@@ -17,42 +17,56 @@
         <div class="header">
             <!-- Sidebar Header -->
             <h2>Workflow Machine</h2>
-            <img src=".../img/white_logo_transparent_background.png" alt="logo">
+            <img src="../img/white_logo_transparent_background.png" alt="logo">
         </div>
 
         <!-- Menu Items -->
         <div class="menu">
             <ul>
-                <li><a href="../calendar.html">
-                    <span class="icon"><img src="" alt="calendar"></span>
-                    <span class="item">calendar</span> 
+                <li><a href="./appointments.html">
+                    <span class="icon"><img src="../img/bxs_calendar.png" alt="calendar"></span>
+                    <span class="item">calendar</span>
                 </a></li>
 
-                <li><a href=".../notes/notes.html">
-                    <span class="icon"><img src=".../img/charm_notes-tick.png" alt="notes"></span>
+                <li><a href="../notes/notes.html">
+                    <span class="icon"><img src="../img/charm_notes-tick.png" alt="notes"></span>
                     <span class="item">notes</span>
                 </a></li>
 
-                <li><a href=".../tasks/tasks.html">
-                    <span class="icon"><img src=".../img/clarity_tasks-line.png" alt="todos"></span>
+                <li><a href="../tasks/tasks.html">
+                    <span class="icon"><img src="../img/clarity_tasks-line.png" alt="todos"></span>
                     <span class="item">tasks</span>
                 </a></li>
 
                 <li><a href="#">
-                    <span class="icon"><img src=".../img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
+                    <span class="icon"><img src="../img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                     <span class="item">spreadsheet</span>
                 </a></li>
             </ul>
         </div>
+
         <!-- Logout Button -->
         <div class="logoutbutton">
             <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
         </div>
     </div>
 
-    <form action="POST">
-        <h1>Make an Appointment</h1>
-    </form>
+    <div class="page">
+        <form action="POST">
+            <h1>Make an Appointment</h1>
+
+            <div class="apptbox">
+                <h3>What is the appointment type?</h3>
+                <p><a href="#">Phone Call</a></p>
+                <hr>
+                <p><a href="#">Meeting</a></p>
+                <hr>
+                <p><a href="#">Deadline</a></p>
+                <hr>
+                <p><a href="#">Appearence</a></p>
+            </div>
+        </form>
+    </div>
     
 </body>
 </html>
