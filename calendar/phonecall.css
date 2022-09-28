@@ -29,8 +29,8 @@
   line-height: 40px;
   padding: 20px;
   background-color: white;
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
 }
 * body .page .apptbox h3 {
   color: #243F67;
@@ -47,6 +47,26 @@
 * body .page .apptbox .topic {
   padding-top: 20px;
 }
+* body .page .apptbox .timeline {
+  display: flex;
+  gap: 80px;
+}
+* body .page .apptbox .time {
+  padding-top: 20px;
+}
+* body .page .apptbox .timebuttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 25px;
+}
+* body .page .apptbox .timebuttons button {
+  width: 100px;
+  background-color: #F3F9FF;
+  color: #243F67;
+  height: 25px;
+  border: #243F67 1px solid;
+  border-radius: 5px;
+}
 * body .page .apptbox .buttondiv {
   height: 100px;
   padding-top: 70px;
@@ -55,8 +75,8 @@
   background-color: #243F67;
   border: 1px solid;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   color: white;
 }
 * body .sidebar {
