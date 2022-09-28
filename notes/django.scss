@@ -99,12 +99,32 @@ $background: #F3F9FF;
         padding-top: 100px;
         padding-bottom: 20px;
         img {
-            width: 400px;
+            width: 300px;
         }
     }
     .line {
         hr {
             border: 1px solid $darkblue;
+        }
+    }
+    .djangoheader {
+        color: $darkblue;
+        padding: 30px 0 70px 0;
+        h2 {
+            font-size: 3.5vh;
+            background-color: #F5F5F5;
+            width: 680px;
+        }
+    }
+    .djangonotes {
+        line-height: 75px;
+        p {
+            a {
+                text-decoration: none;
+                color: $darkblue;
+                font-size: 2vh;
+                font-weight: 505;
+            }
         }
     }
 }

@@ -85,8 +85,26 @@
   padding-bottom: 20px;
 }
 .page .logo img {
-  width: 400px;
+  width: 300px;
 }
 .page .line hr {
   border: 1px solid #243F67;
+}
+.page .djangoheader {
+  color: #243F67;
+  padding: 30px 0 70px 0;
+}
+.page .djangoheader h2 {
+  font-size: 3.5vh;
+  background-color: #F5F5F5;
+  width: 680px;
+}
+.page .djangonotes {
+  line-height: 75px;
+}
+.page .djangonotes p a {
+  text-decoration: none;
+  color: #243F67;
+  font-size: 2vh;
+  font-weight: 505;
 }/*# sourceMappingURL=django.css.map */
