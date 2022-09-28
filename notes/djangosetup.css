@@ -107,7 +107,7 @@
   color: #243F67;
   font-size: 20px;
   line-height: 45px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   width: 700px;
 }
 .setupbox .setuplist hr {
@@ -115,4 +115,11 @@
 }
 .setupbox .setuplist small {
   font-size: medium;
+}
+.setupbox .backbutton {
+  padding-bottom: 100px;
+}
+.setupbox .backbutton p a {
+  color: #243F67;
+  font-weight: bold;
 }/*# sourceMappingURL=djangosetup.css.map */

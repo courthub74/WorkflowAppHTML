@@ -124,13 +124,22 @@ $background: #F3F9FF;
         color: $darkblue;
         font-size: 20px;
         line-height: 45px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         width: 700px;
         hr {
             border: 1px solid #F5F5F5;
         }
         small {
             font-size: medium;
+        }
+    }
+    .backbutton {
+        padding-bottom: 100px;
+        p {
+            a {
+                color: $darkblue;
+                font-weight: bold;
+            }
         }
     }
 }
