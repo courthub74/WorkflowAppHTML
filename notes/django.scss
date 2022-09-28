@@ -86,5 +86,25 @@ $background: #F3F9FF;
 
 
 .page {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 400px;
+    width: 90%;
+    .logo {
+        // background-color: green;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        img {
+            width: 400px;
+        }
+    }
+    .line {
+        hr {
+            border: 1px solid $darkblue;
+        }
+    }
 }

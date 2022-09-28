@@ -71,5 +71,22 @@
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 400px;
+  width: 90%;
+}
+.page .logo {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+.page .logo img {
+  width: 400px;
+}
+.page .line hr {
+  border: 1px solid #243F67;
 }/*# sourceMappingURL=django.css.map */
