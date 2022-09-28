@@ -122,11 +122,12 @@ $background: #F3F9FF;
     .setuplist {
         text-align: left;
         color: $darkblue;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 45px;
         padding-bottom: 30px;
+        width: 700px;
         hr {
-            border: 1px solid #A5ABBD;
+            border: 1px solid #F5F5F5;
         }
         small {
             font-size: medium;
