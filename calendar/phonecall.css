@@ -79,6 +79,12 @@
   height: 90px;
   color: white;
 }
+* body .page .apptbox .buttondiv .back {
+  padding-top: 20px;
+}
+* body .page .apptbox .buttondiv .back a {
+  color: #243F67;
+}
 * body .sidebar {
   background-color: #243F67;
   width: 280px;
