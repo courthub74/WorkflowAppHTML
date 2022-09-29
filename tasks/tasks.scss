@@ -125,29 +125,29 @@ $background: #F3F9FF;
                 flex-direction: column;
                 gap: 100px;
                 #deliverables {
-                    border: 3px solid green;
-                    color: green;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #deliverables:hover {
-                    background-color: green;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }
                 #projects {
-                    border: 3px solid black;
-                    color: black;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #projects:hover {
-                    background-color: black;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }
                 #practices {
-                    border: 3px solid blue;
-                    color: blue;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #practices:hover {
-                    background-color: blue;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }
@@ -158,29 +158,29 @@ $background: #F3F9FF;
                 gap: 100px;
                 // padding-left: 150px;
                 #classes {
-                    border: 3px solid orange;
-                    color: orange;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #classes:hover {
-                    background-color: orange;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }
                 #freelance {
-                    border: 3px solid red;
-                    color: red;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #freelance:hover {
-                    background-color: red;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }
                 #appointments {
-                    border: 3px solid purple;
-                    color: purple;
+                    border: 3px solid $darkblue;
+                    color: $darkblue;
                 }
                 #appointments:hover {
-                    background-color: purple;
+                    background-color: $darkblue;
                     color: $background;
                     transition: all .5s ease-in;
                 }

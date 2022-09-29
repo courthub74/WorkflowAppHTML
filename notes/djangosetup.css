@@ -71,55 +71,65 @@
   color: #243F67;
 }
 
-.setupbox {
+.forbackbuttontoside {
+  display: flex;
+}
+.forbackbuttontoside .setupbox {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 400px;
   width: 90%;
+  height: 100vh;
 }
-.setupbox .logo {
+.forbackbuttontoside .setupbox .logo {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-top: 100px;
   padding-bottom: 20px;
 }
-.setupbox .logo img {
+.forbackbuttontoside .setupbox .logo img {
   width: 300px;
 }
-.setupbox .line hr {
+.forbackbuttontoside .setupbox .line hr {
   border: 1px solid #243F67;
 }
-.setupbox .djangoheader {
+.forbackbuttontoside .setupbox .djangoheader {
   text-align: left;
   padding: 30px 0 40px 0;
 }
-.setupbox .djangoheader h2 {
+.forbackbuttontoside .setupbox .djangoheader h2 {
   font-size: 3.5vh;
   background-color: #F5F5F5;
   width: 680px;
   color: #243F67;
 }
-.setupbox .setuplist {
+.forbackbuttontoside .setupbox .setuplist {
   text-align: left;
   color: #243F67;
   font-size: 20px;
   line-height: 45px;
-  padding-bottom: 10px;
   width: 700px;
+  border: 1px solid #243F67;
+  border-radius: 5px;
+  padding: 10px;
 }
-.setupbox .setuplist hr {
-  border: 1px solid #F5F5F5;
+.forbackbuttontoside .setupbox .setuplist hr {
+  border: 1px solid linear-gradient(to right, red, yellow);
 }
-.setupbox .setuplist small {
+.forbackbuttontoside .setupbox .setuplist small {
   font-size: medium;
 }
-.setupbox .backbutton {
-  padding-bottom: 100px;
+.forbackbuttontoside .setupbox .setuplist .backbutton {
+  height: 40px;
+  width: 670px;
+  border: 1px solid #243F67;
+  background-color: #243F67;
+  text-align: center;
 }
-.setupbox .backbutton p a {
-  color: #243F67;
+.forbackbuttontoside .setupbox .setuplist .backbutton p a {
+  color: white;
   font-weight: bold;
 }/*# sourceMappingURL=djangosetup.css.map */

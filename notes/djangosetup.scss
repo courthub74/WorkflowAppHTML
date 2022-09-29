@@ -87,59 +87,72 @@ $background: #F3F9FF;
         }
     }
 }
-.setupbox {
-    text-align: center;
+.forbackbuttontoside {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 400px;
-    width: 90%;
-    .logo {
+    .setupbox {
+        text-align: center;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-        padding-bottom: 20px;
-        img {
-            width: 300px;
+        justify-content: center;
+        padding-left: 400px;
+        width: 90%;
+        height: 100vh;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            img {
+                width: 300px;
+            }
         }
-    }
-    .line {
-        hr {
-            border: 1px solid $darkblue;
+        .line {
+            hr {
+                border: 1px solid $darkblue;
+            }
         }
-    }
-    .djangoheader {
-        text-align: left;
-        padding: 30px 0 40px 0;
-        h2 {
-            font-size: 3.5vh;
-            background-color: #F5F5F5;
-            width: 680px;
-            color: $darkblue;
-        }
-    }
-    .setuplist {
-        text-align: left;
-        color: $darkblue;
-        font-size: 20px;
-        line-height: 45px;
-        padding-bottom: 10px;
-        width: 700px;
-        hr {
-            border: 1px solid #F5F5F5;
-        }
-        small {
-            font-size: medium;
-        }
-    }
-    .backbutton {
-        padding-bottom: 100px;
-        p {
-            a {
+        .djangoheader {
+            text-align: left;
+            padding: 30px 0 40px 0;
+            h2 {
+                font-size: 3.5vh;
+                background-color: #F5F5F5;
+                width: 680px;
                 color: $darkblue;
-                font-weight: bold;
+            }
+        }
+        .setuplist {
+            text-align: left;
+            color: $darkblue;
+            font-size: 20px;
+            line-height: 45px;
+            width: 700px;
+            border: 1px solid $darkblue;
+            border-radius: 5px;
+            padding: 10px;
+            hr {
+                border: 1px solid linear-gradient(to right, red , yellow) ;
+            }
+            small {
+                font-size: medium;
+            }
+            .backbutton {
+                // background-color: green;
+                height: 40px;
+                width: 670px;
+                border: 1px solid $darkblue;
+                background-color: $darkblue;
+                text-align: center;
+                
+                p {
+                    a {
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }
+    
 }
