@@ -88,7 +88,7 @@ $background: #F3F9FF;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-left: 150px;
+        padding-left: 250px;
         padding-top: 100px;
         height: 100vh;
         .header {
@@ -97,12 +97,12 @@ $background: #F3F9FF;
             color: white;
             background-color: $darkblue;
             padding: 40px;
-            width: 1000px;
+            width: 80%;
             height: 90px;
             p {
-                font-size: 3.5vh;
+                font-size: 4vh;
                 // background-color: green;
-                padding-right: 60px;
+                padding-right: 100px;
             }
             .inputblock {
                 // background-color: red;
@@ -111,7 +111,7 @@ $background: #F3F9FF;
                     margin: 0;
                     border: none;
                     border-radius: 0;
-                    width: 70%;
+                    width: 50%;
                     height: 30%;
                     padding: 10px;
                     float: left;
@@ -139,6 +139,20 @@ $background: #F3F9FF;
                         text-align: center;
                         width: 100%;
                     }
+                }
+            }
+        }
+        .thelist {
+            border: 1px solid $darkblue;
+            width: 80%;
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            #projlist {
+                // background-color: yellow;
+                li {
+                    padding: 20px;
+                    font-size: 20px;
                 }
             }
         }
