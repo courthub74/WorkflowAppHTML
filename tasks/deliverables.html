@@ -56,9 +56,9 @@
     <div class="wrapper">
 
         <div class="header">
-            <h2>Deliverables To Complete</h2>
+            <p>Deliverables To Complete</p>
             <input type="text" id="myInput" placeholder="Add Deliverable here....">
-            <span onclick="newElement()" class="addBtn">Add Deliverable</span>
+            <span onclick="newElement()" class="addBtn"><p>Add Deliverable</p></span>
         </div>
 
         <ul id="myUL">
@@ -93,7 +93,7 @@
             }
 
             // Add a "checked" symbol when clicking on a list item]
-            var list = document.querySelector('ul');
+            var list = document.querySelector('#myUL');
             list.addEventListener('click', function(ev) {
                 if (ev.target.tagName === 'LI') {
                     ev.target.classList.toggle('checked');
