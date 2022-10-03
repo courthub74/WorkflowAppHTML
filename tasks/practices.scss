@@ -139,7 +139,7 @@ $background: #F3F9FF;
             padding-left: 10px;
             padding-right: 10px;
             #praclist {
-                li {
+                .items {
                     padding: 20px;
                     font-size: 20px;
                 }
@@ -148,6 +148,8 @@ $background: #F3F9FF;
                     border: $darkblue;
                     background-color: $darkblue;
                     color: white;
+                    padding: 20px;
+                    font-size: 20px;
                 }
             }
         }

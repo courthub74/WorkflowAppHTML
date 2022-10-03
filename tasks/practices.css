@@ -124,7 +124,7 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-* .wrapper .thelist #praclist li {
+* .wrapper .thelist #praclist .items {
   padding: 20px;
   font-size: 20px;
 }
@@ -133,4 +133,6 @@
   border: #243F67;
   background-color: #243F67;
   color: white;
+  padding: 20px;
+  font-size: 20px;
 }/*# sourceMappingURL=practices.css.map */

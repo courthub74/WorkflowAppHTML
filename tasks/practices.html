@@ -88,7 +88,8 @@
         // console.log(myNodelist);
         var i;
         for (i = 0; i < myNodelist.length; i++) {
-            var span = document.createElement("span");
+            // var span = document.createElement("span");
+            var span = document.createElement("li");
             var txt = document.createTextNode("\u00D7");
             span.className = "close";
             span.appendChild(txt);
@@ -112,6 +113,34 @@
                 ev.target.className.toggle('checked');
             }
         }, false);
+
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+            var items = document.createElement("li");
+            var inputValue = document.getElementById("pracinput").value;
+            var t = document.createTextNode(inputValue);
+            items.appendChild(t);
+            if (inputValue === '') {
+                alert("Please enter a practice");
+            } else {
+                document.getElementById("praclist").appendChild(items);
+            }
+            // NOW record what was input in the input field
+            document.getElementById("pracinput").value = "";
+
+            var items = document.createElement("li");
+            var txt = document.createTextNode("\u00D7");
+            items.className = "close";
+            items.appendChild(txt);
+            li.appendChild(items);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
     </script>
 
 
