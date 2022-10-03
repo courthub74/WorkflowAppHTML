@@ -85,6 +85,7 @@ $background: #F3F9FF;
     }
 
     .wrapper {
+        // background-color: red;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -94,18 +95,16 @@ $background: #F3F9FF;
         .header {
             display: flex;
             align-items: center;
-            color: white;
             background-color: $darkblue;
-            padding: 40px;
             width: 80%;
             height: 90px;
+            color: white;
+            padding: 40px;
             p {
                 font-size: 4vh;
-                // background-color: green;
                 padding-right: 100px;
             }
             .inputblock {
-                // background-color: red;
                 width: 100%;
                 input {
                     margin: 0;
@@ -115,44 +114,40 @@ $background: #F3F9FF;
                     height: 30%;
                     padding: 10px;
                     float: left;
-                    font-size: 16px; 
+                    font-size: 16px;
                     height: 40px;
                 }
-                .addProj {
-                    background-color: gainsboro;
-                    height: 40px;
-                    width: 25%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                .addPrac {
+                    // background-color: gainsboro;
                     cursor: pointer;
-                    position: relative;
                     p {
-                        font-size: 15px; 
-                        padding-left: 60px;
+                        font-size: 15px;
                         padding-top: 10px;
                         color: $darkblue;
-                        // background-color: green;s
-                        height: 100%;
-                        // position: absolute;
-                        top: 0;
+                        background-color: gainsboro;
+                        width: 70%;
+                        height: 40px;
                         text-align: center;
-                        width: 100%;
                     }
                 }
             }
         }
         .thelist {
-            border: 1px solid $darkblue;
+            border: 1px solid #afbcd1;
             width: 80%;
             text-align: left;
             padding-left: 10px;
             padding-right: 10px;
-            #projlist {
-                // background-color: yellow;
+            #praclist {
                 li {
                     padding: 20px;
                     font-size: 20px;
+                }
+                .checked {
+                    text-decoration: line-through; 
+                    border: $darkblue;
+                    background-color: $darkblue;
+                    color: white;
                 }
             }
         }

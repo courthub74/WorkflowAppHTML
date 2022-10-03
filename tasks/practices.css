@@ -81,11 +81,11 @@
 * .wrapper .header {
   display: flex;
   align-items: center;
-  color: white;
   background-color: #243F67;
-  padding: 40px;
   width: 80%;
   height: 90px;
+  color: white;
+  padding: 40px;
 }
 * .wrapper .header p {
   font-size: 4vh;
@@ -105,34 +105,32 @@
   font-size: 16px;
   height: 40px;
 }
-* .wrapper .header .inputblock .addProj {
-  background-color: gainsboro;
-  height: 40px;
-  width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+* .wrapper .header .inputblock .addPrac {
   cursor: pointer;
-  position: relative;
 }
-* .wrapper .header .inputblock .addProj p {
+* .wrapper .header .inputblock .addPrac p {
   font-size: 15px;
-  padding-left: 60px;
   padding-top: 10px;
   color: #243F67;
-  height: 100%;
-  top: 0;
+  background-color: gainsboro;
+  width: 70%;
+  height: 40px;
   text-align: center;
-  width: 100%;
 }
 * .wrapper .thelist {
-  border: 1px solid #243F67;
+  border: 1px solid #afbcd1;
   width: 80%;
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
 }
-* .wrapper .thelist #projlist li {
+* .wrapper .thelist #praclist li {
   padding: 20px;
   font-size: 20px;
-}/*# sourceMappingURL=projects.css.map */
+}
+* .wrapper .thelist #praclist .checked {
+  text-decoration: line-through;
+  border: #243F67;
+  background-color: #243F67;
+  color: white;
+}/*# sourceMappingURL=practices.css.map */

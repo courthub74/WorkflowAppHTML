@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="projects.css">
-    <title>Deliverables</title>
+    <link rel="stylesheet" href="practices.css">
+    <title>Practices</title>
 </head>
 <body>
 
@@ -47,39 +47,75 @@
     <!-- Logout Button -->
     <div class="logoutbutton">
         <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
-    </div>
+    </div>    
 </div>
 
+ <!-- TODO LIST -->
 
-<!-- TODO LIST -->
-
-<div class="wrapper">
+ <div class="wrapper">
 
     <div class="header">
-        <p>Projects</p>
+        <p>Practices</p>
         <div class="inputblock">
-            <input type="text" id="projinput" placeholder="Add Projects here....">
-            <span onclick="newElement()" class="addProj"><p>Add Project</p></span>
+            <input type="text" id="pracinput" placeholder="Add Projects here....">
+            <span onclick="newElement()" class="addPrac"><p>Add Project</p></span>
         </div>
     </div>
 
     <div class="thelist">
-        <ul id="projlist">
-            <li>First</li>
+        <ul id="praclist">
+            <li class="items">First</li>
             <hr>
-            <li>Second</li>
+            <li class="items">Second</li>
             <hr>
-            <li>Third</li>
+            <li class="items">Third</li>
             <hr>
-            <li>Fourth</li>
+            <li class="checked">Fourth</li>
             <hr>
-            <li>Fifth</li>
+            <li class="items">Fifth</li>
             <hr>
-            <li>Sixth</li>
+            <li class="items">Sixth</li>
+            <hr>
+            <li class="items">Seven</li>
         </ul>
     </div>
 
-    
+    <!-- TODO JS -->
+    <script>
 
-    
+        // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByClassName("items");
+        // console.log(myNodelist);
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+            var span = document.createElement("span");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            myNodelist[i].appendChild(span);
+        }
+
+        // Click on a close button to hide the current list item
+        var close = document.getElementByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+            if (ev.target.className === 'items') {
+                ev.target.className.toggle('checked');
+            }
+        }, false);
+    </script>
+
+
 </div>
+    
+</body>
+</html>
