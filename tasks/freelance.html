@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="tasks.css">
-
-    <title>Tasks</title>
+    <link rel="stylesheet" href="freelance.css">
+    <title>Practices</title>
 </head>
+
+
 <body>
 
- <!-- Sidebar -->
+<!-- Sidebar -->
  <div class="sidebar">
     <div class="header">
         <!-- Sidebar Header -->
@@ -48,39 +49,53 @@
     <!-- Logout Button -->
     <div class="logoutbutton">
         <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
-    </div>
+    </div>    
 </div>
 
 
-<!-- TASKS BUTTON LINKS -->
+        <!-- TODO LIST -->
 
     <div class="wrapper">
 
-    
-        <div class="title">
-            <h1>Tasks</h1>
-        </div>
+        <header class="header">
+            <h1>Freelance Jobs to Complete</h1>
 
-        <div class="page">
-            <div class="buttons">
+            <!-- Form Field in Header -->
+            <form id="new-task-form">
 
-                <div class="col1">
-                    <a class="button" id="deliverables" href="deliverables.html">Deliverables</a>
-                    <a class="button" id="projects" href="projects.html">Projects</a>
-                    <a class="button" id="practices" href="practices.html">Practices</a>
+                <!-- Input Field -->
+                <input 
+                    type="text"
+                    id="new-task-input"
+                    placeholder="Enter Freelance Job....." />
+
+                <!-- Submit Button -->
+                <input 
+                    type="Submit"
+                    id="new-task-submit" 
+                    value="Add Task"/>
+            </form>
+        </header>
+
+        <main>
+
+            <!-- The List -->
+            <section class="task-list">
+
+                <!-- <hr> -->
+
+                <div id="tasks">
+
+
+                    <!-- The Action Buttons -->
+                    <button class="edit">Edit</button>
+                    <button class="crossoff">Cross Off</button>
+                    <button class="delete">Delete</button>
                 </div>
 
-                <div class="col2">
-                    <a class="button" id="classes" href="#">Classes To Take</a>
-                    <a class="button" id="freelance" href="freelance.html">Freelance</a>
-                    <a class="button" id="appointments" href="#">Appointments</a>
-                    <!-- <a class="button" href="#">Big Button</a> -->
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
+
     </div>
-  
-</div>
-    
 </body>
 </html>

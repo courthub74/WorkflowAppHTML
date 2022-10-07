@@ -62,6 +62,7 @@
         </div>
 
         <ul id="myUL">
+            <li class="items"></li>
             <!-- <li>First Thing<li>
             <li class="checked">First Thing<li>
             <li>First Thing<li>
@@ -71,14 +72,22 @@
 
         <script>
             // Create a "close" button and append it to each list item
-            var myNodelist = document.getElementsByTagName("LI");
+            var myNodelist = document.getElementsByTagName("items");
+            // create node list 
             var i;
             for (i = 0; i < myNodelist.length; i++) {
+                // iterate through the nodelist
                 var span = document.createElement("SPAN");
+                // create a <span>
                 var txt = document.createTextNode("\u00D7");
+                // creates a text node
                 span.className = "close";
+                // setting the class name of the created span to 'close'
                 span.appendChild(txt);
+                // append the text node to the span
                 myNodelist[i].appendChild(span);
+                // for every iteration of myNodelist, append the span
+                // so add to the list
             }
 
             // Click on a close button to hide the current list item
