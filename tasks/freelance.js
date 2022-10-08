@@ -25,20 +25,38 @@ window.addEventListener('load', () => {
             return;
         }
 
-        // create task input (DOM Node)
+
+
+        // TASK
+
+        // create task element (DOM Node)
         const task_el = document.createElement('div');
 
-        // add the task input to the list
+        // add the task element to the list
         task_el.classList.add('task');
 
-        // create task input element
+
+
+
+        // TASK CONTENT
+
+        // create task content element
         const task_content_el = document.createElement('div');
 
         // add the task to the list
         task_content_el.classList.add('content');
 
+        // task_content_el.innerText = task;
+
         // append the task content to the task element
         task_el.appendChild(task_content_el);
+
+        // list_el.appendChild(task_el);
+
+
+
+
+        // TASK INPUT
 
         // Create the task input element
         const task_input_el = document.createElement('input');
@@ -46,6 +64,8 @@ window.addEventListener('load', () => {
         task_input_el.classList.add('text');
         // set it's type
         task_input_el.type = 'text';
+        // get the value from input
+        task_input_el.value = task;
         // set it's attribute
         task_input_el.setAttribute('readonly', 'readonly');
 
@@ -56,5 +76,65 @@ window.addEventListener('load', () => {
         task_actions_el = document.createElement('div');
         // add task action to the list
         task_actions_el.classList.add('actions');
+
+
+
+        // ACTION BUTTONS
+
+        // EDIT
+        // create the task edit button
+        const task_edit_el = document.createElement('button');
+        // set it's class
+        task_edit_el.classList.add('edit');
+        // set the inner text
+        task_edit_el.innerText = "Edit";
+
+        // DELETE
+        // Create the task delete button
+        const task_delete_el = document.createElement('button');
+        // set it's class
+        task_delete_el.classList.add('delete');
+        // set the inner text
+        task_delete_el.innerText = "Delete";
+
+
+
+        // APPENDS OF THE ACTIONS
+
+        // edit to actions
+        task_actions_el.appendChild(task_edit_el);
+        // delete to actions
+        task_actions_el.appendChild(task_delete_el);
+
+        // actions to task 
+        task_el.appendChild(task_actions_el);
+
+        // task to list
+        list_el.appendChild(task_el);
+
+        // set's input to blank after button clicked
+        input.value = '';
+
+        // Event listener's for the Edit and Delete Buttons
+        task_edit_el.addEventListener('click', (e) => {
+            if (task_edit_el.innerText.toLowerCase() == "edit") {
+                // set innerText to save (turns into save)
+                task_edit_el.innerText = "Save";
+                // remove 'readonly' attribute
+                task_input_el.removeAttribute("readonly");
+                // set focus function (makes the element active)
+                task_input_el.focus();
+            } else {
+                // set innerText to edit
+                task_edit_el.innerText = "Edit";
+                // set Attribute back to readonly
+                task_edit_el.setAttribute("readonly", "readonly");
+            }
+        });
+
+        // Set delete action
+        task_delete_el.addEventListener('click', (e) => {
+            list_el.removeChild(task_el);
+        })
     })
 })

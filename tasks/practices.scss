@@ -4,6 +4,9 @@
 // COLORS
 $darkblue: #243F67;
 $background: #F3F9FF;
+$thegreen: #3C908B;
+$alertblue: #3292FA;
+$otherbackground: #E2F1FF;
 
 
 // WHOLE PAGE
@@ -16,6 +19,7 @@ $background: #F3F9FF;
     font-family: 'Inter', sans-serif;
     body {
         background-color: #F3F9FF;
+        background-color: $otherbackground;
     }
     .sidebar {
         background-color: $darkblue;

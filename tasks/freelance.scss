@@ -5,6 +5,10 @@
 $darkblue: #243F67;
 $background: #F3F9FF;
 $placeholder: #6B7280;
+$thegreen: #3C908B;
+$alertblue: #3292FA;
+$editwhite: #E1F5F3;
+$otherbackground: #E2F1FF;
 
 
 // WHOLE PAGE
@@ -165,6 +169,43 @@ $placeholder: #6B7280;
                             background-color: $darkblue;
                             padding: 1rem;
                             margin-bottom: 1rem;
+                            .content {
+                                .text {
+                                    font-weight: 600;
+                                }
+                                input {
+                                    background-color: $darkblue;
+                                    border: none;
+                                    color: white;
+                                    font-size: 1.5rem;
+                                }
+                            }
+                            .actions {
+                                display: flex;
+                                margin: 0 -0.5rem;
+                                button {
+                                    cursor: pointer;
+                                    margin: 0 0.5rem;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                    transition: 0.4s;
+                                }
+                                .edit {
+                                    background-color: $darkblue;
+                                    color: #11B386;
+                                    border: none;
+                                    font-size: 15px;
+                                    // padding: 1rem;
+                                }
+                                .delete {
+                                    color: $alertblue;
+                                    background-color: $darkblue;
+                                    border: none;
+                                    font-size: 15px;
+                                    // padding: 1rem;
+                                }
+                            }
                         }
                     }
                 }
