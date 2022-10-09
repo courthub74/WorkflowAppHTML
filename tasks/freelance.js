@@ -72,12 +72,18 @@ window.addEventListener('load', () => {
         // append the input to the content
         task_content_el.appendChild(task_input_el);
 
+        // console.log(task_content_el); 
+        // The whole div
+        console.log(task_input_el.value);
+        // The content of the div
+
+
+        // ACTIONS
+
         // create the task action element
         task_actions_el = document.createElement('div');
         // add task action to the list
         task_actions_el.classList.add('actions');
-
-
 
         // ACTION BUTTONS
 
@@ -149,5 +155,11 @@ window.addEventListener('load', () => {
 
         // set the cross action
         // needs to change the class of the input to that of cross
+        // start with the button
+        task_cross_el.addEventListener('click', (e) => {
+            // console.log(task_input_el.value);
+            // console.log(task_input_el.className);
+            task_input_el.classList.add("crossed");
+        })
     })
 })

@@ -147,6 +147,9 @@
 * body .wrapper main .task-list #tasks .task .content .text {
   font-weight: 600;
 }
+* body .wrapper main .task-list #tasks .task .content .crossed {
+  text-decoration: line-through;
+}
 * body .wrapper main .task-list #tasks .task .content input {
   background-color: #243F67;
   border: none;
