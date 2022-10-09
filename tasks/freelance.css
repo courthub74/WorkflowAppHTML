@@ -142,6 +142,7 @@
   background-color: #243F67;
   padding: 1rem;
   margin-bottom: 1rem;
+  transition: all 0.3s ease-in;
 }
 * body .wrapper main .task-list #tasks .task .content .text {
   font-weight: 600;

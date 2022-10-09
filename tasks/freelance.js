@@ -97,6 +97,14 @@ window.addEventListener('load', () => {
         // set the inner text
         task_delete_el.innerText = "Delete";
 
+        // CROSS
+        // create the cross button
+        const task_cross_el = document.createElement('button');
+        // set it's class
+        task_cross_el.classList.add('cross');
+        // set the inner text
+        task_cross_el.innerText = "Cross";
+
 
 
         // APPENDS OF THE ACTIONS
@@ -105,6 +113,8 @@ window.addEventListener('load', () => {
         task_actions_el.appendChild(task_edit_el);
         // delete to actions
         task_actions_el.appendChild(task_delete_el);
+        // cross to actions
+        task_actions_el.appendChild(task_cross_el);
 
         // actions to task 
         task_el.appendChild(task_actions_el);
@@ -136,5 +146,8 @@ window.addEventListener('load', () => {
         task_delete_el.addEventListener('click', (e) => {
             list_el.removeChild(task_el);
         })
+
+        // set the cross action
+        // needs to change the class of the input to that of cross
     })
 })

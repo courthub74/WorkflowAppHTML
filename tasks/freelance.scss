@@ -169,6 +169,7 @@ $otherbackground: #E2F1FF;
                             background-color: $darkblue;
                             padding: 1rem;
                             margin-bottom: 1rem;
+                            transition: all .3s ease-in;
                             .content {
                                 .text {
                                     font-weight: 600;
