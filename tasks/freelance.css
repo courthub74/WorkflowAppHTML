@@ -136,6 +136,9 @@
   border: 2px solid #243F67;
   padding: 30px;
 }
+* body .wrapper main .task-list #tasks p {
+  font-weight: lighter;
+}
 * body .wrapper main .task-list #tasks .task {
   display: flex;
   justify-content: space-between;
@@ -160,7 +163,7 @@
   font-size: 1.5rem;
 }
 * body .wrapper main .task-list #tasks .task .content input:not(:-moz-read-only) {
-  color: #3C908B;
+  color: #E1F5F3;
   -moz-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   -moz-appearance: none;
@@ -169,7 +172,7 @@
   outline: none;
 }
 * body .wrapper main .task-list #tasks .task .content input:not(:read-only) {
-  color: #3C908B;
+  color: #E1F5F3;
   transition: all 0.4s ease-in;
   -webkit-appearance: none;
      -moz-appearance: none;

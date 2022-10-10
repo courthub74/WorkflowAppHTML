@@ -164,6 +164,9 @@ $cream: #FFF7D6;
                     #tasks {
                         border: 2px solid $darkblue;
                         padding: 30px;
+                        p {
+                            font-weight: lighter;
+                        }
                         .task {
                             display: flex;
                             justify-content: space-between;
@@ -189,7 +192,7 @@ $cream: #FFF7D6;
                                     font-size: 1.5rem;
                                 }
                                 input:not(:read-only) {
-                                    color: $thegreen;
+                                    color: $editwhite;
                                     transition: all .4s ease-in;
                                     appearance: none;
                                     border: none;
