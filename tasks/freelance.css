@@ -150,11 +150,32 @@
 * body .wrapper main .task-list #tasks .task .content .crossed {
   text-decoration: line-through;
 }
+* body .wrapper main .task-list #tasks .task .content .uncrossed {
+  text-decoration: none;
+}
 * body .wrapper main .task-list #tasks .task .content input {
   background-color: #243F67;
   border: none;
   color: white;
   font-size: 1.5rem;
+}
+* body .wrapper main .task-list #tasks .task .content input:not(:-moz-read-only) {
+  color: #3C908B;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  outline: none;
+}
+* body .wrapper main .task-list #tasks .task .content input:not(:read-only) {
+  color: #3C908B;
+  transition: all 0.4s ease-in;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
 }
 * body .wrapper main .task-list #tasks .task .actions {
   display: flex;
@@ -176,6 +197,12 @@
 }
 * body .wrapper main .task-list #tasks .task .actions .delete {
   color: #3292FA;
+  background-color: #243F67;
+  border: none;
+  font-size: 15px;
+}
+* body .wrapper main .task-list #tasks .task .actions .cross {
+  color: #FFF7D6;
   background-color: #243F67;
   border: none;
   font-size: 15px;

@@ -157,9 +157,30 @@ window.addEventListener('load', () => {
         // needs to change the class of the input to that of cross
         // start with the button
         task_cross_el.addEventListener('click', (e) => {
-            // console.log(task_input_el.value);
-            // console.log(task_input_el.className);
-            task_input_el.classList.add("crossed");
+            // let cross = task_cross_el.innerText;
+            // console.log(cross);
+            if (task_cross_el.innerText === "CROSS"){
+                // if the buttons texts says 'Cross'
+                task_input_el.classList.add("crossed");
+                // set the input's class to crossed
+                task_cross_el.innerText = "UNCROSS";
+                // set the button innertext
+                task_edit_el.remove('button')
+                // remove the edit button
+            } else if (task_cross_el.innerText === "UNCROSS") {
+                console.log("uncrossed");
+                task_input_el.classList.add("uncrossed");
+                task_cross_el.innerText = "CROSS";
+                // create the task edit button
+                task_edit_el.document.createElement('button');
+                // const task_edit_el = document.createElement('button');
+                // set it's class
+                task_edit_el.classList.add('edit');
+                // set the inner text
+                task_edit_el.innerText = "Edit";
+            }
         })
+
+        // NEXT toggle back the uncross and add back the edit button
     })
 })
