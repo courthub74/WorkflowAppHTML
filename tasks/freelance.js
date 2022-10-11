@@ -165,19 +165,17 @@ window.addEventListener('load', () => {
                 // set the input's class to crossed
                 task_cross_el.innerText = "UNCROSS";
                 // set the button innertext
-                task_edit_el.remove('button')
+                // task_edit_el.remove('button')
+                // hide the button element
+                task_edit_el.style.display = 'none';
                 // remove the edit button
             } else if (task_cross_el.innerText === "UNCROSS") {
-                console.log("uncrossed");
-                task_input_el.classList.add("uncrossed");
+                // remove the cross css
+                task_input_el.classList.remove("crossed");
+                // change the text of the button
                 task_cross_el.innerText = "CROSS";
-                // create the task edit button
-                task_edit_el.document.createElement('button');
-                // const task_edit_el = document.createElement('button');
-                // set it's class
-                task_edit_el.classList.add('edit');
-                // set the inner text
-                task_edit_el.innerText = "Edit";
+                // bring the button back
+                task_edit_el.style.display = 'block';
             }
         })
 

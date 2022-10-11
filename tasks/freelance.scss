@@ -171,6 +171,7 @@ $cream: #FFF7D6;
                             display: flex;
                             justify-content: space-between;
                             background-color: $darkblue;
+                            // background-color: red;
                             padding: 1rem;
                             margin-bottom: 1rem;
                             transition: all .3s ease-in;
@@ -190,6 +191,7 @@ $cream: #FFF7D6;
                                     border: none;
                                     color: white;
                                     font-size: 1.5rem;
+                                    width: 100%;
                                 }
                                 input:not(:read-only) {
                                     color: $editwhite;
