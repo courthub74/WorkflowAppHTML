@@ -1,3 +1,4 @@
+
 // Load the Window
 window.addEventListener('load', () => {
     // Once the page is loaded
@@ -177,8 +178,10 @@ window.addEventListener('load', () => {
                 // bring the button back
                 task_edit_el.style.display = 'block';
             }
+           
         })
-
+        console.log(firebase);
         // NEXT toggle back the uncross and add back the edit button
     })
+    
 })
