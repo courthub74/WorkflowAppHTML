@@ -180,7 +180,6 @@ window.addEventListener('load', () => {
             }
            
         })
-        console.log(firebase);
         // NEXT toggle back the uncross and add back the edit button
     })
     

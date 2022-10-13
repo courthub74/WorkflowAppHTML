@@ -97,9 +97,32 @@
 * body .pagestuff .loginarea .login ::placeholder {
   color: whitesmoke;
 }
+* body .pagestuff .loginarea .login .googlelogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+* body .pagestuff .loginarea .login .googlelogin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #243F67;
+  width: 300px;
+  height: 30px;
+}
+* body .pagestuff .loginarea .login .googlelogin button a {
+  font-weight: 600;
+  padding-right: 5px;
+  text-decoration: none;
+  color: #243F67;
+}
 * body .pagestuff .loginarea .loginbutton {
   align-self: center;
   padding-top: 50px;
+  padding-bottom: 60px;
 }
 * body .pagestuff .loginarea .loginbutton button {
   background-color: white;

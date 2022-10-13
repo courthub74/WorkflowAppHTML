@@ -85,6 +85,7 @@ $background: #F3F9FF;
                     flex-direction: column;
                     gap: 20px;
                     padding: 51px;
+                    // background-color: red;
                     p {
                         font-size: 3vh;
                         text-align: left;
@@ -101,11 +102,36 @@ $background: #F3F9FF;
                     ::placeholder {
                         color: whitesmoke;
                     }
+                    .googlelogin {
+                        // background-color: red;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 10px;
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px;
+                            background-color: #F5F5F5;
+                            border: 1px solid $darkblue;
+                            width: 300px;
+                            height: 30px;
+                            a {
+                                font-weight: 600;
+                                padding-right: 5px;
+                                text-decoration: none;
+                                color: $darkblue;
+                            }
+                        }
+                    }
                 }
                 .loginbutton {
                     // border: 1px green solid;
                     align-self: center;
                     padding-top: 50px;
+                    padding-bottom: 60px;
+                    // background-color: green;
                     button {
                         background-color: white;
                         border: $darkblue 2px solid;
