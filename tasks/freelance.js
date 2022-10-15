@@ -218,9 +218,6 @@ function submitForm(e) {
     // test print in console the value added
     console.log(task);
 
-    // reset the form
-    // document.getElementById("new-task-form").reset();
-
     // save to database
     saveMessages(task);
 }
@@ -238,3 +235,5 @@ const saveMessages = (task) => {
 const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
+
+// NOW YOU NEED TO DISPLAY THE DB TO THE PAGE
