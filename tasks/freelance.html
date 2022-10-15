@@ -87,10 +87,11 @@
             <section class="task-list">
                 <p>the list:</p>
 
-                <!-- <hr> -->
 
                 <div id="tasks">
-                    <!-- <p>the list:</p> -->
+
+                    <!-- Created in the DOM -->
+                    <!-- <input class="text" id="task"/> -->
 
 
                     <!-- The Action Buttons -->
@@ -101,6 +102,53 @@
 
             </section>
         </main>
+
+   
+       <!-- FIREBASE SOURCED -->
+       <!-- <script type="module">
+            // Import the functions you need from the SDKs you need
+            // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+            // var firebase = "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
+                authDomain: "workflowapp-c191d.firebaseapp.com",
+                databaseURL: "https://workflowapp-c191d-default-rtdb.firebaseio.com",
+                projectId: "workflowapp-c191d",
+                storageBucket: "workflowapp-c191d.appspot.com",
+                messagingSenderId: "205004352373",
+                appId: "1:205004352373:web:89d233c2cdc4e4ccbf413c"
+            };
+
+           
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+
+                // reference your database
+                var taskInput = firebase.database().ref("task");
+
+                document.getElementById("task").addEventListener("submit", submitTask);
+
+                function submitTask(e) {
+                    e.preventDefault();
+
+                    var task = getElementVal("task");
+
+                    console.log(taskInput);
+
+                    // create the get element value function
+                    const getElementVal = (id) => {
+                        return document.getElementById(id).value;
+                    }
+                }
+           
+        </script> -->
+
+        <!-- JS SOURCED -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
         <script src="freelance.js"></script>
 

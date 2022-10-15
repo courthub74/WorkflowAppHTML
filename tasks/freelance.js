@@ -63,6 +63,8 @@ window.addEventListener('load', () => {
         const task_input_el = document.createElement('input');
         // set it's class
         task_input_el.classList.add('text');
+        // set it's ID
+        task_input_el.setAttribute("id", "task");
         // set it's type
         task_input_el.type = 'text';
         // get the value from input
@@ -75,7 +77,7 @@ window.addEventListener('load', () => {
 
         // console.log(task_content_el); 
         // The whole div
-        console.log(task_input_el.value);
+        // console.log(task_input_el.value);
         // The content of the div
 
 
@@ -184,3 +186,55 @@ window.addEventListener('load', () => {
     })
     
 })
+
+// config firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
+    authDomain: "workflowapp-c191d.firebaseapp.com",
+    databaseURL: "https://workflowapp-c191d-default-rtdb.firebaseio.com",
+    projectId: "workflowapp-c191d",
+    storageBucket: "workflowapp-c191d.appspot.com",
+    messagingSenderId: "205004352373",
+    appId: "1:205004352373:web:89d233c2cdc4e4ccbf413c"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// reference your database (id of the form)
+var freelanceFormDB = firebase.database().ref("new-task-form")
+
+// Event Listener to submit button
+document.getElementById("new-task-form").addEventListener("submit", submitForm);
+
+// create the submit form function called above
+function submitForm(e) {
+    // keeps page from refreshing
+    e.preventDefault();
+
+    // get the value of the task entered
+    var task = getElementVal("new-task-input");
+
+    // test print in console the value added
+    console.log(task);
+
+    // reset the form
+    // document.getElementById("new-task-form").reset();
+
+    // save to database
+    saveMessages(task);
+}
+
+// NOW save the messages to the database
+const saveMessages = (task) => {
+    var newFreelance = freelanceFormDB.push();
+
+    newFreelance.set({
+        task: task,
+    });
+};
+
+// getElement Value
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+}
