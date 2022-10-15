@@ -237,3 +237,5 @@ const getElementVal = (id) => {
 }
 
 // NOW YOU NEED TO DISPLAY THE DB TO THE PAGE
+// Map thru items added
+// 
