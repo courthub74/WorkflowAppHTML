@@ -265,8 +265,15 @@ function getItems() {
 // which loops through every single item
 
 function generateItems(items) {
+    // let itemsHTML = "";
     // items.forEach((item) => {
         // console.log(item);
+        // itemsHTML += `
+        // (TYPE IN THE HTML OF THE TODO INPUT DIV)
+        // `   (STRING LITERAL)
+
+        // NOW within the output display render the data with
+            // ${item.text}  'text' might be diff in your case
     // })
 }
 
