@@ -241,3 +241,33 @@ const getElementVal = (id) => {
 // GETS items added 
 // iterates through items added 
 // Displays items added
+
+function getItems() {
+    // the collection (form) .onSnapshot(socket)
+    // loop through the snapshot
+    // first console log the snapshot to see what ya got
+
+    // let items = [];
+    // snapshot.docs.forEach((doc) => {
+        // items.push(doc.data())
+    // })
+    // console.log(items);
+}
+
+// next you need to get the ID
+// SO items.push({
+    // id: doc.id,
+    // ...doc.data()
+    // ABOVE is a spread operator
+// });
+
+// NOW make a new function to generate items
+// which loops through every single item
+
+function generateItems(items) {
+    // items.forEach((item) => {
+        // console.log(item);
+    // })
+}
+
+getItems();
