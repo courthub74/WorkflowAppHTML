@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     // Once the page is loaded
     // Create the form element added to the page using the id for the form
     const form = document.querySelector("#new-task-form");
-    // Create the input element that's entered
+    // set a variable that retrieves the input element that's entered
     const input = document.querySelector("#new-task-input");
     // Create the list or tasks element
     const list_el = document.querySelector("#tasks");
@@ -201,8 +201,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// reference your database (id of the form)
-var freelanceFormDB = firebase.database().ref("new-task-form")
+// create the reference point of your database
+var freelanceFormDB = firebase.database().ref("freelance")
 
 // Event Listener to submit button
 document.getElementById("new-task-form").addEventListener("submit", submitForm);
@@ -216,7 +216,7 @@ function submitForm(e) {
     var task = getElementVal("new-task-input");
 
     // test print in console the value added
-    console.log(task);
+    // console.log(task);
 
     // save to database
     saveMessages(task);
@@ -242,39 +242,52 @@ const getElementVal = (id) => {
 // iterates through items added 
 // Displays items added
 
-function getItems() {
-    // the collection (form) .onSnapshot(socket)
-    // loop through the snapshot
-    // first console log the snapshot to see what ya got
+// create the reference point
+// var freelanceFormDB = firebase.database().ref("freelance");
 
-    // let items = [];
-    // snapshot.docs.forEach((doc) => {
-        // items.push(doc.data())
-    // })
-    // console.log(items);
+// utilize the on function
+freelanceFormDB.on("value", function(snapshot) {
+    // set a variable for the snapshot value
+    var data = snapshot.val();
+    console.log(data);
+    // loop through the snapshot value
+    for(let i in data){
+        console.log(data[i]);
+    }
+});
+
+
+
+// The actual way to translate this it works now try it on the same page
+
+/**
+ *   // Reference the Database
+  var ref = database.ref('tasks');
+  console.log(ref);
+  ref.on('value', gotData, errData);
+
+  function gotData(data) {
+
+    // to remove the tasks
+    // var taskslist = selectAll('#taskslist');
+    // for (var i = 0; i < taskslist.length; i++) {
+    //     taskslist[i].remove();
+    // }
+
+    
+    console.log(data.val());
+    // set variable to get the value of each task
+    var tasks = data.val();
+    // set variable to get the keys of each task
+    var keys = Object.keys(tasks);
+    // test print the keys
+    // console.log(keys);
+    // iterate through everything
+    for(let i in tasks){
+        console.log(tasks[i]);
+        document.querySelector('#taskslist').innerHTML +=`
+        <div>${tasks[i]}</div>
+      `
+    }
 }
-
-// next you need to get the ID
-// SO items.push({
-    // id: doc.id,
-    // ...doc.data()
-    // ABOVE is a spread operator
-// });
-
-// NOW make a new function to generate items
-// which loops through every single item
-
-function generateItems(items) {
-    // let itemsHTML = "";
-    // items.forEach((item) => {
-        // console.log(item);
-        // itemsHTML += `
-        // (TYPE IN THE HTML OF THE TODO INPUT DIV)
-        // `   (STRING LITERAL)
-
-        // NOW within the output display render the data with
-            // ${item.text}  'text' might be diff in your case
-    // })
-}
-
-getItems();
+ */
