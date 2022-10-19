@@ -3,7 +3,9 @@
 window.addEventListener('load', () => {
     // Once the page is loaded
     // Create the form element added to the page using the id for the form
+        // OR the actual list or p element
     const form = document.querySelector("#new-task-form");
+        // TRY CREATING A BASIC LI OR P ELEMENT INSTEAD
     // set a variable that retrieves the input element that's entered
     const input = document.querySelector("#new-task-input");
     // Create the list or tasks element
@@ -233,6 +235,7 @@ const saveMessages = (task) => {
 
 // getElement Value
 const getElementVal = (id) => {
+    console.log(id + "The ID");
     return document.getElementById(id).value;
 }
 
@@ -245,49 +248,88 @@ const getElementVal = (id) => {
 // create the reference point
 // var freelanceFormDB = firebase.database().ref("freelance");
 
-// utilize the on function
-freelanceFormDB.on("value", function(snapshot) {
-    // set a variable for the snapshot value
-    var data = snapshot.val();
-    console.log(data);
-    // loop through the snapshot value
-    for(let i in data){
-        console.log(data[i]);
+// test print the db object
+// console.log(freelanceFormDB);
+
+// reference for retrieval
+// define database
+database = firebase.database();
+var ref = database.ref('freelance');
+console.log(ref);
+ref.on('value', getData, getErr)
+
+// utilize the on function (adopts to changes)
+// freelanceFormDB.on('value', getData, getErr);
+
+// getData function 
+function getData(data) {
+    console.log(data.val());
+    // set variable to get the value of each task (or node)
+    var tasks = data.val();
+    // set variable to get the keys of each task
+    var keys = Object.keys(tasks);
+    // test print the keys
+    console.log(keys);
+    // iterate through all of the tasks
+    for(let i in tasks){
+        var freelances = tasks[i];
+        console.log(freelances);
+        // create a new element
+        // This is where you have to mesh with previous code
+            // test with below first
+        document.querySelector("#tasks").innerHTML += `
+            <div>${freelances}</div>
+        `
     }
-});
+}      
+    
+  
+// getErr function
+function getErr(err){
+    console.log(err);
+}
+
+// utilize the on function
+// freelanceFormDB.on("value", function(snapshot) {
+//     // set a variable for the snapshot value
+//     var data = snapshot.val();
+//     console.log(data);
+//     // loop through the snapshot value
+//     for(let i in data){
+//         console.log(data[i]);
+//     }
+// });
 
 
 
 // The actual way to translate this it works now try it on the same page
 
-/**
- *   // Reference the Database
-  var ref = database.ref('tasks');
-  console.log(ref);
-  ref.on('value', gotData, errData);
+// Reference the Database
+//   var ref = database.ref('tasks');
+//   console.log(ref);
+//   ref.on('value', gotData, errData);
 
-  function gotData(data) {
+//   function gotData(data) {
 
-    // to remove the tasks
-    // var taskslist = selectAll('#taskslist');
-    // for (var i = 0; i < taskslist.length; i++) {
-    //     taskslist[i].remove();
-    // }
+//     // to remove the tasks
+//     // var taskslist = selectAll('#taskslist');
+//     // for (var i = 0; i < taskslist.length; i++) {
+//     //     taskslist[i].remove();
+//     // }
 
-    
-    console.log(data.val());
-    // set variable to get the value of each task
-    var tasks = data.val();
-    // set variable to get the keys of each task
-    var keys = Object.keys(tasks);
-    // test print the keys
-    // console.log(keys);
-    // iterate through everything
-    for(let i in tasks){
-        console.log(tasks[i]);
-        document.querySelector('#taskslist').innerHTML +=`
-        <div>${tasks[i]}</div>
-      `
-    }
-}
- */
+
+//     console.log(data.val());
+//     // set variable to get the value of each task
+//     var tasks = data.val();
+//     // set variable to get the keys of each task
+//     var keys = Object.keys(tasks);
+//     // test print the keys
+//     // console.log(keys);
+//     // iterate through everything
+//     for(let i in tasks){
+//         console.log(tasks[i]);
+//         document.querySelector('#taskslist').innerHTML +=`
+//         <div>${tasks[i]}</div>
+//       `
+//     }
+// }
