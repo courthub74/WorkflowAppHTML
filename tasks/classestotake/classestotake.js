@@ -63,8 +63,13 @@ function getClass(classtotake){
         console.log(classesall);
         // create the output in HTML
         document.querySelector('#tasks').innerHTML += `
-            <div>${classesall}</div>
+            <div>
+                <div class='task'><p class="content">${classesall}</p></div>
+                <div class='actions'></div>
+            </div>
         `
+        // create a div set it's class to 'content'
+        // create an element p set it's id to 'task'
     }
 }
 

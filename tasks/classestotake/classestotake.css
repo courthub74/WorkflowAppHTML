@@ -136,9 +136,6 @@
   border: 2px solid #243F67;
   padding: 30px;
 }
-* body .wrapper main .task-list #tasks p {
-  font-weight: lighter;
-}
 * body .wrapper main .task-list #tasks .task {
   display: flex;
   justify-content: space-between;
@@ -148,23 +145,23 @@
   margin-bottom: 1rem;
   transition: all 0.3s ease-in;
 }
-* body .wrapper main .task-list #tasks .task .content .text {
+* body .wrapper main .task-list #tasks .task p .content .text {
   font-weight: 600;
 }
-* body .wrapper main .task-list #tasks .task .content .crossed {
+* body .wrapper main .task-list #tasks .task p .content .crossed {
   text-decoration: line-through;
 }
-* body .wrapper main .task-list #tasks .task .content .uncrossed {
+* body .wrapper main .task-list #tasks .task p .content .uncrossed {
   text-decoration: none;
 }
-* body .wrapper main .task-list #tasks .task .content input {
+* body .wrapper main .task-list #tasks .task p .content input {
   background-color: #243F67;
   border: none;
   color: white;
   font-size: 1.5rem;
   width: 100%;
 }
-* body .wrapper main .task-list #tasks .task .content input:not(:-moz-read-only) {
+* body .wrapper main .task-list #tasks .task p .content input:not(:-moz-read-only) {
   color: #E1F5F3;
   -moz-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
@@ -173,7 +170,7 @@
   border: none;
   outline: none;
 }
-* body .wrapper main .task-list #tasks .task .content input:not(:read-only) {
+* body .wrapper main .task-list #tasks .task p .content input:not(:read-only) {
   color: #E1F5F3;
   transition: all 0.4s ease-in;
   -webkit-appearance: none;
