@@ -206,6 +206,9 @@ firebase.initializeApp(firebaseConfig);
 // create the reference point of your database
 var freelanceFormDB = firebase.database().ref("freelance")
 
+
+// TO DATABASE (WHEN YOU GET HERE JUST USE THE OTHER ONE)
+
 // Event Listener to submit button
 document.getElementById("new-task-form").addEventListener("submit", submitForm);
 
@@ -278,7 +281,7 @@ function getData(data) {
         // This is where you have to mesh with previous code
             // test with below first
         document.querySelector("#tasks").innerHTML += `
-            <div>${freelances}</div>
+            <div>${freelances.task}</div>
         `
     }
 }      
