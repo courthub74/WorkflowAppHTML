@@ -85,10 +85,10 @@
   font-weight: 400;
   margin-bottom: 1rem;
 }
-* body .wrapper .header #new-task-form {
+* body .wrapper .header #classes-form {
   display: flex;
 }
-* body .wrapper .header #new-task-input {
+* body .wrapper .header #classes-input {
   flex: 1 1 0%;
   background-color: #243F67;
   color: white;
@@ -98,20 +98,20 @@
   border: none;
   outline: none;
 }
-* body .wrapper .header #new-task-input::-moz-placeholder {
+* body .wrapper .header #classes-input::-moz-placeholder {
   color: #6B7280;
 }
-* body .wrapper .header #new-task-input:-ms-input-placeholder {
+* body .wrapper .header #classes-input:-ms-input-placeholder {
   color: #6B7280;
 }
-* body .wrapper .header #new-task-input::placeholder {
+* body .wrapper .header #classes-input::placeholder {
   color: #6B7280;
 }
-* body .wrapper .header #new-task-input:active {
+* body .wrapper .header #classes-input:active {
   color: white;
   background-color: #243F67;
 }
-* body .wrapper .header #new-task-submit {
+* body .wrapper .header #classes-submit {
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
@@ -120,7 +120,7 @@
   background: none;
   padding: 5px;
 }
-* body .wrapper .header #new-task-submit:active {
+* body .wrapper .header #classes-submit:active {
   border-radius: 10px;
 }
 * body .wrapper main {
