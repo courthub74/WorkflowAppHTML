@@ -32,7 +32,7 @@ document.querySelector("#classes-submit").addEventListener('click', () => {
 // FROM DATABASE
 
 // test print the firebase object
-console.log(firebaseClassesRef);
+// console.log(firebaseClassesRef);
 
 
 // utilize the on function 
@@ -61,15 +61,38 @@ function getClass(classtotake){
         var classesall = classes[i];
         // test print the above
         console.log(classesall);
+
+        // create the ACTIONS div
+
+
+        // create the EDIT button
+        const class_edit_button = document.createElement('button');
+        // set it's class
+        class_edit_button.classList.add('edit');
+        // set the inner text
+        class_edit_button.innerText = "EDIT";
+        // create the DELETE button
+        // create the CROSS button
+
+        // append all 3 buttons to ACTIONS div
+
+        // append the ACTIONS to TASK div
+
+        // append the TASK to THE LIST
+
         // create the output in HTML
         document.querySelector('#tasks').innerHTML += `
             <div>
-                <div class='task'><p class="content">${classesall}</p></div>
-                <div class='actions'></div>
+                <div class='task'>
+                    <p id="content">${classesall}</p>
+                    <div class='actions'>
+                        
+                    </div>
+                </div>
             </div>
         `
-        // create a div set it's class to 'content'
-        // create an element p set it's id to 'task'
+        // Event listener's for the Edit and Delete Buttons
+        
     }
 }
 

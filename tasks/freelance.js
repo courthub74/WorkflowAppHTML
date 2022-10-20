@@ -145,6 +145,7 @@ window.addEventListener('load', () => {
                 task_input_el.removeAttribute("readonly");
                 // set focus function (makes the element active)
                 task_input_el.focus();
+                // in here lookup how to edit in firebase
             } else {
                 // set innerText to edit
                 task_edit_el.innerText = "Edit";
