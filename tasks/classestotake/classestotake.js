@@ -23,11 +23,19 @@ var firebaseClassesRef = firebase.database().ref("classes");
 document.querySelector("#classes-submit").addEventListener('click', () => {
     // set a variable to get the value of the input field
     const classneed = document.getElementById('classes-input').value;
+    // Error handling
+    if (!classneed) {
+        alert("Please enter your freelance job");
+        return;
+    }
     // push the value to the firebase reference point
     firebaseClassesRef.push(classneed);
     // test print the input
     // console.log(classneed);
+    
 });
+
+
 
 // FROM DATABASE
 
@@ -62,17 +70,43 @@ function getClass(classtotake){
         // test print the above
         console.log(classesall);
 
+        // CREATING THE LIST 
+            // FIRST you have to set up the main container on the HTML
+                // in this case it's called 'tasks' like your home page
+
+        // create the CLASSES div
+        
+
+        // // set the CLASSES div element
+        
+
+        // // create the CLASSES CONTENT div
+       
+
+        // // set the CLASSES CONTENT class
+        
+
+        // // append CLASSES CONTENT to CLASSES element
+        
+
+        // // CLASSES INPUT (what was entered into the task input)
+
+        // // NOW set the INPUT element for the CLASSES
+        
+
+        // console.log(classneed);
+
+        // create the CLASSES INPUT div
+
+
         // create the ACTIONS div
 
 
+        // create the ACTIONS BUTTONS div
+
+
         // create the EDIT button
-        const class_edit_button = document.createElement('button');
-        // set it's class
-        class_edit_button.classList.add('edit');
-        // set the inner text
-        class_edit_button.innerText = "EDIT";
-        // create the DELETE button
-        // create the CROSS button
+       
 
         // append all 3 buttons to ACTIONS div
 
@@ -83,15 +117,17 @@ function getClass(classtotake){
         // create the output in HTML
         document.querySelector('#tasks').innerHTML += `
             <div>
-                <div class='task'>
+                <div class='classes'>
                     <p id="content">${classesall}</p>
                     <div class='actions'>
-                        
+                        <button class="edit" id="edit">EDIT</button>
+                        <button class="delete" id="delete">DELETE</button>
+                        <button class="cross" id="cross">CROSS</button>
                     </div>
                 </div>
             </div>
         `
-        // Event listener's for the Edit and Delete Buttons
+        // Event listener's for the ACTION Buttons
         
     }
 }

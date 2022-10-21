@@ -157,6 +157,7 @@ window.addEventListener('load', () => {
         // Set delete action
         task_delete_el.addEventListener('click', (e) => {
             list_el.removeChild(task_el);
+            // for firebase you just do a remove() from firebase
         })
 
         // set the cross action
