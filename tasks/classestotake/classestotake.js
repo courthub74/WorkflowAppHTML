@@ -120,18 +120,44 @@ function getClass(classtotake){
                 <div class='classes'>
                     <p id="content">${classesall}</p>
                     <div class='actions'>
-                        <button class="edit" id="edit">EDIT</button>
+                        <button type="submit" class="edit" id="edit">EDIT</button>
                         <button class="delete" id="delete">DELETE</button>
                         <button class="cross" id="cross">CROSS</button>
                     </div>
                 </div>
             </div>
         `
-        // Event listener's for the ACTION Buttons
-        
+
+        // document.getElementById("edit").addEventListener('click', editClass)
+        //     // create the function
+        //     function editClass() {
+        //         // test print for affectiveness
+        //         console.log("editClass Activated")
+        //         // get the button element set innerText to save (turns into save)
+        //         document.getElementById("edit").innerText.toLowerCase = "save";
+        //         // remove the readonly attribute
+        //         document.getElementById("edit").removeAttribute("readonly");
+        //         // edit in firebase database
+
+        //     }
+
+        // Create the button
+        var editbutton = document.getElementById("edit");
+        console.log(editbutton);
+        console.log("editClass Activated");
     }
 }
-
 function errData(err){
     console.log(err);
 }
+
+  // NOW add the event listener to the edit button
+    //     editbutton.addEventListener('click', (e) => {
+    //         // if text says edit 
+    //         if(editbutton.innerText.toLowerCase() == "edit") {
+    //             // change the edit to save
+    //             editbutton.innerText = "save";
+    //             // test print the edit button
+    //             console.log("edit button pressed");
+    //         }      
+    // }   
