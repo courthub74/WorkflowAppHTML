@@ -147,6 +147,8 @@ function getClass(classtotake){
         console.log("editClass Activated");
 
         // THINGS TO DO HERE
+        // iterate through all buttons
+
         // NOW add the event listener to the edit button
         editbutton.addEventListener('click', (e) => {
             if (editbutton.innerText.toLowerCase() == "edit") {
@@ -155,7 +157,8 @@ function getClass(classtotake){
                 // test print the edit button
                 console.log("edit button pressed");
                 // THINGS TO DO HERE
-                  // set the state to write upon click 
+                  // set the state to write upon click
+                  // program the change into firebase 
             } else {
                 // if text says save
                 if (editbutton.innerText.toLowerCase() == "save") {
