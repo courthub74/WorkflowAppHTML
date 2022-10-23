@@ -141,29 +141,33 @@ function getClass(classtotake){
 
         //     }
 
-        // Create the button
-        var editbutton = document.getElementById("edit");
-        console.log(editbutton);
-        console.log("editClass Activated");
+        // iterate through all buttons up here
 
+        // Create the button
+        let editbuttons = document.getElementById("edit");
+        // test print the edit button
+        console.log(editbuttons);
+        // Test Array
+        // let arr = [1,2,3,4];
+        // for (let z = 0; z < arr.length; z++){
+        //     console.log(arr[z]);
+        // }
         // THINGS TO DO HERE
         // iterate through all buttons
-        // for loop
-        for (var b = 0; b < editbutton.length; b++){
         // NOW add the event listener to the edit button
-        editbutton[b].addEventListener('click', (e) => {
-            if (editbutton.innerText.toLowerCase() == "edit") {
+        editbuttons.addEventListener('click', (e) => {
+            if (editbuttons.innerText.toLowerCase() == "edit") {
                 // change the text to save
-                editbutton.innerText = "save";
+                editbuttons.innerText = "save";
                 // test print the edit button
                 console.log("edit button pressed");
                 // THINGS TO DO HERE
-                  // set the state to write upon click 
+                // set the state to write upon click 
             } else {
                 // if text says save
-                if (editbutton.innerText.toLowerCase() == "save") {
+                if (editbuttons.innerText.toLowerCase() == "save") {
                     // change the text back to edit
-                    editbutton.innerText = "edit";
+                    editbuttons.innerText = "edit";
                     // test print this
                     console.log("save button pressed");
                 // THINGS TO DO HERE
@@ -172,30 +176,29 @@ function getClass(classtotake){
                 }
             }
         })
-    }
 
         // NOW add the event listener to the edit button
-        editbutton.addEventListener('click', (e) => {
-            if (editbutton.innerText.toLowerCase() == "edit") {
-                // change the text to save
-                editbutton.innerText = "save";
-                // test print the edit button
-                console.log("edit button pressed");
-                // THINGS TO DO HERE
-                  // set the state to write upon click 
-            } else {
-                // if text says save
-                if (editbutton.innerText.toLowerCase() == "save") {
-                    // change the text back to edit
-                    editbutton.innerText = "edit";
-                    // test print this
-                    console.log("save button pressed");
-                // THINGS TO DO HERE
-                    // set the state to readonly upon click 
-                    // program the change into firebase 
-                }
-            }
-        });
+        // editbutton.addEventListener('click', (e) => {
+        //     if (editbutton.innerText.toLowerCase() == "edit") {
+        //         // change the text to save
+        //         editbutton.innerText = "save";
+        //         // test print the edit button
+        //         console.log("edit button pressed");
+        //         // THINGS TO DO HERE
+        //           // set the state to write upon click 
+        //     } else {
+        //         // if text says save
+        //         if (editbutton.innerText.toLowerCase() == "save") {
+        //             // change the text back to edit
+        //             editbutton.innerText = "edit";
+        //             // test print this
+        //             console.log("save button pressed");
+        //         // THINGS TO DO HERE
+        //             // set the state to readonly upon click 
+        //             // program the change into firebase 
+        //         }
+        //     }
+        // });
     }
 }
 function errData(err){
