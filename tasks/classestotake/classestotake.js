@@ -146,14 +146,15 @@ function getClass(classtotake){
         // Create the button
         let editbuttons = document.getElementById("edit");
         // test print the edit button
-        console.log(editbuttons);
-        // Test Array
-        // let arr = [1,2,3,4];
-        // for (let z = 0; z < arr.length; z++){
-        //     console.log(arr[z]);
-        // }
+        // console.log(editbuttons);
+
         // THINGS TO DO HERE
         // iterate through all buttons
+        for (let i = 0; i < editbuttons; i++){
+            var editbuttonloop = editbuttons[i];
+            console.log(editbuttonloop);
+        }
+
         // NOW add the event listener to the edit button
         editbuttons.addEventListener('click', (e) => {
             if (editbuttons.innerText.toLowerCase() == "edit") {
