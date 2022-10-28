@@ -128,6 +128,10 @@ function getClass(classtotake){
             </div>
         `
 
+        // NOW set the functionality of the action buttons
+
+        // EDIT BUTTON
+
         // query the edit buttons
         let editbuttons = document.querySelectorAll("#edit");
 
@@ -162,8 +166,21 @@ function getClass(classtotake){
                         // program the change into firebase 
                     }
                 }
-            })
+            });
         }
+
+        // DELETE BUTTON
+
+        // query the delete buttons
+        // iterate through the delete buttons
+        // addEventListener to them
+        // use .remove()
+        // also .remove() from firebase
+
+
+        // CROSS BUTTON
+
+        // query the cross buttons
     }
 };
 
