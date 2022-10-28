@@ -153,6 +153,9 @@ $cream: #FFF7D6;
                     border-radius: 10px;
                 }
             }
+
+
+            // PAGE BODY
             main {
                 flex: 1 1 0%;
                 // background-color: aqua;
@@ -164,13 +167,11 @@ $cream: #FFF7D6;
                     #tasks {
                         border: 2px solid $darkblue;
                         padding: 30px;
-                        p {
-                            font-weight: lighter;
-                        }
-                        .task {
+                        .freelances {
                             display: flex;
                             justify-content: space-between;
                             background-color: $darkblue;
+                            color: white;
                             // background-color: red;
                             padding: 1rem;
                             margin-bottom: 1rem;

@@ -278,13 +278,29 @@ function getData(data) {
     // iterate through all of the tasks
     for(let i in tasks){
         var freelances = tasks[i];
-        console.log(freelances);
+        // console.log(freelances);
         // create a new element
         // This is where you have to mesh with previous code
             // test with below first
         document.querySelector("#tasks").innerHTML += `
-            <div>${freelances.task}</div>
+            <div>
+                <div class='freelances'>
+                    <p id="content">${freelances.task}</p>
+                    <div class='actions'>
+                        <button type="submit" class="edit" id="edit">EDIT</button>
+                        <button class="delete" id="delete">DELETE</button>
+                        <button class="cross" id="cross">CROSS</button>
+                    </div>
+                </div>
+            </div>
         `
+
+        // NOW set the functionality of the action buttons
+
+        // EDIT BUTTON
+
+        // query the edit buttons
+        
     }
 }      
     
