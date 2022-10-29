@@ -23,6 +23,7 @@ var firebaseClassesRef = firebase.database().ref("classes");
 document.querySelector("#classes-submit").addEventListener('click', () => {
     // set a variable to get the value of the input field
     const classneed = document.getElementById('classes-input').value;
+
     // Error handling
     if (!classneed) {
         alert("Please enter your freelance job");
@@ -32,7 +33,6 @@ document.querySelector("#classes-submit").addEventListener('click', () => {
     firebaseClassesRef.push(classneed);
     // test print the input
     // console.log(classneed);
-    
 });
 
 

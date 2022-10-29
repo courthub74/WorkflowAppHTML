@@ -300,7 +300,45 @@ function getData(data) {
         // EDIT BUTTON
 
         // query the edit buttons
-        
+        let editbuttons = document.querySelectorAll("#edit");
+
+        // iterate through all the edit buttons
+        for (i = 0; i < editbuttons.length; i++){
+            // set variable for editbuttons[i]
+            let alleditbuttons = editbuttons[i];
+            // test print the edit button text
+            console.log(alleditbuttons.innerText);
+            // NOW lets addEventListener upon click
+            alleditbuttons.addEventListener('click', function(){
+                // test print
+                console.log("edit button pressed");
+                // if statement checks the innerTEXT
+                if (alleditbuttons.innerText.toLowerCase() == 'edit'){
+                    // change innerText to save
+                    alleditbuttons.innerText = 'save';
+                    // THINGS TO DO HERE
+                        // set the state to write upon click 
+                            // from readonly to write
+                    // FIRST get the input by ID
+                    let freelanceinput = document.querySelectorAll("#content");
+                    // test print 
+                    // FIRST you have to pinpoint the one you want within the iterations
+                    // NOW set it to readOnly
+                } else {
+                    // if text says save
+                    // check innerTEXT again
+                    if (alleditbuttons.innerText.toLowerCase() == 'save'){
+                        // change innerText back to edit
+                        alleditbuttons.innerText = 'edit';
+                        // test print
+                        console.log("save button pressed");
+                        // THINGS TO DO HERE
+                        // set the state to readonly upon click 
+                        // program the change into firebase 
+                    }
+                }
+            });
+        }
     }
 }      
     
