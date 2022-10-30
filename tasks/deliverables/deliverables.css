@@ -9,6 +9,9 @@
 }
 * body {
   background-color: #F3F9FF;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 * .sidebar {
   background-color: #243F67;
@@ -70,46 +73,67 @@
 * .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
-* .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 150px;
-  padding-top: 100px;
-  height: 100vh;
-}
 * .wrapper .header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+* .wrapper .header h1 {
+  font-size: 2.5rem;
+  color: #243F67;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+* .wrapper .header #deliverables-form {
   display: flex;
+}
+* .wrapper .header #deliverables-input {
+  flex: 1 1 0%;
+  background-color: #243F67;
+  color: white;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+}
+* .wrapper .header #deliverables-input::-moz-placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #deliverables-input:-ms-input-placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #deliverables-input::placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #deliverables-input:active {
   color: white;
   background-color: #243F67;
-  padding: 40px;
-  width: 1000px;
-  height: 110px;
 }
-* .wrapper .header p {
-  font-size: 2vh;
-  padding-right: 20px;
-}
-* .wrapper .header input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 50%;
-  height: 30%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-  height: 40px;
-}
-* .wrapper .header .addBtn {
-  padding-bottom: 20px;
-  padding-top: 20px;
-  width: 25%;
-  height: 20px;
-  background: #d9d9d9;
-  color: #243F67;
-  text-align: center;
-  font-size: 16px;
+* .wrapper .header #deliverables-submit {
+  font-size: 1.25rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  color: #243F67;
+  border: #243F67 2px solid;
+  background: none;
+  text-align: center;
+  width: 175px;
+}
+* .wrapper .header #deliverables-submit:active {
+  border-radius: 10px;
+}
+* .wrapper main {
+  flex: 1 1 0%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+* .wrapper main .deliverables-list {
+  padding: 1rem;
+}
+* .wrapper main #deliverables {
+  border: 2px solid #243F67;
+  padding: 30px;
 }/*# sourceMappingURL=deliverables.css.map */

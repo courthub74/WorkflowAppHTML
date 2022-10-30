@@ -19,3 +19,17 @@ var freelanceFormDB = firebase.database().ref("freelance");
 
 // TO DATABASE
 // Event Listener to submit button(get the submit button ID)
+document.querySelector("#new-task-submit").addEventListener('click', () => {
+    // set a variable to get the value of the input field
+    const freelanceinput = document.getElementById('new-task-input');
+
+    // Error handling 
+    if (!freelanceinput){
+        alert("Please enter your freelance job");
+        return;
+    }
+    // push the value to the firebase reference point
+    freelanceFormDB.push(freelanceinput);
+    // test print the input
+    console.log(freelanceinput);
+});

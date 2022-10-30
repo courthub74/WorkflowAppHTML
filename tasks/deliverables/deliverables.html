@@ -17,38 +17,38 @@
         <!-- Sidebar Header -->
         <a href="../homepage/home.html">
             <h2>Workflow Machine</h2>
-            <img src="../img/white_logo_transparent_background.png" alt="logo">
+            <img src="/img/white_logo_transparent_background.png" alt="logo">
         </a>
     </div>
     <!-- Menu Items -->
     <div class="menu">
         <ul>
-            <li><a href="../calendar/calendar.html">
-                <span class="icon"><img src="../img/bxs_calendar.png" alt="calendar"></span>
+            <li><a href="/calendar/calendar.html">
+                <span class="icon"><img src="/img/bxs_calendar.png" alt="calendar"></span>
                 <span class="item">calendar</span>
             </a></li>
 
-            <li><a href="../notes/notes.html">
-                <span class="icon"><img src="../img/charm_notes-tick.png" alt="notes"></span>
+            <li><a href="/notes/notes.html">
+                <span class="icon"><img src="/img/charm_notes-tick.png" alt="notes"></span>
                 <span class="item">notes</span>
             </a></li>
 
-            <li><a href="../tasks/tasks.html">
-                <span class="icon"><img src="../img/clarity_tasks-line.png" alt="todos"></span>
+            <li><a href="/tasks/tasks.html">
+                <span class="icon"><img src="/img/clarity_tasks-line.png" alt="todos"></span>
                 <span class="item">tasks</span>
-                <span class="check"><img src="../img/languages/check.png" alt="currentpage"></span> 
+                <span class="check"><img src="/img/languages/check.png" alt="currentpage"></span> 
 
             </a></li>
 
             <li><a href="#">
-                <span class="icon"><img src="../img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
+                <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                 <span class="item"><a href="#">spreadsheet</a></span>
             </a></li>
         </ul>
     </div>
     <!-- Logout Button -->
     <div class="logoutbutton">
-        <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
+        <button class="logout"><a href="/loginpage/login.html">Logout</a></button>
     </div>
 </div>
 
@@ -57,89 +57,39 @@
 
     <div class="wrapper">
 
-        <div class="header">
-            <p>Deliverables To Complete</p>
-            <input type="text" id="myInput" placeholder="Add Deliverable here....">
-            <span onclick="newElement()" class="addBtn"><p>Add Deliverable</p></span>
-        </div>
+        <header class="header">
+            <h1>Deliverables to Complete</h1>
 
-        <ul id="myUL">
-            <li class="items"></li>
-            <!-- <li>First Thing<li>
-            <li class="checked">First Thing<li>
-            <li>First Thing<li>
-            <li>First Thing<li>
-            <li>First Thing<li> -->
-        </ul>
+            <!-- Form Field in Header -->
+            <form id="deliverables-form">
+                <!-- Input Field -->
+                <input type="text"
+                        id="deliverables-input"
+                        placeholder="Enter deliverable here...." />
+                
+                <!-- Submit Button -->
+                <input type="text"
+                        id="deliverables-submit"
+                        value="Add Deliverable"/>
+            </form>
 
-        <script>
-            // Create a "close" button and append it to each list item
-            var myNodelist = document.getElementsByTagName("items");
-            // create node list 
-            var i;
-            for (i = 0; i < myNodelist.length; i++) {
-                // iterate through the nodelist
-                var span = document.createElement("SPAN");
-                // create a <span>
-                var txt = document.createTextNode("\u00D7");
-                // creates a text node
-                span.className = "close";
-                // setting the class name of the created span to 'close'
-                span.appendChild(txt);
-                // append the text node to the span
-                myNodelist[i].appendChild(span);
-                // for every iteration of myNodelist, append the span
-                // so add to the list
-            }
+        </header>
 
-            // Click on a close button to hide the current list item
-            var close = document.getElementsByClassName("close");
-            // now for the length of 'close'
-            var i;
-            for (i = 0; i < close.length; i++) {
-                close[i].onclick = function() {
-                    var div = this.parentElement;
-                    div.style.display = "none";
-                }
-            }
+        <main>
+            <!-- The List -->
+            <section class="deliverables-list">
+                <p>the list:</p>
 
-            // Add a "checked" symbol when clicking on a list item]
-            var list = document.querySelector('#myUL');
-            list.addEventListener('click', function(ev) {
-                if (ev.target.tagName === 'LI') {
-                    ev.target.classList.toggle('checked');
-                }
-            }, false);
+                <div id="deliverables">
 
-            // Create a new list item when clicking on the "Add" button
-            function newElement() {
-                var li = document.createElement("li");
-                var inputValue = document.getElementById("myInput").value;
-                var t = document.createTextNode(inputValue);
-                li.appendChild(t);
-                if (inputValue === '') {
-                    alert("Must enter a Deliverable");
-                } else {
-                    document.getElementById("myUL").appendChild(li);
-                }
-                document.getElementById("myInput").value = "";
+                </div>
+            </section>
+        </main>
 
-                var span = document.createElement("SPAN");
-                var txt = document.createTextNode("\u00D7");
-                span.className = "close";
-                span.appendChild(txt);
-                li.appendChild(span);
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
-                for (i = 0; i < close.length; i++) {
-                    close[i].onclick = function() {
-                        var div = this.parentElement;
-                        div.style.display = "none";
-                    }
-                }
-            }
-        </script>
-
-    </div>
+        <script src="deliverables.js"></script>
+    </div>    
     
 </body>
 </html>
