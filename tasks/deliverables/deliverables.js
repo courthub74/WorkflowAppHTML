@@ -140,7 +140,7 @@ function getDeliv(deliv){
                         console.log("save button pressed");
                         // THINGS TO DO HERE
                         // query or get the #content field
-                    let delivfield = document.querySelectorAll("#content");
+                    let delivfield = document.querySelector("#content");
                     // iterate through the delivfields
                     for (j in delivfield){
                         // test print the field value
@@ -149,32 +149,25 @@ function getDeliv(deliv){
                         let delivfields = delivfield[j];
                          // remove readonly attribute
                          delivfields.setAttribute('readonly', true);
+                         // program the change into firebase
                     }
-                        // program the change into firebase
-
-                /**
-                 * // THINGS TO DO HERE
-            // set the state of the id field 'content' to write upon click 
-                // from readonly to write or readonly as false
-                
-                // query or get the #content field
-                let delivfield = document.querySelectorAll("#content");
-                // test print the first one to make sure the query is right
-                // console.log(delivfield[0].innerText);
-                // iterate through the #content
-                for (j in delivfield){
-                    // set one variable for the deliv fields
-                    let delivfields = delivfield[j];
-                    // test print
-                    console.log(delivfields);
-                    // function that removes attribute "readonly"
-                    delivfields.removeAttribute('readonly');
-                }
-                         */
                     }
                 }
             });
+
+        // DELETE BUTTON
+
+        // query the delete buttons
+        // iterate through the delete buttons
+        // addEventListener to them
+        // use .remove()
+        // also .remove() from firebase
         }
+
+        // CROSS BUTTON
+
+        // query the cross buttons
+        // add the line-through attribute to the content upon pressing
     }
 }
 
