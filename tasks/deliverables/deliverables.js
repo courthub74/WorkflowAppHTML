@@ -82,6 +82,8 @@ function getDeliv(deliv){
             </div>
         `
 
+        // set input attribute to readonly
+
         // NOW set the functionality of the action buttons
 
         // EDIT BUTTON
@@ -119,7 +121,7 @@ function getDeliv(deliv){
                         // test print
                         console.log(delivfields);
                         // function that removes attribute "readonly"
-                            // but you need to set it first
+                        
                     }
                 } else {
                     // if text says save
