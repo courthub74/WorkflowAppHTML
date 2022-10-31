@@ -66,13 +66,13 @@ function getDeliv(deliv){
         // create a variable for the delivs iteration
         var delivsall = delivs[i];
         // test print the above
-        console.log(delivsall);
+        // console.log(delivsall);
 
         // create the output in HTML
         document.querySelector('#deliverables').innerHTML += `
             <div>
                 <div class='deliverables'>
-                    <p id="content">${delivsall}</p>
+                    <p id="content" class="text">${delivsall}</p>
                     <div class='actions'>
                         <button type="submit" class="edit" id="edit">EDIT</button>
                         <button class="delete" id="delete">DELETE</button>
@@ -81,6 +81,61 @@ function getDeliv(deliv){
                 </div>
             </div>
         `
+
+        // NOW set the functionality of the action buttons
+
+        // EDIT BUTTON
+
+        // query the edit buttons
+        let editbuttons = document.querySelectorAll("#edit");
+
+        // test print
+        // console.log(editbuttons);
+
+        // iterate through all buttons
+        for (i = 0; i < editbuttons.length; i++){
+            // set a variable for editbuttons[i]
+            let alleditbuttons = editbuttons[i];
+            // test print the edit button text
+            console.log(alleditbuttons.innerText);
+            // NOW lets addEventListener upon click
+            alleditbuttons.addEventListener('click', function(){
+                // test print
+                console.log("edit button pressed");
+                if (alleditbuttons.innerText.toLowerCase() == 'edit'){
+                    // change innerTEXT to 'save'
+                    alleditbuttons.innerText = 'save';
+                    // THINGS TO DO HERE
+                        // set the state of the id field 'content' to write upon click 
+                            // from readonly to write or readonly as false
+                    // query or get the #content field
+                    let delivfield = document.querySelectorAll("#content");
+                    // test print the first one to make sure the query is right
+                    // console.log(delivfield[0].innerText);
+                    // iterate through the #content
+                    for (j in delivfield){
+                        // set one variable for the deliv fields
+                        let delivfields = delivfield[j];
+                        // test print
+                        console.log(delivfields);
+                        // function that removes attribute "readonly"
+                            // but you need to set it first
+                    }
+                } else {
+                    // if text says save
+                    // check innerTEXT again
+                    if (alleditbuttons.innerText.toLowerCase() == 'save'){
+                        // change innerText back to edit
+                        alleditbuttons.innerText = 'edit';
+                        // test print
+                        console.log("save button pressed");
+                        // THINGS TO DO HERE
+                        // set the state to readonly upon click 
+                        // program the change into firebase
+                    }
+                }
+            });
+        }
     }
 }
 

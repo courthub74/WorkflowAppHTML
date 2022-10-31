@@ -181,6 +181,7 @@ function getClass(classtotake){
         // CROSS BUTTON
 
         // query the cross buttons
+        // add the line-through attribute to the content upon pressing
     }
 };
 

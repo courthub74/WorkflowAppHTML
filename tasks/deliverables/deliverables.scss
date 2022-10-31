@@ -11,6 +11,11 @@ $editwhite: #E1F5F3;
 $otherbackground: #E2F1FF;
 $cream: #FFF7D6;
 
+// ACTION BUTTON COLORS
+$editbuttongreen: #11B386;
+$crossbuttoncream:#FFF7D6;
+$deletebuttonblue:#3292FA;
+
 // WHOLE PAGE
 * {
     list-style: none;
@@ -163,8 +168,60 @@ $cream: #FFF7D6;
             }
             #deliverables {
                 border: 2px solid $darkblue;
-                padding: 30px; 
-                
+                padding: 30px;
+                .deliverables{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: $darkblue;
+                    color: white;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    transition: all .3s ease-in;
+                    #content {
+                        background-color: green;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+                    // pops up when it is NOT read-only (for edit)
+                    #content:not(:read-only){
+                        color: $editwhite;
+                        transition: all .4s ease-in;
+                        appearance: none;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                // NOW the ACTION buttons
+                .actions {
+                    display: flex;
+                    margin: 0 -0.5rem;
+                    button {
+                        cursor: pointer;
+                        margin: 0 0.5rem;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        transition: 0.4s;
+                    }
+                    .edit {
+                        background-color: $darkblue;
+                        color: $editbuttongreen;
+                        border: none;
+                        font-size: 15px;
+                    }
+                    .delete {
+                        background-color: $darkblue;
+                        color: $deletebuttonblue;
+                        border: none;
+                        font-size: 15px; 
+                    }
+                    .cross {
+                        background-color: $darkblue;
+                        color: $crossbuttoncream;
+                        border: none;
+                        font-size: 15px;
+                    }
+                } 
             }
         }
     }
