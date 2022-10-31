@@ -148,6 +148,8 @@
 }
 * .wrapper main #deliverables .deliverables #content {
   background-color: #243F67;
+  color: white;
+  border: none;
   font-weight: bold;
   font-size: 1.5rem;
 }

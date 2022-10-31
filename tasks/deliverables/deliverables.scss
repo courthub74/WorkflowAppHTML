@@ -179,6 +179,8 @@ $deletebuttonblue:#3292FA;
                     transition: all .3s ease-in;
                     #content {
                         background-color: $darkblue;
+                        color: white;
+                        border: none;
                         font-weight: bold;
                         font-size: 1.5rem;
                     }
