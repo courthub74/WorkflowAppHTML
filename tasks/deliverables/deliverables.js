@@ -167,6 +167,7 @@ function getDeliv(deliv){
         // CROSS BUTTON
 
         // query the cross buttons
+        let crossbuttons = document.querySelectorAll("#cross");
         // add the line-through attribute to the content upon pressing
     }
 }
