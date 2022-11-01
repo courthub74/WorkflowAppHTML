@@ -129,6 +129,8 @@ function getDeliv(deliv){
                         let delivfields = delivfield[j];
                          // remove readonly attribute
                          delivfields.removeAttribute('readonly');
+                        //  set focus function
+                        delivfields.focus();
                     }
                 } else {
                     // if text says save
@@ -168,7 +170,41 @@ function getDeliv(deliv){
 
         // query the cross buttons
         let crossbuttons = document.querySelectorAll("#cross");
-        // add the line-through attribute to the content upon pressing
+        // console.log(crossbuttons);
+        // NOW loop through the cross buttons
+        for (c = 0; c < crossbuttons.length; c++){
+            // create variable for the iteration of crossbuttons
+            let allcrossbuttons = crossbuttons[c];
+            // test print
+            console.log(allcrossbuttons);
+            // NOW lets addEventListener upon click
+            allcrossbuttons.addEventListener('click', function(){
+                // if statement to check the crossbuttons innerTEXT
+                if (allcrossbuttons.innerText === "CROSS"){
+                    // test print 
+                    console.log("cross button pressed");
+                    // change the innerTEXT to crossed
+                    allcrossbuttons.innerText = "UNCROSS";
+                    // define the input field within this block
+                    let inputs = document.querySelectorAll("#content");
+                    // iterate through the inputs
+                    for (t = 0; t < inputs.length; t++){
+                        // test print
+                        console.log(inputs[t]);
+                        // set variable for inputs[t]
+                        let allinputs = inputs[t];
+                        // if input (content) is uncrossed, set it as crossed
+                        inputs[0].style.textDecoration = "line-through";
+                        // set the focus for one at a time
+                        // allinputs.focus();
+                    }
+                    
+                }
+                
+                    // add the line-through attribute to the content upon pressing 
+                    // if statement to check the status of the text decoration
+            });
+        }
     }
 }
 

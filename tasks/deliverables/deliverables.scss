@@ -183,6 +183,9 @@ $deletebuttonblue:#3292FA;
                         border: none;
                         font-weight: bold;
                         font-size: 1.5rem;
+                        .crossed {
+                            text-decoration: line-through;
+                        }
                     }
                     // pops up when it is NOT read-only (for edit)
                     #content:not(:read-only){
