@@ -194,7 +194,7 @@ function getDeliv(deliv){
                         // set variable for inputs[t]
                         let allinputs = inputs[t];
                         // if input (content) is uncrossed, set it as crossed
-                        inputs[0].style.textDecoration = "line-through";
+                        allinputs.style.textDecoration = "line-through";
                         // set the focus for one at a time
                         // allinputs.focus();
                     }
