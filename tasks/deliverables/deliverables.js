@@ -188,9 +188,21 @@ function getDeliv(deliv){
                     allcrossbuttons.innerText = "UNCROSS";
                     // get by id and then change style
                     let inputs = document.getElementById("content");
+                    // test print
+                    console.log(inputs);
+                    // prints the first one
+
+                    // NOW print them all
+                    for (t in inputs){
+                        // store in variable
+                        let allinputs = inputs[t];
+                        // test print 
+                        console.log(allinputs);
+                        // change the style on these
+                        
+                        // allinputs.style.textDecoration = 'line-through'
+                    }
                     
-                    inputs.style.textDecoration = 'line-through'
-            
                     // TEST 
                     // get the innerTEXT of inputs
                     // console.log(inputs[1].defaultValue)
