@@ -170,9 +170,7 @@ function getDeliv(deliv){
 
         // query the cross buttons
         let crossbuttons = document.querySelectorAll("#cross");
-        // querying through inputs
-        // CONTEMPLATE THE WAY YOU ARE QUERYING TO GET THE INNERHTML
-        let inputs = document.querySelectorAll("#content");
+        
         // console.log(crossbuttons);
         // NOW loop through the cross buttons
         for (c = 0; c < crossbuttons.length; c++){
@@ -188,34 +186,28 @@ function getDeliv(deliv){
                     console.log("cross button pressed");
                     // change the innerTEXT to crossed
                     allcrossbuttons.innerText = "UNCROSS";
-                    // set the input to crossed
-                    // test print
-                    console.log(inputs);
-                    // iterate through the inputs
-                    for (t = 0; t < inputs.length; t++){
-                        // store iterations in a variable
-                        let allinputs = inputs[t];
-                        // test print the inputs
-                        console.log(allinputs);
-                        // change the style of pressed one
-                        
-                    }
+                    // get by id and then change style
+                    let inputs = document.getElementById("content");
+                    
+                    inputs.style.textDecoration = 'line-through'
+            
+                    // TEST 
                     // get the innerTEXT of inputs
-                    console.log(inputs[1].defaultValue)
-                    console.log(inputs[2].defaultValue)
-                    console.log(inputs[3].defaultValue)
+                    // console.log(inputs[1].defaultValue)
+                    // console.log(inputs[2].defaultValue)
+                    // console.log(inputs[3].defaultValue)
+
+
                     // NOW set the above to be crossed off through the DOM
                     // inputs[0].defaultValue = "crossed";
 
                     // get by id and then change style
-                    document.getElementById("content").style.textDecoration = 'line-through';
+                    // document.getElementById("content").style.textDecoration = 'line-through';
 
 
                     // define the input field within this block
                     // You have to set the cross button to set the style of the 
                     // input field on the todo list
-
-
                     
                 }
                 
