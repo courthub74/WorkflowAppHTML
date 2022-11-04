@@ -205,13 +205,16 @@ function getDeliv(deliv){
                     console.log(inputs[2].defaultValue)
                     console.log(inputs[3].defaultValue)
                     // NOW set the above to be crossed off through the DOM
-                    inputs[0].defaultValue = "crossed";
+                    // inputs[0].defaultValue = "crossed";
+
+                    // get by id and then change style
+                    document.getElementById("content").style.textDecoration = 'line-through';
 
 
                     // define the input field within this block
                     // You have to set the cross button to set the style of the 
                     // input field on the todo list
-                    
+
 
                     
                 }
