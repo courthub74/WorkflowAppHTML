@@ -170,6 +170,9 @@ function getDeliv(deliv){
 
         // query the cross buttons
         let crossbuttons = document.querySelectorAll("#cross");
+        // querying through inputs
+        // CONTEMPLATE THE WAY YOU ARE QUERYING TO GET THE INNERHTML
+        let inputs = document.querySelectorAll("#content");
         // console.log(crossbuttons);
         // NOW loop through the cross buttons
         for (c = 0; c < crossbuttons.length; c++){
@@ -185,19 +188,31 @@ function getDeliv(deliv){
                     console.log("cross button pressed");
                     // change the innerTEXT to crossed
                     allcrossbuttons.innerText = "UNCROSS";
-                    // define the input field within this block
-                    let inputs = document.querySelectorAll("#content");
+                    // set the input to crossed
+                    // test print
+                    console.log(inputs);
                     // iterate through the inputs
                     for (t = 0; t < inputs.length; t++){
-                        // test print
-                        console.log(inputs[t]);
-                        // set variable for inputs[t]
+                        // store iterations in a variable
                         let allinputs = inputs[t];
-                        // if input (content) is uncrossed, set it as crossed
-                        allinputs.style.textDecoration = "line-through";
-                        // set the focus for one at a time
-                        // allinputs.focus();
+                        // test print the inputs
+                        console.log(allinputs);
+                        // change the style of pressed one
+                        
                     }
+                    // get the innerTEXT of inputs
+                    console.log(inputs[1].defaultValue)
+                    console.log(inputs[2].defaultValue)
+                    console.log(inputs[3].defaultValue)
+                    // NOW set the above to be crossed off through the DOM
+                    inputs[0].defaultValue = "crossed";
+
+
+                    // define the input field within this block
+                    // You have to set the cross button to set the style of the 
+                    // input field on the todo list
+                    
+
                     
                 }
                 
