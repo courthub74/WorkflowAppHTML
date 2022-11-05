@@ -348,6 +348,9 @@ function getErr(err){
     console.log(err);
 }
 
+// GET IT SO IT ONLY RESPONDS TO BUTTON PRESSED
+// LOCATE THE TEXT IN THE NODELIST
+
 // utilize the on function
 // freelanceFormDB.on("value", function(snapshot) {
 //     // set a variable for the snapshot value

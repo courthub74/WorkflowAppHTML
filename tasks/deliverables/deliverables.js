@@ -72,7 +72,7 @@ function getDeliv(deliv){
         document.querySelector('#deliverables').innerHTML += `
             <div>
                 <div class='deliverables'>
-                    <input type="text" id="content" class="text" value="${delivsall}" readonly="true">Hello</input>
+                    <input type="text" id="content" class="text" value="${delivsall}" readonly="true"></input>
                     <div class='actions'>
                         <button type="submit" class="edit" id="edit">EDIT</button>
                         <button class="delete" id="delete">DELETE</button>
@@ -82,15 +82,19 @@ function getDeliv(deliv){
             </div>
         `
 
-        // // query or get the #content field
-        // let delivfield = document.querySelectorAll("#content");
-        // // iterate through the delivfields
-        // for (j in delivfield){
-        //     // test print the field value
-        //     console.log(delivfield[j].value);
-        //     // create variable for the delivfield
-        //     let delivfields = delivfield[j];
-        // }
+// ALL FIELDS
+// GET IT SO IT ONLY RESPONDS TO FIELD THE BUTTON IS PRESSED IN
+
+// EDIT AND CROSS OFF
+// LOCATE THE TEXT IN THE NODELIST FOR MANIPULATION
+
+// FOR PRACCY LETS PLAY AROUND WITH THE BUTTONS IN 
+    // LOOP THROUGH THE BUTTONS
+        // ADD FEATURES TO A TEXTFIELD UPON CLICKING EACH BUTTON
+            // TEXT 1 - BUTTON 1 CHANGES IT RED
+            // TEXT 1 - BUTTON 2 CROSSES IT OFF
+            // TEXT 1 - BUTTON 3 UNDERLINES IT
+            // TEXT 1 - BUTTON 4 CHANGES IT BLUE
 
         // NOW set the functionality of the action buttons
 
@@ -127,10 +131,10 @@ function getDeliv(deliv){
                         console.log(delivfield[j].value);
                         // create variable for the delivfield
                         let delivfields = delivfield[j];
-                         // remove readonly attribute
-                         delivfields.removeAttribute('readonly');
+                        // remove readonly attribute
+                        delivfields.removeAttribute('readonly', true);
                         //  set focus function
-                        delivfields.focus();
+                        // delivfields.focus();
                     }
                 } else {
                     // if text says save
@@ -149,8 +153,8 @@ function getDeliv(deliv){
                         console.log(delivfield[j].value);
                         // create variable for the delivfield
                         let delivfields = delivfield[j];
-                         // remove readonly attribute
-                         delivfields.setAttribute('readonly', true);
+                        // remove readonly attribute
+                        delivfields.setAttribute('readonly', true);
                          // program the change into firebase
                     }
                     }
@@ -160,8 +164,20 @@ function getDeliv(deliv){
         // DELETE BUTTON
 
         // query the delete buttons
+        let deletebuttons = document.querySelectorAll("#delete");
         // iterate through the delete buttons
-        // addEventListener to them
+        for (d = 0; d < deletebuttons.length; d++){
+            // store the iterations in a variable
+            let alldeletebuttons = deletebuttons[d];
+            // test print
+            // console.log(alldeletebuttons.innerHTML);
+            // addEventListener to them
+            alldeletebuttons.addEventListener('click', function(){
+                // test print for button pressed
+                console.log("delete button pressed");
+            })
+        }
+        
         // use .remove()
         // also .remove() from firebase
         }
@@ -171,6 +187,7 @@ function getDeliv(deliv){
         // query the cross buttons
         let crossbuttons = document.querySelectorAll("#cross");
         // NOW get the inputs by id and then change style
+            // THEY ARE BEING RENDERED FROM FIREBASE
         var inputs = document.getElementsByTagName("input");
         // test print
         console.log(inputs);
