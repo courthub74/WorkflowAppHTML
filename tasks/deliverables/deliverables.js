@@ -170,14 +170,16 @@ function getDeliv(deliv){
 
         // query the cross buttons
         let crossbuttons = document.querySelectorAll("#cross");
-        
-        // console.log(crossbuttons);
+        // NOW get the inputs by id and then change style
+        var inputs = document.getElementsByTagName("input");
+        // test print
+        console.log(inputs);
         // NOW loop through the cross buttons
         for (c = 0; c < crossbuttons.length; c++){
             // create variable for the iteration of crossbuttons
             let allcrossbuttons = crossbuttons[c];
             // test print
-            console.log(allcrossbuttons);
+            // console.log(allcrossbuttons);
             // NOW lets addEventListener upon click
             allcrossbuttons.addEventListener('click', function(){
                 // if statement to check the crossbuttons innerTEXT
@@ -186,41 +188,18 @@ function getDeliv(deliv){
                     console.log("cross button pressed");
                     // change the innerTEXT to crossed
                     allcrossbuttons.innerText = "UNCROSS";
-                    // get by id and then change style
-                    let inputs = document.getElementById("content");
-                    // test print
-                    console.log(inputs);
-                    // prints the first one
-
-                    // NOW print them all
-                    for (t in inputs){
-                        // store in variable
-                        let allinputs = inputs[t];
-                        // test print 
-                        console.log(allinputs);
-                        // change the style on these
-                        
-                        // allinputs.style.textDecoration = 'line-through'
+                    // test print the inputs
+                    // console.log(inputs);
+                    // set input to cross
+                        // how do I extract the text from the input
+                } else {
+                    // if statement to check the crossbuttons innerTEXT
+                    if (allcrossbuttons.innerText === "UNCROSS"){
+                        // test print if button reclicked
+                        console.log("uncross buttton pressed");
+                        // change the innerTEXT to uncrossed
+                        allcrossbuttons.innerText = "CROSS";
                     }
-                    
-                    // TEST 
-                    // get the innerTEXT of inputs
-                    // console.log(inputs[1].defaultValue)
-                    // console.log(inputs[2].defaultValue)
-                    // console.log(inputs[3].defaultValue)
-
-
-                    // NOW set the above to be crossed off through the DOM
-                    // inputs[0].defaultValue = "crossed";
-
-                    // get by id and then change style
-                    // document.getElementById("content").style.textDecoration = 'line-through';
-
-
-                    // define the input field within this block
-                    // You have to set the cross button to set the style of the 
-                    // input field on the todo list
-                    
                 }
                 
                     // add the line-through attribute to the content upon pressing 
