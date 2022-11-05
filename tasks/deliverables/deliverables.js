@@ -72,7 +72,7 @@ function getDeliv(deliv){
         document.querySelector('#deliverables').innerHTML += `
             <div>
                 <div class='deliverables'>
-                    <input type="text" id="content" class="text" value="${delivsall}" readonly="true"></input>
+                    <input type="text" id="content" class="text" value="${delivsall}" readonly="true">Hello</input>
                     <div class='actions'>
                         <button type="submit" class="edit" id="edit">EDIT</button>
                         <button class="delete" id="delete">DELETE</button>
@@ -192,6 +192,8 @@ function getDeliv(deliv){
                     // console.log(inputs);
                     // set input to cross
                         // how do I extract the text from the input
+                        // this is coming from firebase db
+                    
                 } else {
                     // if statement to check the crossbuttons innerTEXT
                     if (allcrossbuttons.innerText === "UNCROSS"){
