@@ -88,6 +88,9 @@ function getDeliv(deliv){
 // EDIT AND CROSS OFF
 // LOCATE THE TEXT IN THE NODELIST FOR MANIPULATION
 
+// DELETE BUTTON
+// WHY DOES IT MULTIPLY BY 8 WHEN THE OTHERS DON'T HMMMM....
+
 // FOR PRACCY LETS PLAY AROUND WITH THE BUTTONS IN 
     // LOOP THROUGH THE BUTTONS
         // ADD FEATURES TO A TEXTFIELD UPON CLICKING EACH BUTTON
@@ -170,7 +173,7 @@ function getDeliv(deliv){
             // store the iterations in a variable
             let alldeletebuttons = deletebuttons[d];
             // test print
-            // console.log(alldeletebuttons.innerHTML);
+            console.log(alldeletebuttons.innerHTML);
             // addEventListener to them
             alldeletebuttons.addEventListener('click', function(){
                 // test print for button pressed
