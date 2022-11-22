@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <!-- CSS Connector -->
+    <link rel="stylesheet" href="projectstodo.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="header">
+            <!-- Sidebar Header -->
+            <a href="/homepage/home.html">
+                <h2>Workflow Machine</h2>
+                <img src="/img/white_logo_transparent_background.png" alt="logo">
+            </a>
+        </div>
+        <!-- Menu Items -->
+        <div class="menu">
+            <ul>
+                <li><a href="/calendar/calendar.html">
+                    <span class="icon"><img src="/img/bxs_calendar.png" alt="calendar"></span>
+                    <span class="item">calendar</span>
+                </a></li>
+
+                <li><a href="/notes/notes.html">
+                    <span class="icon"><img src="/img/charm_notes-tick.png" alt="notes"></span>
+                    <span class="item">notes</span>
+                </a></li>
+
+                <li><a href="/tasks/tasks.html">
+                    <span class="icon"><img src="/img/clarity_tasks-line.png" alt="todos"></span>
+                    <span class="item">tasks</span>
+                    <span class="check"><img src="/img/languages/check.png" alt="currentpage"></span> 
+
+                </a></li>
+
+                <li><a href="#">
+                    <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
+                    <span class="item">spreadsheet</span>
+                </a></li>
+            </ul>
+        </div>
+        <!-- Logout Button -->
+        <div class="logoutbutton">
+            <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
+        </div>    
+    </div>
+
+     <!-- TOP OF THE PAGE -->
+     <div class="wrapper">
+        <header class="header">
+            <h1>Projects to Complete</h1>
+
+            <!-- Form Field in Header -->
+            <form id="project-fill-form">
+                <!-- Input Field -->
+                <input 
+                    type="text"
+                    id="new-project-input"
+                    placeholder="Enter Project to be done....."/>
+                <!-- Submit Button -->
+                <input 
+                    type="submit"
+                    id="new-project-submit"
+                    value="Add Project"/>
+            </form>
+        </header>
+     </div>
+
+    <!-- BODY OF THE PAGE -->
+     <main>
+
+        <!-- The List -->
+        <section class="project-list">
+            <p>the list:</p>
+
+            <div id="projects">
+                <!-- THIS IS CREATED IN THE DOM  -->
+                <!-- CONTENT and BUTTONS go in here -->
+                <div class="project-items">
+                    <!-- CONTENT PART -->
+                    <div class="content">
+                        <input type="text"
+                               class="text"
+                               id="input"
+                               value="${Todo Item}"
+                               readonly/>
+                    </div>
+                    <!-- BUTTONS PART -->
+                    <div class="actions">
+                        <button class="edit">EDIT</button>
+                        <button class="delete">DELETE</button>
+                        <button class="cross">CROSS OFF</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+     </main>
+
+     <!-- JS Connection -->
+     <script src="projectstodo.js"></script>
+    
+</body>
+</html>
