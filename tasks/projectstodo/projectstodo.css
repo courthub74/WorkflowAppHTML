@@ -97,4 +97,50 @@
   font-size: 1.25rem;
   border: none;
   outline: none;
+}
+* .wrapper .header #new-project-input::-moz-placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #new-project-input:-ms-input-placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #new-project-input::placeholder {
+  color: #6B7280;
+}
+* .wrapper .header #new-project-input:active {
+  color: white;
+  background-color: #243F67;
+}
+* .wrapper .header #new-project-submit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #243F67;
+  border: #243F67 2px solid;
+  background: none;
+  text-align: center;
+  width: 175px;
+}
+* .wrapper .header #new-project-submit:active {
+  border-radius: 10px;
+}
+* .wrapper main {
+  flex: 1 1 0%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+* .wrapper main .project-list {
+  padding: 1rem;
+}
+* .wrapper main #projects {
+  border: 2px solid #243F67;
+  padding: 30px;
+}
+* .wrapper main #projects .project-items {
+  display: flex;
+  justify-content: space-between;
+  background-color: #243F67;
+  color: white;
+  padding: 1rem;
 }/*# sourceMappingURL=projectstodo.css.map */
