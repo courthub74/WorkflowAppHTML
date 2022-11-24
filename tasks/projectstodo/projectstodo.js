@@ -38,6 +38,7 @@ window.addEventListener('load', () => {
         const project_list_element = document.querySelector("#project-list");
 
         // NOW populate the list element upon the submit button click
+        // THIS part is the form that goes TO the database
         form.addEventListener('submit', (e) => {
 
            // keeps page from refreshing
@@ -65,5 +66,48 @@ window.addEventListener('load', () => {
 
             // NOW this is where we push the todo variable to the firebaseTodo db reference
             firebaseProjectsRef.push(project);
+            // test print the input
+            console.log(project);
         });
+
+        // THIS part is the todo list that renders FROM the database
+
+        // test print the firebase db object
+        console.log(firebaseProjectsRef);
+
+        // utilize the on function on the db reference
+        // based on value
+        // pass getProject and errProject functions
+            // getProject locates fb db
+            // errProject test for errors
+                // i.e. permissions, other blocks
+        firebaseProjectsRef.on('value', getProject, errProject);
+
+        // create the getProject function
+            // pass the arg 'projectitem'
+        function getProject(projectitem){
+            // test print the value of the arg
+            console.log(projectitem.val());
+            // store the value in a variable
+            var projects = projectitem.val();
+            // set variable to get the keys of each task
+            var keys = Object.keys(projectitem);
+            // test print the keys
+            console.log(keys);
+            // iterate through the todoitems entered
+            for(let i in projects){
+                // iterate through the todoitems entered
+                var projectsall = projects[i];
+                // test print
+                console.log(projectsall);
+
+                // start building the list elements 
+                // in the for loop for each one
+            }
+        }
+
+        // create the errTodo function
+        function errProject(err){
+            console.log(err);
+        }
 });
