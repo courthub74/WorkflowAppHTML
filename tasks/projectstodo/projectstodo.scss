@@ -154,8 +154,9 @@ $deletebuttonblue:#3292FA;
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            .project-list {
+            #project-list {
                 padding: 1rem;
+                // background-color: #11B386;
             }
             // THE DIV THAT HOLDS WHAT'S CREATED IN THE DOM
             #projects {

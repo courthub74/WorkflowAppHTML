@@ -130,7 +130,7 @@
   max-width: 800px;
   margin: 0 auto;
 }
-* .wrapper main .project-list {
+* .wrapper main #project-list {
   padding: 1rem;
 }
 * .wrapper main #projects {
