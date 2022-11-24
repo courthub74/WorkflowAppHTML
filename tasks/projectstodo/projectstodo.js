@@ -103,6 +103,40 @@ window.addEventListener('load', () => {
 
                 // start building the list elements 
                 // in the for loop for each one
+
+                // PROJECTS DIV
+
+                // create the 'project_items' div
+                const project_items = document.createElement('div');
+
+                // test print it
+                console.log(project_items);
+
+                // add the class to the div
+                project_items.classList.add('project_items');
+
+                // append the todo div to the todos-list
+                project_list_element.appendChild(project_items);
+
+                // CONTENT DIV
+
+                // create the 'content' div 
+                    // this is setup as an input that displays the output
+                const project_content_div = document.createElement('div');
+
+                // test print it
+                console.log(project_content_div);
+
+                // set the div id
+                project_content_div.setAttribute('id', 'content');
+
+                // append the content div to the todo div
+                project_items.appendChild(project_content_div);
+
+                // INPUT ELEMENT
+                    // create the input element that's going to be inside of the content
+                    // which is actually a display of the output
+                        // but you need to set as readonly so ....
             }
         }
 
