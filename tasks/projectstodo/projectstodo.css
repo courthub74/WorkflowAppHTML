@@ -143,4 +143,59 @@
   background-color: #243F67;
   color: white;
   padding: 1rem;
+}
+* .wrapper main #projects .project-items #content input {
+  background-color: #243F67;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+* .wrapper main #projects .project-items #content input:not(:-moz-read-only) {
+  color: #11B386;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  outline: none;
+}
+* .wrapper main #projects .project-items #content input:not(:read-only) {
+  color: #11B386;
+  transition: all 0.4s ease-in;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+}
+* .wrapper main #projects .project-items #actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+* .wrapper main #projects .project-items #actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+* .wrapper main #projects .project-items #actions .edit {
+  background-color: #243F67;
+  color: #11B386;
+  border: none;
+  font-size: 15px;
+}
+* .wrapper main #projects .project-items #actions .delete {
+  background-color: #243F67;
+  color: #3292FA;
+  border: none;
+  font-size: 15px;
+}
+* .wrapper main #projects .project-items #actions .cross {
+  background-color: #243F67;
+  color: #FFF7D6;
+  border: none;
+  font-size: 15px;
 }/*# sourceMappingURL=projectstodo.css.map */

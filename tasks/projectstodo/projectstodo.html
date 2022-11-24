@@ -71,7 +71,7 @@
                     value="Add Project"/>
             </form>
         </header>
-     </div>
+     
 
     <!-- BODY OF THE PAGE -->
      <main>
@@ -85,19 +85,19 @@
                 <!-- CONTENT and BUTTONS go in here -->
                 <div class="project-items">
                     <!-- CONTENT PART -->
-                    <!-- <div class="content">
+                    <div id="content">
                         <input type="text"
                                class="text"
                                id="input"
                                value="${Todo Item}"
                                readonly/>
-                    </div> -->
+                    </div>
                     <!-- BUTTONS PART -->
-                    <!-- <div class="actions">
-                        <button class="edit">EDIT</button>
-                        <button class="delete">DELETE</button>
-                        <button class="cross">CROSS OFF</button>
-                    </div> -->
+                    <div id="actions">
+                        <button class="edit">edit</button>
+                        <button class="delete">delete</button>
+                        <button class="cross">cross off</button>
+                    </div>
                 </div>
             </div>
 
@@ -105,8 +105,9 @@
 
      </main>
 
-     <!-- JS Connection -->
-     <script src="projectstodo.js"></script>
+        <!-- JS Connection -->
+        <script src="projectstodo.js"></script>
+    </div>
     
 </body>
 </html>
