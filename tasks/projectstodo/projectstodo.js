@@ -90,54 +90,83 @@ window.addEventListener('load', () => {
             console.log(projectitem.val());
             // store the value in a variable
             var projects = projectitem.val();
-            // set variable to get the keys of each task
-            var keys = Object.keys(projectitem);
-            // test print the keys
-            console.log(keys);
-            // iterate through the todoitems entered
-            for(let i in projects){
-                // iterate through the todoitems entered
-                var projectsall = projects[i];
-                // test print
-                console.log(projectsall);
+            // create an array called data 
+                // that is going to consist of the data to push to firebase
+            var data = [];
+            // NOW loop through the projects (input values) and push them into the 
+                // data array
+            Object.keys(projects).forEach(element => {
+                // test print the todo item with it's key
+                console.log('item key and text ===', element, projects[element]);
+                // NOW push the id (element-keys) and item (project)
+                    // to the data array
+                data.push({
+                    id: element,
+                    // item is value with id(key) set to the 'todo' name under the 
+                        // firebase todo db list
+                    item: projects[element]['project']
+                })
+            }); 
 
-                // start building the list elements 
-                // in the for loop for each one
+            // // start building the list elements 
+            //     // in the for loop for each one
 
-                // PROJECTS DIV
+            //     // PROJECTS DIV
 
-                // create the 'project_items' div
-                const project_items = document.createElement('div');
+            //     // create the 'project_items' div
+            //     const project_items = document.createElement('div');
 
-                // test print it
-                console.log(project_items);
+            //     // test print it
+            //     console.log(project_items);
 
-                // add the class to the div
-                project_items.classList.add('project_items');
+            //     // add the class to the div
+            //     project_items.classList.add('project_items');
 
-                // append the todo div to the todos-list
-                project_list_element.appendChild(project_items);
+            //     // append the todo div to the todos-list
+            //     project_list_element.appendChild(project_items);
 
-                // CONTENT DIV
+            //     // CONTENT DIV
 
-                // create the 'content' div 
-                    // this is setup as an input that displays the output
-                const project_content_div = document.createElement('div');
+            //     // create the 'content' div 
+            //         // this is setup as an input that displays the output
+            //     const project_content_div = document.createElement('div');
 
-                // test print it
-                console.log(project_content_div);
+            //     // test print it
+            //     console.log(project_content_div);
 
-                // set the div id
-                project_content_div.setAttribute('id', 'content');
+            //     // set the div id
+            //     project_content_div.setAttribute('id', 'content');
 
-                // append the content div to the todo div
-                project_items.appendChild(project_content_div);
+            //     // append the content div to the todo div
+            //     project_items.appendChild(project_content_div);
 
-                // INPUT ELEMENT
-                    // create the input element that's going to be inside of the content
-                    // which is actually a display of the output
-                        // but you need to set as readonly so ....
-            }
+            //     // INPUT ELEMENT
+            //         // create the input element that's going to be inside of the content
+            //         // which is actually a display of the output
+            //             // but you need to set as readonly so ....
+            //     const project_input_element = document.createElement('input');
+
+            //     // test print it
+            //     console.log(project_input_element);
+
+            //     // add it's class
+            //     project_input_element.classList.add('input');
+            //     // set it's type
+            //     project_input_element.type = "text";
+            //     // set it's id
+            //     project_input_element.id = "input";
+
+            //     // set it's value. Which is the input value 'todo' variable
+            //     // you need to redefine 'todo' in this for loop
+            //     project_input_element.value = projectsall;
+            //     // set it's style
+            //     project_input_element.style.width = "300px";
+            //     // set it's attribute
+            //     project_input_element.setAttribute('readonly', true);
+
+            //     // append the input element to the content div
+            //         // which was appended to the todos div earlier
+            //     project_content_div.appendChild(project_input_element);
         }
 
         // create the errTodo function
