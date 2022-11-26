@@ -152,9 +152,7 @@
   border: none;
   font-weight: bold;
   font-size: 1.5rem;
-}
-* .wrapper main #deliverables .deliverables #content .crossed {
-  text-decoration: line-through;
+  transition: all 0.4s ease-in;
 }
 * .wrapper main #deliverables .deliverables #content:not(:-moz-read-only) {
   color: #E1F5F3;

@@ -157,8 +157,72 @@ $deletebuttonblue:#3292FA;
             #project-list {
                 padding: 1rem;
                 // background-color: #11B386;
+                // NOW time for the block for the items of projects
                 #project_block {
                     border: 2px solid $darkblue;
+                    padding: 30px;
+                    // background-color: #11B386;
+                    // NOW time for the individual items
+                    .project_items {
+                        // background and slicing for each item
+                        background-color: $darkblue;
+                        padding: 1rem;
+                        margin-bottom: 1rem;
+                        transition: all .3s ease-in;
+                        // NOW set the content
+                        #content {
+                            // display flex and space-between for the items
+                                // on each project item (i.e. input and buttons)
+                            display: flex;
+                            justify-content: space-between;
+                            input {
+                                background-color: $darkblue;
+                                border: none;
+                                color: white;
+                                font-weight: bold;
+                                font-size: 1.2rem;
+                            }
+                            // pops up when it is NOT read-only (for edit)
+                            input:not(:read-only){
+                                color: $editbuttongreen;
+                                transition: all .4s ease-in;
+                                appearance: none;
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                        // NOW the ACTION buttons
+                        .buttons {
+                            display: flex;
+                            margin: 0 -0.5rem;
+                            button {
+                                cursor: pointer;
+                                margin: 0 0.5rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                transition: 0.4s;
+                            }
+                            .edit {
+                                background-color: $darkblue;
+                                color: $editbuttongreen;
+                                border: none;
+                                font-size: 15px;
+                            }
+                            .delete {
+                                background-color: $darkblue;
+                                color: $deletebuttonblue;
+                                border: none;
+                                font-size: 15px; 
+                            }
+                            .cross {
+                                background-color: $darkblue;
+                                color: $crossbuttoncream;
+                                border: none;
+                                font-size: 15px;
+                            }
+                        } 
+                    }
                 }
             }
 

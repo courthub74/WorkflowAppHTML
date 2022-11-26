@@ -70,7 +70,13 @@ window.addEventListener('load', () => {
             console.log(project);
         });
 
-        // THIS part is the todo list that renders FROM the database
+        // // clear the project block each time
+        // if (project_list_element){
+        //     project_list_element.innerHTML = '';;
+        // }
+        
+
+        // FROM DATABASE
 
         // test print the firebase db object
         console.log(firebaseProjectsRef);
@@ -122,16 +128,23 @@ window.addEventListener('load', () => {
             // test print keys and projects
             console.log('Keys and Projects ===',keys, projects);
             // if there is a projects-list div 
-            // then change the innerHTML of the projects-list div
-            if (document.getElementById('projects-list')){
-                document.getElementById('projects-list').innerHTML = '';
-            }
+                // then change the innerHTML of the projects-list div
+                // if (document.getElementById('projects-block')){
+                //     document.getElementById('projects-block').innerHTML = '';
+                // }
+
+                 // clear the project block each time
+                if (project_list_element){
+                    project_list_element.innerHTML = '';;
+                }
+        
             // iterate through the projectitems pushed to the data array
             for (let i = 0; i < data.length; i++){
                 // store them in a variable
                 var projectsall = data[i];
                 // test print
                 console.log('projectsall ===', projectsall);
+
 
                 // NOW we build the list elements below
                     // so each time the form is submitted 
@@ -199,6 +212,145 @@ window.addEventListener('load', () => {
                 // append the input element to the content div
                     // which was appended to the todos div earlier
                 project_content_div.appendChild(project_input_element);
+
+
+
+                // NOW FOR THE BUTTONS
+
+                // FIRST SET THE BUTTONS DIV
+
+                // BUTTONS DIV
+
+                // this is the bar of buttons (edit, delete, cross-off)
+                const project_buttons_div = document.createElement('div');
+
+                // test print
+                console.log(project_buttons_div);
+
+                // set it's class
+                project_buttons_div.classList.add('buttons');
+
+                // append the buttons div to the todos div
+                    // REMEMBER parent first and then appendChild to it
+                        // this is separate from the input on the todos div
+                project_content_div.appendChild(project_buttons_div);
+
+                // NOW to put buttons on it
+
+
+
+                // EDIT BUTTON
+
+                // create the edit button
+                const project_edit_button = document.createElement('button');
+
+                // test print
+                console.log(project_edit_button);
+
+                // set it's class
+                project_edit_button.classList.add('edit');
+
+                // set the id (for the key of the firebase item)
+                    // the id is the actual key
+                project_edit_button.setAttribute('id', projectsall.id);
+
+                // set the innerText
+                project_edit_button.innerText = "edit";
+
+                // append edit button to the buttons div
+                project_buttons_div.appendChild(project_edit_button);
+
+
+
+                // DELETE BUTTON
+
+                // create the delete button
+                const project_delete_button = document.createElement('button');
+
+                // test print
+                console.log(project_delete_button);
+
+                // set it's class
+                project_delete_button.classList.add('delete');
+
+                // set the id (for the key of the firebase item)
+                    // the id is the actual key
+                project_delete_button.setAttribute('id', projectsall.id);
+
+                // set the innerText
+                project_delete_button.innerText = "delete";
+
+                // append delete button to the buttons div
+                project_buttons_div.appendChild(project_delete_button);
+
+
+
+                // CROSS OFF BUTTON
+
+                // create the cross off button
+                const project_cross_button = document.createElement('button');
+
+                // set it's class
+                project_cross_button.classList.add('cross');
+
+                // NOTE this one doesn't need an ID 
+                    // since it's just a css change
+                        // nothing to do with the database
+
+                // set the innerText
+                project_cross_button.innerText = "cross-off";
+
+                // test print
+                console.log(project_cross_button);
+
+                // append cross button to the buttons div
+                project_buttons_div.appendChild(project_cross_button);
+
+                // EVENT LISTENER TIME
+
+                // EDIT BUTTON
+                    // this is where you:
+                        // set the innertext change on the button
+                        // toggle the readonly attribute
+                        // edit the changes in firebase
+                project_edit_button.addEventListener('click', (e) => {
+                    // store the id in a variable that is the target of event (the key)
+                    let id = e.target.id;
+                    // check the text in order to change it
+                    if (project_edit_button.innerText.toLowerCase() === "edit"){
+                        // test print text with the id
+                        console.log(project_edit_button, id);
+                        // change the innerText
+                        project_edit_button.innerText = "SAVE";
+                        // remove the readonly attribute from the input field so you can edit the field
+                        project_input_element.removeAttribute('readonly', true);
+                        // place the cursor inside the field to be edited
+                        project_input_element.focus();
+                    } else {
+                        // check the text in order to change it
+                        if (project_edit_button.innerText.toLowerCase() === "save"){
+                            // test print text with the id
+                            console.log("save button pressed", id);
+                            // change the innerText
+                            project_edit_button.innerText = "EDIT";
+                            // set the readonly attribute to the input field so you can't edit
+                            project_input_element.setAttribute('readonly', true);
+                            // NOW save the change to firebase
+                            // NOW keep the edit in firebase
+                            let updated = project_input_element.value;
+                            // test print
+                            console.log(updated, id);
+                            // test print db + updated element
+                            console.log(projects, "project/" + updated);
+                            // NOW edit in firebase
+                                // locate the firebase reference by each item id
+                                    // apply the update function
+                            firebase.database().ref(`projects/${id}`).update({
+                                projects: updated
+                            })
+                        }
+                    }
+                })
             }
             
         }
