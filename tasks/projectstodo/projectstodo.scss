@@ -157,68 +157,11 @@ $deletebuttonblue:#3292FA;
             #project-list {
                 padding: 1rem;
                 // background-color: #11B386;
-            }
-            // THE DIV THAT HOLDS WHAT'S CREATED IN THE DOM
-            #projects {
-                border: 2px solid $darkblue;
-                padding: 30px;
-                // background-color: aqua;
-                .project_items {
-                    display: flex;
-                    justify-content: space-between;
-                    background-color: $darkblue;
-                    color: white;
-                    padding: 1rem;
-                    // The entered output
-                    #content {
-                        input {
-                            background-color: $darkblue;
-                            color: white;
-                            border: none;
-                            font-weight: bold;
-                            font-size: 1.2rem;
-                        }
-                        // pops up when it is NOT read-only (for edit)
-                        input:not(:read-only){
-                            color: $editbuttongreen;
-                            transition: all .4s ease-in;
-                            appearance: none;
-                            border: none;
-                            outline: none;
-                        }
-                    }
-                    #actions {
-                        display: flex;
-                        margin: 0 -0.5rem;
-                        button {
-                            cursor: pointer;
-                            margin: 0 0.5rem;
-                            font-size: 1rem;
-                            font-weight: 400;
-                            text-transform: uppercase;
-                            transition: 0.4s;
-                        }
-                        .edit {
-                            background-color: $darkblue;
-                            color: $editbuttongreen;
-                            border: none;
-                            font-size: 15px;
-                        }
-                        .delete {
-                            background-color: $darkblue;
-                            color: $deletebuttonblue;
-                            border: none;
-                            font-size: 15px;
-                        }
-                        .cross {
-                            background-color: $darkblue;
-                            color: $crossbuttoncream;
-                            border: none;
-                            font-size: 15px;
-                        }
-                    }
+                #project_block {
+                    border: 2px solid $darkblue;
                 }
             }
+
         }
     }
 }

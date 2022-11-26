@@ -34,8 +34,8 @@ window.addEventListener('load', () => {
         const form = document.querySelector("#project-fill-form");
         // queryselect the input field
         const input = document.querySelector("#new-project-input");
-        // queryselect the output field
-        const project_list_element = document.querySelector("#project-list");
+        // queryselect the output fields field
+        const project_list_element = document.querySelector("#project_block");
 
         // NOW populate the list element upon the submit button click
         // THIS part is the form that goes TO the database
@@ -140,8 +140,10 @@ window.addEventListener('load', () => {
                 
                             // start building the list elements 
                 // in the for loop for each one
+            
 
-                // PROJECTS DIV
+                // BELOW is for EACH todo item that gets populated
+                // PROJECT-ITEMS DIV
 
                 // create the 'project_items' div
                 const project_items = document.createElement('div');
