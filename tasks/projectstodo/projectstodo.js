@@ -341,7 +341,7 @@ window.addEventListener('load', () => {
                             // test print
                             console.log(updated, id);
                             // test print db + updated element
-                            console.log(projects, "project/" + updated);
+                            console.log(projects, "projects/" + updated);
                             // NOW edit in firebase
                                 // locate the firebase reference by each item id
                                     // apply the update function
