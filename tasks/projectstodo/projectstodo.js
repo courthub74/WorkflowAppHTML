@@ -86,10 +86,19 @@ window.addEventListener('load', () => {
         // create the getProject function
             // pass the arg 'projectitem'
         function getProject(projectitem){
+            console.log('projectitem ===',projectitem);
             // test print the value of the arg
             console.log(projectitem.val());
             // store the value in a variable
             var projects = projectitem.val();
+            // test print
+            console.log('projects ===', projects);
+
+            // NOW get the keys and items entered 
+                // to push them to an array 
+                    // in order to have access to deleting and editing
+
+                    
             // create an array called data 
                 // that is going to consist of the data to push to firebase
             var data = [];
@@ -104,8 +113,9 @@ window.addEventListener('load', () => {
                     id: element,
                     // item is value with id(key) set to the 'todo' name under the 
                         // firebase todo db list
-                    item: projects[element]['project']
+                    item: projects[element]
                 })
+                console.log('data ===', data);
             }); 
             // lets set a variable to get the keys of each todo item
             var keys = Object.keys(projects);
@@ -178,7 +188,7 @@ window.addEventListener('load', () => {
 
                 // set it's value. Which is the input value 'todo' variable
                 // you need to redefine 'todo' in this for loop
-                project_input_element.value = projectsall;
+                project_input_element.value = projectsall.item;
                 // set it's style
                 project_input_element.style.width = "300px";
                 // set it's attribute
