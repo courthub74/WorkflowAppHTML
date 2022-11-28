@@ -370,7 +370,9 @@ window.addEventListener('load', () => {
                     project_list_element.removeChild(project_items);
                     // NOW to remove the data element from firebase
                     // test print the location in the db
-                    console.log(`firebasetodo/${id}`);
+                    console.log(`projects/${id}`);
+                    // NOW delete it in the firebase 
+                    firebase.database().ref(`projects/${id}`).remove();
                 });
             }
             

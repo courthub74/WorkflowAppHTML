@@ -15,6 +15,8 @@ $cream: #FFF7D6;
 $editbuttongreen: #11B386;
 $crossbuttoncream:#FFF7D6;
 $deletebuttonblue:#3292FA;
+$background: #F3F9FF;
+
 
 // WHOLE PAGE
 * {
@@ -217,7 +219,7 @@ $deletebuttonblue:#3292FA;
                             }
                             .cross {
                                 background-color: $darkblue;
-                                color: $crossbuttoncream;
+                                color: white;
                                 border: none;
                                 font-size: 15px;
                             }
