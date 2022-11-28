@@ -129,7 +129,7 @@ window.addEventListener('load', () => {
             }); 
                  // clear the project block each time
                 if (project_list_element){
-                    project_list_element.innerHTML = '';;
+                    project_list_element.innerHTML = '';
                 }
         
             // iterate through the projectitems pushed to the data array
@@ -166,6 +166,11 @@ window.addEventListener('load', () => {
                 // append the todo div to the todos-list
                 project_list_element.appendChild(project_items);
 
+
+
+
+
+
                 // CONTENT DIV
 
                 // create the 'content' div 
@@ -173,13 +178,14 @@ window.addEventListener('load', () => {
                 const project_content_div = document.createElement('div');
 
                 // test print it
-                // console.log(project_content_div);
+                console.log(project_content_div);
 
                 // set the div id
                 project_content_div.setAttribute('id', 'content');
 
                 // append the content div to the todo div
                 project_items.appendChild(project_content_div);
+
 
                 // INPUT ELEMENT
                     // create the input element that's going to be inside of the content
@@ -347,7 +353,25 @@ window.addEventListener('load', () => {
                             firebase.database().ref(`projects/${id}`).update({project: updated});
                         }
                     }
-                })
+                });
+
+                // DELETE BUTTON
+                    // this is where you:
+                        // remove the input element from the display
+                        // remove the data element from firebase
+                project_delete_button.addEventListener('click', (e) => {
+                    // keep from bubbling up
+                    e.stopPropagation();
+                    // store the id in a variable that is the target of event
+                    let id = e.target.id;
+                    // test print the delete button
+                    console.log("delete button pressed", id);
+                    // remove the child input (PROJECT ITEM or CONTENT) from the (PROJECT BLOCK)
+                    project_list_element.removeChild(project_items);
+                    // NOW to remove the data element from firebase
+                    // test print the location in the db
+                    console.log(`firebasetodo/${id}`);
+                });
             }
             
         }
