@@ -21,12 +21,11 @@ firebase.initializeApp(firebaseConfig);
 var firebaseProjectsRef = firebase.database().ref("projects");
 
 // test print
-console.log("Here is the DB for the firebaseProjectsRef");
-console.log(firebaseProjectsRef);
+console.log("Here is the DB object for the firebaseProjectsRef:", firebaseProjectsRef);
 
 // NOW lets set up the page through the DOM
 
-// Whole Page
+// event listener for the elements of the WHOLE PAGE
 window.addEventListener('load', () => {
     // Once the page is loaded
     // queryselect the whole form by id
@@ -70,11 +69,6 @@ window.addEventListener('load', () => {
             console.log('PROJECT===',project);
         });
 
-        // // clear the project block each time
-        // if (project_list_element){
-        //     project_list_element.innerHTML = '';;
-        // }
-        
 
         // FROM DATABASE
 
@@ -308,7 +302,7 @@ window.addEventListener('load', () => {
                 // append cross button to the buttons div
                 project_buttons_div.appendChild(project_cross_button);
 
-                
+
 
                 // EVENT LISTENER TIME
 

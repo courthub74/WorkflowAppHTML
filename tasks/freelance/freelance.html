@@ -65,40 +65,52 @@
             <h1>Freelance Jobs to Complete</h1>
 
             <!-- Form Field in Header -->
-            <form id="new-task-form">
+            <form id="freelance-fill-form">
 
                 <!-- Input Field -->
                 <input 
                     type="text"
-                    id="new-task-input"
+                    id="new-freelance-input"
                     placeholder="Enter Freelance Job....." />
 
                 <!-- Submit Button -->
                 <input 
                     type="Submit"
-                    id="new-task-submit" 
-                    value="Add Task"/>
+                    id="new-freelance-submit" 
+                    value="Add Freelance Job"/>
             </form>
         </header>
 
         <main>
 
             <!-- The List -->
-            <section class="task-list">
+            <section class="freelance-list">
                 <p>the list:</p>
 
 
-                <div id="tasks">
+                <div id="freelance_block">
+                    <!-- THIS IS CREATED IN THE DOM  -->
+                    <!-- CONTENT and BUTTONS go in here -->
 
-                    <!-- Created in the DOM -->
-                    <!-- <input class="text" id="task"/> -->
-
-
-                    <!-- The Action Buttons -->
-                    <!-- <button class="edit">Edit</button>
-                    <button class="crossoff">Cross Off</button>
-                    <button class="delete">Delete</button> -->
-                </div>
+                    <!-- THIS IS WHATS CREATED EVERY TIME A TODO IS ENTERED -->
+                    <!-- THESE EXIST IN AND OF ITSELF -->
+                    
+                <!-- <div class="freelance_items"> -->
+                        <!-- CONTENT PART -->
+                        <!-- <div id="content">
+                            <input type="text"
+                                class="text"
+                                id="input"
+                                value="${Todo Item}"
+                                readonly/>
+                        </div> -->
+                        <!-- BUTTONS PART -->
+                        <!-- <div id="buttons">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                            <button class="cross">Cross-Off</button>
+                        </div> -->
+                <!-- </div> -->
 
             </section>
         </main>
