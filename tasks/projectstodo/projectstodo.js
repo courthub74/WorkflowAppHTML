@@ -308,6 +308,8 @@ window.addEventListener('load', () => {
                 // append cross button to the buttons div
                 project_buttons_div.appendChild(project_cross_button);
 
+                
+
                 // EVENT LISTENER TIME
 
                 // EDIT BUTTON
@@ -373,6 +375,36 @@ window.addEventListener('load', () => {
                     console.log(`projects/${id}`);
                     // NOW delete it in the firebase 
                     firebase.database().ref(`projects/${id}`).remove();
+                });
+
+
+                // CROSS OFF BUTTON
+                    // this is where you:
+                        // change the style to line through and then back again
+                project_cross_button.addEventListener('click', (e) => {
+                    // if statement to check for innerText of cross button
+                    if (project_cross_button.innerText.toLowerCase() === "cross-off"){
+                        // test print text here you don't need the id
+                        console.log("cross button pressed");
+                        // change the innerText of the cross off button to uncross
+                        project_cross_button.innerText = "uncross";
+                        // change the CSS
+                        project_input_element.style.textDecoration = "line-through";
+                        // eliminate the edit button
+                        project_edit_button.style.display = "none";
+                    } else {
+                        // if statement to check for innerText of uncross button
+                        if (project_cross_button.innerText.toLowerCase() === "uncross"){
+                            // test print text here you don't need the id
+                            console.log("uncross button pressed");
+                            // set innerText of the uncross button back to cross
+                            project_cross_button.innerText = "cross-off";
+                            // unset the line-through style
+                            project_input_element.style.textDecoration = "none";
+                            // bring the edit button back
+                            project_edit_button.style.display = "block";
+                        }
+                    }
                 });
             }
             
