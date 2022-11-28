@@ -65,9 +65,9 @@ window.addEventListener('load', () => {
             // TO DATABASE
 
             // NOW this is where we push the todo variable to the firebaseTodo db reference
-            firebaseProjectsRef.push(project);
+            firebaseProjectsRef.push({project});
             // test print the input
-            console.log(project);
+            console.log('PROJECT===',project);
         });
 
         // // clear the project block each time
@@ -79,7 +79,7 @@ window.addEventListener('load', () => {
         // FROM DATABASE
 
         // test print the firebase db object
-        console.log(firebaseProjectsRef);
+        // console.log(firebaseProjectsRef);
 
         // utilize the on function on the db reference
         // based on value
@@ -92,9 +92,9 @@ window.addEventListener('load', () => {
         // create the getProject function
             // pass the arg 'projectitem'
         function getProject(projectitem){
-            console.log('projectitem ===',projectitem);
+            // console.log('projectitem ===',projectitem);
             // test print the value of the arg
-            console.log(projectitem.val());
+            // console.log(projectitem.val());
             // store the value in a variable
             var projects = projectitem.val();
             // test print
@@ -112,27 +112,21 @@ window.addEventListener('load', () => {
                 // data array
             Object.keys(projects).forEach(element => {
                 // test print the todo item with it's key
-                console.log('item key and text ===', element, projects[element]);
+                // console.log('item key and text ===', element, projects[element]);
                 // NOW push the id (element-keys) and item (project)
                     // to the data array
                 data.push({
                     id: element,
                     // item is value with id(key) set to the 'todo' name under the 
-                        // firebase todo db list
-                    item: projects[element]
+                        // firebase todo db list which happens to be projects
+                            // the last bracket is for the render to locate the new key set 
+                                // push the item with the key into the project name key
+                    item: projects[element]['project']
                 })
+                // test print the data array
+                    // it prints for every todo item entered
                 console.log('data ===', data);
             }); 
-            // lets set a variable to get the keys of each todo item
-            var keys = Object.keys(projects);
-            // test print keys and projects
-            console.log('Keys and Projects ===',keys, projects);
-            // if there is a projects-list div 
-                // then change the innerHTML of the projects-list div
-                // if (document.getElementById('projects-block')){
-                //     document.getElementById('projects-block').innerHTML = '';
-                // }
-
                  // clear the project block each time
                 if (project_list_element){
                     project_list_element.innerHTML = '';;
@@ -145,6 +139,8 @@ window.addEventListener('load', () => {
                 // test print
                 console.log('projectsall ===', projectsall);
 
+
+                // THE ELEMENT CREATION PART
 
                 // NOW we build the list elements below
                     // so each time the form is submitted 
@@ -162,7 +158,7 @@ window.addEventListener('load', () => {
                 const project_items = document.createElement('div');
 
                 // test print it
-                console.log(project_items);
+                // console.log(project_items);
 
                 // add the class to the div
                 project_items.classList.add('project_items');
@@ -177,7 +173,7 @@ window.addEventListener('load', () => {
                 const project_content_div = document.createElement('div');
 
                 // test print it
-                console.log(project_content_div);
+                // console.log(project_content_div);
 
                 // set the div id
                 project_content_div.setAttribute('id', 'content');
@@ -192,7 +188,7 @@ window.addEventListener('load', () => {
                 const project_input_element = document.createElement('input');
 
                 // test print it
-                console.log(project_input_element);
+                // console.log(project_input_element);
 
                 // add it's class
                 project_input_element.classList.add('input');
@@ -225,7 +221,7 @@ window.addEventListener('load', () => {
                 const project_buttons_div = document.createElement('div');
 
                 // test print
-                console.log(project_buttons_div);
+                // console.log(project_buttons_div);
 
                 // set it's class
                 project_buttons_div.classList.add('buttons');
@@ -268,7 +264,7 @@ window.addEventListener('load', () => {
                 const project_delete_button = document.createElement('button');
 
                 // test print
-                console.log(project_delete_button);
+                // console.log(project_delete_button);
 
                 // set it's class
                 project_delete_button.classList.add('delete');
@@ -301,7 +297,7 @@ window.addEventListener('load', () => {
                 project_cross_button.innerText = "cross-off";
 
                 // test print
-                console.log(project_cross_button);
+                // console.log(project_cross_button);
 
                 // append cross button to the buttons div
                 project_buttons_div.appendChild(project_cross_button);
@@ -319,7 +315,7 @@ window.addEventListener('load', () => {
                     // check the text in order to change it
                     if (project_edit_button.innerText.toLowerCase() === "edit"){
                         // test print text with the id
-                        console.log(project_edit_button, id);
+                        // console.log(project_edit_button, id);
                         // change the innerText
                         project_edit_button.innerText = "SAVE";
                         // remove the readonly attribute from the input field so you can edit the field
@@ -330,7 +326,7 @@ window.addEventListener('load', () => {
                         // check the text in order to change it
                         if (project_edit_button.innerText.toLowerCase() === "save"){
                             // test print text with the id
-                            console.log("save button pressed", id);
+                            // console.log("save button pressed", id);
                             // change the innerText
                             project_edit_button.innerText = "EDIT";
                             // set the readonly attribute to the input field so you can't edit
@@ -339,15 +335,16 @@ window.addEventListener('load', () => {
                             // NOW keep the edit in firebase
                             let updated = project_input_element.value;
                             // test print
-                            console.log(updated, id);
+                            // console.log(updated, id);
                             // test print db + updated element
-                            console.log(projects, "projects/" + updated);
+                            console.log(`projects ${id}`);
+                            console.log(updated);
                             // NOW edit in firebase
                                 // locate the firebase reference by each item id
                                     // apply the update function
-                            firebase.database().ref(`projects/${id}`).update({
-                                projects: updated
-                            })
+                                        // it sets updated value with a new key
+                                            // that is declared earlier in the data.push ['project']
+                            firebase.database().ref(`projects/${id}`).update({project: updated});
                         }
                     }
                 })
