@@ -71,23 +71,21 @@
   color: #243F67;
 }
 * #instructions {
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   width: 857px;
   color: #243F67;
-  font-weight: bold;
 }
 * .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 538px;
+  height: 100vh;
   width: 100%;
-  padding-top: 400px;
 }
 * .container .calendar {
   border: 2px #243F67 solid;
-  padding-top: 40px;
 }
 * .container .calendar header {
   display: flex;
@@ -151,14 +149,14 @@
   padding-top: 15px;
   padding-left: 45px;
 }
-* .container #others .margin span {
+* .container #others .margin span a {
   display: flex;
 }
-* .container #others .margin span img {
+* .container #others .margin span a img {
   width: 30px;
   height: 30px;
 }
-* .container #others .margin span p {
+* .container #others .margin span a p {
   padding: 8px;
   color: #243F67;
   font-weight: bold;
