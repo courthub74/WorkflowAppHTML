@@ -83,17 +83,25 @@ $background: #F3F9FF;
             }
         }
     }
-
+    // INSTRUCTIONS
+    #instructions {
+        // background-color: green;
+        padding-top: 40px;
+        width: 857px;
+        color: $darkblue;
+        font-weight: bold;
+    }
     // CALENDAR
     .container {
         // background-color: yellow;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 538px;
         width: 100%;
         padding-top: 400px;
-        padding-left: 200px;
+        // padding-right: 200px;
         .calendar {
             // background-color: green;
             border: 2px $darkblue solid;
@@ -103,7 +111,8 @@ $background: #F3F9FF;
                 gap: 400px;
                 position: relative;
                 .arrows {
-                    padding-left: 120px;
+                    // padding-left: 120px;
+                    padding: 20px;
                     #left {
                         border: 1px $darkblue solid;
                         border-radius: 50%;
@@ -116,7 +125,7 @@ $background: #F3F9FF;
                 p {
                     text-transform: uppercase;
                     padding-left: 38px;
-                    font-size: 5vh;
+                    font-size: 4vh;
                     font-weight: bold;
                     color: $darkblue;
                 }
@@ -130,7 +139,7 @@ $background: #F3F9FF;
                             line-height: 4em;
                             text-align: center;
                             width: 4em;
-                            font-size: 3vh;
+                            font-size: 2vh;
                             color: #243F67;
                         }
                     }
@@ -154,6 +163,33 @@ $background: #F3F9FF;
                         .next-month {
                             color: lightgray;
                         }
+                    }
+                }
+            }
+        }
+        #others {
+            // background-color: blue;
+            width: 858px;
+            // move the margin div to the right side
+            display: flex;
+            justify-content: flex-end;
+            .margin {
+                // background-color: green;
+                width: 320px;
+                text-align: left;
+                padding-top: 15px;
+                padding-left: 45px;
+                span {
+                    display: flex;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    p {
+                        padding: 8px;
+                        color: $darkblue;
+                        font-weight: bold;
+                        // background-color: green;
                     }
                 }
             }

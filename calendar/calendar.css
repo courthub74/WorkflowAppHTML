@@ -70,14 +70,20 @@
 * .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
+* #instructions {
+  padding-top: 40px;
+  width: 857px;
+  color: #243F67;
+  font-weight: bold;
+}
 * .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 538px;
   width: 100%;
   padding-top: 400px;
-  padding-left: 200px;
 }
 * .container .calendar {
   border: 2px #243F67 solid;
@@ -89,7 +95,7 @@
   position: relative;
 }
 * .container .calendar header .arrows {
-  padding-left: 120px;
+  padding: 20px;
 }
 * .container .calendar header .arrows #left {
   border: 1px #243F67 solid;
@@ -102,7 +108,7 @@
 * .container .calendar header p {
   text-transform: uppercase;
   padding-left: 38px;
-  font-size: 5vh;
+  font-size: 4vh;
   font-weight: bold;
   color: #243F67;
 }
@@ -114,7 +120,7 @@
   line-height: 4em;
   text-align: center;
   width: 4em;
-  font-size: 3vh;
+  font-size: 2vh;
   color: #243F67;
 }
 * .container .calendar table tbody tr td {
@@ -133,4 +139,27 @@
 }
 * .container .calendar table tbody tr .next-month {
   color: lightgray;
+}
+* .container #others {
+  width: 858px;
+  display: flex;
+  justify-content: flex-end;
+}
+* .container #others .margin {
+  width: 320px;
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 45px;
+}
+* .container #others .margin span {
+  display: flex;
+}
+* .container #others .margin span img {
+  width: 30px;
+  height: 30px;
+}
+* .container #others .margin span p {
+  padding: 8px;
+  color: #243F67;
+  font-weight: bold;
 }/*# sourceMappingURL=calendar.css.map */
