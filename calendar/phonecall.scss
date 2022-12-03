@@ -5,6 +5,9 @@
 $darkblue: #243F67;
 $background: #F3F9FF;
 
+// TEXT FIELD COLOR
+$textfield: #96B0D3;
+
 * {
     list-style: none;
     text-decoration: none;
@@ -26,15 +29,50 @@ $background: #F3F9FF;
             align-items: center;
             h1 {
                 padding-bottom: 100px;
-                color: $darkblue;
+                color: $textfield;
+                font-size: 3.5rem;
             }
             .apptbox {
                 border-radius: 5px;
                 line-height: 40px;
-                padding: 20px;
-                background-color: white;
-                width: 700px;
-                height: 500px;
+                padding: 40px 20px;
+                background-color: $textfield;
+                width: 900px;
+                height: 800px;
+                #phonename {
+                    // background-color: green;
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    padding-right: 21rem;
+                    padding-bottom: 20px;
+                    input {
+                        border: none;
+                        background-color: $textfield;
+                        color: $darkblue;
+                        width: 500rem;
+                    }
+                }
+                #phonedate {
+                    // background-color: green;
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    padding-right: 21rem;
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    input {
+                        border: none;
+                        background-color: $textfield;
+                        color: $darkblue;
+                        width: 500rem;
+                    }
+                }
+                hr {
+                    height: 2px;
+                    background-color: $darkblue;
+                    border: none;
+                }
                 h3 {
                     color: $darkblue;
                     text-align: left;
@@ -46,31 +84,36 @@ $background: #F3F9FF;
                         color: white;
                     }
                 }
+                .date {
+                    padding-top: 30px;
+                }
                 .phonenum {
-                    padding-top: 20px;
+                    padding-top: 30px;
                 }
                 .topic {
-                    padding-top: 20px;
+                    padding-top: 30px;
                 }
                 .timeline {
                     display: flex;
                     gap: 80px;
                 }
                 .time {
-                    padding-top: 20px;
+                    padding-top: 30px;
                 }
                 .timebuttons {
                     // background-color: green;
                     display: flex;
                     gap: 10px;
-                    padding-top: 25px;
+                    padding-top: 30px;
+                    width: 500px;
                     button {
-                        width: 100px;
+                        width: 80px;
                         background-color: $darkblue;
                         color: $background;
                         height: 25px;
-                        border: #243F67 1px solid;
+                        border: #243F67 2px solid;
                         border-radius: 5px;
+                        cursor: pointer;
                     }
                 }
                 .buttondiv {
@@ -79,16 +122,24 @@ $background: #F3F9FF;
                     padding-top: 70px;
                     button {
                         background-color: $darkblue;
-                        border: 1px solid ;
+                        border: 1px $darkblue solid ;
                         border-radius: 50%;
                         width: 90px;
                         height: 90px;
                         color: white;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        cursor: pointer;
                     }
                     .back {
                         padding-top: 20px;
                         a {
-                            color: #243F67;
+                            color: $darkblue;
+                        }
+                    }
+                    .callslist {
+                        a {
+                            color: $darkblue;
                         }
                     }
                 }
