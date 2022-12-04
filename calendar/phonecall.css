@@ -31,7 +31,7 @@
   padding: 40px 20px;
   background-color: #96B0D3;
   width: 900px;
-  height: 800px;
+  height: 600px;
 }
 * body .page .apptbox #phonename {
   display: flex;
@@ -45,6 +45,22 @@
   background-color: #96B0D3;
   color: #243F67;
   width: 500rem;
+  height: 2rem;
+}
+* body .page .apptbox #phonename ::-moz-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonename :-ms-input-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonename ::placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
 }
 * body .page .apptbox #phonedate {
   display: flex;
@@ -59,6 +75,22 @@
   background-color: #96B0D3;
   color: #243F67;
   width: 500rem;
+  height: 2rem;
+}
+* body .page .apptbox #phonedate ::-moz-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonedate :-ms-input-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonedate ::placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
 }
 * body .page .apptbox #phonenumber {
   display: flex;
@@ -73,6 +105,22 @@
   background-color: #96B0D3;
   color: #243F67;
   width: 500rem;
+  height: 2rem;
+}
+* body .page .apptbox #phonenumber ::-moz-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonenumber :-ms-input-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonenumber ::placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
 }
 * body .page .apptbox #phonetime {
   display: flex;
@@ -87,6 +135,7 @@
   background-color: #96B0D3;
   color: #243F67;
   width: 500rem;
+  height: 2rem;
 }
 * body .page .apptbox hr {
   height: 2px;
@@ -122,6 +171,25 @@
   display: flex;
   justify-content: space-between;
 }
+* body .page .apptbox #phonetimes input {
+  border: none;
+  background-color: #96B0D3;
+}
+* body .page .apptbox #phonetimes ::-moz-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonetimes :-ms-input-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonetimes ::placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
 * body .page .apptbox #phonetimes .timebuttons {
   display: flex;
   gap: 10px;
@@ -137,6 +205,36 @@
   border: #243F67 2px solid;
   border-radius: 5px;
   cursor: pointer;
+}
+* body .page .apptbox #phonetopic {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding-right: 21rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+* body .page .apptbox #phonetopic input {
+  border: none;
+  background-color: #96B0D3;
+  color: #243F67;
+  width: 500rem;
+  height: 2rem;
+}
+* body .page .apptbox #phonetopic ::-moz-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonetopic :-ms-input-placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
+}
+* body .page .apptbox #phonetopic ::placeholder {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 3vh;
 }
 * body .page .apptbox .buttondiv {
   height: 100px;
