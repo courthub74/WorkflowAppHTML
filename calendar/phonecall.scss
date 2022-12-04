@@ -68,6 +68,36 @@ $textfield: #96B0D3;
                         width: 500rem;
                     }
                 }
+                #phonenumber {
+                    // background-color: green;
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    padding-right: 21rem;
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    input {
+                        border: none;
+                        background-color: $textfield;
+                        color: $darkblue;
+                        width: 500rem;
+                    }
+                }
+                #phonetime {
+                    // background-color: green;
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    padding-right: 21rem;
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    input {
+                        border: none;
+                        background-color: $textfield;
+                        color: $darkblue;
+                        width: 500rem;
+                    }
+                }
                 hr {
                     height: 2px;
                     background-color: $darkblue;
@@ -100,20 +130,26 @@ $textfield: #96B0D3;
                 .time {
                     padding-top: 30px;
                 }
-                .timebuttons {
+                #phonetimes {
                     // background-color: green;
                     display: flex;
-                    gap: 10px;
-                    padding-top: 30px;
-                    width: 500px;
-                    button {
-                        width: 80px;
-                        background-color: $darkblue;
-                        color: $background;
-                        height: 25px;
-                        border: #243F67 2px solid;
-                        border-radius: 5px;
-                        cursor: pointer;
+                    justify-content: space-between;
+                    .timebuttons {
+                        // background-color: green;
+                        display: flex;
+                        gap: 10px;
+                        padding-top: 30px;
+                        padding-right: 100px;
+                        width: 700px;
+                        button {
+                            width: 80px;
+                            background-color: $darkblue;
+                            color: $background;
+                            height: 25px;
+                            border: #243F67 2px solid;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .buttondiv {

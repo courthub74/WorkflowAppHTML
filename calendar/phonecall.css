@@ -60,6 +60,34 @@
   color: #243F67;
   width: 500rem;
 }
+* body .page .apptbox #phonenumber {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-right: 21rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+* body .page .apptbox #phonenumber input {
+  border: none;
+  background-color: #96B0D3;
+  color: #243F67;
+  width: 500rem;
+}
+* body .page .apptbox #phonetime {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-right: 21rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+* body .page .apptbox #phonetime input {
+  border: none;
+  background-color: #96B0D3;
+  color: #243F67;
+  width: 500rem;
+}
 * body .page .apptbox hr {
   height: 2px;
   background-color: #243F67;
@@ -90,13 +118,18 @@
 * body .page .apptbox .time {
   padding-top: 30px;
 }
-* body .page .apptbox .timebuttons {
+* body .page .apptbox #phonetimes {
+  display: flex;
+  justify-content: space-between;
+}
+* body .page .apptbox #phonetimes .timebuttons {
   display: flex;
   gap: 10px;
   padding-top: 30px;
-  width: 500px;
+  padding-right: 100px;
+  width: 700px;
 }
-* body .page .apptbox .timebuttons button {
+* body .page .apptbox #phonetimes .timebuttons button {
   width: 80px;
   background-color: #243F67;
   color: #F3F9FF;
