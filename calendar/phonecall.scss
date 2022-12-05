@@ -38,7 +38,7 @@ $textfield: #96B0D3;
                 padding: 40px 20px;
                 background-color: $textfield;
                 width: 900px;
-                height: 600px;
+                height: 680px;
                 #phonename {
                     // background-color: green;
                     display: flex;
@@ -57,7 +57,7 @@ $textfield: #96B0D3;
                     ::placeholder {
                         color: $darkblue;
                         font-weight: bold;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                     }
                 }
                 #phonedate {
@@ -67,7 +67,7 @@ $textfield: #96B0D3;
                     align-content: center;
                     padding-right: 21rem;
                     padding-bottom: 20px;
-                    padding-top: 20px;
+                    padding-top: 30px;
                     input {
                         border: none;
                         background-color: $textfield;
@@ -78,7 +78,7 @@ $textfield: #96B0D3;
                     ::placeholder {
                         color: $darkblue;
                         font-weight: bold;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                     }
                 }
                 #phonenumber {
@@ -88,7 +88,7 @@ $textfield: #96B0D3;
                     align-content: center;
                     padding-right: 21rem;
                     padding-bottom: 20px;
-                    padding-top: 20px;
+                    padding-top: 30px;
                     input {
                         border: none;
                         background-color: $textfield;
@@ -99,33 +99,45 @@ $textfield: #96B0D3;
                     ::placeholder {
                         color: $darkblue;
                         font-weight: bold;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                     }
                 }
-                #phonetime {
-                    // background-color: green;
+                #phonetimes {
+                    // background-color: aqua;
                     display: flex;
                     justify-content: space-between;
                     align-content: center;
                     padding-right: 21rem;
-                    padding-bottom: 20px;
-                    padding-top: 20px;
-                    input {
-                        border: none;
-                        background-color: $textfield;
+                    .time {
+                        font-size: 2.5vh;
+                        padding-top: 20px;
+                        // background-color: goldenrod;
+                        padding-bottom: 20px;
                         color: $darkblue;
-                        width: 500rem;
-                        height: 2rem;
+                        text-align: left;
+                    }
+                    #timebuttons {
+                        // background-color: aqua;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 0px 10px 120px;
+                        button {
+                            width: 80px;
+                            height: 25px;
+                            background-color: $darkblue;
+                            color: $background;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
                     }
                 }
                 hr {
                     height: 2px;
                     background-color: $darkblue;
                     border: none;
-                }
-                h3 {
-                    color: $darkblue;
-                    text-align: left;
                 }
                 p {
                     a {
@@ -134,60 +146,13 @@ $textfield: #96B0D3;
                         color: white;
                     }
                 }
-                .date {
-                    padding-top: 30px;
-                }
-                .phonenum {
-                    padding-top: 30px;
-                }
-                .topic {
-                    padding-top: 30px;
-                }
-                .timeline {
-                    display: flex;
-                    gap: 80px;
-                }
-                .time {
-                    padding-top: 30px;
-                }
-                #phonetimes {
-                    // background-color: green;
-                    display: flex;
-                    justify-content: space-between;
-                    input {
-                        border: none;
-                        background-color: $textfield;
-                    }
-                    ::placeholder {
-                        color: $darkblue;
-                        font-weight: bold;
-                        font-size: 3vh;
-                    }
-                    .timebuttons {
-                        // background-color: green;
-                        display: flex;
-                        gap: 10px;
-                        padding-top: 30px;
-                        padding-right: 100px;
-                        width: 700px;
-                        button {
-                            width: 80px;
-                            background-color: $darkblue;
-                            color: $background;
-                            height: 25px;
-                            border: #243F67 2px solid;
-                            border-radius: 5px;
-                            cursor: pointer;
-                        }
-                    }
-                }
                 #phonetopic {
                     display: flex;
                     justify-content: space-around;
                     align-content: center;
                     padding-right: 21rem;
                     padding-bottom: 20px;
-                    padding-top: 20px;
+                    padding-top: 30px;
                     
                     input {
                         border: none;
@@ -199,33 +164,38 @@ $textfield: #96B0D3;
                     ::placeholder {
                         color: $darkblue;
                         font-weight: bold;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                     }
                 }
                 .buttondiv {
-                    height: 100px;
+                    height: 250px;
                     // background-color: green;
                     padding-top: 70px;
                     button {
                         background-color: $darkblue;
                         border: 1px $darkblue solid ;
                         border-radius: 50%;
-                        width: 90px;
-                        height: 90px;
+                        width: 120px;
+                        height: 120px;
                         color: white;
                         font-weight: bold;
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         cursor: pointer;
                     }
-                    .back {
-                        padding-top: 20px;
-                        a {
-                            color: $darkblue;
+                    #otheroptions {
+                        display: flex;
+                        justify-content: space-between;
+                        .back {
+                            // padding-top: 20px;
+                            a {
+                                color: $darkblue;
+                            }
                         }
-                    }
-                    .callslist {
-                        a {
-                            color: $darkblue;
+                        .callslist {
+                            // padding-top: 20px;
+                            a {
+                                color: $darkblue;
+                            }
                         }
                     }
                 }
