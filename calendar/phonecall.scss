@@ -38,26 +38,40 @@ $textfield: #96B0D3;
                 padding: 40px 20px;
                 background-color: $textfield;
                 width: 900px;
-                height: 680px;
+                height: 700px;
                 #phonename {
-                    // background-color: green;
+                    // background-color: aqua;
                     display: flex;
-                    justify-content: space-between;
-                    align-content: center;
+                    // justify-content: space-between;
+                    // // align-content: center;
                     padding-right: 21rem;
-                    padding-bottom: 20px;
-                    input {
-                        border: none;
-                        background-color: $textfield;
-                        color: $darkblue;
-                        width: 500rem;
-                        height: 2rem;
-                        // padding: 20px;
-                    }
-                    ::placeholder {
+                    padding-bottom: 10px;
+                    padding-top: 20px;
+                    .name {
                         color: $darkblue;
                         font-weight: bold;
                         font-size: 2.5vh;
+                        // padding-right: 100px;
+                    }
+                    .inputfield {
+                        background-color: red;
+                        display: flex;
+                        justify-content: center;
+                        // padding-left: 50px;
+                        .phone {
+                            border: none;
+                            background-color: $textfield;
+                            // background-color: green;
+                            color: $darkblue;
+                            font-size: 3vh;
+                            width: 750px ;
+                            text-align: center;
+                            margin: 0 auto;
+                        }
+                        input:focus {
+                            outline: none;
+                            
+                        }
                     }
                 }
                 #phonedate {
@@ -189,12 +203,14 @@ $textfield: #96B0D3;
                             // padding-top: 20px;
                             a {
                                 color: $darkblue;
+                                font-size: 2.1vh;
                             }
                         }
                         .callslist {
                             // padding-top: 20px;
                             a {
                                 color: $darkblue;
+                                font-size: 2.1vh;
                             }
                         }
                     }
