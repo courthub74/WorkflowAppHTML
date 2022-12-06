@@ -21,7 +21,7 @@ $textfield: #96B0D3;
             // background-color: red;
             height: 100vh;
             width: 100%;
-            padding-top: 100px;
+            padding-top: 70px;
             line-height: 40px;
             text-align: center;
             display: flex;
@@ -42,8 +42,6 @@ $textfield: #96B0D3;
                 #phonename {
                     // background-color: aqua;
                     display: flex;
-                    // justify-content: space-between;
-                    // // align-content: center;
                     padding-right: 21rem;
                     padding-bottom: 10px;
                     padding-top: 20px;
@@ -51,20 +49,18 @@ $textfield: #96B0D3;
                         color: $darkblue;
                         font-weight: bold;
                         font-size: 2.5vh;
-                        // padding-right: 100px;
                     }
                     .inputfield {
                         background-color: red;
                         display: flex;
                         justify-content: center;
-                        // padding-left: 50px;
                         .phone {
                             border: none;
                             background-color: $textfield;
                             // background-color: green;
                             color: $darkblue;
                             font-size: 3vh;
-                            width: 750px ;
+                            width: 720px ;
                             text-align: center;
                             margin: 0 auto;
                         }
@@ -82,6 +78,23 @@ $textfield: #96B0D3;
                     padding-right: 21rem;
                     padding-bottom: 20px;
                     padding-top: 30px;
+                    .date{
+                        color: $darkblue;
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    .dateentry {
+                        #month {
+                            border: none;
+                            background-color: $textfield;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            color: $darkblue;
+                            .header {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
                     input {
                         border: none;
                         background-color: $textfield;

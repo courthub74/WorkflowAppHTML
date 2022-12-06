@@ -13,7 +13,7 @@
 * body .page {
   height: 100vh;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 70px;
   line-height: 40px;
   text-align: center;
   display: flex;
@@ -54,7 +54,7 @@
   background-color: #96B0D3;
   color: #243F67;
   font-size: 3vh;
-  width: 750px;
+  width: 720px;
   text-align: center;
   margin: 0 auto;
 }
@@ -68,6 +68,21 @@
   padding-right: 21rem;
   padding-bottom: 20px;
   padding-top: 30px;
+}
+* body .page .apptbox #phonedate .date {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+* body .page .apptbox #phonedate .dateentry #month {
+  border: none;
+  background-color: #96B0D3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #243F67;
+}
+* body .page .apptbox #phonedate .dateentry #month .header {
+  font-size: 2rem;
 }
 * body .page .apptbox #phonedate input {
   border: none;
