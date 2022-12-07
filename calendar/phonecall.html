@@ -150,7 +150,8 @@
                     <h3 class="number">phone:</h3>
                     <div class="inputfield">
                         <input 
-                            type="text"
+                            type="tel"
+                            pattern=”[0-9]{3}-[0-9]{3}-[0-9]{4}”
                             class="phone"
                             id="name"
                         />
@@ -164,12 +165,12 @@
                     <h3 class="time">time:</h3>
 
                     <div id="timebuttons">
-                        <button type="submit">2:00PM</button>
-                        <button type="submit">3:00PM</button>
-                        <button type="submit">4:00PM</button>
-                        <button type="submit">5:00PM</button>
-                        <button type="submit">6:00PM</button>
-                        <button type="submit">7:00PM</button>
+                        <button class="hour" value="2:00PM">2:00PM</button>
+                        <button>3:00PM</button>
+                        <button>4:00PM</button>
+                        <button>5:00PM</button>
+                        <button>6:00PM</button>
+                        <button>7:00PM</button>
                     </div>
                 </div>
 
