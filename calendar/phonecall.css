@@ -74,15 +74,44 @@
   font-weight: bold;
   font-size: 2.5vh;
 }
+* body .page .apptbox #phonedate .dateentry select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+* body .page .apptbox #phonedate .dateentry select:focus {
+  outline: none;
+}
 * body .page .apptbox #phonedate .dateentry #month {
   border: none;
   background-color: #96B0D3;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #243F67;
+  text-align: center;
+}
+* body .page .apptbox #phonedate .dateentry #date {
+  border: none;
+  background-color: #96B0D3;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #243F67;
+  padding-right: 20px;
+  text-align: center;
+}
+* body .page .apptbox #phonedate .dateentry #date:focus {
+  outline: none;
+}
+* body .page .apptbox #phonedate .dateentry #year {
+  border: none;
+  background-color: #96B0D3;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #243F67;
 }
-* body .page .apptbox #phonedate .dateentry #month .header {
-  font-size: 2rem;
+* body .page .apptbox #phonedate .dateentry #year:focus {
+  outline: none;
 }
 * body .page .apptbox #phonedate input {
   border: none;
@@ -90,21 +119,6 @@
   color: #243F67;
   width: 500rem;
   height: 2rem;
-}
-* body .page .apptbox #phonedate ::-moz-placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
-}
-* body .page .apptbox #phonedate :-ms-input-placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
-}
-* body .page .apptbox #phonedate ::placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
 }
 * body .page .apptbox #phonenumber {
   display: flex;

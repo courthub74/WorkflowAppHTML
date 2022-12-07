@@ -75,24 +75,54 @@ $textfield: #96B0D3;
                     display: flex;
                     justify-content: space-between;
                     align-content: center;
+                    // text-align: center;
                     padding-right: 21rem;
                     padding-bottom: 20px;
                     padding-top: 30px;
+                    // Date label
                     .date{
                         color: $darkblue;
                         font-weight: bold;
                         font-size: 2.5vh;
                     }
-                    .dateentry {
+                    // Date Picker
+                    .dateentry{
+                        select {
+                            cursor: pointer;
+                            appearance: none;
+                        }
+                        select:focus{
+                            outline: none;
+                        }
                         #month {
                             border: none;
                             background-color: $textfield;
-                            font-size: 1.5rem;
+                            font-size: 1.4rem;
                             font-weight: bold;
                             color: $darkblue;
-                            .header {
-                                font-size: 2rem;
-                            }
+                            text-align: center;
+                        }
+                        #date {
+                            border: none;
+                            background-color: $textfield;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: $darkblue;
+                            padding-right: 20px;
+                            text-align: center;
+                        }
+                        #date:focus {
+                            outline: none;
+                        }
+                        #year {
+                            border: none;
+                            background-color: $textfield;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: $darkblue;
+                        }
+                        #year:focus {
+                            outline: none;
                         }
                     }
                     input {
@@ -101,11 +131,6 @@ $textfield: #96B0D3;
                         color: $darkblue;
                         width: 500rem;
                         height: 2rem;
-                    }
-                    ::placeholder {
-                        color: $darkblue;
-                        font-weight: bold;
-                        font-size: 2.5vh;
                     }
                 }
                 #phonenumber {
