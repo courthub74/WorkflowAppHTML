@@ -51,9 +51,9 @@ $textfield: #96B0D3;
                         font-size: 2.5vh;
                     }
                     .inputfield {
-                        background-color: red;
+                        // background-color: red;
                         display: flex;
-                        justify-content: center;
+                        // justify-content: center;
                         .phone {
                             border: none;
                             background-color: $textfield;
@@ -136,17 +136,31 @@ $textfield: #96B0D3;
                 #phonenumber {
                     // background-color: green;
                     display: flex;
-                    justify-content: space-between;
-                    align-content: center;
                     padding-right: 21rem;
-                    padding-bottom: 20px;
-                    padding-top: 30px;
-                    input {
-                        border: none;
-                        background-color: $textfield;
+                    padding-bottom: 10px;
+                    padding-top: 20px;
+                    .number {
                         color: $darkblue;
-                        width: 500rem;
-                        height: 2rem;
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    .inputfield {
+                        display: flex;
+                        // justify-content: center;
+                        .phone {
+                            border: none;
+                            background-color: $textfield;
+                            // background-color: green;
+                            color: $darkblue;
+                            font-size: 3vh;
+                            width: 720px;
+                            text-align: center;
+                            margin: 0 auto;
+                           
+                        }
+                        input:focus {
+                            outline: none;
+                        }
                     }
                     ::placeholder {
                         color: $darkblue;

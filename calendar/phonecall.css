@@ -45,9 +45,7 @@
   font-size: 2.5vh;
 }
 * body .page .apptbox #phonename .inputfield {
-  background-color: red;
   display: flex;
-  justify-content: center;
 }
 * body .page .apptbox #phonename .inputfield .phone {
   border: none;
@@ -122,18 +120,29 @@
 }
 * body .page .apptbox #phonenumber {
   display: flex;
-  justify-content: space-between;
-  align-content: center;
   padding-right: 21rem;
-  padding-bottom: 20px;
-  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
-* body .page .apptbox #phonenumber input {
+* body .page .apptbox #phonenumber .number {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+* body .page .apptbox #phonenumber .inputfield {
+  display: flex;
+}
+* body .page .apptbox #phonenumber .inputfield .phone {
   border: none;
   background-color: #96B0D3;
   color: #243F67;
-  width: 500rem;
-  height: 2rem;
+  font-size: 3vh;
+  width: 720px;
+  text-align: center;
+  margin: 0 auto;
+}
+* body .page .apptbox #phonenumber .inputfield input:focus {
+  outline: none;
 }
 * body .page .apptbox #phonenumber ::-moz-placeholder {
   color: #243F67;
