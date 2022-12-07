@@ -151,9 +151,10 @@
                     <div class="inputfield">
                         <input 
                             type="tel"
-                            pattern=”[0-9]{3}-[0-9]{3}-[0-9]{4}”
+                            
                             class="phone"
-                            id="name"
+                            id="phone"
+                            required
                         />
                     </div>
                 </div>
@@ -164,14 +165,16 @@
 
                     <h3 class="time">time:</h3>
 
-                    <div id="timebuttons">
-                        <button class="hour" value="2:00PM">2:00PM</button>
-                        <button>3:00PM</button>
-                        <button>4:00PM</button>
-                        <button>5:00PM</button>
-                        <button>6:00PM</button>
-                        <button>7:00PM</button>
-                    </div>
+                    <input type="time" id="timeclock">
+
+                    <!-- <div id="timebuttons">
+                        <button type="button" class="hour" value="2:00PM">2:00PM</button>
+                        <button class="hour" value="3:00PM">3:00PM</button>
+                        <button class="hour" value="4:00PM">4:00PM</button>
+                        <button class="hour" value="5:00PM">5:00PM</button>
+                        <button class="hour" value="6:00PM">6:00PM</button>
+                        <button class="hour" value="7:00PM">7:00PM</button>
+                    </div> -->
                 </div>
 
                 <hr>
