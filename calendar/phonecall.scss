@@ -59,7 +59,7 @@ $textfield: #96B0D3;
                             background-color: $textfield;
                             // background-color: green;
                             color: $darkblue;
-                            font-size: 3vh;
+                            font-size: 2.3vh;
                             width: 720px ;
                             text-align: center;
                             margin: 0 auto;
@@ -152,11 +152,10 @@ $textfield: #96B0D3;
                             background-color: $textfield;
                             // background-color: green;
                             color: $darkblue;
-                            font-size: 3vh;
+                            font-size: 2.3vh;
                             width: 720px;
                             text-align: center;
-                            margin: 0 auto;
-                           
+                            margin: 0 auto;  
                         }
                         input:focus {
                             outline: none;
@@ -180,10 +179,18 @@ $textfield: #96B0D3;
                     input {
                         border: none;
                         background-color: $textfield;
-                        width: 120px;
+                        width: 160px;
                         font-size: 2.5vh;
                         color: $darkblue;
                         font-weight: bold;
+                    }
+                    input:focus {
+                        outline: none;
+                    }
+                    input[type="time"]::-webkit-calendar-picker-indicator {
+                        // width: 20px;
+                        // height: 20px;
+                        filter: invert(21%) sepia(16%) saturate(1959%) hue-rotate(177deg) brightness(100%) contrast(93%);
                     }
                     // BELOW are the buttons
                     // #timebuttons {
