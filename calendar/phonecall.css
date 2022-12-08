@@ -31,7 +31,7 @@
   padding: 40px 20px;
   background-color: #96B0D3;
   width: 900px;
-  height: 700px;
+  height: 650px;
 }
 * body .page .apptbox #phonename {
   display: flex;
@@ -55,7 +55,7 @@
   width: 790px;
   text-align: center;
   margin: 0 auto;
-  padding-right: 50px;
+  padding-right: 48px;
 }
 * body .page .apptbox #phonename .inputfield input:focus {
   outline: none;
@@ -64,8 +64,8 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding-right: 21rem;
-  padding-bottom: 20px;
+  padding-right: 23rem;
+  padding-bottom: 8px;
   padding-top: 30px;
 }
 * body .page .apptbox #phonedate .date {
@@ -85,10 +85,11 @@
 * body .page .apptbox #phonedate .dateentry #month {
   border: none;
   background-color: #96B0D3;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #243F67;
   text-align: center;
+  margin-right: -25px;
 }
 * body .page .apptbox #phonedate .dateentry #date {
   border: none;
@@ -98,6 +99,7 @@
   color: #243F67;
   padding-right: 20px;
   text-align: center;
+  margin-right: -20px;
 }
 * body .page .apptbox #phonedate .dateentry #date:focus {
   outline: none;
@@ -202,12 +204,11 @@
 * body .page .apptbox #phonetopic {
   display: flex;
   padding-right: 21rem;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 20px;
 }
 * body .page .apptbox #phonetopic .topic {
   color: #243F67;
-  font-weight: bold;
   font-size: 2.5vh;
   background-color: #96B0D3;
 }

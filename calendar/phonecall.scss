@@ -38,7 +38,7 @@ $textfield: #96B0D3;
                 padding: 40px 20px;
                 background-color: $textfield;
                 width: 900px;
-                height: 700px;
+                height: 650px;
                 #phonename {
                     // background-color: aqua;
                     display: flex;
@@ -61,7 +61,7 @@ $textfield: #96B0D3;
                             width: 790px ;
                             text-align: center;
                             margin: 0 auto;
-                            padding-right: 50px;
+                            padding-right: 48px;
                         }
                         input:focus {
                             outline: none;
@@ -74,9 +74,8 @@ $textfield: #96B0D3;
                     display: flex;
                     justify-content: space-between;
                     align-content: center;
-                    // text-align: center;
-                    padding-right: 21rem;
-                    padding-bottom: 20px;
+                    padding-right: 23rem;
+                    padding-bottom: 8px;
                     padding-top: 30px;
                     // Date label
                     .date{
@@ -97,10 +96,11 @@ $textfield: #96B0D3;
                         #month {
                             border: none;
                             background-color: $textfield;
-                            font-size: 1.4rem;
+                            font-size: 1.5rem;
                             font-weight: bold;
                             color: $darkblue;
                             text-align: center;
+                            margin-right: -25px;
                         }
                         #date {
                             border: none;
@@ -110,6 +110,7 @@ $textfield: #96B0D3;
                             color: $darkblue;
                             padding-right: 20px;
                             text-align: center;
+                            margin-right: -20px;
                         }
                         #date:focus {
                             outline: none;
@@ -227,11 +228,11 @@ $textfield: #96B0D3;
                     // justify-content: space-around;
                     // align-content: center;
                     padding-right: 21rem;
-                    padding-bottom: 20px;
+                    padding-bottom: 10px;
                     padding-top: 20px;
                     .topic {
                         color: $darkblue;
-                        font-weight: bold;
+                        // font-weight: bold;
                         font-size: 2.5vh;
                         // padding-right: 80px;
                         background-color: $textfield;
