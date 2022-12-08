@@ -1,9 +1,11 @@
-// FONTS
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 // COLORS
 $darkblue: #243F67;
 $background: #F3F9FF;
+
+// TEXT FIELD COLOR
+$textfield: #4375C0;
 
 * {
     list-style: none;
@@ -14,58 +16,6 @@ $background: #F3F9FF;
     font-family: 'Inter', sans-serif;
     body {
         background-color: $background;
-        .page {
-            // background-color: red;
-            height: 100vh;
-            width: 100%;
-            padding-top: 100px;
-            line-height: 40px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h1 {
-                padding-bottom: 100px;
-                color: $darkblue;
-            }
-            .apptbox {
-                border-radius: 5px;
-                line-height: 70px;
-                padding: 20px;
-                background-color: #586E9A;
-                background-color: #3292FA;
-                background-color: $darkblue;
-                h3 {
-                    padding-bottom: 20px;
-                    color: white;
-                }
-                p {
-                    a {
-                        font-weight: 2VH;
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
-            }
-            #apptsettings {
-                display: flex;
-                padding-top: 10px;
-                // background-color: aqua;
-                img {
-                    width: 20px;
-                    height: 20px;
-                    background-color: wheat;
-                }
-                span{
-                    background-color: white;
-                    a {
-                        color: $darkblue;
-                        font-weight: bold;
-                    }
-                }
-                
-            }
-        }
         .sidebar {
             background-color: $darkblue;
             width: 280px;
@@ -134,5 +84,28 @@ $background: #F3F9FF;
                 }
             }
         }
-    }
+        // PAGE PART
+        .page {
+            // background-color: red;
+            height: 100vh;
+            width: 100%;
+            padding-top: 70px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                color: $textfield;
+                font-size: 3.5rem;
+                padding-bottom: 100px;
+            }
+            .apptbox {
+                background-color: $textfield;
+                width: 900px;
+                height: 650px;
+
+            }
+        }
+    } 
 }
