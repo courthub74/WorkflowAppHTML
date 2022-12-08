@@ -52,9 +52,10 @@
   background-color: #96B0D3;
   color: #243F67;
   font-size: 2.3vh;
-  width: 720px;
+  width: 790px;
   text-align: center;
   margin: 0 auto;
+  padding-right: 50px;
 }
 * body .page .apptbox #phonename .inputfield input:focus {
   outline: none;
@@ -137,9 +138,10 @@
   background-color: #96B0D3;
   color: #243F67;
   font-size: 2.3vh;
-  width: 720px;
+  width: 780px;
   text-align: center;
   margin: 0 auto;
+  padding-right: 50px;
 }
 * body .page .apptbox #phonenumber .inputfield input:focus {
   outline: none;
@@ -171,6 +173,22 @@
 * body .page .apptbox #phonetimes input[type=time]::-webkit-calendar-picker-indicator {
   filter: invert(21%) sepia(16%) saturate(1959%) hue-rotate(177deg) brightness(100%) contrast(93%);
 }
+* body .page .apptbox #phonetimes #timebuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px 10px 120px;
+}
+* body .page .apptbox #phonetimes #timebuttons button {
+  width: 80px;
+  height: 25px;
+  background-color: #243F67;
+  color: #F3F9FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 * body .page .apptbox hr {
   height: 2px;
   background-color: #243F67;
@@ -183,33 +201,29 @@
 }
 * body .page .apptbox #phonetopic {
   display: flex;
-  justify-content: space-around;
-  align-content: center;
   padding-right: 21rem;
   padding-bottom: 20px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
-* body .page .apptbox #phonetopic input {
-  border: none;
+* body .page .apptbox #phonetopic .topic {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 2.5vh;
   background-color: #96B0D3;
-  color: #243F67;
-  width: 500rem;
-  height: 2rem;
 }
-* body .page .apptbox #phonetopic ::-moz-placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
+* body .page .apptbox #phonetopic .inputfield {
+  display: flex;
 }
-* body .page .apptbox #phonetopic :-ms-input-placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
+* body .page .apptbox #phonetopic .inputfield .topic {
+  border: none;
+  text-align: center;
+  width: 790px;
+  margin: 0 auto;
+  padding-right: 50px;
+  font-size: 2.3vh;
 }
-* body .page .apptbox #phonetopic ::placeholder {
-  color: #243F67;
-  font-weight: bold;
-  font-size: 2.5vh;
+* body .page .apptbox #phonetopic .inputfield input:focus {
+  outline: none;
 }
 * body .page .apptbox .buttondiv {
   height: 250px;

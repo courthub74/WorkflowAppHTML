@@ -53,16 +53,15 @@ $textfield: #96B0D3;
                     .inputfield {
                         // background-color: red;
                         display: flex;
-                        // justify-content: center;
                         .phone {
                             border: none;
                             background-color: $textfield;
-                            // background-color: green;
                             color: $darkblue;
                             font-size: 2.3vh;
-                            width: 720px ;
+                            width: 790px ;
                             text-align: center;
                             margin: 0 auto;
+                            padding-right: 50px;
                         }
                         input:focus {
                             outline: none;
@@ -84,6 +83,7 @@ $textfield: #96B0D3;
                         color: $darkblue;
                         font-weight: bold;
                         font-size: 2.5vh;
+                        
                     }
                     // Date Picker
                     .dateentry{
@@ -146,16 +146,17 @@ $textfield: #96B0D3;
                     }
                     .inputfield {
                         display: flex;
-                        // justify-content: center;
+                        // justify-content: center
+                             
                         .phone {
                             border: none;
                             background-color: $textfield;
-                            // background-color: green;
                             color: $darkblue;
                             font-size: 2.3vh;
-                            width: 720px;
+                            width: 780px;
                             text-align: center;
                             margin: 0 auto;  
+                            padding-right: 50px;
                         }
                         input:focus {
                             outline: none;
@@ -188,28 +189,26 @@ $textfield: #96B0D3;
                         outline: none;
                     }
                     input[type="time"]::-webkit-calendar-picker-indicator {
-                        // width: 20px;
-                        // height: 20px;
                         filter: invert(21%) sepia(16%) saturate(1959%) hue-rotate(177deg) brightness(100%) contrast(93%);
                     }
                     // BELOW are the buttons
-                    // #timebuttons {
-                    //     // background-color: aqua;
-                    //     display: flex;
-                    //     justify-content: center;
-                    //     align-items: center;
-                    //     gap: 10px;
-                    //     padding: 10px 0px 10px 120px;
-                    //     button {
-                    //         width: 80px;
-                    //         height: 25px;
-                    //         background-color: $darkblue;
-                    //         color: $background;
-                    //         border: none;
-                    //         border-radius: 5px;
-                    //         cursor: pointer;
-                    //     }
-                    // }
+                    #timebuttons {
+                        // background-color: aqua;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 0px 10px 120px;
+                        button {
+                            width: 80px;
+                            height: 25px;
+                            background-color: $darkblue;
+                            color: $background;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
                 }
                 hr {
                     height: 2px;
@@ -225,23 +224,31 @@ $textfield: #96B0D3;
                 }
                 #phonetopic {
                     display: flex;
-                    justify-content: space-around;
-                    align-content: center;
+                    // justify-content: space-around;
+                    // align-content: center;
                     padding-right: 21rem;
                     padding-bottom: 20px;
-                    padding-top: 30px;
-                    
-                    input {
-                        border: none;
-                        background-color: $textfield;
-                        color: $darkblue;
-                        width: 500rem;
-                        height: 2rem;
-                    }
-                    ::placeholder {
+                    padding-top: 20px;
+                    .topic {
                         color: $darkblue;
                         font-weight: bold;
                         font-size: 2.5vh;
+                        // padding-right: 80px;
+                        background-color: $textfield;
+                    }
+                    .inputfield {
+                        display: flex;
+                        .topic {
+                            border: none;
+                            text-align: center;
+                            width: 790px;
+                            margin: 0 auto;
+                            padding-right: 50px;
+                            font-size: 2.3vh;
+                        }
+                        input:focus {
+                            outline: none;
+                        }
                     }
                 }
                 .buttondiv {
