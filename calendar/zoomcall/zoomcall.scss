@@ -104,7 +104,9 @@ $textfield: #4375C0;
                 background-color: $textfield;
                 width: 900px;
                 height: 650px;
-
+                border-radius: 5px;
+                line-height: 40px;
+                padding: 40px 20px;
             }
         }
     } 
