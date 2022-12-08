@@ -89,7 +89,7 @@
   font-weight: bold;
   color: #243F67;
   text-align: center;
-  margin-right: -25px;
+  margin-right: -19px;
 }
 * body .page .apptbox #phonedate .dateentry #date {
   border: none;
@@ -143,7 +143,7 @@
   width: 780px;
   text-align: center;
   margin: 0 auto;
-  padding-right: 50px;
+  padding-right: 60px;
 }
 * body .page .apptbox #phonenumber .inputfield input:focus {
   outline: none;
@@ -180,11 +180,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px 0px 10px 120px;
+  padding: 10px 10px 0px 90px;
 }
 * body .page .apptbox #phonetimes #timebuttons button {
-  width: 80px;
-  height: 25px;
+  width: 90px;
+  height: 30px;
   background-color: #243F67;
   color: #F3F9FF;
   border: none;
@@ -227,8 +227,13 @@
   outline: none;
 }
 * body .page .apptbox .buttondiv {
-  height: 250px;
-  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 5px;
 }
 * body .page .apptbox .buttondiv button {
   background-color: #243F67;
@@ -241,15 +246,17 @@
   font-size: 1.3rem;
   cursor: pointer;
 }
-* body .page .apptbox .buttondiv #otheroptions {
-  display: flex;
-  justify-content: space-between;
+* body .page .apptbox .buttondiv .back {
+  padding: 80px 190px 0px 0px;
 }
-* body .page .apptbox .buttondiv #otheroptions .back a {
+* body .page .apptbox .buttondiv .back a {
   color: #243F67;
   font-size: 2.1vh;
 }
-* body .page .apptbox .buttondiv #otheroptions .callslist a {
+* body .page .apptbox .buttondiv .callslist {
+  padding: 80px 0px 0px 150px;
+}
+* body .page .apptbox .buttondiv .callslist a {
   color: #243F67;
   font-size: 2.1vh;
 }
