@@ -64,7 +64,7 @@
             <div class="apptbox">
                 <!-- The Name Line -->
                 <div class="zoomentry">
-                    <h3 class="name">name:</h3>
+                    <h3 class="title">name:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
@@ -76,19 +76,30 @@
                 <hr>
                 <!-- The Date Line -->
                 <div class="zoomentry">
-                    <h3 class="date">date:</h3>
-                    <div class="inputfield">
-                        <input 
-                            type="text"
-                            class="zoomdate"
-                            id="date"/>
+                    <h3 class="title">date:</h3>
+                    <div class="zoomdate">
+                        <!-- datepicker here -->
+                        <!-- Month -->
+                        <select name="date" id="date">
+                            <option disabled selected>Select Here</option>
+                            <option value="January">Jan 1 2023</option>
+                            <option value="January">Jan 2 2023</option>
+                            <option value="January">Jan 3 2023</option>
+                            <option value="January">Jan 4 2023</option>
+                            <option value="January">Jan 5 2023</option>
+                            <option value="January">Jan 6 2023</option>
+                            <option value="January">Jan 7 2023</option>
+                            <option value="January">Jan 8 2023</option>
+                            <option value="January">Jan 9 2023</option>
+                            <option value="January">Jan 10 2023</option>
+                        </select>
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Time Line -->
                 <div class="zoomentry">
-                    <h3 class="time">time:</h3>
+                    <h3 class="title">time:</h3>
                     <div id="timebuttons">
                         <button type="button" class="hour" value="2:00PM">2:00PM</button>
                         <button type="button" class="hour" value="3:00PM">3:00PM</button>
@@ -102,7 +113,7 @@
                 <hr>
                 <!-- The Phone Line -->
                 <div class="zoomentry">
-                    <h3 class="phone">phone:</h3>
+                    <h3 class="title">phone:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
@@ -114,7 +125,7 @@
                 <hr>
                 <!-- The Topic Line -->
                 <div class="zoomentry">
-                    <h3 class="topic">topic:</h3>
+                    <h3 class="title">topic:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
@@ -126,7 +137,7 @@
                 <hr>
                 <!-- The Zoom Link Line -->
                 <div class="zoomentry">
-                    <h3 class="link">link:</h3>
+                    <h3 class="title">link:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"

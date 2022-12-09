@@ -99,7 +99,7 @@
   padding-top: 10px;
   padding-right: 21rem;
 }
-* body .page .apptbox .zoomentry .name {
+* body .page .apptbox .zoomentry .title {
   color: white;
   font-weight: bold;
   font-size: 2.5vh;
@@ -119,6 +119,27 @@
 }
 * body .page .apptbox .zoomentry .inputfield input:focus {
   outline: none;
+}
+* body .page .apptbox .zoomentry .zoomdate {
+  padding-top: 5px;
+  padding-left: 312px;
+}
+* body .page .apptbox .zoomentry .zoomdate select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+* body .page .apptbox .zoomentry .zoomdate select:focus {
+  outline: none;
+}
+* body .page .apptbox .zoomentry .zoomdate #date {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #4375C0;
+  color: white;
+  text-align: center;
 }
 * body .page .apptbox .buttondiv {
   display: flex;
