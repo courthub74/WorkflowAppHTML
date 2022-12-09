@@ -197,6 +197,15 @@ $textfield: #4375C0;
                         margin: 0 auto;
                         padding-right: 40px;
                     }
+                    // the LINK section
+                    .zoomlink {
+                        border: none;
+                        background-color: $textfield;
+                        color: white;
+                        font-size: 2.3vh;
+                        width: 780px;
+                        text-align: center;
+                    }
                 }
                 hr {
                     height: 2px;
