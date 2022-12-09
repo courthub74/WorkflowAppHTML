@@ -92,4 +92,34 @@
   border-radius: 5px;
   line-height: 40px;
   padding: 40px 20px;
+}
+* body .page .apptbox .zoomentry {
+  display: flex;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 21rem;
+}
+* body .page .apptbox .zoomentry .name {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+* body .page .apptbox .zoomentry .inputfield {
+  display: flex;
+}
+* body .page .apptbox .zoomentry .inputfield .zoomname {
+  border: none;
+  width: 790px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.3vh;
+  padding-right: 48px;
+  background-color: #4375C0;
+  color: white;
+}
+* body .page .apptbox .zoomentry .inputfield input:focus {
+  outline: none;
+}
+* body .page .apptbox .buttondiv {
+  display: flex;
 }/*# sourceMappingURL=zoomcall.css.map */
