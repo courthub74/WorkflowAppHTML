@@ -154,9 +154,25 @@ $textfield: #4375C0;
                             background-color: $textfield;
                             // background-color: lightgreen;
                             color: white;
-                            text-align: center;
-                            // width: 790px;
-                            
+                            text-align: center; 
+                        }
+                    }
+                    // the TIME section
+                    #timebuttons {
+                        // background-color: lightgreen;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 10px 5px 90px;
+                        button {
+                            width: 90px;
+                            height: 30px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: white;
+                            color: $textfield;
                         }
                     }
                 }
