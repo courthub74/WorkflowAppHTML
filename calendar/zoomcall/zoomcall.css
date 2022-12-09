@@ -157,6 +157,31 @@
   background-color: white;
   color: #4375C0;
 }
+* body .page .apptbox .zoomentry .zoomphone {
+  border: none;
+  background-color: #4375C0;
+  color: white;
+  font-size: 2.3vh;
+  width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  padding-right: 60px;
+}
+* body .page .apptbox .zoomentry .zoomtopic {
+  border: none;
+  background-color: #4375C0;
+  color: white;
+  font-size: 2.3vh;
+  width: 790px;
+  text-align: center;
+  margin: 0 auto;
+  padding-right: 40px;
+}
+* body .page .apptbox hr {
+  height: 2px;
+  background-color: white;
+  border: none;
+}
 * body .page .apptbox .buttondiv {
   display: flex;
 }/*# sourceMappingURL=zoomcall.css.map */

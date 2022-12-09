@@ -113,7 +113,7 @@ $textfield: #4375C0;
                     padding-bottom: 10px;
                     padding-top: 10px;
                     padding-right: 21rem;
-                    // the NAME section
+                    // ALL the Titles
                     .title {
                         color: white;
                         font-weight: bold;
@@ -121,7 +121,7 @@ $textfield: #4375C0;
                     }
                     .inputfield {
                         display: flex;
-                        // height: 400px;
+                        // the NAME section
                         .zoomname {
                             border: none;
                             width: 790px;
@@ -175,6 +175,33 @@ $textfield: #4375C0;
                             color: $textfield;
                         }
                     }
+                    // the PHONE NUMBER section
+                    .zoomphone {
+                        border: none;
+                        background-color: $textfield;
+                        color: white;
+                        font-size: 2.3vh;
+                        width: 780px;
+                        text-align: center;
+                        margin: 0 auto;
+                        padding-right: 60px;
+                    }
+                    // the TOPIC section
+                    .zoomtopic {
+                        border: none;
+                        background-color: $textfield;
+                        color: white;
+                        font-size: 2.3vh;
+                        width: 790px;
+                        text-align: center;
+                        margin: 0 auto;
+                        padding-right: 40px;
+                    }
+                }
+                hr {
+                    height: 2px;
+                    background-color: white;
+                    border: none;
                 }
                 .buttondiv {
                     display: flex;
