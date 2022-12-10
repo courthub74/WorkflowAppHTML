@@ -212,8 +212,39 @@ $textfield: #4375C0;
                     background-color: white;
                     border: none;
                 }
+                // the BUTTONS section
                 .buttondiv {
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 90px 10px 0px 20px;
+                    // background-color: aqua;
+                    button {
+                        border: none;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;
+                        color: $textfield;
+                        background-color: white;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    .back {
+                        padding: 80px 150px 0px 0px;
+                        a {
+                            color: white;
+                            font-size: 2.1vh;
+                        }
+                    }
+                    .zoomslist {
+                        padding: 80px 0px 0px 150px;
+                        a {
+                            color: white;
+                            font-size: 2.1vh;
+                        }
+                    }
                 }
             }
         }
