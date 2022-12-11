@@ -9,6 +9,7 @@
 }
 * body {
   background-color: #F3F9FF;
+  padding-bottom: 60px;
 }
 * .sidebar {
   background-color: #243F67;
@@ -87,7 +88,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 .forbackbuttontoside .setupbox .logo img {
@@ -125,11 +126,14 @@
 .forbackbuttontoside .setupbox .setuplist .backbutton {
   height: 40px;
   width: 670px;
-  border: 1px solid #243F67;
-  background-color: #243F67;
+  padding-top: 10px;
+  padding-bottom: 50px;
   text-align: center;
 }
+.forbackbuttontoside .setupbox .setuplist .backbutton p img {
+  height: 17px;
+}
 .forbackbuttontoside .setupbox .setuplist .backbutton p a {
-  color: white;
+  color: #243F67;
   font-weight: bold;
 }/*# sourceMappingURL=djangosetup.css.map */

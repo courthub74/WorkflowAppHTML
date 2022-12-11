@@ -16,6 +16,7 @@ $background: #F3F9FF;
     font-family: 'Inter', sans-serif;
     body {
         background-color: #F3F9FF;
+        padding-bottom: 60px;
     }
     .sidebar {
         background-color: $darkblue;
@@ -101,7 +102,7 @@ $background: #F3F9FF;
             display: flex;
             flex-direction: column;
             text-align: center;
-            padding-top: 100px;
+            padding-top: 30px;
             padding-bottom: 20px;
             img {
                 width: 300px;
@@ -138,16 +139,17 @@ $background: #F3F9FF;
                 font-size: medium;
             }
             .backbutton {
-                // background-color: green;
                 height: 40px;
                 width: 670px;
-                border: 1px solid $darkblue;
-                background-color: $darkblue;
+                padding-top: 10px;
+                padding-bottom: 50px;
                 text-align: center;
-                
                 p {
+                    img {
+                        height: 17px;
+                    }
                     a {
-                        color: white;
+                        color: $darkblue;
                         font-weight: bold;
                     }
                 }
