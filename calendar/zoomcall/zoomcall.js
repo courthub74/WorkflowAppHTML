@@ -1,5 +1,7 @@
 // first connect to the firebase db
 
+// const { Button } = require("react-bootstrap");
+
 const firebaseConfig = {
     apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
     authDomain: "workflowapp-c191d.firebaseapp.com",
@@ -22,14 +24,78 @@ var firebaseZoomCallRef = firebase.database().ref("zooms");
 // test print
 console.log("Here is the DB object for the firebaseZoomCallRef:", firebaseZoomCallRef);
 
-// query each input field
-    // get the input.value for each
+// window add event listener
+window.addEventListener('load', () => {
+    // query the form field for submit button
+    const form = document.querySelector("#zoomform");
 
-// query select the form in order to 
-// add event listener to the submit button repping the form
-    // when clicked, send data from each queried input
-        // to the firebase db
-            // most likely you will place it in key value form
+    // query each input field
+        // get the input.value for each
 
-// first put the arrow on there django set up and installation
+    // NAME field
+    const name = document.querySelector("#name");
+    // DATE field
+    const date = document.querySelector("#date");
+    // TIME field
+    const time = document.getElementsByName("#timebutt");
+
+   
+    // for TIME
+        // FIRST you have to set the buttons to onclick
+            // render the value
+        
+            // push to firebase from here
+
+    // query select the form in order to 
+    // add event listener to the submit button repping the form
+        // when clicked, send data from each queried input
+            // to the firebase db
+                // most likely you will place it in key value form
+
+    // add event listener to the form submit button
+    form.addEventListener('submit', (e) => {
+        // keeps page from refreshing
+        e.preventDefault();
+        // test print the submit button
+        console.log("Zoom submit button pressed");
+
+
+        // for NAME
+        // get the value of the 'name' variable
+            // store it in a variable
+        const zoomname = name.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomname) {
+            alert("Please fill out the name field");
+            return;
+        }
+        // clear the name field after button pressed
+        name.value = '';
+
+        // test print
+        console.log(zoomname);
+
+
+        // for DATE
+        // get the value of the 'date' variable
+            // store it in a variable
+        const zoomdate = date.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomdate) {
+            alert("Please fill out the date field");
+            return;
+        }
+        // clear the date field after button pressed
+        date.value = 'Select Here';
+
+        // test print
+        console.log(zoomdate);
+        
+    });
+})
+
+
+
 

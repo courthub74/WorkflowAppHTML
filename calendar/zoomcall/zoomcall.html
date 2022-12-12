@@ -57,7 +57,7 @@
     <!-- PAGE PART -->
     <div class="page">
 
-        <form action="POST">
+        <form id="zoomform" action="POST">
             <h1>Zoom Call</h1>
 
             <!-- The Blue Zoom Box -->
@@ -82,16 +82,16 @@
                         <!-- Month -->
                         <select name="date" id="date">
                             <option disabled selected>Select Here</option>
-                            <option value="January">Jan 1 2023</option>
-                            <option value="January">Jan 2 2023</option>
-                            <option value="January">Jan 3 2023</option>
-                            <option value="January">Jan 4 2023</option>
-                            <option value="January">Jan 5 2023</option>
-                            <option value="January">Jan 6 2023</option>
-                            <option value="January">Jan 7 2023</option>
-                            <option value="January">Jan 8 2023</option>
-                            <option value="January">Jan 9 2023</option>
-                            <option value="January">Jan 10 2023</option>
+                            <option value="Jan 1 2023">Jan 1 2023</option>
+                            <option value="Jan 2 2023">Jan 2 2023</option>
+                            <option value="Jan 2 2023">Jan 3 2023</option>
+                            <option value="Jan 4 2023">Jan 4 2023</option>
+                            <option value="Jan 5 2023">Jan 5 2023</option>
+                            <option value="Jan 6 2023">Jan 6 2023</option>
+                            <option value="Jan 7 2023">Jan 7 2023</option>
+                            <option value="Jan 8 2023">Jan 8 2023</option>
+                            <option value="Jan 9 2023">Jan 9 2023</option>
+                            <option value="Jan 10 2023">Jan 10 2023</option>
                         </select>
                     </div>
                 </div>
@@ -100,15 +100,25 @@
                 <!-- The Time Line -->
                 <div class="zoomentry">
                     <h3 class="title">time:</h3>
+                    <!-- <select name="time" id="time">
+                        <option disabled selected>Select Here</option>
+                        <option value="2:00pm">2:00pm</option>
+                        <option value="3:00pm">3:00pm</option>
+                        <option value="4:00pm">4:00pm</option>
+                        <option value="5:00pm">5:00pm</option>
+                        <option value="6:00pm">6:00pm</option>
+                        <option value="7:00pm">7:00pm</option>
+                    </select> -->
                     <div id="timebuttons">
-                        <button type="button" class="hour" value="2:00PM">2:00PM</button>
-                        <button type="button" class="hour" value="3:00PM">3:00PM</button>
-                        <button type="button" class="hour" value="4:00PM">4:00PM</button>
-                        <button type="button" class="hour" value="5:00PM">5:00PM</button>
-                        <button type="button" class="hour" value="6:00PM">6:00PM</button>
-                        <button type="button" class="hour" value="7:00PM">7:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="2:00PM">2:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="3:00PM">3:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="4:00PM">4:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="5:00PM">5:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="6:00PM">6:00PM</button>
+                        <button type="button" name="timebutt" class="hour" value="7:00PM">7:00PM</button>
                     </div>
                 </div>
+
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Phone Line -->
