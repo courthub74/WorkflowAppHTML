@@ -1,6 +1,5 @@
 // first connect to the firebase db
 
-// const { Button } = require("react-bootstrap");
 
 const firebaseConfig = {
     apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
@@ -36,16 +35,97 @@ window.addEventListener('load', () => {
     const name = document.querySelector("#name");
     // DATE field
     const date = document.querySelector("#date");
-    // TIME field
-    const time = document.getElementsByName("#timebutt");
+    // TIME field 
+        // rendered by parent div
+    var property = document.getElementById("timebuttons");
+    // add event listener to each button
+    property.addEventListener('click', (e) => {
+        // if 2pm 
+        if(e.target && e.target.id == "two"){
+            console.log(e.target.value);
+            var two = e.target;
+            // console.log(two);
+            // NOW change it's style
+            two.style.backgroundColor = "#4375C0";
+            // change the border
+            two.style.border = "#ffffff solid 1px";
+            // change the text color
+            two.style.color = "#ffffff";
+        }
+        // if 3pm 
+        if(e.target && e.target.id == "three"){
+            console.log(e.target.value);
+            // store 3pm target in a variable
+            var three = e.target;
+            // NOW change it's style
+            three.style.backgroundColor = "#4375C0";
+            // change the border
+            three.style.border = "#ffffff solid 1px";
+            // change the text color
+            three.style.color = "#ffffff";
+        }
+        // if 4pm
+        if(e.target && e.target.id == "four"){
+            console.log(e.target.value);
+            // store 4pm target in a variable
+            var four = e.target;
+            // NOW change it's style
+            four.style.backgroundColor = "#4375C0";
+            // change the border
+            four.style.border = "#ffffff solid 1px";
+            // change the text color
+            four.style.color = "#ffffff";
+        }
+        // if 5pm
+        if(e.target && e.target.id == "five"){
+            console.log(e.target.value);
+            // store 5pm target in a variable
+            var five = e.target;
+            // NOW change it's style
+            five.style.backgroundColor = "#4375C0";
+            // change the border
+            five.style.border = "#ffffff solid 1px";
+            // change the text color
+            five.style.color = "#ffffff";
+        }
+        // if 6pm
+        if(e.target && e.target.id == "six"){
+            console.log(e.target.value);
+            // store 6pm target in a variable
+            var six = e.target;
+            // NOW change it's style
+            six.style.backgroundColor = "#4375C0";
+            // change the border
+            six.style.border = "#ffffff solid 1px";
+            // change the text color
+            six.style.color = "#ffffff";
+        }
+        // if 7pm
+        if(e.target && e.target.id == "seven"){
+            console.log(e.target.value);
+            // store 6pm target in a variable
+            var six = e.target;
+            // NOW change it's style
+            six.style.backgroundColor = "#4375C0";
+            // change the border
+            six.style.border = "#ffffff solid 1px";
+            // change the text color
+            six.style.color = "#ffffff";
+        }
+        // NOW print that value to the div like the other fields
+            // somehow send it to the form
+        const timevar = e.target.value;
+        console.log("This is the time pressed: ",timevar);
+    });
 
-   
-    // for TIME
-        // FIRST you have to set the buttons to onclick
-            // render the value
-        
-            // push to firebase from here
+    // PHONE field
+    const phone = document.querySelector("#phone");
+    // TOPIC field
+    const topic = document.querySelector("#topic");
+    // LINK field
+    const link = document.querySelector("#link");
 
+    // FORM field
     // query select the form in order to 
     // add event listener to the submit button repping the form
         // when clicked, send data from each queried input
@@ -76,6 +156,8 @@ window.addEventListener('load', () => {
         // test print
         console.log(zoomname);
 
+        // push to firebase from here
+
 
         // for DATE
         // get the value of the 'date' variable
@@ -92,9 +174,72 @@ window.addEventListener('load', () => {
 
         // test print
         console.log(zoomdate);
-        
+
+        // push to firebase from here
+
+
+        // for TIME
+        // get the value of the 'time' button pressed
+            // store it in a variable
+        // add event listener to each button
+       console.log("The Time needs to be figured out here")
+        // Need to refresh the buttons set
+        // push to firebase from here
+
+
+        // for PHONE
+        // get the value of the 'date' variable
+            // store it in a variable
+        const zoomphone = phone.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomphone) {
+            alert("Please fill out the phone field");
+            return;
+        }
+        // clear the date field after button pressed
+        phone.value = '';
+
+        // test print
+        console.log(zoomphone);
+
+        // push to firebase from here
+
+        // for TOPIC
+        // get the value of the 'topic' variable
+            // store it in a variable
+        const zoomtopic = topic.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomtopic) {
+            alert("Please fill out the topic field");
+            return;
+        }
+        // clear the date field after button pressed
+        topic.value = '';
+
+        // test print
+        console.log(zoomtopic);
+
+        // push to firebase from here
+
+        // for LINK
+        // get the value of the 'topic' variable
+            // store it in a variable
+        const zoomlink = link.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomlink) {
+            alert("Please fill out the zoomlink field");
+            return;
+        }
+        // clear the date field after button pressed
+        link.value = '';
+
+        // test print
+        console.log(zoomlink);
     });
-})
+});
 
 
 
