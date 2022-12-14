@@ -9,40 +9,40 @@
     <link rel="stylesheet" href="appointments.css">
     <title>Make an Appointment</title>
 </head>
-<body>
+<body onload="setDate()">
 
     <!-- SIDEBAR -->
 
     <div class="sidebar">
         <div class="header">
             <!-- Sidebar Header -->
-            <a href="../homepage/home.html">
+            <a href="/homepage/home.html">
                 <h2>Workflow Machine</h2>
-                <img src="../img/white_logo_transparent_background.png" alt="logo">
+                <img src="/img/white_logo_transparent_background.png" alt="logo">
             </a>
         </div>
 
         <!-- Menu Items -->
         <div class="menu">
             <ul>
-                <li><a href="./calendar.html">
-                    <span class="icon"><img src="../img/bxs_calendar.png" alt="calendar"></span>
+                <li><a href="/calendar/calendar.html">
+                    <span class="icon"><img src="/img/bxs_calendar.png" alt="calendar"></span>
                     <span class="item">calendar</span>
-                    <span class="check"><img src="../img/languages/check.png" alt="currentpage"></span>
+                    <span class="check"><img src="/img/languages/check.png" alt="currentpage"></span>
                 </a></li>
 
-                <li><a href="../notes/notes.html">
-                    <span class="icon"><img src="../img/charm_notes-tick.png" alt="notes"></span>
+                <li><a href="/notes/notes.html">
+                    <span class="icon"><img src="/img/charm_notes-tick.png" alt="notes"></span>
                     <span class="item">notes</span>
                 </a></li>
 
-                <li><a href="../tasks/tasks.html">
-                    <span class="icon"><img src="../img/clarity_tasks-line.png" alt="todos"></span>
+                <li><a href="/tasks/tasks.html">
+                    <span class="icon"><img src="/img/clarity_tasks-line.png" alt="todos"></span>
                     <span class="item">tasks</span>
                 </a></li>
 
                 <li><a href="#">
-                    <span class="icon"><img src="../img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
+                    <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                     <span class="item">spreadsheet</span>
                 </a></li>
             </ul>
@@ -50,7 +50,7 @@
 
         <!-- Logout Button -->
         <div class="logoutbutton">
-            <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
+            <button class="logout"><a href="/loginpage/login.html">Logout</a></button>
         </div>
     </div>
 
@@ -58,11 +58,14 @@
         <form action="POST">
             <h1>Make an Appointment</h1>
 
+            <!-- The DATE when a date clicked on in the calendar -->
+            <p id="show"></p>
+
             <div class="apptbox">
                 <h3>What is the appointment type?</h3>
-                <p><a href="./phonecall/phonecall.html">Phone Call</a></p>
+                <p><a href="/calendar/phonecall/phonecall.html">Phone Call</a></p>
                 <hr>
-                <p><a href="./zoomcall/zoomcall.html">Zoom Meeting</a></p>
+                <p><a href="/calendar/zoomcall/zoomcall.html">Zoom Meeting</a></p>
                 <hr>
                 <p><a href="#">In Person Meeting</a></p>
                 <hr>
@@ -76,5 +79,12 @@
         </div>
     </div>
     
+    <!-- JavaScript Link to query the calendar data -->
+    <script>
+        function setDate(){
+            console.log("Date set by local storage here");
+            // document.getElementById("show").innerHTML = "The Date Clicked on will be here";
+        }
+    </script>
 </body>
 </html>
