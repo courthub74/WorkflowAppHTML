@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="appointments.css">
     <title>Make an Appointment</title>
 </head>
-<body onload="setDate()">
+<body>
 
     <!-- SIDEBAR -->
 
@@ -81,10 +81,30 @@
     
     <!-- JavaScript Link to query the calendar data -->
     <script>
-        function setDate(){
-            console.log("Date set by local storage here");
-            // document.getElementById("show").innerHTML = "The Date Clicked on will be here";
-        }
+        console.log("The first date set by local storage here");
+        // Get the 1st of June and store it in a variable
+        var first = localStorage.getItem("DATE1");
+        // test print
+        console.log(first);
+        document.getElementById("show").innerHTML = first;
+
+        // function setDate1(){
+        //     console.log("The first date set by local storage here");
+        //     // Get the 1st of June and store it in a variable
+        //     var first = localStorage.getItem("DATE1");
+        //     // test print
+        //     console.log(first);
+        //     document.getElementById("show").innerHTML = first;
+        // }
+
+        // function setDate2(){
+        //     console.log("The second date set by local storage here");
+        //     // Get the 1st of June and store it in a variable
+        //     var second = localStorage.getItem("DATE2");
+        //     // test print
+        //     console.log(second);
+        //     document.getElementById("show").innerHTML = second;
+        // }
     </script>
 </body>
 </html>

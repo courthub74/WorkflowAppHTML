@@ -75,6 +75,8 @@
 
             </header>
 
+        <form id="form" method="POST" action="/calendar/appointments/appointments.html">
+
             <table>
  
                 <thead>
@@ -100,8 +102,8 @@
                       <td class="prev-month">30</td>
                       <td class="prev-month">31</td>
            
-                      <td id="first" value="June 1st, 2023"><a value="June 1st, 2023" href="/calendar/appointments/appointments.html">1</a></td>
-                      <td><a href="/calendar/appointments/appointments.html">2</a></td>
+                      <td><a id="first" value="June 1st, 2023" href="/calendar/appointments/appointments.html" onclick="submitDate1()">1</a></td>
+                      <td><a id="second" value="June 2nd, 2023" href="/calendar/appointments/appointments.html" onclick="submitDate2()">2</a></td>
                       <td><a href="/calendar/appointments/appointments.html">3</a></td>
                       <td><a href="/calendar/appointments/appointments.html">4</a></td>
                     </tr>
@@ -150,6 +152,8 @@
 
             </table>
 
+        </form>
+
         </div>  <!-- end calendar -->
 
         <!-- OTHER APPOINTMENT OPTIONS -->
@@ -166,20 +170,45 @@
     <script>
         // Lets query the date data
         const datedata = document.querySelector("#first");
+        const datedata2 = document.querySelector("#second");
 
-        // test print
+        // // test print
         console.log(datedata.innerHTML);
+        // // test print
+        console.log(datedata2.innerHTML);
 
-        // check if it has the attribute
+        // // check if it has the attribute
         let target = datedata.hasAttribute('value');
         console.log(target);
 
-        // NOW get the attribute
+        // // NOW get the attribute
         let datevalue = datedata.getAttribute('value');
         console.log(datevalue);
 
+        // // check if it has the attribute
+        let target2 = datedata2.hasAttribute('value');
+        console.log(target2);
+
+        // // NOW get the attribute
+        let datevalue2 = datedata2.getAttribute('value');
+        console.log(datevalue2);
+
+        let first = document.getElementById("first");
+        let value1 = first.value;
+        localStorage.setItem("DATE1", value1);
+
         // NOW push it to another html page
         // perform the submitForm function here
+        // function submitDate1(){
+        //     let first = document.getElementById("first");
+        //     let value1 = first.value;
+        //     localStorage.setItem("DATE1", value1);
+        // }
+        // function submitDate2(){
+        //     let second = document.getElementById("second");
+        //     let value2 = second.value;
+        //     localStorage.setItem("DATE1", value2);
+        // }
         // THEN figure out how to make this work on just clicking the date
     </script>
 </body>
