@@ -126,6 +126,10 @@
   padding: 50px;
   text-align: center;
 }
+* .container .calendar table tbody tr td button {
+  background-color: #E2F1FF;
+  border: none;
+}
 * .container .calendar table tbody tr .event {
   background-color: #243F67;
 }

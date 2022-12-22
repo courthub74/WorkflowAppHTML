@@ -21,8 +21,15 @@
   align-items: center;
 }
 * body .page h1 {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   color: #243F67;
+  font-size: 45px;
+}
+* body .page #show {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 20px;
 }
 * body .page .apptbox {
   border-radius: 5px;
@@ -43,7 +50,7 @@
 }
 * body .page #apptsettings {
   display: flex;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 * body .page #apptsettings #gear {
   height: 40px;

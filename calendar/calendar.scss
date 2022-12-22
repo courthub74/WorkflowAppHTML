@@ -148,6 +148,10 @@ $background: #F3F9FF;
                             background-color: #E2F1FF;
                             padding: 50px;
                             text-align: center;
+                            button {
+                                background-color: #E2F1FF;
+                                border: none;
+                            }
                         }
                         .event {
                             background-color: #243F67;
