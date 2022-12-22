@@ -103,13 +103,13 @@ window.addEventListener('load', () => {
         if(e.target && e.target.id == "seven"){
             console.log(e.target.value);
             // store 6pm target in a variable
-            var six = e.target;
+            var seven = e.target;
             // NOW change it's style
-            six.style.backgroundColor = "#4375C0";
+            seven.style.backgroundColor = "#4375C0";
             // change the border
-            six.style.border = "#ffffff solid 1px";
+            seven.style.border = "#ffffff solid 1px";
             // change the text color
-            six.style.color = "#ffffff";
+            seven.style.color = "#ffffff";
         }
         // NOW print that value to the div like the other fields
             // somehow send it to the form
