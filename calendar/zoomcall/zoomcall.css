@@ -80,12 +80,12 @@
   flex-direction: column;
   align-items: center;
 }
-* body .page h1 {
+* body .page form h1 {
   color: #4375C0;
   font-size: 3.5rem;
   padding-bottom: 100px;
 }
-* body .page .apptbox {
+* body .page form .apptbox {
   background-color: #4375C0;
   width: 900px;
   height: 650px;
@@ -93,21 +93,21 @@
   line-height: 40px;
   padding: 40px 20px;
 }
-* body .page .apptbox .zoomentry {
+* body .page form .apptbox .zoomentry {
   display: flex;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-right: 21rem;
 }
-* body .page .apptbox .zoomentry .title {
+* body .page form .apptbox .zoomentry .title {
   color: white;
   font-weight: bold;
   font-size: 2.5vh;
 }
-* body .page .apptbox .zoomentry .inputfield {
+* body .page form .apptbox .zoomentry .inputfield {
   display: flex;
 }
-* body .page .apptbox .zoomentry .inputfield .zoomname {
+* body .page form .apptbox .zoomentry .inputfield .zoomname {
   border: none;
   width: 790px;
   text-align: center;
@@ -117,23 +117,23 @@
   background-color: #4375C0;
   color: white;
 }
-* body .page .apptbox .zoomentry .inputfield input:focus {
+* body .page form .apptbox .zoomentry .inputfield input:focus {
   outline: none;
 }
-* body .page .apptbox .zoomentry .zoomdate {
+* body .page form .apptbox .zoomentry .zoomdate {
   padding-top: 5px;
   padding-left: 300px;
 }
-* body .page .apptbox .zoomentry .zoomdate select {
+* body .page form .apptbox .zoomentry .zoomdate select {
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-* body .page .apptbox .zoomentry .zoomdate select:focus {
+* body .page form .apptbox .zoomentry .zoomdate select:focus {
   outline: none;
 }
-* body .page .apptbox .zoomentry .zoomdate #date {
+* body .page form .apptbox .zoomentry .zoomdate #date {
   border: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -141,14 +141,14 @@
   color: white;
   text-align: center;
 }
-* body .page .apptbox .zoomentry #timebuttons {
+* body .page form .apptbox .zoomentry #timebuttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 10px 10px 5px 90px;
 }
-* body .page .apptbox .zoomentry #timebuttons button {
+* body .page form .apptbox .zoomentry #timebuttons button {
   width: 90px;
   height: 30px;
   border-radius: 5px;
@@ -157,7 +157,7 @@
   background-color: white;
   color: #4375C0;
 }
-* body .page .apptbox .zoomentry .zoomphone {
+* body .page form .apptbox .zoomentry .zoomphone {
   border: none;
   background-color: #4375C0;
   color: white;
@@ -167,7 +167,7 @@
   margin: 0 auto;
   padding-right: 78px;
 }
-* body .page .apptbox .zoomentry .zoomtopic {
+* body .page form .apptbox .zoomentry .zoomtopic {
   border: none;
   background-color: #4375C0;
   color: white;
@@ -177,7 +177,7 @@
   margin: 0 auto;
   padding-right: 59.5px;
 }
-* body .page .apptbox .zoomentry .zoomlink {
+* body .page form .apptbox .zoomentry .zoomlink {
   border: none;
   background-color: #4375C0;
   color: white;
@@ -185,22 +185,22 @@
   width: 780px;
   text-align: center;
 }
-* body .page .apptbox hr {
+* body .page form .apptbox hr {
   height: 2px;
   background-color: white;
   border: none;
 }
-* body .page .apptbox .buttondiv {
+* body .page form .apptbox .buttondiv {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   padding: 90px 0px 0px 20px;
 }
-* body .page .apptbox .buttondiv .subbutton {
+* body .page form .apptbox .buttondiv .subbutton {
   padding-left: 12px;
 }
-* body .page .apptbox .buttondiv .subbutton button {
+* body .page form .apptbox .buttondiv .subbutton button {
   border: none;
   border-radius: 50%;
   width: 100px;
@@ -211,19 +211,19 @@
   font-size: 1.3rem;
   cursor: pointer;
 }
-* body .page .apptbox .buttondiv .calendar {
+* body .page form .apptbox .buttondiv .calendar {
   text-align: center;
   padding: 80px 160px 0px 0px;
 }
-* body .page .apptbox .buttondiv .calendar .back a {
+* body .page form .apptbox .buttondiv .calendar .back a {
   color: white;
   font-size: 2.1vh;
 }
-* body .page .apptbox .buttondiv .list {
+* body .page form .apptbox .buttondiv .list {
   text-align: center;
   padding: 80px 10px 0px 145px;
 }
-* body .page .apptbox .buttondiv .list .zoomslist a {
+* body .page form .apptbox .buttondiv .list .zoomslist a {
   color: white;
   font-size: 2.1vh;
 }/*# sourceMappingURL=zoomcall.css.map */

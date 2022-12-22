@@ -101,9 +101,10 @@
                       <td class="prev-month">29</td>
                       <td class="prev-month">30</td>
                       <td class="prev-month">31</td>
-           
-                      <td><a id="first" value="June 1st, 2023" href="/calendar/appointments/appointments.html" onclick="submitDate1()">1</a></td>
-                      <td><a id="second" value="June 2nd, 2023" href="/calendar/appointments/appointments.html" onclick="submitDate2()">2</a></td>
+                        
+                      <!-- If I change it to Button it the date gets a definition and sends through local storage -->
+                      <td><a id="first" value="For: June 1st, 2023" onclick="submitDate1()">1</a></td>
+                      <td><a id="second" value="For: June 2nd, 2023" href="/calendar/appointments/appointments.html" onclick="submitDate2()">2</a></td>
                       <td><a href="/calendar/appointments/appointments.html">3</a></td>
                       <td><a href="/calendar/appointments/appointments.html">4</a></td>
                     </tr>
@@ -167,36 +168,7 @@
     </div>  <!-- end container -->
     
     <!-- JavaScript Link to appointments -->
-    <script>
-        // Lets query the date data
-        const datedata = document.querySelector("#first");
-        const datedata2 = document.querySelector("#second");
-
-        // // test print
-        console.log(datedata.innerHTML);
-        // // test print
-        console.log(datedata2.innerHTML);
-
-        // // check if it has the attribute
-        let target = datedata.hasAttribute('value');
-        console.log(target);
-
-        // // NOW get the attribute
-        let datevalue = datedata.getAttribute('value');
-        console.log(datevalue);
-
-        // // check if it has the attribute
-        let target2 = datedata2.hasAttribute('value');
-        console.log(target2);
-
-        // // NOW get the attribute
-        let datevalue2 = datedata2.getAttribute('value');
-        console.log(datevalue2);
-
-        let first = document.getElementById("first");
-        let value1 = first.value;
-        localStorage.setItem("DATE1", value1);
-
+    <script src="calendar.js">
         // NOW push it to another html page
         // perform the submitForm function here
         // function submitDate1(){

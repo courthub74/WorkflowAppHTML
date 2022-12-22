@@ -1,6 +1,5 @@
 // first connect to the firebase db
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
     authDomain: "workflowapp-c191d.firebaseapp.com",
