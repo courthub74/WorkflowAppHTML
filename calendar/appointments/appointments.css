@@ -45,13 +45,14 @@
   display: flex;
   padding-top: 10px;
 }
-* body .page #apptsettings img {
+* body .page #apptsettings #gear {
+  height: 40px;
+  padding-top: 5px;
+  padding-right: 2px;
+}
+* body .page #apptsettings #gear img {
   width: 20px;
   height: 20px;
-  background-color: wheat;
-}
-* body .page #apptsettings span {
-  background-color: white;
 }
 * body .page #apptsettings span a {
   color: #243F67;

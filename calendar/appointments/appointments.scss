@@ -50,14 +50,21 @@ $background: #F3F9FF;
             #apptsettings {
                 display: flex;
                 padding-top: 10px;
+                // height: 500px;
                 // background-color: aqua;
-                img {
-                    width: 20px;
-                    height: 20px;
-                    background-color: wheat;
+                #gear{
+                    height: 40px;
+                    // background-color: aqua;
+                    padding-top: 5px;
+                    padding-right: 2px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        // background-color: wheat;
+                    }
                 }
                 span{
-                    background-color: white;
+                    // background-color: white;
                     a {
                         color: $darkblue;
                         font-weight: bold;
