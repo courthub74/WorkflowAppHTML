@@ -115,6 +115,9 @@ window.addEventListener('load', () => {
             // somehow send it to the form
         const timevar = e.target.value;
         console.log("This is the time pressed: ",timevar);
+        // function for the Timebuttons
+        // get's the value from the button by id
+        // send it with the press of the submit button
     });
 
     // PHONE field
@@ -123,6 +126,8 @@ window.addEventListener('load', () => {
     const topic = document.querySelector("#topic");
     // LINK field
     const link = document.querySelector("#link");
+    // TIME fields
+    const twopm = document.querySelector("#two");
 
     // FORM field
     // query select the form in order to 
@@ -182,7 +187,18 @@ window.addEventListener('load', () => {
         // add event listener to each button
        console.log("The Time needs to be figured out here")
         // Need to refresh the buttons set
-        // push to firebase from here
+        const zoomtime = twopm.value;
+        // Error handling
+            // if no value entered just alert
+        if (!zoomtime) {
+            alert("Please select a time");
+            return;
+        }
+
+        // clear the phone field buttons
+        twopm.value = '';
+
+        console.log('zoomtime:', zoomtime);
 
 
         // for PHONE
@@ -238,13 +254,14 @@ window.addEventListener('load', () => {
         console.log(zoomlink);
 
         // push to firebase from here
+        // create a new variable
         // push to fb list but in the new variable 
             // set all of the inputs into a library
         var newZoomRef = firebaseZoomCallRef.push();
         newZoomRef.set({
             name: zoomname,
             date: zoomdate,
-            // need time here
+            time: zoomtime,
             phone: zoomphone,
             topic: zoomtopic,
             link: zoomlink,
