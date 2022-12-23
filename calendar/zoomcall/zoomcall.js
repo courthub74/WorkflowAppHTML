@@ -22,7 +22,7 @@ var firebaseZoomCallRef = firebase.database().ref("zooms");
 // test print
 console.log("Here is the DB object for the firebaseZoomCallRef:", firebaseZoomCallRef);
 
-// window add event listener
+// window add event listener for form submit
 window.addEventListener('load', () => {
     // query the form field for submit button
     const form = document.querySelector("#zoomform");
@@ -157,7 +157,6 @@ window.addEventListener('load', () => {
 
         // push to firebase from here
 
-
         // for DATE
         // get the value of the 'date' variable
             // store it in a variable
@@ -237,6 +236,19 @@ window.addEventListener('load', () => {
 
         // test print
         console.log(zoomlink);
+
+        // push to firebase from here
+        // push to fb list but in the new variable 
+            // set all of the inputs into a library
+        var newZoomRef = firebaseZoomCallRef.push();
+        newZoomRef.set({
+            name: zoomname,
+            date: zoomdate,
+            // need time here
+            phone: zoomphone,
+            topic: zoomtopic,
+            link: zoomlink,
+        })
     });
 });
 
