@@ -166,6 +166,13 @@
   cursor: pointer;
   z-index: 2;
 }
+* body .page form .apptbox .zoomentry #timebuttons .input-container input[type=radio] {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  opacity: 0;
+  color: #4375C0;
+}
 * body .page form .apptbox .zoomentry #timebuttons .input-container .radio-tile {
   display: flex;
   justify-content: center;
