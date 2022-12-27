@@ -166,7 +166,8 @@ $textfield: #4375C0;
                                 align-items: center;
                                 gap: 10px;
                                 padding: 10px 10px 5px 90px;
-                                button {
+                                .input-container {
+                                    position: relative;
                                     width: 90px;
                                     height: 30px;
                                     border-radius: 5px;
@@ -174,6 +175,24 @@ $textfield: #4375C0;
                                     cursor: pointer;
                                     background-color: white;
                                     color: $textfield;
+                                    input {
+                                        position: absolute;
+                                        height: 100%;
+                                        width: 100%;
+                                        margin: 0;
+                                        cursor: pointer;
+                                        z-index: 2;
+                                        
+                                        // opacity: 0;
+                                    }
+                                    .radio-tile {
+                                        // background-color: green;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100%;
+                                        transition: all 300s ease;
+                                    }
                                 }
                             }
                             // the PHONE NUMBER section

@@ -187,6 +187,8 @@ window.addEventListener('load', () => {
         // add event listener to each button
        console.log("The Time needs to be figured out here")
         // Need to refresh the buttons set
+        // THIS is where you would put the value if pressed button variable
+        // query select the input value with the corresponding name
         const zoomtime = twopm.value;
         // Error handling
             // if no value entered just alert
