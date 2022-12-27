@@ -34,22 +34,35 @@ window.addEventListener('load', () => {
     const name = document.querySelector("#name");
     // DATE field
     const date = document.querySelector("#date");
-    // TIME field 
-        // rendered by parent div
+    // TIME field
+    // const time = document.querySelector("#timebuttons");
+    // ISSUE BELOW
+    // try to get each input-field by each input clicked on
+        // if input is pressed get tile id and change that
+    // const twofield = document.getElementById("");
+    // rendered by parent div
     var property = document.getElementById("timebuttons");
     // add event listener to each button
     property.addEventListener('click', (e) => {
         // if 2pm 
         if(e.target && e.target.id == "two"){
             console.log(e.target.value);
-            var two = e.target;
+            // var two = e.target;
             // console.log(two);
-            // NOW change it's style
-            two.style.backgroundColor = "#4375C0";
+            // NOW get the input-container
+            var containtwo = document.getElementById("containertwo");
+            // test print 
+            console.log('Container Two:', containtwo);
+            // NOW change the background color
+            containtwo.style.backgroundColor = "#4375C0";
             // change the border
-            two.style.border = "#ffffff solid 1px";
-            // change the text color
-            two.style.color = "#ffffff";
+            containtwo.style.border = "#ffffff solid 1px";
+            // NOW get the label by id
+            var labeltwo = document.getElementById("labeltwo");
+            // test print
+            console.log('Label Two:', labeltwo);
+            // NOW change the text color through label
+            labeltwo.style.color = "#ffffff";
         }
         // if 3pm 
         if(e.target && e.target.id == "three"){
@@ -129,6 +142,7 @@ window.addEventListener('load', () => {
     // TIME fields
     const twopm = document.querySelector("#two");
 
+
     // FORM field
     // query select the form in order to 
     // add event listener to the submit button repping the form
@@ -142,8 +156,6 @@ window.addEventListener('load', () => {
         e.preventDefault();
         // test print the submit button
         console.log("Zoom submit button pressed");
-
-
         // for NAME
         // get the value of the 'name' variable
             // store it in a variable
@@ -178,14 +190,10 @@ window.addEventListener('load', () => {
         // test print
         console.log(zoomdate);
 
-        // push to firebase from here
 
 
         // for TIME
-        // get the value of the 'time' button pressed
-            // store it in a variable
-        // add event listener to each button
-       console.log("The Time needs to be figured out here")
+
         // Need to refresh the buttons set
         // THIS is where you would put the value if pressed button variable
         // query select the input value with the corresponding name
@@ -197,8 +205,17 @@ window.addEventListener('load', () => {
             return;
         }
 
+        // get the container for 2pm
+        var containtwo = document.getElementById("containertwo");
         // clear the phone field buttons
         twopm.value = '';
+
+        // change the style back
+        containtwo.style.backgroundColor = "#ffffff";
+        containtwo.style.border = "none";
+        // get the label 
+        var labeltwo = document.getElementById("labeltwo");
+        labeltwo.style.color = "#4375C0";
 
         console.log('zoomtime:', zoomtime);
 
@@ -267,7 +284,7 @@ window.addEventListener('load', () => {
             phone: zoomphone,
             topic: zoomtopic,
             link: zoomlink,
-        })
+        });
     });
 });
 

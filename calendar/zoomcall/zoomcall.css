@@ -165,6 +165,7 @@
   margin: 0;
   cursor: pointer;
   z-index: 2;
+  opacity: 0;
 }
 * body .page form .apptbox .zoomentry #timebuttons .input-container input[type=radio] {
   display: inline-block;
