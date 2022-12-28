@@ -155,9 +155,9 @@ window.addEventListener('load', () => {
     const topic = document.querySelector("#topic");
     // LINK field
     const link = document.querySelector("#link");
-    // TIME input fields
-    const twopm = document.querySelector("#two");
-    const threepm = document.querySelector("#three");
+   
+    // const twopm = document.querySelector("#two");
+    // const threepm = document.querySelector("#three");
 
     // FORM field
     // query select the form in order to 
@@ -210,12 +210,14 @@ window.addEventListener('load', () => {
 
         // for TIME
 
+         // TIME input fields go under the same variable
+        const zoomtimes = document.querySelector('input[name="timebutt"]:checked').value;
         // 2PM
         // store the clicked value into a variable
-        const zoomtime = twopm.value;
+        // const zoomtime = times.value;
         // Error handling
             // if no value entered just alert
-        if (!zoomtime) {
+        if (!zoomtimes) {
             alert("Please select a time");
             return;
         }
@@ -231,18 +233,18 @@ window.addEventListener('load', () => {
         // change the text style back
         labeltwo.style.color = "#4375C0";
         // show what's sent to db in console
-        console.log('zoomtime:', zoomtime);
+        // console.log('zoomtime:', zoomtime);
 
 
         // 3PM
         // store the clicked value into a variable
-        const zoomtimethree = threepm.value;
+        // const zoomtimethree = threepm.value;
         // Error handling
             // if now value entered just alert
-        if (!zoomtimethree) {
-            alert("Please select a time");
-            return;
-        }
+        // if (!zoomtimethree) {
+        //     alert("Please select a time");
+        //     return;
+        // }
         // get the container for 3pm
         var containthree = document.getElementById("containerthree");
         // clear the 3pm field button
@@ -256,13 +258,14 @@ window.addEventListener('load', () => {
         // change the text style back
         labelthree.style.color = "#4375C0";
         // show what's sent to db in console
-        console.log('zoomtime3:', zoomtimethree);
+        // console.log('zoomtime3:', zoomtimethree);
 
 
         // 4PM
         // 5PM
         // 6PM
         // 7PM
+        console.log('Time submitted is:', zoomtimes);
 
         // for PHONE
         // get the value of the 'date' variable
