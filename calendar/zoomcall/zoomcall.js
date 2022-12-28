@@ -221,6 +221,7 @@ window.addEventListener('load', () => {
             alert("Please select a time");
             return;
         }
+        // NOW change the style
         // get the container for 2pm
         var containtwo = document.getElementById("containertwo");
         // clear the field button
