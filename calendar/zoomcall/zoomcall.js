@@ -44,8 +44,8 @@ window.addEventListener('load', () => {
     var property = document.getElementById("timebuttons");
     // add event listener to each button
     property.addEventListener('click', (e) => {
-        // if 2pm 
-        if(e.target && e.target.id == "two"){
+        // if 2pm change the button style to opposite colors
+        if(e.target && e.target.id === "two"){
             console.log(e.target.value);
             // var two = e.target;
             // console.log(two);
@@ -63,20 +63,36 @@ window.addEventListener('load', () => {
             console.log('Label Two:', labeltwo);
             // NOW change the text color through label
             labeltwo.style.color = "#ffffff";
+            // get the input for 2pm
+            // const twopm = document.querySelector("#two");
+            // test print
+            // console.log(twopm);
+            // store the value into a variable
+            // const zoomtime = twopm.value;
+            // test print 
+            // console.log('zoomtime:', zoomtime);
         }
-        // if 3pm 
-        if(e.target && e.target.id == "three"){
+        // if 3pm change the button style to opposite colors
+        if(e.target && e.target.id === "three"){
             console.log(e.target.value);
             // store 3pm target in a variable
-            var three = e.target;
-            // NOW change it's style
-            three.style.backgroundColor = "#4375C0";
+            // var three = e.target;
+            // NOW let's get the input-container
+            var containthree = document.getElementById("containerthree");
+            // test print
+            console.log('Container Three:', containthree);
+            // NOW change the background color
+            containthree.style.backgroundColor = "#4375C0";
             // change the border
-            three.style.border = "#ffffff solid 1px";
-            // change the text color
-            three.style.color = "#ffffff";
+            containthree.style.border = "#ffffff solid 1px";
+            // NOW get the label by id
+            var labelthree = document.getElementById("labelthree");
+            // test print
+            console.log('Label Three:', labelthree);
+            // change the text color through label
+            labelthree.style.color = "#ffffff";
         }
-        // if 4pm
+        // if 4pm change the button style to opposite colors
         if(e.target && e.target.id == "four"){
             console.log(e.target.value);
             // store 4pm target in a variable
@@ -88,7 +104,7 @@ window.addEventListener('load', () => {
             // change the text color
             four.style.color = "#ffffff";
         }
-        // if 5pm
+        // if 5pm change the button style to opposite colors
         if(e.target && e.target.id == "five"){
             console.log(e.target.value);
             // store 5pm target in a variable
@@ -100,7 +116,7 @@ window.addEventListener('load', () => {
             // change the text color
             five.style.color = "#ffffff";
         }
-        // if 6pm
+        // if 6pm change the button style to opposite colors
         if(e.target && e.target.id == "six"){
             console.log(e.target.value);
             // store 6pm target in a variable
@@ -112,7 +128,7 @@ window.addEventListener('load', () => {
             // change the text color
             six.style.color = "#ffffff";
         }
-        // if 7pm
+        // if 7pm change the button style to opposite colors
         if(e.target && e.target.id == "seven"){
             console.log(e.target.value);
             // store 6pm target in a variable
@@ -139,9 +155,9 @@ window.addEventListener('load', () => {
     const topic = document.querySelector("#topic");
     // LINK field
     const link = document.querySelector("#link");
-    // TIME fields
+    // TIME input fields
     const twopm = document.querySelector("#two");
-
+    const threepm = document.querySelector("#three");
 
     // FORM field
     // query select the form in order to 
@@ -194,9 +210,8 @@ window.addEventListener('load', () => {
 
         // for TIME
 
-        // Need to refresh the buttons set
-        // THIS is where you would put the value if pressed button variable
-        // query select the input value with the corresponding name
+        // 2PM
+        // store the clicked value into a variable
         const zoomtime = twopm.value;
         // Error handling
             // if no value entered just alert
@@ -204,21 +219,50 @@ window.addEventListener('load', () => {
             alert("Please select a time");
             return;
         }
-
         // get the container for 2pm
         var containtwo = document.getElementById("containertwo");
-        // clear the phone field buttons
-        twopm.value = '';
-
+        // clear the field button
+        // twopm.value = '';
         // change the style back
         containtwo.style.backgroundColor = "#ffffff";
         containtwo.style.border = "none";
         // get the label 
         var labeltwo = document.getElementById("labeltwo");
+        // change the text style back
         labeltwo.style.color = "#4375C0";
-
+        // show what's sent to db in console
         console.log('zoomtime:', zoomtime);
 
+
+        // 3PM
+        // store the clicked value into a variable
+        const zoomtimethree = threepm.value;
+        // Error handling
+            // if now value entered just alert
+        if (!zoomtimethree) {
+            alert("Please select a time");
+            return;
+        }
+        // get the container for 3pm
+        var containthree = document.getElementById("containerthree");
+        // clear the 3pm field button
+        // threepm.value = '';
+
+        // change the style back
+        containthree.style.backgroundColor = "#ffffff";
+        containthree.style.border = "none";
+        // get the label
+        var labelthree = document.getElementById("labelthree");
+        // change the text style back
+        labelthree.style.color = "#4375C0";
+        // show what's sent to db in console
+        console.log('zoomtime3:', zoomtimethree);
+
+
+        // 4PM
+        // 5PM
+        // 6PM
+        // 7PM
 
         // for PHONE
         // get the value of the 'date' variable
@@ -271,6 +315,11 @@ window.addEventListener('load', () => {
 
         // test print
         console.log(zoomlink);
+
+        // clear the 2pm field button
+        twopm.value = '';
+        // clear the 3pm field button
+        threepm.value = '';
 
         // push to firebase from here
         // create a new variable
