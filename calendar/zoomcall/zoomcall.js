@@ -256,6 +256,8 @@ window.addEventListener('load', () => {
         // NOW change the style to original colors after submit button pressed
 
         // 2PM
+        // HERE we get the input container 
+                // and change the background and border
         // get the container for 2pm
         var containtwo = document.getElementById("containertwo");
         // clear the field button
@@ -267,16 +269,13 @@ window.addEventListener('load', () => {
         var labeltwo = document.getElementById("labeltwo");
         // change the text style back
         labeltwo.style.color = "#4375C0";
-        // show what's sent to db in console
-        // console.log('zoomtime:', zoomtime);
 
 
         // 3PM
+        // HERE we get the input container 
+                // and change the background and border
         // get the container for 3pm
         var containthree = document.getElementById("containerthree");
-        // clear the 3pm field button
-        // threepm.value = '';
-
         // change the style back
         containthree.style.backgroundColor = "#ffffff";
         containthree.style.border = "none";
@@ -284,14 +283,69 @@ window.addEventListener('load', () => {
         var labelthree = document.getElementById("labelthree");
         // change the text style back
         labelthree.style.color = "#4375C0";
-        // show what's sent to db in console
-        // console.log('zoomtime3:', zoomtimethree);
 
 
         // 4PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 4pm
+        var containfour = document.getElementById("containerfour");
+        // test print
+        console.log(containfour);
+        // change the style back
+        containfour.style.backgroundColor = "#ffffff";
+        containfour.style.border = "none";
+        // get the label
+        var labelfour = document.getElementById("labelfour");
+        // change the text style back
+        labelfour.style.color = "#4375C0";
+
         // 5PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 5pm
+        var containfive = document.getElementById("containerfive");
+        // test print
+        console.log(containfive);
+        // change the style back
+        containfive.style.backgroundColor = "#ffffff";
+        containfive.style.border = "none";
+        // get the label
+        var labelfive = document.getElementById("labelfive");
+        // change the text style back
+        labelfive.style.color = "#4375C0";
+
         // 6PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 6pm
+        var containsix = document.getElementById("containersix");
+        // test print
+        console.log(containsix);
+        // change the style back
+        containsix.style.backgroundColor = "#ffffff";
+        containsix.style.border = "none";
+        // get the label
+        var labelsix = document.getElementById("labelsix");
+        // change the text style back
+        labelsix.style.color = "#4375C0";
+
         // 7PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 7pm
+        var containseven = document.getElementById("containerseven");
+        // test print
+        console.log(containseven);
+        // change the style back
+        containseven.style.backgroundColor = "#ffffff";
+        containseven.style.border = "none";
+        // get the label
+        var labelseven = document.getElementById("labelseven");
+        // change the text style back
+        labelseven.style.color = "#4375C0";
+
+        // test print the zoom time checked
         console.log('Time submitted is:', zoomtimes);
 
         // for PHONE
@@ -346,8 +400,10 @@ window.addEventListener('load', () => {
         // test print
         console.log(zoomlink);
 
-        // clear the timefield field button
-        
+        // clear the timefield field button (perhaps)
+
+        // NOW grab the Zoom Call Submitted div by id and change the HTML
+        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!"
 
         // push to firebase from here
         // create a new variable

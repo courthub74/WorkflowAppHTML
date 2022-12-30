@@ -249,7 +249,9 @@ $textfield: #4375C0;
                             .subbutton {
                                 // background-color: aqua;
                                 padding-left: 12px;
+                                // padding-left: 60px;
                                 button {
+                                    position: relative;
                                     border: none;
                                     border-radius: 50%;
                                     width: 100px;
@@ -261,10 +263,21 @@ $textfield: #4375C0;
                                     cursor: pointer;
                                 }
                             }
+                            .subalert {
+                                background-color: green;               
+                                // padding-left: 80px;
+                                // width: 200px;
+                                #subalert {
+                                    color: white;
+                                    font-size: small;
+                                    // width: 100px;
+                                }
+                            }
                             .calendar {
                                 // background-color: aqua;
                                 text-align: center;
                                 padding: 80px 160px 0px 0px;
+                                // width: 600px;
                                 .back {
                                     
                                     a {
@@ -277,6 +290,7 @@ $textfield: #4375C0;
                                 // background-color: aqua;
                                 text-align: center;
                                 padding: 80px 10px 0px 145px;
+                                // width: 700px;
                                 .zoomslist {
                                     a {
                                         color: white;

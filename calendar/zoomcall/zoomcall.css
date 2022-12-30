@@ -225,6 +225,7 @@
   padding-left: 12px;
 }
 * body .page form .apptbox .buttondiv .subbutton button {
+  position: relative;
   border: none;
   border-radius: 50%;
   width: 100px;
@@ -234,6 +235,13 @@
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
+}
+* body .page form .apptbox .buttondiv .subalert {
+  background-color: green;
+}
+* body .page form .apptbox .buttondiv .subalert #subalert {
+  color: white;
+  font-size: small;
 }
 * body .page form .apptbox .buttondiv .calendar {
   text-align: center;
