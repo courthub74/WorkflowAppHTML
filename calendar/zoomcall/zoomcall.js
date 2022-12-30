@@ -47,8 +47,6 @@ window.addEventListener('load', () => {
         // if 2pm change the button style to opposite colors
         if(e.target && e.target.id === "two"){
             console.log(e.target.value);
-            // var two = e.target;
-            // console.log(two);
             // NOW get the input-container
             var containtwo = document.getElementById("containertwo");
             // test print 
@@ -75,8 +73,6 @@ window.addEventListener('load', () => {
         // if 3pm change the button style to opposite colors
         if(e.target && e.target.id === "three"){
             console.log(e.target.value);
-            // store 3pm target in a variable
-            // var three = e.target;
             // NOW let's get the input-container
             var containthree = document.getElementById("containerthree");
             // test print
@@ -320,10 +316,8 @@ window.addEventListener('load', () => {
         // test print
         console.log(zoomlink);
 
-        // clear the 2pm field button
-        twopm.value = '';
-        // clear the 3pm field button
-        threepm.value = '';
+        // clear the timefield field button
+        
 
         // push to firebase from here
         // create a new variable
@@ -333,7 +327,7 @@ window.addEventListener('load', () => {
         newZoomRef.set({
             name: zoomname,
             date: zoomdate,
-            time: zoomtime,
+            time: zoomtimes,
             phone: zoomphone,
             topic: zoomtopic,
             link: zoomlink,
