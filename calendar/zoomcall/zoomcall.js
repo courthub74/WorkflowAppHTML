@@ -35,18 +35,19 @@ window.addEventListener('load', () => {
     // DATE field
     const date = document.querySelector("#date");
     // TIME field
-    // const time = document.querySelector("#timebuttons");
     // ISSUE BELOW
     // try to get each input-field by each input clicked on
         // if input is pressed get tile id and change that
-    // const twofield = document.getElementById("");
     // rendered by parent div
     var property = document.getElementById("timebuttons");
     // add event listener to each button
     property.addEventListener('click', (e) => {
         // if 2pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id === "two"){
             console.log(e.target.value);
+            // HERE we get the input container 
+                // and change the background and border
             // NOW get the input-container
             var containtwo = document.getElementById("containertwo");
             // test print 
@@ -61,18 +62,13 @@ window.addEventListener('load', () => {
             console.log('Label Two:', labeltwo);
             // NOW change the text color through label
             labeltwo.style.color = "#ffffff";
-            // get the input for 2pm
-            // const twopm = document.querySelector("#two");
-            // test print
-            // console.log(twopm);
-            // store the value into a variable
-            // const zoomtime = twopm.value;
-            // test print 
-            // console.log('zoomtime:', zoomtime);
         }
         // if 3pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id === "three"){
             console.log(e.target.value);
+            // HERE we get the input container 
+                // and change the background and border
             // NOW let's get the input-container
             var containthree = document.getElementById("containerthree");
             // test print
@@ -89,52 +85,92 @@ window.addEventListener('load', () => {
             labelthree.style.color = "#ffffff";
         }
         // if 4pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "four"){
             console.log(e.target.value);
-            // store 4pm target in a variable
-            var four = e.target;
-            // NOW change it's style
-            four.style.backgroundColor = "#4375C0";
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containfour = document.getElementById("containerfour");
+            // test print
+            console.log('Container Four:', containfour);
+            // change the background color
+            containfour.style.backgroundColor = "#4375C0";
             // change the border
-            four.style.border = "#ffffff solid 1px";
-            // change the text color
-            four.style.color = "#ffffff";
+            containfour.style.border = "#ffffff solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelfour = document.getElementById("labelfour");
+            // test print
+            console.log('Label Four:', labelfour);
+            // change the text color through label
+            labelfour.style.color = "#ffffff";
         }
         // if 5pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "five"){
             console.log(e.target.value);
-            // store 5pm target in a variable
-            var five = e.target;
-            // NOW change it's style
-            five.style.backgroundColor = "#4375C0";
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containfive = document.getElementById("containerfive");
+            // test print
+            console.log('Container Five:', containfive);
+            // change the background color
+            containfive.style.backgroundColor = "#4375C0";
             // change the border
-            five.style.border = "#ffffff solid 1px";
-            // change the text color
-            five.style.color = "#ffffff";
+            containfive.style.border = "#ffffff solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelfive = document.getElementById("labelfive");
+            // test print
+            console.log('Label Five:', labelfive);
+            // change the text color through label
+            labelfive.style.color = "#ffffff";
         }
         // if 6pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "six"){
             console.log(e.target.value);
-            // store 6pm target in a variable
-            var six = e.target;
-            // NOW change it's style
-            six.style.backgroundColor = "#4375C0";
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containsix = document.getElementById("containersix");
+            // test print
+            console.log('Container Six:', containsix);
+            // change the background color
+            containsix.style.backgroundColor = "#4375C0";
             // change the border
-            six.style.border = "#ffffff solid 1px";
-            // change the text color
-            six.style.color = "#ffffff";
+            containsix.style.border = "#ffffff solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelsix = document.getElementById("labelsix");
+            // test print
+            console.log('Label Six:', labelsix);
+            // change the text color through label
+            labelsix.style.color = "#ffffff";
         }
         // if 7pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "seven"){
             console.log(e.target.value);
-            // store 6pm target in a variable
-            var seven = e.target;
-            // NOW change it's style
-            seven.style.backgroundColor = "#4375C0";
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containseven = document.getElementById("containerseven");
+            // test print
+            console.log('Container Seven:', containseven);
+            // change the background color
+            containseven.style.backgroundColor = "#4375C0";
             // change the border
-            seven.style.border = "#ffffff solid 1px";
-            // change the text color
-            seven.style.color = "#ffffff";
+            containseven.style.border = "#ffffff solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelseven = document.getElementById("labelseven");
+            // test print
+            console.log('Label Seven:', labelseven);
+            // change the text color through label
+            labelseven.style.color = "#ffffff";
         }
         // NOW print that value to the div like the other fields
             // somehow send it to the form
@@ -161,6 +197,7 @@ window.addEventListener('load', () => {
         // when clicked, send data from each queried input
             // to the firebase db
                 // most likely you will place it in key value form
+        // FOR THE TIME BUTTONS you will change the color back to original
 
     // add event listener to the form submit button
     form.addEventListener('submit', (e) => {
@@ -204,20 +241,21 @@ window.addEventListener('load', () => {
 
 
 
-        // for TIME
+        // for TIME VALUES
 
-         // TIME input fields go under the same variable
+        // TIME input fields go under the same variable
         const zoomtimes = document.querySelector('input[name="timebutt"]:checked').value;
-        // 2PM
-        // store the clicked value into a variable
-        // const zoomtime = times.value;
         // Error handling
             // if no value entered just alert
         if (!zoomtimes) {
             alert("Please select a time");
             return;
         }
-        // NOW change the style
+
+
+        // NOW change the style to original colors after submit button pressed
+
+        // 2PM
         // get the container for 2pm
         var containtwo = document.getElementById("containertwo");
         // clear the field button
@@ -234,14 +272,6 @@ window.addEventListener('load', () => {
 
 
         // 3PM
-        // store the clicked value into a variable
-        // const zoomtimethree = threepm.value;
-        // Error handling
-            // if now value entered just alert
-        // if (!zoomtimethree) {
-        //     alert("Please select a time");
-        //     return;
-        // }
         // get the container for 3pm
         var containthree = document.getElementById("containerthree");
         // clear the 3pm field button
