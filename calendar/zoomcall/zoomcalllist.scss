@@ -110,7 +110,7 @@ $topicfield: #61d657;
                 padding: 30px;
                 // padding-left: 100px;
                 // Here is where you place the zoom call list items
-                .zoom_items {
+                #zoom_items {
                     background-color: $textfield;
                     padding: 1rem;
                     transition: all .3s ease-in;
