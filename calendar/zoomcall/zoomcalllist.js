@@ -23,11 +23,6 @@ var firebaseZoomcallsRef = firebase.database().ref("zooms");
 // test print
 // console.log("Here is the DB for the firebaseZooms");
 
-// query the 'zooms' div
-// const zooms = document.querySelector(".zooms");
-// test print
-// console.log(zooms);
-
 // NOW lets set up the page through the DOM
 
 // event listener for the elements of the WHOLE PAGE
@@ -36,6 +31,10 @@ window.addEventListener('load', () => {
     // queryselect the whole form by id
         // you will add the event listener to this
 
+    // query the 'zooms' div
+    const zooms = document.querySelector(".zooms");
+    // test print
+    console.log('query of zooms ===', zooms);
 
     // FROM DATABASE
 
@@ -45,9 +44,6 @@ window.addEventListener('load', () => {
     function getZoom(zoomitem){
         var zooms = zoomitem.val();
         console.log('zooms ===', zooms);
-
-
-       
     };
         
         // errZoom
@@ -56,8 +52,8 @@ window.addEventListener('load', () => {
         }
 });
 
-/**
- *  //THE ELEMENT CREATION PART
+
+        //THE ELEMENT CREATION PART
         // so each time the form is submitted 
             // a separate zoomcall element is created 
                 // so it can be manipulated individually
@@ -147,4 +143,3 @@ window.addEventListener('load', () => {
         //     // test print
         //     console.log('zoomsall ===', zoomsall);
         // }
- */
