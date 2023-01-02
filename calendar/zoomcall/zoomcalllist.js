@@ -79,13 +79,16 @@ window.addEventListener('load', () => {
         console.log(zooms);
 
         // create the 'content' div
-        const content = document.createElement("div");
+        const zoomcontent = document.createElement("div");
 
         // test print it
         // console.log(content);
 
         // assign it the id content
-        content.id = "content";
+        zoomcontent.id = "content";
+
+        // append to 'zoom_items'
+        zoom_items.appendChild(zoomcontent);
 
         // THE CONTENT ITEMS
 
@@ -97,6 +100,33 @@ window.addEventListener('load', () => {
         console.log(zoomname);
 
         // add it's class
+        zoomname.classList.add('text');
+        // set it's type
+        zoomname.type = "text";
+        // set it's id
+        zoomname.id = "zoomname";
+
+        // set the value
+            // take the value from zoomsall 4 loop
+        zoomname.value = "Mike Check";
+        // test print
+        // console.log(zoomsall.item);
+
+        // set the attribute to readonly
+        zoomname.setAttribute('readonly', true);
+
+        // append to the content div
+        zoomcontent.appendChild(zoomname);
+
+
+        /////////////////////////////////////
+
+        // DATE ELEMENT
+        // create the DATE element that's going to be inside of the content
+
+        // test print
+
+        // add it's class
         // set it's type
         // set it's id
 
@@ -104,6 +134,8 @@ window.addEventListener('load', () => {
             // take the value from zoomsall 4 loop
 
         // set the attribute to readonly
+
+        // append to the content div
 
         // errZoom
         function errZoom(err){
