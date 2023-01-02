@@ -23,6 +23,11 @@ var firebaseZoomcallsRef = firebase.database().ref("zooms");
 // test print
 // console.log("Here is the DB for the firebaseZooms");
 
+// query the 'zooms' div
+const zooms = document.querySelector(".zooms");
+// test print
+// console.log(zooms);
+
 // NOW lets set up the page through the DOM
 
 // event listener for the elements of the WHOLE PAGE
@@ -31,8 +36,6 @@ window.addEventListener('load', () => {
     // queryselect the whole form by id
         // you will add the event listener to this
 
-        // HERE you just need to query the output
-        const zoom_call_element = document.querySelector("#zoom_items");
 
         // FROM DATABASE
 
@@ -42,11 +45,68 @@ window.addEventListener('load', () => {
         function getZoom(zoomitem){
             var zooms = zoomitem.val();
             console.log('zooms ===', zooms);
-        }
+
+            // iterate through the zoomitems
+            for (let i = 0; i < zooms.length; i++){
+                // store them in a variable
+                var zoomsall = zooms[i];
+                // test print
+                console.log('zoomsall ===', zoomsall);
+            }
+        };
+
+        // THE ELEMENT CREATION PART
+            // so each time the form is submitted 
+                // a separate zoomcall element is created 
+                    // so it can be manipulated individually
+        
+        // BELOW is for EACH zoomcall item that gets populated
+        // ZOOM-ITEMS DIV
+
+        // create the 'zoom_items' div
+        const zoom_items = document.createElement('div');
+
+        // test print it
+        // console.log(zoom_items);
+
+        // give it the id zoom_items 
+        zoom_items.id = "zoom_items";
+
+        // append 'zoom_items' to the 'zooms' div
+        zooms.appendChild(zoom_items);
+
+        // test print
+        console.log(zooms);
+
+        // create the 'content' div
+        const content = document.createElement("div");
+
+        // test print it
+        // console.log(content);
+
+        // assign it the id content
+        content.id = "content";
+
+        // THE CONTENT ITEMS
+
+        // NAME ELEMENT
+        // create the NAME element that's going to be inside of the content
+        const zoomname = document.createElement('input');
+
+        // test print
+        console.log(zoomname);
+
+        // add it's class
+        // set it's type
+        // set it's id
+
+        // set the value
+            // take the value from zoomsall 4 loop
+
+        // set the attribute to readonly
 
         // errZoom
         function errZoom(err){
             console.log(err);
         }
-        
 });
