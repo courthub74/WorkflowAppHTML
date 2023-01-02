@@ -26,7 +26,7 @@ var firebaseZoomcallsRef = firebase.database().ref("zooms");
 // query the 'zooms' div
 const zooms = document.querySelector(".zooms");
 // test print
-// console.log(zooms);
+console.log(zooms);
 
 // NOW lets set up the page through the DOM
 
@@ -46,18 +46,8 @@ window.addEventListener('load', () => {
             var zooms = zoomitem.val();
             console.log('zooms ===', zooms);
 
-            
 
-            // iterate through the zoomitems
-            // for (let i = 0; i < zooms.length; i++){
-            //     // store them in a variable
-            //     var zoomsall = zooms[i];
-            //     // test print
-            //     console.log('zoomsall ===', zoomsall);
-            // }
-        };
-
-        // THE ELEMENT CREATION PART
+            //THE ELEMENT CREATION PART
             // so each time the form is submitted 
                 // a separate zoomcall element is created 
                     // so it can be manipulated individually
@@ -69,13 +59,13 @@ window.addEventListener('load', () => {
                 const zoom_items = document.createElement('div');
 
                 // test print it
-                // console.log(zoom_items);
+                console.log(zoom_items);
 
                 // give it the id zoom_items 
                 zoom_items.id = "zoom_items";
 
                 // append 'zoom_items' to the 'zooms' div
-                zooms.appendChild(zoom_items);
+                // zooms.appendChild(zoom_items);
 
                 // test print
                 console.log(zooms);
@@ -120,7 +110,6 @@ window.addEventListener('load', () => {
                 // append to the content div
                 zoomcontent.appendChild(zoomname);
 
-
                 /////////////////////////////////////
 
                 // DATE ELEMENT
@@ -138,6 +127,28 @@ window.addEventListener('load', () => {
                 // set the attribute to readonly
 
                 // append to the content div
+
+            // iterate through the zoomitems
+            // for (let i = 0; i < zooms.length; i++){
+            //     // store them in a variable
+            //     var zoomsall = zooms[i];
+            //     // test print
+            //     console.log('zoomsall ===', zoomsall);
+            // }
+        };
+
+        // // THE ELEMENT CREATION PART
+        //     // so each time the form is submitted 
+        //         // a separate zoomcall element is created 
+        //             // so it can be manipulated individually
+        
+        //         // BELOW is for EACH zoomcall item that gets populated
+        //         // ZOOM-ITEMS DIV
+
+        //         // create the 'zoom_items' div
+        //         const zoom_items = document.createElement('div');
+
+        //        
 
         
         // errZoom
