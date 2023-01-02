@@ -46,13 +46,15 @@ window.addEventListener('load', () => {
             var zooms = zoomitem.val();
             console.log('zooms ===', zooms);
 
+            
+
             // iterate through the zoomitems
-            for (let i = 0; i < zooms.length; i++){
-                // store them in a variable
-                var zoomsall = zooms[i];
-                // test print
-                console.log('zoomsall ===', zoomsall);
-            }
+            // for (let i = 0; i < zooms.length; i++){
+            //     // store them in a variable
+            //     var zoomsall = zooms[i];
+            //     // test print
+            //     console.log('zoomsall ===', zoomsall);
+            // }
         };
 
         // THE ELEMENT CREATION PART
@@ -60,83 +62,84 @@ window.addEventListener('load', () => {
                 // a separate zoomcall element is created 
                     // so it can be manipulated individually
         
-        // BELOW is for EACH zoomcall item that gets populated
-        // ZOOM-ITEMS DIV
+                // BELOW is for EACH zoomcall item that gets populated
+                // ZOOM-ITEMS DIV
 
-        // create the 'zoom_items' div
-        const zoom_items = document.createElement('div');
+                // create the 'zoom_items' div
+                const zoom_items = document.createElement('div');
 
-        // test print it
-        // console.log(zoom_items);
+                // test print it
+                // console.log(zoom_items);
 
-        // give it the id zoom_items 
-        zoom_items.id = "zoom_items";
+                // give it the id zoom_items 
+                zoom_items.id = "zoom_items";
 
-        // append 'zoom_items' to the 'zooms' div
-        zooms.appendChild(zoom_items);
+                // append 'zoom_items' to the 'zooms' div
+                zooms.appendChild(zoom_items);
 
-        // test print
-        console.log(zooms);
+                // test print
+                console.log(zooms);
 
-        // create the 'content' div
-        const zoomcontent = document.createElement("div");
+                // create the 'content' div
+                const zoomcontent = document.createElement("div");
 
-        // test print it
-        // console.log(content);
+                // test print it
+                // console.log(content);
 
-        // assign it the id content
-        zoomcontent.id = "content";
+                // assign it the id content
+                zoomcontent.id = "content";
 
-        // append to 'zoom_items'
-        zoom_items.appendChild(zoomcontent);
+                // append to 'zoom_items'
+                zoom_items.appendChild(zoomcontent);
 
-        // THE CONTENT ITEMS
+                // THE CONTENT ITEMS
 
-        // NAME ELEMENT
-        // create the NAME element that's going to be inside of the content
-        const zoomname = document.createElement('input');
+                // NAME ELEMENT
+                // create the NAME element that's going to be inside of the content
+                const zoomname = document.createElement('input');
 
-        // test print
-        console.log(zoomname);
+                // test print
+                console.log(zoomname);
 
-        // add it's class
-        zoomname.classList.add('text');
-        // set it's type
-        zoomname.type = "text";
-        // set it's id
-        zoomname.id = "zoomname";
+                // add it's class
+                zoomname.classList.add('text');
+                // set it's type
+                zoomname.type = "text";
+                // set it's id
+                zoomname.id = "zoomname";
 
-        // set the value
-            // take the value from zoomsall 4 loop
-        zoomname.value = "Mike Check";
-        // test print
-        // console.log(zoomsall.item);
+                // set the value
+                    // take the value from zoomsall 4 loop
+                zoomname.value = "Mike Check";
+                // test print
+                // console.log(zoomsall.item);
 
-        // set the attribute to readonly
-        zoomname.setAttribute('readonly', true);
+                // set the attribute to readonly
+                zoomname.setAttribute('readonly', true);
 
-        // append to the content div
-        zoomcontent.appendChild(zoomname);
+                // append to the content div
+                zoomcontent.appendChild(zoomname);
 
 
-        /////////////////////////////////////
+                /////////////////////////////////////
 
-        // DATE ELEMENT
-        // create the DATE element that's going to be inside of the content
+                // DATE ELEMENT
+                // create the DATE element that's going to be inside of the content
 
-        // test print
+                // test print
 
-        // add it's class
-        // set it's type
-        // set it's id
+                // add it's class
+                // set it's type
+                // set it's id
 
-        // set the value
-            // take the value from zoomsall 4 loop
+                // set the value
+                    // take the value from zoomsall 4 loop
 
-        // set the attribute to readonly
+                // set the attribute to readonly
 
-        // append to the content div
+                // append to the content div
 
+        
         // errZoom
         function errZoom(err){
             console.log(err);
