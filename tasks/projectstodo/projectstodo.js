@@ -84,11 +84,11 @@ window.addEventListener('load', () => {
         firebaseProjectsRef.on('value', getProject, errProject);
 
         // create the getProject function
-            // pass the arg 'projectitem'
+            // pass the arg 'projectitem' which comes from the on function from ABOVE
         function getProject(projectitem){
             // console.log('projectitem ===',projectitem);
             // test print the value of the arg
-            // console.log(projectitem.val());
+            console.log(projectitem.val());
             // store the value in a variable
             var projects = projectitem.val();
             // test print
@@ -100,10 +100,10 @@ window.addEventListener('load', () => {
 
                     
             // create an array called data 
-                // that is going to consist of the data to push to firebase
+                // that is going to consist of the data from fb
             var data = [];
             // NOW loop through the projects (input values) and push them into the 
-                // data array
+                // data array by Object ids
             Object.keys(projects).forEach(element => {
                 // test print the todo item with it's key
                 // console.log('item key and text ===', element, projects[element]);

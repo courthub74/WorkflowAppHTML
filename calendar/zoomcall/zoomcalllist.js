@@ -37,23 +37,49 @@ window.addEventListener('load', () => {
     console.log('query of zooms ===', zooms);
 
     // FROM DATABASE
-
+    // utilize the on function on the db reference
+        // based on value
+        // pass getProject and errProject functions
+            // getProject locates fb db
+            // errProject test for errors
+                // i.e. permissions, other blocks
     firebaseZoomcallsRef.on('value', getZoom, errZoom)
 
     // get project
     function getZoom(zoomitem){
         var zooms = zoomitem.val();
         console.log('zooms ===', zooms);
-    };
-        
-        // errZoom
-        function errZoom(err){
-            console.log(err);
-        }
-});
 
+        // NOW get the keys and items entered 
+                // to push them to an array 
+                    // this is for rendering each zoomcall item
+        // let's create an empty array called data
+        var data = [];
+        // NOW loop through the zooms and push them into the 
+                // data array by Object ids
+        // Object.keys(zooms).forEach();
+        Object.keys(zooms).forEach(element => {
+            // test print the todo item with it's key
+                console.log('item key and text ===', element, zooms[element]);
+                // NOW push the id (element-keys) and item (project)
+                    // to the data array
+            data.push({
+                id: element,
+                item: zooms[element]
+            });
+            // test print the data array
+            console.log('data ===', data);
+        });
+        // clear the zoom_items each entry so no double up
+            // Need to study this one
+        // NOW let's iterate through the zoomitems pushed to the data array
+        for (let i = 0; i < data.length; i++){
+            // store them in a variable
+            var zoomsall = data[i];
+            // test print
+            console.log('zoomsall ===', zoomsall);
 
-        //THE ELEMENT CREATION PART
+            //THE ELEMENT CREATION PART
         // so each time the form is submitted 
             // a separate zoomcall element is created 
                 // so it can be manipulated individually
@@ -97,7 +123,7 @@ window.addEventListener('load', () => {
             const zoomname = document.createElement('input');
 
             // test print
-            console.log(zoomname);
+            console.log('zoomname ===', zoomname);
 
             // add it's class
             zoomname.classList.add('text');
@@ -108,7 +134,7 @@ window.addEventListener('load', () => {
 
             // set the value
                 // take the value from zoomsall 4 loop
-            zoomname.value = "Mike Check";
+            zoomname.value = zoomsall.item.name;
             // test print
             // console.log(zoomsall.item);
 
@@ -122,24 +148,169 @@ window.addEventListener('load', () => {
 
             // DATE ELEMENT
             // create the DATE element that's going to be inside of the content
-
+            const zoomdate = document.createElement('input');
             // test print
-
+            console.log('zoomdate ===', zoomdate);
             // add it's class
+            zoomdate.classList.add('text');
             // set it's type
+            zoomdate.type = "text";
             // set it's id
+            zoomdate.id = "zoomdate";
 
             // set the value
                 // take the value from zoomsall 4 loop
+            zoomdate.value = zoomsall.item.date;
 
             // set the attribute to readonly
+            zoomdate.setAttribute('readonly', true);
 
             // append to the content div
+            zoomcontent.appendChild(zoomdate);
 
-        //iterate through the zoomitems
-        // for (let i = 0; i < zooms.length; i++){
-        //     // store them in a variable
-        //     var zoomsall = zooms[i];
+            /////////////////////////////////////
+
+            // TIME ELEMENT
+            // create the TIME element that's going to be inside of the content
+            const zoomtime = document.createElement('input');
+            // test print
+            console.log('zoomtime ===', zoomtime);
+            // add it's class
+            zoomtime.classList.add('text');
+            // set it's type
+            zoomtime.type = "text";
+            // set it's id
+            zoomtime.id = "zoomtime";
+
+            // set the value
+                // take the value from zoomsall 4 loop
+            zoomtime.value = zoomsall.item.time;
+
+            // set the attribute to readonly
+            zoomtime.setAttribute('readonly', true);
+
+            // append to the content div
+            zoomcontent.appendChild(zoomtime);
+
+            /////////////////////////////////////
+
+            // PHONE NUMBER ELEMENT
+            // create the TIME element that's going to be inside of the content
+            const zoomnumber = document.createElement('input');
+            // test print
+            console.log('zoomnumber ===', zoomnumber);
+            // add it's class
+            zoomnumber.classList.add('text');
+            // set it's type
+            zoomnumber.type = "text";
+            // set it's id
+            zoomnumber.id = "zoomnumber";
+
+            // set the value
+                // take the value from zoomsall 4 loop
+            zoomnumber.value = zoomsall.item.phone;
+
+            // set the attribute to readonly
+            zoomnumber.setAttribute('readonly', true);
+
+            // append to the content div
+            zoomcontent.appendChild(zoomnumber);
+        }
+
+    };
+        
+        // errZoom
+        function errZoom(err){
+            console.log(err);
+        }
+});
+
+
+        // //THE ELEMENT CREATION PART
+        // // so each time the form is submitted 
+        //     // a separate zoomcall element is created 
+        //         // so it can be manipulated individually
+    
+        //     // BELOW is for EACH zoomcall item that gets populated
+        //     // ZOOM-ITEMS DIV
+
+        //     const zooms = document.querySelector(".zooms");
+
+        //     // create the 'zoom_items' div
+        //     const zoom_items = document.createElement('div');
+
+        //     // test print it
+        //     console.log(zoom_items);
+
+        //     // give it the id zoom_items 
+        //     zoom_items.id = "zoom_items";
+
+        //     // append to the zooms div
+        //     zooms.appendChild(zoom_items);
+
         //     // test print
-        //     console.log('zoomsall ===', zoomsall);
-        // }
+        //     console.log(zooms);
+
+        //     // create the 'content' div
+        //     const zoomcontent = document.createElement("div");
+
+        //     // test print it
+        //     // console.log(content);
+
+        //     // assign it the id content
+        //     zoomcontent.id = "content";
+
+        //     // append to 'zoom_items'
+        //     zoom_items.appendChild(zoomcontent);
+
+        //     // THE CONTENT ITEMS
+
+        //     // NAME ELEMENT
+        //     // create the NAME element that's going to be inside of the content
+        //     const zoomname = document.createElement('input');
+
+        //     // test print
+        //     console.log('zoomname ===', zoomname);
+
+        //     // add it's class
+        //     zoomname.classList.add('text');
+        //     // set it's type
+        //     zoomname.type = "text";
+        //     // set it's id
+        //     zoomname.id = "zoomname";
+
+        //     // set the value
+        //         // take the value from zoomsall 4 loop
+        //     zoomname.value = "Mike Check";
+        //     // test print
+        //     // console.log(zoomsall.item);
+
+        //     // set the attribute to readonly
+        //     zoomname.setAttribute('readonly', true);
+
+        //     // append to the content div
+        //     zoomcontent.appendChild(zoomname);
+
+        //     /////////////////////////////////////
+
+        //     // DATE ELEMENT
+        //     // create the DATE element that's going to be inside of the content
+        //     const zoomdate = document.createElement('input');
+        //     // test print
+        //     console.log('zoomdate ===', zoomdate);
+        //     // add it's class
+        //     zoomdate.classList.add('text');
+        //     // set it's type
+        //     zoomdate.type = "text";
+        //     // set it's id
+        //     zoomdate.id = "zoomdate";
+
+        //     // set the value
+        //         // take the value from zoomsall 4 loop
+        //     zoomdate.value = "3/2/2023";
+
+        //     // set the attribute to readonly
+        //     zoomdate.setAttribute('readonly', true);
+
+        //     // append to the content div
+        //     zoomcontent.appendChild(zoomdate);
