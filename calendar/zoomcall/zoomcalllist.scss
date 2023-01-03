@@ -109,7 +109,7 @@ $topicfield: #6cce63;
                 border: 2px solid $darkblue;
                 padding: 30px;
                 // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
-                height: 600px;
+                height: 700px;
                 // ADD A SCROLLAR FEATURE TO THIS DIV
                 overflow-y: scroll;
                 // Here is where you place the zoom call list items
@@ -122,10 +122,15 @@ $topicfield: #6cce63;
                     #content {
                         input {
                             background-color: $textfield;
-                            // background-color: green;
                             border: none;
                             text-align: center;
-                            // each category by id
+                        }
+                        input:focus {
+                            background-color: $textfield;
+                            appearance: none;
+                            border: none;
+                            outline: none;
+                            text-align: center;
                         }
                         #zoomname {
                             color: white;

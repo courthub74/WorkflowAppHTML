@@ -87,7 +87,7 @@
 * body .page .zooms {
   border: 2px solid #243F67;
   padding: 30px;
-  height: 600px;
+  height: 700px;
   overflow-y: scroll;
 }
 * body .page .zooms #zoom_items {
@@ -99,6 +99,15 @@
 * body .page .zooms #zoom_items #content input {
   background-color: #4375C0;
   border: none;
+  text-align: center;
+}
+* body .page .zooms #zoom_items #content input:focus {
+  background-color: #4375C0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
   text-align: center;
 }
 * body .page .zooms #zoom_items #content #zoomname {

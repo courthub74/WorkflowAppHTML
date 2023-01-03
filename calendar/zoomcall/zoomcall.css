@@ -107,18 +107,31 @@
 * body .page form .apptbox .zoomentry .inputfield {
   display: flex;
 }
-* body .page form .apptbox .zoomentry .inputfield .zoomname {
+* body .page form .apptbox .zoomentry .inputfield input {
+  background-color: #4375C0;
   border: none;
   width: 790px;
   text-align: center;
   margin: 0 auto;
   font-size: 2.3vh;
-  padding-right: 72px;
-  background-color: #4375C0;
+  padding-right: 70px;
   color: white;
 }
+* body .page form .apptbox .zoomentry .inputfield input:-webkit-autofill {
+  background-color: #4375C0;
+}
+* body .page form .apptbox .zoomentry .inputfield input:autofill {
+  background-color: #4375C0;
+}
 * body .page form .apptbox .zoomentry .inputfield input:focus {
+  background-color: #4375C0;
+  color: white;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
   outline: none;
+  text-align: center;
 }
 * body .page form .apptbox .zoomentry .zoomdate {
   padding-top: 5px;
@@ -181,34 +194,6 @@
   height: 100%;
   transition: all 300s ease;
 }
-* body .page form .apptbox .zoomentry .zoomphone {
-  border: none;
-  background-color: #4375C0;
-  color: white;
-  font-size: 2.3vh;
-  width: 780px;
-  text-align: center;
-  margin: 0 auto;
-  padding-right: 78px;
-}
-* body .page form .apptbox .zoomentry .zoomtopic {
-  border: none;
-  background-color: #4375C0;
-  color: white;
-  font-size: 2.3vh;
-  width: 790px;
-  text-align: center;
-  margin: 0 auto;
-  padding-right: 59.5px;
-}
-* body .page form .apptbox .zoomentry .zoomlink {
-  border: none;
-  background-color: #4375C0;
-  color: white;
-  font-size: 2.3vh;
-  width: 780px;
-  text-align: center;
-}
 * body .page form .apptbox hr {
   height: 2px;
   background-color: white;
@@ -238,8 +223,11 @@
 }
 * body .page form .apptbox .buttondiv .subalert {
   background-color: green;
+  height: 40px;
 }
 * body .page form .apptbox .buttondiv .subalert #subalert {
+  position: -webkit-sticky;
+  position: sticky;
   color: white;
   font-size: small;
 }

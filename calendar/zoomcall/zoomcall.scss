@@ -122,20 +122,57 @@ $textfield: #4375C0;
                             }
                             .inputfield {
                                 display: flex;
-                                // the NAME section
-                                .zoomname {
+                                input {
+                                    background-color: $textfield;
                                     border: none;
                                     width: 790px;
                                     text-align: center;
                                     margin: 0 auto;
                                     font-size: 2.3vh;
-                                    padding-right: 72px;
-                                    background-color: $textfield;
+                                    padding-right: 70px;
                                     color: white;
                                 }
-                                input:focus {
-                                    outline: none;
+                                input:-webkit-autofill {
+                                    background-color: $textfield;
                                 }
+                                input:autofill {
+                                    background-color: $textfield;
+                                }
+                                input:focus {
+                                    background-color: $textfield;
+                                    color: white;
+                                    appearance: none;
+                                    border: none;
+                                    outline: none;
+                                    text-align: center;
+                                }
+                                // the NAME section
+                                .zoomname {
+                                    // border: none;
+                                    // width: 790px;
+                                    // text-align: center;
+                                    // margin: 0 auto;
+                                    // font-size: 2.3vh;
+                                    // padding-right: 72px;
+                                    // background-color: $textfield;
+                                    // color: white;
+                                }
+                                // .zoomname:focus {
+                                //     background-color: $textfield;
+                                //     outline: none;
+                                //     appearance: none;
+                                //     border: none;
+                                // }
+                                // .zoomname:active {
+                                //     background-color: $textfield;
+
+                                // }
+                                // .zoomname:-webkit-autofill {
+                                //     background-color: $textfield;
+                                // }
+                                // .zoomname:autofill {
+                                //     background-color: $textfield;
+                                // }
                             }
                             // the DATE section
                             .zoomdate {
@@ -203,34 +240,34 @@ $textfield: #4375C0;
                             }
                             // the PHONE NUMBER section
                             .zoomphone {
-                                border: none;
-                                background-color: $textfield;
-                                color: white;
-                                font-size: 2.3vh;
-                                width: 780px;
-                                text-align: center;
-                                margin: 0 auto;
-                                padding-right: 78px;
+                                // border: none;
+                                // background-color: $textfield;
+                                // color: white;
+                                // font-size: 2.3vh;
+                                // width: 780px;
+                                // text-align: center;
+                                // margin: 0 auto;
+                                // padding-right: 78px;
                             }
                             // the TOPIC section
                             .zoomtopic {
-                                border: none;
-                                background-color: $textfield;
-                                color: white;
-                                font-size: 2.3vh;
-                                width: 790px;
-                                text-align: center;
-                                margin: 0 auto;
-                                padding-right: 59.5px;
+                                // border: none;
+                                // background-color: $textfield;
+                                // color: white;
+                                // font-size: 2.3vh;
+                                // width: 790px;
+                                // text-align: center;
+                                // margin: 0 auto;
+                                // padding-right: 59.5px;
                             }
                             // the LINK section
                             .zoomlink {
-                                border: none;
-                                background-color: $textfield;
-                                color: white;
-                                font-size: 2.3vh;
-                                width: 780px;
-                                text-align: center;
+                                // border: none;
+                                // background-color: $textfield;
+                                // color: white;
+                                // font-size: 2.3vh;
+                                // width: 780px;
+                                // text-align: center;
                             }
                         }
                         hr {
@@ -264,10 +301,12 @@ $textfield: #4375C0;
                                 }
                             }
                             .subalert {
-                                background-color: green;               
+                                background-color: green; 
+                                height: 40px;              
                                 // padding-left: 80px;
                                 // width: 200px;
                                 #subalert {
+                                    position: sticky;
                                     color: white;
                                     font-size: small;
                                     // width: 100px;
