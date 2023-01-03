@@ -87,6 +87,8 @@
 * body .page .zooms {
   border: 2px solid #243F67;
   padding: 30px;
+  height: 600px;
+  overflow-y: scroll;
 }
 * body .page .zooms #zoom_items {
   background-color: #4375C0;
@@ -133,6 +135,6 @@
   font-size: 1.1rem;
   cursor: pointer;
   padding-left: 20px;
-  padding-right: 30px;
+  padding-right: 20px;
   width: 350px;
 }/*# sourceMappingURL=zoomcalllist.css.map */
