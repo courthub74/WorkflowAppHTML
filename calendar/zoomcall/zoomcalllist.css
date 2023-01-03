@@ -92,8 +92,8 @@
 }
 * body .page .zooms #zoom_items {
   background-color: #4375C0;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
   transition: all 0.3s ease-in;
 }
 * body .page .zooms #zoom_items #content input {
