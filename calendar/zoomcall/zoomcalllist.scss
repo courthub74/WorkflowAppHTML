@@ -10,7 +10,7 @@ $textfield: #4375C0;
 // PHONE NUM COLOR
 $phonefield: #FEFC00;
 // TOPIC FIELD COLOR
-$topicfield: #61d657;
+$topicfield: #6cce63;
 
 * {
     list-style: none;
@@ -121,35 +121,40 @@ $topicfield: #61d657;
                             // background-color: green;
                             border: none;
                             text-align: center;
-                            // width: 200px;
                             // each category by id
                         }
                         #zoomname {
                             color: white;
                             font-weight: bold;
                             font-size: 1.3rem;
-                            width: 230px;
+                            width: 220px;
+                            // background-color: darkblue;
                         }
                         #zoomdate {
                             color: white;
                             font-size: 1.1rem;
                             width: 150px;
+                            // background-color: darkmagenta;
                         }
                         #zoomtime {
                             color: $crossbuttoncream;
                             font-size: 1.1rem;
                             width: 150px;
+                            // background-color: darkgoldenrod;
                         }
                         #zoomnumber {
                             color: $phonefield;
                             font-size: 1.1rem;
                             width: 150px;
+                            // background-color: darkkhaki;
                         }
                         #zoomtopic {
                             color: $topicfield;
                             font-weight: bold;
                             font-size: 1.2rem;
-                            width: 150px;
+                            width: 300px;
+                            padding-left: 10px;
+                            // background-color: darkorange;
                         }
                         #zoomlink {
                             color: white;
@@ -158,6 +163,8 @@ $topicfield: #61d657;
                             cursor: pointer;
                             padding-left: 20px;
                             padding-right: 30px;
+                            width: 350px;
+                            // background-color: darkcyan;
                         }
                     }
                 }

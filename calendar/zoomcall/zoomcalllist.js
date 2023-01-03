@@ -215,6 +215,53 @@ window.addEventListener('load', () => {
 
             // append to the content div
             zoomcontent.appendChild(zoomnumber);
+
+            /////////////////////////////////////
+
+            // TOPIC ELEMENT
+            // create the TOPIC element that's going to be inside of the content
+            const zoomtopic = document.createElement('input');
+            // test print
+            console.log('zoomtopic ===', zoomtopic);
+            // and it's class
+            zoomtopic.classList.add('text');
+            // set it's type
+            zoomtopic.type = "text";
+            // set it's id
+            zoomtopic.id = "zoomtopic";
+
+            // set the value
+                // take the value from zoomsall 4 loop
+            zoomtopic.value = zoomsall.item.topic;
+            // set the attribute to readonly
+            zoomtopic.setAttribute('readonly', true);
+
+            // append to the content div
+            zoomcontent.appendChild(zoomtopic);
+
+             /////////////////////////////////////
+
+            // LINK ELEMENT
+            // create the LINK element that's going to be inside of the content
+            const zoomlink = document.createElement('input');
+
+            // test print
+            console.log('zoomlink ===', zoomlink);
+            // and it's class
+            zoomlink.classList.add('text');
+            // set it's type
+            zoomlink.type = "text";
+            // set it's id
+            zoomlink.id = "zoomlink";
+
+            // set the value
+                // take the value from zoomsall 4 loop
+            zoomlink.value = zoomsall.item.link;
+            // set the attribute to readonly
+            zoomlink.setAttribute('readonly', true);
+
+            // append to the content div
+            zoomcontent.appendChild(zoomlink);
         }
 
     };

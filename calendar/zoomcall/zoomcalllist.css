@@ -103,7 +103,7 @@
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
-  width: 230px;
+  width: 220px;
 }
 * body .page .zooms #zoom_items #content #zoomdate {
   color: white;
@@ -121,10 +121,11 @@
   width: 150px;
 }
 * body .page .zooms #zoom_items #content #zoomtopic {
-  color: #61d657;
+  color: #6cce63;
   font-weight: bold;
   font-size: 1.2rem;
-  width: 150px;
+  width: 300px;
+  padding-left: 10px;
 }
 * body .page .zooms #zoom_items #content #zoomlink {
   color: white;
@@ -133,4 +134,5 @@
   cursor: pointer;
   padding-left: 20px;
   padding-right: 30px;
+  width: 350px;
 }/*# sourceMappingURL=zoomcalllist.css.map */
