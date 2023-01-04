@@ -4,12 +4,15 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
+
 * body {
   background-color: #F3F9FF;
 }
+
 * body .sidebar {
   background: #243F67;
   width: 280px;
@@ -18,24 +21,30 @@
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
 * body .sidebar .header {
   text-align: center;
   margin: 20px;
 }
+
 * body .sidebar .header h2 {
   color: white;
   padding-bottom: 30px;
 }
+
 * body .sidebar .header img {
   width: 120px;
   height: 120px;
 }
+
 * body .sidebar .menu {
   padding-top: 90px;
   padding-left: 40px;
 }
+
 * body .sidebar .menu ul li a {
   padding-left: 10px;
   font-size: 25px;
@@ -43,16 +52,19 @@
   color: white;
   line-height: 70px;
 }
+
 * body .sidebar .menu ul li .icon img {
   top: 5px;
   width: 25px;
   display: inline-block;
 }
+
 * body .sidebar .logoutbutton {
   padding-top: 200px;
   height: 20px;
   text-align: center;
 }
+
 * body .sidebar .logoutbutton .logout {
   width: 70px;
   height: 70px;
@@ -62,46 +74,64 @@
   color: #243F67;
   font-weight: bold;
 }
+
 * body .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   height: 100vh;
 }
+
 * body .page .pagestuff {
   height: 80vh;
   text-align: left;
 }
+
 * body .page .pagestuff .header {
   padding-bottom: 100px;
 }
+
 * body .page .pagestuff .header p {
   font-size: 4vh;
   color: #243F67;
   font-size: 65px;
 }
+
 * body .page .pagestuff .recents {
   font-size: 45px;
   color: #243F67;
   background-color: #F5F5F5;
 }
+
 * body .page .pagestuff .recentlist {
   padding-top: 80px;
   line-height: 70px;
 }
+
 * body .page .pagestuff .recentlist a {
   font-size: 20px;
 }
+
 * body .page .pagestuff .recentlist #one {
   color: green;
 }
+
 * body .page .pagestuff .recentlist #two {
   color: orange;
 }
+
 * body .page .pagestuff .recentlist #three {
   color: red;
 }
+
 * body .page .pagestuff .recentlist #four {
   color: blue;
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */

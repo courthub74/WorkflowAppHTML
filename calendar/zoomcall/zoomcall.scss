@@ -132,19 +132,20 @@ $textfield: #4375C0;
                                     padding-right: 70px;
                                     color: white;
                                 }
-                                input:-webkit-autofill {
-                                    background-color: $textfield;
-                                }
-                                input:autofill {
-                                    background-color: $textfield;
-                                }
                                 input:focus {
                                     background-color: $textfield;
+                                    // background-color: aqua;
                                     color: white;
                                     appearance: none;
                                     border: none;
                                     outline: none;
                                     text-align: center;
+                                }
+                                input:-webkit-autofill {
+                                    background-color: $textfield;
+                                }
+                                input:autofill {
+                                    background-color: $textfield;
                                 }
                                 // the NAME section
                                 .zoomname {
@@ -157,22 +158,6 @@ $textfield: #4375C0;
                                     // background-color: $textfield;
                                     // color: white;
                                 }
-                                // .zoomname:focus {
-                                //     background-color: $textfield;
-                                //     outline: none;
-                                //     appearance: none;
-                                //     border: none;
-                                // }
-                                // .zoomname:active {
-                                //     background-color: $textfield;
-
-                                // }
-                                // .zoomname:-webkit-autofill {
-                                //     background-color: $textfield;
-                                // }
-                                // .zoomname:autofill {
-                                //     background-color: $textfield;
-                                // }
                             }
                             // the DATE section
                             .zoomdate {

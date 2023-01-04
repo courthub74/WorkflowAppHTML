@@ -4,9 +4,11 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
+
 * body .sidebar {
   background-color: #243F67;
   width: 280px;
@@ -15,24 +17,30 @@
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transition: all 0.5 ease-in;
   transition: all 0.5 ease-in;
 }
+
 * body .sidebar .header {
   text-align: center;
   margin: 20px;
 }
+
 * body .sidebar .header h2 {
   color: white;
   padding-bottom: 30px;
 }
+
 * body .sidebar .header img {
   width: 120px;
   height: 120px;
 }
+
 * body .sidebar .menu {
   padding-top: 90px;
   padding-left: 40px;
 }
+
 * body .sidebar .menu ul li a {
   padding-left: 10px;
   font-size: 25px;
@@ -40,22 +48,27 @@
   text-decoration: none;
   line-height: 70px;
 }
+
 * body .sidebar .menu ul li a .icon img {
   top: 5px;
   width: 25px;
   display: inline-block;
 }
+
 * body .sidebar .menu ul li a .check {
   height: 20px;
 }
+
 * body .sidebar .menu ul li a .check img {
   width: 25px;
 }
+
 * body .sidebar .logoutbutton {
   padding-top: 200px;
   height: 20px;
   text-align: center;
 }
+
 * body .sidebar .logoutbutton .logout {
   width: 70px;
   height: 70px;
@@ -64,9 +77,11 @@
   border: none;
   font-weight: bold;
 }
+
 * body .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
+
 * body .page {
   height: 100vh;
   width: 100%;
@@ -74,33 +89,46 @@
   padding-left: 160px;
   line-height: 40px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 * body .page h1 {
   color: #4375C0;
   font-size: 3.5rem;
   padding-bottom: 100px;
   padding-left: 20px;
 }
+
 * body .page .zooms {
   border: 2px solid #243F67;
   padding: 30px;
   height: 700px;
   overflow-y: scroll;
 }
+
 * body .page .zooms #zoom_items {
   background-color: #4375C0;
   padding: 2rem;
   margin-bottom: 2rem;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
+
 * body .page .zooms #zoom_items #content input {
   background-color: #4375C0;
   border: none;
   text-align: center;
 }
+
 * body .page .zooms #zoom_items #content input:focus {
   background-color: #4375C0;
   -webkit-appearance: none;
@@ -110,27 +138,32 @@
   outline: none;
   text-align: center;
 }
+
 * body .page .zooms #zoom_items #content #zoomname {
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
   width: 220px;
 }
+
 * body .page .zooms #zoom_items #content #zoomdate {
   color: white;
   font-size: 1.1rem;
   width: 150px;
 }
+
 * body .page .zooms #zoom_items #content #zoomtime {
   color: #FFF7D6;
   font-size: 1.1rem;
   width: 150px;
 }
+
 * body .page .zooms #zoom_items #content #zoomnumber {
   color: #FEFC00;
   font-size: 1.1rem;
   width: 150px;
 }
+
 * body .page .zooms #zoom_items #content #zoomtopic {
   color: #6cce63;
   font-weight: bold;
@@ -138,6 +171,7 @@
   width: 300px;
   padding-left: 10px;
 }
+
 * body .page .zooms #zoom_items #content #zoomlink {
   color: white;
   font-weight: bold;
@@ -146,4 +180,5 @@
   padding-left: 20px;
   padding-right: 20px;
   width: 350px;
-}/*# sourceMappingURL=zoomcalllist.css.map */
+}
+/*# sourceMappingURL=zoomcalllist.css.map */
