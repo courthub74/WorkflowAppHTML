@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"inperson.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "inperson.scss"
+    ],
+    "names": [],
+    "file": "inperson.css"
+}
