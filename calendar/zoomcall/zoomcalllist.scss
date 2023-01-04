@@ -92,7 +92,7 @@ $topicfield: #6cce63;
             height: 100vh;
             width: 100%;
             padding-top: 70px;
-            padding-left: 160px;
+            padding-left: 280px;
             line-height: 40px;
             text-align: center;
             display: flex;
@@ -101,18 +101,54 @@ $topicfield: #6cce63;
             h1 {
                 color: $textfield;
                 font-size: 3.5rem;
-                padding-bottom: 100px;
+                padding-bottom: 90px;
                 padding-left: 20px;
             }
             // HERE is where you want the frame
-            .zooms {
-                border: 2px solid $darkblue;
-                padding: 30px;
-                // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
-                height: 700px;
-                // ADD A SCROLLAR FEATURE TO THIS DIV
-                overflow-y: scroll;
-                // Here is where you place the zoom call list items
+                .outline {
+                    border: 2px solid $darkblue;
+                    // background-color: aqua;
+                    height: 700px;
+                    padding: 40px;
+                    .zooms {
+                        padding: 30px;
+                        // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
+                        height: 550px;
+                        // ADD A SCROLLAR FEATURE TO THIS DIV
+                        overflow-y: scroll;
+                        // Here is where you place the zoom call list items
+                    }
+                    .zooms::-webkit-scrollbar {
+                        // background-color: $textfield;
+                        border: 1px solid $textfield;
+                        border-radius: 10px;
+                    }
+                    .zooms::-webkit-scrollbar-thumb {
+                        background: $textfield;
+                        // background: white;
+                        border: 1px $textfield solid;
+                        border-radius: 10px;
+                    }
+                    .settings {
+                        display: flex;
+                        // background-color: #6cce63;
+                        justify-content: right;
+                        padding: 30px 50px 0px 0px;
+                        #gear{
+                            // background-color: aqua;
+                            height: 40px;
+                            padding: 5px 5px 5px 0px;
+                            img {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                        a {
+                        color: $darkblue;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        }
+                    }                
                 #zoom_items {
                     background-color: $textfield;
                     padding: 2rem;

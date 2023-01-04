@@ -71,7 +71,7 @@
   height: 100vh;
   width: 100%;
   padding-top: 70px;
-  padding-left: 160px;
+  padding-left: 280px;
   line-height: 40px;
   text-align: center;
   display: flex;
@@ -81,27 +81,58 @@
 * body .page h1 {
   color: #4375C0;
   font-size: 3.5rem;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   padding-left: 20px;
 }
-* body .page .zooms {
+* body .page .outline {
   border: 2px solid #243F67;
-  padding: 30px;
   height: 700px;
+  padding: 40px;
+}
+* body .page .outline .zooms {
+  padding: 30px;
+  height: 550px;
   overflow-y: scroll;
 }
-* body .page .zooms #zoom_items {
+* body .page .outline .zooms::-webkit-scrollbar {
+  border: 1px solid #4375C0;
+  border-radius: 10px;
+}
+* body .page .outline .zooms::-webkit-scrollbar-thumb {
+  background: #4375C0;
+  border: 1px #4375C0 solid;
+  border-radius: 10px;
+}
+* body .page .outline .settings {
+  display: flex;
+  justify-content: right;
+  padding: 30px 50px 0px 0px;
+}
+* body .page .outline .settings #gear {
+  height: 40px;
+  padding: 5px 5px 5px 0px;
+}
+* body .page .outline .settings #gear img {
+  width: 25px;
+  height: 25px;
+}
+* body .page .outline .settings a {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+* body .page .outline #zoom_items {
   background-color: #4375C0;
   padding: 2rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease-in;
 }
-* body .page .zooms #zoom_items #content input {
+* body .page .outline #zoom_items #content input {
   background-color: #4375C0;
   border: none;
   text-align: center;
 }
-* body .page .zooms #zoom_items #content input:focus {
+* body .page .outline #zoom_items #content input:focus {
   background-color: #4375C0;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -110,35 +141,35 @@
   outline: none;
   text-align: center;
 }
-* body .page .zooms #zoom_items #content #zoomname {
+* body .page .outline #zoom_items #content #zoomname {
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
   width: 220px;
 }
-* body .page .zooms #zoom_items #content #zoomdate {
+* body .page .outline #zoom_items #content #zoomdate {
   color: white;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .zooms #zoom_items #content #zoomtime {
+* body .page .outline #zoom_items #content #zoomtime {
   color: #FFF7D6;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .zooms #zoom_items #content #zoomnumber {
+* body .page .outline #zoom_items #content #zoomnumber {
   color: #FEFC00;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .zooms #zoom_items #content #zoomtopic {
+* body .page .outline #zoom_items #content #zoomtopic {
   color: #6cce63;
   font-weight: bold;
   font-size: 1.2rem;
   width: 300px;
   padding-left: 10px;
 }
-* body .page .zooms #zoom_items #content #zoomlink {
+* body .page .outline #zoom_items #content #zoomlink {
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
