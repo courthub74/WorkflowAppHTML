@@ -135,13 +135,13 @@
 }
 * .wrapper main #project-list .outline {
   border: 2px solid #243F67;
-  height: 700px;
+  height: 655px;
   padding: 40px;
 }
 * .wrapper main #project-list .outline #project_block {
   padding: 30px;
   overflow-y: scroll;
-  height: 600px;
+  height: 550px;
 }
 * .wrapper main #project-list .outline #project_block .project_items {
   background-color: #243F67;
@@ -215,4 +215,19 @@
 * .wrapper main #project-list .outline #project_block::-webkit-scrollbar-thumb {
   background: #243F67;
   border-radius: 10px;
+}
+* .wrapper main #project-list .outline .back {
+  display: flex;
+  justify-content: right;
+  padding: 20px 50px 0px 0px;
+}
+* .wrapper main #project-list .outline .back #arrow img {
+  width: 20px;
+  height: 20px;
+}
+* .wrapper main #project-list .outline .back a {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-left: 5px;
 }/*# sourceMappingURL=projectstodo.css.map */

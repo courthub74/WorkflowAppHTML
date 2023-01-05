@@ -162,7 +162,7 @@ $background: #F3F9FF;
                     .outline {
                         border: 2px solid $darkblue;
                         // background-color: aqua;
-                        height: 700px;
+                        height: 655px;
                         padding: 40px;
                     // background-color: #11B386;
                     // NOW time for the block for the items of projects
@@ -170,7 +170,7 @@ $background: #F3F9FF;
                         // border: 2px solid $darkblue;
                         padding: 30px;
                         overflow-y: scroll;
-                        height: 600px;
+                        height: 550px;
                         // background-color: #11B386;
                         // NOW time for the individual items
                         .project_items {
@@ -243,6 +243,28 @@ $background: #F3F9FF;
                     #project_block::-webkit-scrollbar-thumb {
                         background: $darkblue;
                         border-radius: 10px;
+                    }
+                    // Back to Tasks Menu Button
+                    .back {
+                        // background-color: greenyellow;
+                        display: flex;
+                        justify-content: right;
+                        padding: 20px 50px 0px 0px;
+                        #arrow {
+                            // background-color: wheat;
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                
+                            }
+                        }
+                        a {
+                            color: $darkblue;
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                            padding-left: 5px;
+                        }
+
                     }
                 }    
             }
