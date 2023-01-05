@@ -4,16 +4,13 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
-
 * body {
   background-color: #F3F9FF;
   background-color: #E2F1FF;
 }
-
 * .sidebar {
   background-color: #243F67;
   width: 280px;
@@ -22,30 +19,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
 * .sidebar .header {
   text-align: center;
   margin: 20px;
 }
-
 * .sidebar .header h2 {
   color: white;
   padding-bottom: 30px;
 }
-
 * .sidebar .header img {
   width: 120px;
   height: 120px;
 }
-
 * .sidebar .menu {
   padding-top: 90px;
   padding-left: 40px;
 }
-
 * .sidebar .menu ul li a {
   padding-left: 10px;
   font-size: 25px;
@@ -53,27 +44,22 @@
   color: white;
   line-height: 70px;
 }
-
 * .sidebar .menu ul li a .icon img {
   top: 5px;
   width: 25px;
   display: inline-block;
 }
-
 * .sidebar .menu ul li .check {
   height: 20px;
 }
-
 * .sidebar .menu ul li .check img {
   width: 25px;
 }
-
 * .sidebar .logoutbutton {
   padding-top: 200px;
   height: 20px;
   text-align: center;
 }
-
 * .sidebar .logoutbutton .logout {
   width: 70px;
   height: 70px;
@@ -82,50 +68,33 @@
   border: none;
   font-weight: bold;
 }
-
 * .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
-
 * .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding-left: 250px;
   padding-top: 100px;
   height: 100vh;
 }
-
 * .wrapper .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #243F67;
   width: 80%;
   height: 90px;
   color: white;
   padding: 40px;
 }
-
 * .wrapper .header p {
   font-size: 4vh;
   padding-right: 100px;
 }
-
 * .wrapper .header .inputblock {
   width: 100%;
 }
-
 * .wrapper .header .inputblock input {
   margin: 0;
   border: none;
@@ -137,11 +106,9 @@
   font-size: 16px;
   height: 40px;
 }
-
 * .wrapper .header .inputblock .addPrac {
   cursor: pointer;
 }
-
 * .wrapper .header .inputblock .addPrac p {
   font-size: 15px;
   padding-top: 10px;
@@ -151,7 +118,6 @@
   height: 40px;
   text-align: center;
 }
-
 * .wrapper .thelist {
   border: 1px solid #afbcd1;
   width: 80%;
@@ -159,12 +125,10 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-
 * .wrapper .thelist #praclist .items {
   padding: 20px;
   font-size: 20px;
 }
-
 * .wrapper .thelist #praclist .checked {
   text-decoration: line-through;
   border: #243F67;
@@ -172,5 +136,4 @@
   color: white;
   padding: 20px;
   font-size: 20px;
-}
-/*# sourceMappingURL=practices.css.map */
+}/*# sourceMappingURL=practices.css.map */

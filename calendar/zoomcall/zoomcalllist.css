@@ -4,11 +4,9 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
-
 * body .sidebar {
   background-color: #243F67;
   width: 280px;
@@ -17,30 +15,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.5 ease-in;
   transition: all 0.5 ease-in;
 }
-
 * body .sidebar .header {
   text-align: center;
   margin: 20px;
 }
-
 * body .sidebar .header h2 {
   color: white;
   padding-bottom: 30px;
 }
-
 * body .sidebar .header img {
   width: 120px;
   height: 120px;
 }
-
 * body .sidebar .menu {
   padding-top: 90px;
   padding-left: 40px;
 }
-
 * body .sidebar .menu ul li a {
   padding-left: 10px;
   font-size: 25px;
@@ -48,27 +40,22 @@
   text-decoration: none;
   line-height: 70px;
 }
-
 * body .sidebar .menu ul li a .icon img {
   top: 5px;
   width: 25px;
   display: inline-block;
 }
-
 * body .sidebar .menu ul li a .check {
   height: 20px;
 }
-
 * body .sidebar .menu ul li a .check img {
   width: 25px;
 }
-
 * body .sidebar .logoutbutton {
   padding-top: 200px;
   height: 20px;
   text-align: center;
 }
-
 * body .sidebar .logoutbutton .logout {
   width: 70px;
   height: 70px;
@@ -77,11 +64,9 @@
   border: none;
   font-weight: bold;
 }
-
 * body .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
-
 * body .page {
   height: 100vh;
   width: 100%;
@@ -89,30 +74,17 @@
   padding-left: 280px;
   line-height: 40px;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 * body .page h1 {
   color: #4375C0;
   font-size: 3.5rem;
   padding-bottom: 90px;
   padding-left: 20px;
 }
-<<<<<<< HEAD
 * body .page .outline {
-=======
-
-* body .page .zooms {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
   border: 2px solid #243F67;
   height: 700px;
   padding: 40px;
@@ -122,7 +94,63 @@
   height: 550px;
   overflow-y: scroll;
 }
-<<<<<<< HEAD
+* body .page .outline .zooms #zoom_items {
+  background-color: #4375C0;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in;
+}
+* body .page .outline .zooms #zoom_items #content input {
+  background-color: #4375C0;
+  border: none;
+  text-align: center;
+}
+* body .page .outline .zooms #zoom_items #content input:focus {
+  background-color: #4375C0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+* body .page .outline .zooms #zoom_items #content #zoomname {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 220px;
+}
+* body .page .outline .zooms #zoom_items #content #zoomdate {
+  color: white;
+  font-size: 1.1rem;
+  width: 150px;
+}
+* body .page .outline .zooms #zoom_items #content #zoomtime {
+  color: #FFF7D6;
+  font-size: 1.1rem;
+  width: 150px;
+}
+* body .page .outline .zooms #zoom_items #content #zoomnumber {
+  color: #FEFC00;
+  font-size: 1.1rem;
+  width: 150px;
+}
+* body .page .outline .zooms #zoom_items #content #zoomtopic {
+  color: #6cce63;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 300px;
+  padding-left: 10px;
+}
+* body .page .outline .zooms #zoom_items #content #zoomlink {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 350px;
+}
 * body .page .outline .zooms::-webkit-scrollbar {
   border: 1px solid #4375C0;
   border-radius: 10px;
@@ -150,106 +178,116 @@
   font-weight: bold;
   font-size: 1.3rem;
 }
-* body .page .outline #zoom_items {
-=======
 
-* body .page .zooms #zoom_items {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  background-color: #4375C0;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content input {
-=======
+/*
+// HERE is where you want the frame
+                .outline {
+                    border: 2px solid $darkblue;
+                    // background-color: aqua;
+                    height: 700px;
+                    padding: 40px;
+                    .zooms {
+                        padding: 30px;
+                        // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
+                        height: 550px;
+                        // ADD A SCROLLAR FEATURE TO THIS DIV
+                        overflow-y: scroll;
+                        // Here is where you place the zoom call list items
+                        #zoom_items {
+                            background-color: $textfield;
+                            padding: 2rem;
+                            margin-bottom: 2rem;
+                            transition: all .3s ease-in;
+                            // height: 100px;
+                            #content {
+                                input {
+                                    background-color: $textfield;
+                                    border: none;
+                                    text-align: center;
+                                }
+                                input:focus {
+                                    background-color: $textfield;
+                                    appearance: none;
+                                    border: none;
+                                    outline: none;
+                                    text-align: center;
+                                }
+                                #zoomname {
+                                    color: white;
+                                    font-weight: bold;
+                                    font-size: 1.3rem;
+                                    width: 220px;
+                                    // background-color: darkblue;
+                                }
+                                #zoomdate {
+                                    color: white;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkmagenta;
+                                }
+                                #zoomtime {
+                                    color: $crossbuttoncream;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkgoldenrod;
+                                }
+                                #zoomnumber {
+                                    color: $phonefield;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkkhaki;
+                                }
+                                #zoomtopic {
+                                    color: $topicfield;
+                                    font-weight: bold;
+                                    font-size: 1.2rem;
+                                    width: 300px;
+                                    padding-left: 10px;
+                                    // background-color: darkorange;
+                                }
+                                #zoomlink {
+                                    color: white;
+                                    font-weight: bold;
+                                    font-size: 1.1rem;
+                                    cursor: pointer;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    width: 350px;
+                                    // background-color: darkcyan;
+                                }
+                            }
+                        }
+                    }
+                    .zooms::-webkit-scrollbar {
+                        // background-color: $textfield;
+                        border: 1px solid $textfield;
+                        border-radius: 10px;
+                    }
+                    .zooms::-webkit-scrollbar-thumb {
+                        background: $textfield;
+                        // background: white;
+                        border: 1px $textfield solid;
+                        border-radius: 10px;
+                    }
+                    .settings {
+                        display: flex;
+                        // background-color: #6cce63;
+                        justify-content: right;
+                        padding: 30px 50px 0px 0px;
+                        #gear{
+                            // background-color: aqua;
+                            height: 40px;
+                            padding: 5px 5px 5px 0px;
+                            img {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                        a {
+                        color: $darkblue;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        }
+                    }                
 
-* body .page .zooms #zoom_items #content input {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  background-color: #4375C0;
-  border: none;
-  text-align: center;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content input:focus {
-=======
-
-* body .page .zooms #zoom_items #content input:focus {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  background-color: #4375C0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  outline: none;
-  text-align: center;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomname {
-=======
-
-* body .page .zooms #zoom_items #content #zoomname {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
-  width: 220px;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomdate {
-=======
-
-* body .page .zooms #zoom_items #content #zoomdate {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: white;
-  font-size: 1.1rem;
-  width: 150px;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomtime {
-=======
-
-* body .page .zooms #zoom_items #content #zoomtime {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: #FFF7D6;
-  font-size: 1.1rem;
-  width: 150px;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomnumber {
-=======
-
-* body .page .zooms #zoom_items #content #zoomnumber {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: #FEFC00;
-  font-size: 1.1rem;
-  width: 150px;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomtopic {
-=======
-
-* body .page .zooms #zoom_items #content #zoomtopic {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: #6cce63;
-  font-weight: bold;
-  font-size: 1.2rem;
-  width: 300px;
-  padding-left: 10px;
-}
-<<<<<<< HEAD
-* body .page .outline #zoom_items #content #zoomlink {
-=======
-
-* body .page .zooms #zoom_items #content #zoomlink {
->>>>>>> 00da3e623eaee7e19b817c15e3b22c0af81e4e5f
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 350px;
-}
-/*# sourceMappingURL=zoomcalllist.css.map */
+            }*//*# sourceMappingURL=zoomcalllist.css.map */

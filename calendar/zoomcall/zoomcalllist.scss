@@ -98,6 +98,7 @@ $topicfield: #6cce63;
             display: flex;
             flex-direction: column;
             align-items: center;
+            // background-color: blue;
             h1 {
                 color: $textfield;
                 font-size: 3.5rem;
@@ -105,6 +106,123 @@ $topicfield: #6cce63;
                 padding-left: 20px;
             }
             // HERE is where you want the frame
+            .outline {
+                border: 2px solid $darkblue;
+                // background-color: aqua;
+                height: 700px;
+                padding: 40px;
+                .zooms {
+                    padding: 30px;
+                    // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
+                    height: 550px;
+                    // ADD A SCROLLAR FEATURE TO THIS DIV
+                    overflow-y: scroll;
+                    // Here is where you place the zoom call list items
+                    #zoom_items {
+                        background-color: $textfield;
+                        padding: 2rem;
+                        margin-bottom: 2rem;
+                        transition: all .3s ease-in;
+                        // height: 100px;
+                        #content {
+                            input {
+                                background-color: $textfield;
+                                border: none;
+                                text-align: center;
+                            }
+                            input:focus {
+                                background-color: $textfield;
+                                appearance: none;
+                                border: none;
+                                outline: none;
+                                text-align: center;
+                            }
+                            #zoomname {
+                                color: white;
+                                font-weight: bold;
+                                font-size: 1.3rem;
+                                width: 220px;
+                                // background-color: darkblue;
+                            }
+                            #zoomdate {
+                                color: white;
+                                font-size: 1.1rem;
+                                width: 150px;
+                                // background-color: darkmagenta;
+                            }
+                            #zoomtime {
+                                color: $crossbuttoncream;
+                                font-size: 1.1rem;
+                                width: 150px;
+                                // background-color: darkgoldenrod;
+                            }
+                            #zoomnumber {
+                                color: $phonefield;
+                                font-size: 1.1rem;
+                                width: 150px;
+                                // background-color: darkkhaki;
+                            }
+                            #zoomtopic {
+                                color: $topicfield;
+                                font-weight: bold;
+                                font-size: 1.2rem;
+                                width: 300px;
+                                padding-left: 10px;
+                                // background-color: darkorange;
+                            }
+                            #zoomlink {
+                                color: white;
+                                font-weight: bold;
+                                font-size: 1.1rem;
+                                cursor: pointer;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                width: 350px;
+                                // background-color: darkcyan;
+                            }
+                        }
+                    }
+                }
+                .zooms::-webkit-scrollbar {
+                    // background-color: $textfield;
+                    border: 1px solid $textfield;
+                    border-radius: 10px;
+                }
+                .zooms::-webkit-scrollbar-thumb {
+                    background: $textfield;
+                    // background: white;
+                    border: 1px $textfield solid;
+                    border-radius: 10px;
+                }
+                .settings {
+                    display: flex;
+                    // background-color: #6cce63;
+                    justify-content: right;
+                    padding: 30px 50px 0px 0px;
+                    #gear{
+                        // background-color: aqua;
+                        height: 40px;
+                        padding: 5px 5px 5px 0px;
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                    a {
+                    color: $darkblue;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    }
+                }                
+            
+        }
+                
+        }
+    }
+}
+
+/*
+// HERE is where you want the frame
                 .outline {
                     border: 2px solid $darkblue;
                     // background-color: aqua;
@@ -117,6 +235,70 @@ $topicfield: #6cce63;
                         // ADD A SCROLLAR FEATURE TO THIS DIV
                         overflow-y: scroll;
                         // Here is where you place the zoom call list items
+                        #zoom_items {
+                            background-color: $textfield;
+                            padding: 2rem;
+                            margin-bottom: 2rem;
+                            transition: all .3s ease-in;
+                            // height: 100px;
+                            #content {
+                                input {
+                                    background-color: $textfield;
+                                    border: none;
+                                    text-align: center;
+                                }
+                                input:focus {
+                                    background-color: $textfield;
+                                    appearance: none;
+                                    border: none;
+                                    outline: none;
+                                    text-align: center;
+                                }
+                                #zoomname {
+                                    color: white;
+                                    font-weight: bold;
+                                    font-size: 1.3rem;
+                                    width: 220px;
+                                    // background-color: darkblue;
+                                }
+                                #zoomdate {
+                                    color: white;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkmagenta;
+                                }
+                                #zoomtime {
+                                    color: $crossbuttoncream;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkgoldenrod;
+                                }
+                                #zoomnumber {
+                                    color: $phonefield;
+                                    font-size: 1.1rem;
+                                    width: 150px;
+                                    // background-color: darkkhaki;
+                                }
+                                #zoomtopic {
+                                    color: $topicfield;
+                                    font-weight: bold;
+                                    font-size: 1.2rem;
+                                    width: 300px;
+                                    padding-left: 10px;
+                                    // background-color: darkorange;
+                                }
+                                #zoomlink {
+                                    color: white;
+                                    font-weight: bold;
+                                    font-size: 1.1rem;
+                                    cursor: pointer;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    width: 350px;
+                                    // background-color: darkcyan;
+                                }
+                            }
+                        }
                     }
                     .zooms::-webkit-scrollbar {
                         // background-color: $textfield;
@@ -149,71 +331,5 @@ $topicfield: #6cce63;
                         font-size: 1.3rem;
                         }
                     }                
-                #zoom_items {
-                    background-color: $textfield;
-                    padding: 2rem;
-                    margin-bottom: 2rem;
-                    transition: all .3s ease-in;
-                    // height: 100px;
-                    #content {
-                        input {
-                            background-color: $textfield;
-                            border: none;
-                            text-align: center;
-                        }
-                        input:focus {
-                            background-color: $textfield;
-                            appearance: none;
-                            border: none;
-                            outline: none;
-                            text-align: center;
-                        }
-                        #zoomname {
-                            color: white;
-                            font-weight: bold;
-                            font-size: 1.3rem;
-                            width: 220px;
-                            // background-color: darkblue;
-                        }
-                        #zoomdate {
-                            color: white;
-                            font-size: 1.1rem;
-                            width: 150px;
-                            // background-color: darkmagenta;
-                        }
-                        #zoomtime {
-                            color: $crossbuttoncream;
-                            font-size: 1.1rem;
-                            width: 150px;
-                            // background-color: darkgoldenrod;
-                        }
-                        #zoomnumber {
-                            color: $phonefield;
-                            font-size: 1.1rem;
-                            width: 150px;
-                            // background-color: darkkhaki;
-                        }
-                        #zoomtopic {
-                            color: $topicfield;
-                            font-weight: bold;
-                            font-size: 1.2rem;
-                            width: 300px;
-                            padding-left: 10px;
-                            // background-color: darkorange;
-                        }
-                        #zoomlink {
-                            color: white;
-                            font-weight: bold;
-                            font-size: 1.1rem;
-                            cursor: pointer;
-                            padding-left: 20px;
-                            padding-right: 20px;
-                            width: 350px;
-                            // background-color: darkcyan;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+                
+            }*/
