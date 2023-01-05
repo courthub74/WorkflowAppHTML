@@ -201,7 +201,7 @@ window.addEventListener('load', () => {
                 // you need to redefine 'todo' in this for loop
                 project_input_element.value = projectsall.item;
                 // set it's style
-                project_input_element.style.width = "300px";
+                project_input_element.style.width = "360px";
                 // set it's attribute
                 project_input_element.setAttribute('readonly', true);
 
