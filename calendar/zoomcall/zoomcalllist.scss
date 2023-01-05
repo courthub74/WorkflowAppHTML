@@ -102,17 +102,18 @@ $topicfield: #6cce63;
             h1 {
                 color: $textfield;
                 font-size: 3.5rem;
-                padding-bottom: 90px;
+                padding-bottom: 80px;
                 padding-left: 20px;
             }
             // HERE is where you want the frame
             .outline {
                 border: 2px solid $darkblue;
+                border-radius: 5px;
                 // background-color: aqua;
-                height: 700px;
+                height: 650px;
                 padding: 40px;
                 .zooms {
-                    padding: 30px;
+                    padding: 20px 30px 0px 0px;
                     // HERE SET THE HEIGHT FOR THE SCROLLBAR EFFECT
                     height: 550px;
                     // ADD A SCROLLAR FEATURE TO THIS DIV
@@ -123,6 +124,7 @@ $topicfield: #6cce63;
                         padding: 2rem;
                         margin-bottom: 2rem;
                         transition: all .3s ease-in;
+                        border-radius: 5px;
                         // height: 100px;
                         #content {
                             input {
@@ -198,7 +200,7 @@ $topicfield: #6cce63;
                     display: flex;
                     // background-color: #6cce63;
                     justify-content: right;
-                    padding: 30px 50px 0px 0px;
+                    padding: 5px 50px 0px 0px;
                     #gear{
                         // background-color: aqua;
                         height: 40px;
