@@ -56,38 +56,57 @@
     <!-- ToDo Part -->
 
     <div class="wrapper">
-
-
-
         <header class="header">
             <h1>Deliverables to Complete</h1>
 
             <!-- Form Field in Header -->
-            <form id="deliverables-form">
+            <form id="deliverables-fill-form">
                 <!-- Input Field -->
                 <input type="text"
                         id="deliverables-input"
                         placeholder="Enter deliverable here...." />
                 
                 <!-- Submit Button -->
-                <input type="text"
+                <input type="submit"
                         id="deliverables-submit"
                         value="Add Deliverable"/>
             </form>
-
         </header>
 
 
 
-
+       <!-- BODY OF THE PAGE -->
         <main>
             <!-- The List -->
             <section class="deliverables-list">
                 <p>the list:</p>
+                <!-- The Outline here -->
+                <div class="outline">
+                    <!-- The Div where objects are created in the DOM -->
+                    <div id="deliverables_block">
+                        <!-- THIS IS CREATED IN THE DOM  -->
+                        <!-- CONTENT and BUTTONS go in here -->
 
-                <!-- The Div where objects are created in the DOM -->
-                <div id="deliverables">
+                        <!-- THIS IS WHATS CREATED EVERY TIME A TODO IS ENTERED -->
+                        <!-- THESE EXIST IN AND OF ITSELF -->
 
+                        <!-- <div class="deliverable_items"> -->
+                        <!-- CONTENT PART -->
+                        <!-- <div id="content">
+                            <input type="text"
+                                class="text"
+                                id="deliverable"
+                                value="${Todo Item}"
+                                readonly/>
+                        </div> -->
+                        <!-- BUTTONS PART -->
+                        <!-- <div id="buttons">
+                            <button class="edit">edit</button>
+                            <button class="delete">delete</button>
+                            <button class="cross">cross-off</button>
+                        </div> -->
+                    <!-- </div> -->
+                    </div>
                 </div>
             </section>
         </main>

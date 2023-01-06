@@ -161,17 +161,13 @@ $background: #F3F9FF;
                     // Put the outline here
                     .outline {
                         border: 2px solid $darkblue;
-                        // background-color: aqua;
                         height: 655px;
                         padding: 40px;
-                    // background-color: #11B386;
                     // NOW time for the block for the items of projects
                     #project_block {
-                        // border: 2px solid $darkblue;
                         padding: 30px;
                         overflow-y: scroll;
                         height: 550px;
-                        // background-color: #11B386;
                         // NOW time for the individual items
                         .project_items {
                             // background and slicing for each item

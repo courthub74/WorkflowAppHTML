@@ -17,220 +17,231 @@ firebase.initializeApp(firebaseConfig);
 // create a reference for your database (give it a name to id by in firebase)
 var firebaseDeliverablesRef = firebase.database().ref("deliverables");
 
-// TO DATABASE
-// Event Listener to submit button(get the submit button ID)
-document.querySelector('#deliverables-submit').addEventListener('click', () => {
-    // set a variable to get the value of the input field
-    const delivneed = document.getElementById('deliverables-input').value;
+// test print 
+console.log("Here is the DB object for the firebaseDeliverablesRef:", firebaseDeliverablesRef);
 
-    // Error handling
-    if (!delivneed) {
-        alert("Please enter your deliverable");
-        return;
-    }
-    // push the value to the firebase reference point
-    firebaseDeliverablesRef.push(delivneed);
-    // test print the input
-    console.log(delivneed);
+// event listener for the elements of the WHOLE PAGE
+window.addEventListener('load', () => {
+    // Once the page is loaded
+    // query the form field
+        // the reason: to add an event listener to the form field
+        const form = document.querySelector("#deliverables-fill-form");
+        // queryselect the input field
+            // the reason: to get the data submitted
+        const input = document.querySelector("#deliverables-input");
+        // queryselect the output fields field (list-elements)
+            // the reason: to place the outputs as items
+        const deliverable_list_element = document.querySelector("#deliverables_block");
+
+        // NOW populate the list element upon the submit button click
+        // THIS part is the form that goes TO the database
+        form.addEventListener('submit', (e) => {
+
+            // keeps page from refreshing
+            e.preventDefault();
+
+            // test print the submit button
+            console.log("Deliverables submit button pressed");
+
+            // get the value of the 'input' variable above and store it in anoter variable
+            const deliverable = input.value;
+
+            // Error handling
+            // if no value entered just alert
+            if (!deliverable) {
+                alert("Please fill out the deliverables");
+                return;
+            }
+
+            // clear the input field after button pressed
+            input.value = '';
+
+            // NOW this is where we push the todo variable to the firebaseTodo db reference
+            firebaseDeliverablesRef.push({deliverable});
+            // test print the input
+            console.log('DELIVERABLE ===', deliverable);
+        });
+
+        // FROM DATABASE
+
+        // test print the firebase db object
+        // console.log(firebaseDeliverablesRef);
+
+        // utilize the on function on the db reference
+        // based on value
+        // pass getDeliverable and errDeliverable functions
+            // getDeliverable locates fb db in order to get the values
+            // errDeliverable test for errors
+                // i.e. permissions, other blocks
+        firebaseDeliverablesRef.on('value', getDeliverable, errDeliverable);
+        // create the getDeliverables function
+            // pass the arg 'deliverableitem' which comes from the on function from ABOVE
+        function getDeliverable(deliverableitem){
+            // console.log('deliverableitem ===', deliverableitem);
+            // test print the value of the arg
+            console.log(deliverableitem.val())
+            // store the value in a variable
+            var deliverables = deliverableitem.val();
+            // test print the value of the arg
+            console.log('deliverables ===', deliverables);
+
+            // NOW get the keys and items entered 
+                // to push them to an array 
+                    // in order to have access to deleting and editing
+
+            // create an array called data
+                // that is going to consist of the data from fb
+            var data = [];
+            // NOW loop through the projects (input values) and push them into the 
+                // data array by Object ids
+            Object.keys(deliverables).forEach(element => {
+                // test print the todo item with it's key
+                console.log('item key and text ===', element, deliverables[element]);
+                // NOW push the id (element-keys) and item (project)
+                    // to the data array
+                data.push({
+                    id: element,
+                    // item is value with id(key) set to the 'todo' name under the 
+                        // firebase todo db list which happens to be deliverables
+                            // the last bracket is for the render to locate the new key set 
+                                // push the item with the key into the project key name['deliverable']
+                    item: deliverables[element]['deliverable']
+                });
+                // test print the data array
+                    // it prints for every todo item entered
+                console.log('data ===', data);
+            });
+            // clear the project block each time
+                // NOW you locate the list items id variable
+            if (deliverable_list_element){
+                deliverable_list_element.innerHTML = '';
+            }
+            // iterate through the deliverableitems pushed to the data array
+            for(let i = 0; i < data.length; i++){
+                // store them in a variable
+                var deliverablesall = data[i];
+                // test print
+                console.log('deliverablesall ===', deliverablesall);
+                // ABOVE is what you access to the output displays
+                    // you are to create BELOW
+                
+                // The way these will be created:
+                    // each time you hit the submit button
+                        // everything above or the algorithm above is executed for the input entered
+                        // THEN an output element is created in and of itself
+                
+                // THE ELEMENT CREATION PART
+
+                // NOW we build the list elements below
+                    // so each time the form is submitted 
+                        // a separate todo element is created 
+                            // so it can be manipulated individually
+                
+                            // start building the list elements 
+                // in the for loop for each one
+            
+
+                // BELOW is for EACH todo item that gets populated
+
+                // DELIVERABLE-ITEMS DIV
+
+                // create the 'deliverable_items' div
+                const deliverable_items = document.createElement('div');
+
+                // test print it
+                console.log(deliverable_items);
+
+                // add the class to the div
+                deliverable_items.classList.add('deliverable_items');
+
+                // append the div to the parent (deliverable_list_element)
+                deliverable_list_element.appendChild(deliverable_items);
+
+                // CONTENT DIV
+
+                // create the 'content' div 
+                    // this is setup as an input that displays the output
+                const deliverable_content_div = document.createElement('div');
+
+                // test print it
+                // console.log(deliverable_content_div);
+
+                // set the div id
+                deliverable_content_div.id = "content";
+
+                // append the div to the parent (deliverable_items)
+                deliverable_items.appendChild(deliverable_content_div);
+
+                // INPUT ELEMENT
+                    // create the input element that's going to be inside of the content
+                    // which is actually a display of the output
+                        // but you need to set as readonly so ....
+                const deliverable_input_element = document.createElement('input');
+
+                // test print it
+                console.log(deliverable_input_element);
+                // add it's class
+                deliverable_input_element.classList.add('input');
+                // set it's type
+                deliverable_input_element.type = "text";
+                // set it's id
+                deliverable_input_element.id = "deliverable";
+
+                // set it's value. Which is the input value 'todo' variable
+                deliverable_input_element.value = deliverablesall.item;
+                // set it's attribute to readonly
+                deliverable_input_element.setAttribute('readonly', true);
+
+                // append the input element to the parent div (deliverable_content_div)
+                deliverable_content_div.appendChild(deliverable_input_element);
+
+                // NOW FOR THE BUTTONS
+
+                // FIRST SET THE BUTTONS DIV
+
+                // BUTTONS DIV
+
+                // this is the bar of buttons (edit, delete, cross-off)
+                const deliverable_buttons_div = document.createElement('div');
+
+                // test print
+                console.log(deliverable_buttons_div);
+
+                // set it's class
+                deliverable_buttons_div.classList.add('buttons');
+                // append the buttons div to the parent div (deliverable_content_div)
+                deliverable_content_div.appendChild(deliverable_buttons_div);
+                    // REMEMBER parent first and then appendChild to it
+                        // this is separate from the input on the todos div
+                
+                // NOW to put buttons on it
+
+                // EDIT BUTTON
+
+                // create the edit button
+                const deliverable_edit_button = document.createElement('button');
+                // test print
+                console.log(deliverable_edit_button);
+                // set it's class
+                deliverable_edit_button.classList.add('edit');
+                // set the id (for the key of the firebase item)
+                    // the id is the actual key
+                        // deliverablesall.id
+                deliverable_edit_button.id = "projectsall.id";
+                // set the innerText
+                deliverable_edit_button.innerText = "edit";
+                // append edit button to parent (deliverable_items)
+                deliverable_buttons_div.appendChild(deliverable_edit_button);
+
+                // DELETE BUTTON
+
+                // create the delete button
+                const deliverable_delete_button = document.createElement('button');
+            }
+        }
 });
 
-// FROM DATABASE
-
-// test print the firebase object
-// console.log(firebaseClassesRef);
-
-
-// utilize the on function 
-// and pass the getData function as an argument
-  // function to locate the firebase db 
-    // then iterate through it to manipulate
-// and pass the errData function as an argument
-  // this function tests for errors 
-    // i.e. permissions, other blocks
-firebaseDeliverablesRef.on('value', getDeliv, errData);
-
-
-// create the getDeliv function
-    // pass the argument 'deliv'
-function getDeliv(deliv){
-    // test print
-    console.log(deliv.val());
-    // set variable to get the value of each class (or node)
-    var delivs = deliv.val();
-    // set variable to get the keys of each task
-    var keys = Object.keys(delivs);
-    // test print the keys
-    console.log(keys);
-    // iterate through the delivs entered
-    for(let i in delivs){
-        // create a variable for the delivs iteration
-        var delivsall = delivs[i];
-        // test print the above
-        // console.log(delivsall);
-
-        // create the output in HTML
-        document.querySelector('#deliverables').innerHTML += `
-            <div>
-                <div class='deliverables'>
-                    <input type="text" id="content" class="text" value="${delivsall}" readonly="true"></input>
-                    <div class='actions'>
-                        <button type="submit" class="edit" id="edit">EDIT</button>
-                        <button class="delete" id="delete">DELETE</button>
-                        <button class="cross" id="cross">CROSS</button>
-                    </div>
-                </div>
-            </div>
-        `
-
-// ALL FIELDS
-// GET IT SO IT ONLY RESPONDS TO FIELD THE BUTTON IS PRESSED IN
-
-// EDIT AND CROSS OFF
-// LOCATE THE TEXT IN THE NODELIST FOR MANIPULATION
-
-// DELETE BUTTON
-// WHY DOES IT MULTIPLY BY 8 WHEN THE OTHERS DON'T HMMMM....
-
-// FOR PRACCY LETS PLAY AROUND WITH THE BUTTONS IN 
-    // LOOP THROUGH THE BUTTONS
-        // ADD FEATURES TO A TEXTFIELD UPON CLICKING EACH BUTTON
-            // TEXT 1 - BUTTON 1 CHANGES IT RED
-            // TEXT 1 - BUTTON 2 CROSSES IT OFF
-            // TEXT 1 - BUTTON 3 UNDERLINES IT
-            // TEXT 1 - BUTTON 4 CHANGES IT BLUE
-
-        // NOW set the functionality of the action buttons
-
-        // EDIT BUTTON
-
-        // query the edit buttons
-        let editbuttons = document.querySelectorAll("#edit");
-
-        // test print
-        // console.log(editbuttons);
-
-        // iterate through all buttons
-        for (i = 0; i < editbuttons.length; i++){
-            // set a variable for editbuttons[i]
-            let alleditbuttons = editbuttons[i];
-            // test print the edit button text
-            console.log(alleditbuttons.innerText);
-
-            // set the attribute to readonly
-
-
-            // NOW lets addEventListener upon click
-            alleditbuttons.addEventListener('click', function(){
-                // test print
-                console.log("edit button pressed");
-                if (alleditbuttons.innerText.toLowerCase() == 'edit'){
-                    // change innerTEXT to 'save'
-                    alleditbuttons.innerText = 'save';
-                    // query or get the #content field
-                    let delivfield = document.querySelectorAll("#content");
-                    // iterate through the delivfields
-                    for (j in delivfield){
-                        // test print the field value
-                        console.log(delivfield[j].value);
-                        // create variable for the delivfield
-                        let delivfields = delivfield[j];
-                        // remove readonly attribute
-                        delivfields.removeAttribute('readonly', true);
-                        //  set focus function
-                        // delivfields.focus();
-                    }
-                } else {
-                    // if text says save
-                    // check innerTEXT again
-                    if (alleditbuttons.innerText.toLowerCase() == 'save'){
-                        // change innerText back to edit
-                        alleditbuttons.innerText = 'edit';
-                        // test print
-                        console.log("save button pressed");
-                        // THINGS TO DO HERE
-                        // query or get the #content field
-                    let delivfield = document.querySelector("#content");
-                    // iterate through the delivfields
-                    for (j in delivfield){
-                        // test print the field value
-                        console.log(delivfield[j].value);
-                        // create variable for the delivfield
-                        let delivfields = delivfield[j];
-                        // remove readonly attribute
-                        delivfields.setAttribute('readonly', true);
-                         // program the change into firebase
-                    }
-                    }
-                }
-            });
-
-        // DELETE BUTTON
-
-        // query the delete buttons
-        let deletebuttons = document.querySelectorAll("#delete");
-        // iterate through the delete buttons
-        for (d = 0; d < deletebuttons.length; d++){
-            // store the iterations in a variable
-            let alldeletebuttons = deletebuttons[d];
-            // test print
-            console.log(alldeletebuttons.innerHTML);
-            // addEventListener to them
-            alldeletebuttons.addEventListener('click', function(){
-                // test print for button pressed
-                console.log("delete button pressed");
-            })
-        }
-        
-        // use .remove()
-        // also .remove() from firebase
-        }
-
-        // CROSS BUTTON
-
-        // query the cross buttons
-        let crossbuttons = document.querySelectorAll("#cross");
-        // NOW get the inputs by id and then change style
-            // THEY ARE BEING RENDERED FROM FIREBASE
-        var inputs = document.getElementsByTagName("input");
-        // test print
-        console.log(inputs);
-        // NOW loop through the cross buttons
-        for (c = 0; c < crossbuttons.length; c++){
-            // create variable for the iteration of crossbuttons
-            let allcrossbuttons = crossbuttons[c];
-            // test print
-            // console.log(allcrossbuttons);
-            // NOW lets addEventListener upon click
-            allcrossbuttons.addEventListener('click', function(){
-                // if statement to check the crossbuttons innerTEXT
-                if (allcrossbuttons.innerText === "CROSS"){
-                    // test print 
-                    console.log("cross button pressed");
-                    // change the innerTEXT to crossed
-                    allcrossbuttons.innerText = "UNCROSS";
-                    // test print the inputs
-                    // console.log(inputs);
-                    // set input to cross
-                        // how do I extract the text from the input
-                        // this is coming from firebase db
-                    
-                } else {
-                    // if statement to check the crossbuttons innerTEXT
-                    if (allcrossbuttons.innerText === "UNCROSS"){
-                        // test print if button reclicked
-                        console.log("uncross buttton pressed");
-                        // change the innerTEXT to uncrossed
-                        allcrossbuttons.innerText = "CROSS";
-                    }
-                }
-                
-                    // add the line-through attribute to the content upon pressing 
-                    // if statement to check the status of the text decoration
-            });
-        }
-    }
-}
-
-function errData(err){
+// for Error handling
+function errDeliverable(err){
     console.log(err);
 }

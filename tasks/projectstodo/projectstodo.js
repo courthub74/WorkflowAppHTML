@@ -47,7 +47,6 @@ window.addEventListener('load', () => {
            console.log("Project submit button pressed");
 
            // get the value of the 'input' variable above and store it in another variable
-            // get the input by id
            const project = input.value;
 
            // Error handling
@@ -116,7 +115,7 @@ window.addEventListener('load', () => {
                             // the last bracket is for the render to locate the new key set 
                                 // push the item with the key into the project name key
                     item: projects[element]['project']
-                })
+                });
                 // test print the data array
                     // it prints for every todo item entered
                 console.log('data ===', data);
@@ -132,7 +131,13 @@ window.addEventListener('load', () => {
                 var projectsall = data[i];
                 // test print
                 console.log('projectsall ===', projectsall);
-
+                // ABOVE is what you access to the output displays
+                    // you are to create BELOW
+                
+                // The way these will be created:
+                    // each time you hit the submit button
+                        // everything above or the algorithm above is executed for the input entered
+                        // THEN an output element is created in and of itself
 
                 // THE ELEMENT CREATION PART
 
@@ -159,10 +164,6 @@ window.addEventListener('load', () => {
 
                 // append the todo div to the todos-list
                 project_list_element.appendChild(project_items);
-
-
-
-
 
 
                 // CONTENT DIV
@@ -198,11 +199,10 @@ window.addEventListener('load', () => {
                 project_input_element.id = "input";
 
                 // set it's value. Which is the input value 'todo' variable
-                // you need to redefine 'todo' in this for loop
                 project_input_element.value = projectsall.item;
                 // set it's style
                 project_input_element.style.width = "360px";
-                // set it's attribute
+                // set it's attribute to readonly
                 project_input_element.setAttribute('readonly', true);
 
                 // append the input element to the content div
@@ -232,8 +232,6 @@ window.addEventListener('load', () => {
                 project_content_div.appendChild(project_buttons_div);
 
                 // NOW to put buttons on it
-
-
 
                 // EDIT BUTTON
 
