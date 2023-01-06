@@ -119,14 +119,11 @@
 }
 * body .page form .apptbox .zoomentry .inputfield input:focus {
   background-color: transparent;
-  color: white;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
   outline: none;
-  text-align: center;
-  font-size: 2.3vh;
 }
 * body .page form .apptbox .zoomentry .inputfield input:-webkit-autofill,
 * body .page form .apptbox .zoomentry .inputfield input:-webkit-autofill:hover,
@@ -136,6 +133,7 @@
   -webkit-box-shadow: 0 0 10px 1000px #4375C0 inset;
   -webkit-transition: background-color 5000s ease-in-out 2s;
   transition: background-color 5000s ease-in-out 2s;
+  font-size: 2.3vh;
 }
 * body .page form .apptbox .zoomentry .inputfield input:-webkit-autofill::first-line {
   font-size: 2.3vh;
