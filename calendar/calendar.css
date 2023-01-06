@@ -86,6 +86,7 @@
 }
 * .container .calendar {
   border: 2px #243F67 solid;
+  border-radius: 5px;
 }
 * .container .calendar header {
   display: flex;
@@ -123,6 +124,7 @@
 }
 * .container .calendar table tbody tr td {
   background-color: #E2F1FF;
+  border-radius: 5px;
   padding: 50px;
   text-align: center;
 }

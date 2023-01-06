@@ -104,6 +104,7 @@ $background: #F3F9FF;
         .calendar {
             // background-color: green;
             border: 2px $darkblue solid;
+            border-radius: 5px;
             header {
                 display: flex;
                 gap: 400px;
@@ -146,6 +147,7 @@ $background: #F3F9FF;
                     tr {
                         td {
                             background-color: #E2F1FF;
+                            border-radius: 5px;
                             padding: 50px;
                             text-align: center;
                             button {
