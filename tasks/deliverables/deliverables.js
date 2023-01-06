@@ -211,8 +211,6 @@ window.addEventListener('load', () => {
                 deliverable_buttons_div.classList.add('buttons');
                 // append the buttons div to the parent div (deliverable_content_div)
                 deliverable_content_div.appendChild(deliverable_buttons_div);
-                    // REMEMBER parent first and then appendChild to it
-                        // this is separate from the input on the todos div
                 
                 // NOW to put buttons on it
 
@@ -227,16 +225,55 @@ window.addEventListener('load', () => {
                 // set the id (for the key of the firebase item)
                     // the id is the actual key
                         // deliverablesall.id
-                deliverable_edit_button.id = "projectsall.id";
+                deliverable_edit_button.setAttribute('id', deliverablesall.id);
                 // set the innerText
                 deliverable_edit_button.innerText = "edit";
-                // append edit button to parent (deliverable_items)
+                // append edit button to parent (deliverable_buttons_div)
                 deliverable_buttons_div.appendChild(deliverable_edit_button);
 
                 // DELETE BUTTON
 
                 // create the delete button
                 const deliverable_delete_button = document.createElement('button');
+
+                // test print
+                console.log(deliverable_delete_button);
+
+                // set it's class
+                deliverable_delete_button.classList.add('delete');
+
+                // set the id (for the key of the firebase item)
+                    // the id is the actual key
+                deliverable_delete_button.setAttribute('id', deliverablesall.id);
+
+                // set the innerText
+                deliverable_delete_button.innerText = "delete";
+
+                // append delete button to the parent div
+                deliverable_buttons_div.appendChild(deliverable_delete_button);
+
+                // CROSS OFF BUTTON
+
+                // create the cross off button
+                const deliverable_cross_button = document.createElement('button');
+
+                // test print
+                console.log(deliverable_cross_button);
+
+                // set it's class
+                deliverable_cross_button.classList.add('cross');
+
+                // set it's id
+                deliverable_cross_button.setAttribute('id', deliverablesall.id);
+
+                // set the innerText
+                deliverable_cross_button.innerText = "cross-off";
+
+                // test print
+                // console.log(project_cross_button);
+
+                // append cross button to the buttons div
+                deliverable_buttons_div.appendChild(deliverable_cross_button);
             }
         }
 });
