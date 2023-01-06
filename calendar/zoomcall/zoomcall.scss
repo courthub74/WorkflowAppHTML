@@ -108,6 +108,7 @@ $textfield: #4375C0;
                         border-radius: 5px;
                         line-height: 40px;
                         padding: 40px 20px;
+                        // For everyfield
                         .zoomentry {
                             // background-color: aqua;
                             display: flex;
@@ -120,10 +121,12 @@ $textfield: #4375C0;
                                 font-weight: bold;
                                 font-size: 2.5vh;
                             }
+                            // ALL the inputs
                             .inputfield {
                                 display: flex;
                                 input {
                                     background-color: $textfield;
+                                    // background-color: aqua;
                                     border: none;
                                     width: 790px;
                                     text-align: center;
@@ -131,32 +134,29 @@ $textfield: #4375C0;
                                     font-size: 2.3vh;
                                     padding-right: 70px;
                                     color: white;
+                                     // the NAME section
                                 }
                                 input:focus {
-                                    background-color: $textfield;
-                                    // background-color: aqua;
+                                    // background-color: $textfield;
+                                    background-color: transparent;
                                     color: white;
                                     appearance: none;
                                     border: none;
                                     outline: none;
                                     text-align: center;
+                                    font-size: 2.3vh;
                                 }
-                                input:-webkit-autofill {
-                                    background-color: $textfield;
-                                }
-                                input:autofill {
-                                    background-color: $textfield;
-                                }
-                                // the NAME section
-                                .zoomname {
-                                    // border: none;
-                                    // width: 790px;
-                                    // text-align: center;
-                                    // margin: 0 auto;
+                                input:-webkit-autofill,
+                                input:-webkit-autofill:hover,
+                                input:-webkit-autofill:focus {
+                                    border: none;
+                                    -webkit-text-fill-color: white;
+                                    -webkit-box-shadow: 0 0 10px 1000px $textfield inset;
+                                    transition: background-color 5000s ease-in-out 2s;
                                     // font-size: 2.3vh;
-                                    // padding-right: 72px;
-                                    // background-color: $textfield;
-                                    // color: white;
+                                }
+                                input:-webkit-autofill::first-line {
+                                    font-size: 2.3vh;
                                 }
                             }
                             // the DATE section
