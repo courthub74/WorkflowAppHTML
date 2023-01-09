@@ -138,6 +138,27 @@
 * .container .calendar table tbody tr .event a {
   color: white;
 }
+* .container .calendar table tbody tr .zoom {
+  background-color: #4375C0;
+}
+* .container .calendar table tbody tr .zoom a {
+  color: white;
+}
+* .container .calendar table tbody tr .phone {
+  background-color: #96B0D3;
+}
+* .container .calendar table tbody tr .deadline {
+  background-color: #971717;
+}
+* .container .calendar table tbody tr .deadline a {
+  color: white;
+}
+* .container .calendar table tbody tr .appearence {
+  background-color: #5589B9;
+}
+* .container .calendar table tbody tr .appearence a {
+  color: white;
+}
 * .container .calendar table tbody tr .prev-month {
   color: lightgray;
 }

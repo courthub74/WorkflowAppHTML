@@ -4,6 +4,10 @@
 // COLORS
 $darkblue: #243F67;
 $background: #F3F9FF;
+$zoomfield: #4375C0;
+$phonefield: #96B0D3;
+$deadlinefield: #971717;
+$appearenceblue: #5589B9;
 
 * {
     list-style: none;
@@ -157,6 +161,27 @@ $background: #F3F9FF;
                         }
                         .event {
                             background-color: #243F67;
+                            a {
+                                color: white;
+                            }
+                        }
+                        .zoom {
+                            background-color: $zoomfield;
+                            a {
+                                color: white;
+                            }
+                        }
+                        .phone {
+                            background-color: $phonefield;
+                        }
+                        .deadline {
+                            background-color: $deadlinefield;
+                            a {
+                                color: white;
+                            }
+                        }
+                        .appearence {
+                            background-color: $appearenceblue;
                             a {
                                 color: white;
                             }
