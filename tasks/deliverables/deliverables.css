@@ -163,7 +163,7 @@
   width: 300px;
 }
 * .wrapper main .deliverables-list .outline #deliverables_block .deliverable_items #content input:not(:-moz-read-only) {
-  color: #E1F5F3;
+  color: #11B386;
   -moz-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   -moz-appearance: none;
@@ -172,7 +172,7 @@
   outline: none;
 }
 * .wrapper main .deliverables-list .outline #deliverables_block .deliverable_items #content input:not(:read-only) {
-  color: #E1F5F3;
+  color: #11B386;
   transition: all 0.4s ease-in;
   -webkit-appearance: none;
      -moz-appearance: none;

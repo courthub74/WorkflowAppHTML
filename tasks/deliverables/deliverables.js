@@ -274,6 +274,53 @@ window.addEventListener('load', () => {
 
                 // append cross button to the buttons div
                 deliverable_buttons_div.appendChild(deliverable_cross_button);
+
+                // EVENT LISTENER TIME
+
+                // EDIT BUTTON
+                    // this is where you:
+                        // set the innertext change on the button
+                        // toggle the readonly attribute
+                        // edit the changes in firebase 
+                deliverable_edit_button.addEventListener('click', (e) => {
+                    // store the id in a variable that is the target of event (the key)
+                    let id = e.target.id;
+                    // test print
+                    console.log('editbutton id for this deliverable ===', id);
+                    // check the text in order to change it
+                    if (deliverable_edit_button.innerText.toLowerCase() === "edit"){
+                        // test print text with the id
+                        // console.log(project_edit_button, id);
+                        // change the innerText
+                        deliverable_edit_button.innerText = "SAVE";
+                        // remove the readonly attribute from the input field so you can edit the field
+                        deliverable_input_element.removeAttribute('readonly', true);
+                        // place the cursor inside the field to be edited
+                        deliverable_input_element.focus();
+                    } else {
+                        // check the text in order to change it
+                        if (deliverable_edit_button.innerText.toLowerCase() === "save"){
+                            // test print text with the id
+                            // console.log("save button pressed", id);
+                            // change the innerText
+                            deliverable_edit_button.innerText = "EDIT";
+                            // set the readonly attribute to the input field so you can't edit
+                            deliverable_input_element.setAttribute('readonly', true);
+                            // NOW save the change to firebase
+                            // NOW keep the edit in firebase
+                            let updated = deliverable_input_element.value;
+                            // test print
+                            console.log(`The key value for this deliverable is: ${id}`);
+                            console.log('The input value for this deliverable is now:', updated);
+                             // NOW edit in firebase
+                                // locate the firebase reference by each item id
+                                    // apply the update function
+                                        // it sets updated value with a new key
+                                            // that is declared earlier in the data.push ['deliverable']
+                            firebase.database().ref(`deliverables/${id}`).update({deliverable: updated});
+                        }
+                    }
+                });
             }
         }
 });

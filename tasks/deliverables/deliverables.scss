@@ -187,7 +187,7 @@ $deletebuttonblue:#3292FA;
                                     }
                                     // pops up when it is NOT read-only (for edit)
                                     input:not(:read-only){
-                                        color: $editwhite;
+                                        color: $editbuttongreen;
                                         transition: all .4s ease-in;
                                         appearance: none;
                                         border: none;
