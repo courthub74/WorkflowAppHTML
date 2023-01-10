@@ -49,6 +49,9 @@ window.addEventListener('load', () => {
             // get the value of the 'input' variable above and store it in anoter variable
             const deliverable = input.value;
 
+            // define crossed as false
+            const crossed = false;
+
             // Error handling
             // if no value entered just alert
             if (!deliverable) {
@@ -62,10 +65,17 @@ window.addEventListener('load', () => {
             // NOW this is where we push the todo variable to the firebaseTodo db reference
             // HERE is where you set the list for deliverable and crossed
                 // set crossed as false
-            firebaseDeliverablesRef.push({deliverable});
-            
-            // test print the input
+            // firebaseDeliverablesRef.push({deliverable});
+            // store the push of fb ref into a variable
+            var newDeliverableRef = firebaseDeliverablesRef.push();
+            newDeliverableRef.set({
+                deliverable,
+                crossed: false
+            });
+
+            // test print the deliverable and crossed
             console.log('DELIVERABLE ===', deliverable);
+            console.log('CROSSED ===', crossed);
         });
 
         // FROM DATABASE
@@ -364,50 +374,77 @@ window.addEventListener('load', () => {
                                     });
                                     console.log('bools ===', bools);
                                 });
-                                // NOW iterate through and then 
-                                    // create a variable for the boolean value
-                                        // to compare to.
-                                        // dont forget to create the key value first
+                                // // NOW iterate through and then 
+                                //     // create a variable for the boolean value
+                                //         // to compare to.
+                                //         // dont forget to create the key value first
                                 for (let b = 0; b < bools.length; b++){
                                     var crosseds = bools[i];
                                     console.log('boolsall ===', crosseds);
-                                    // NOW if bool item === true set the css
-                                        // to line-through
-                                    if (crosseds.item === true){
-                                        let crossv = crosseds.item;
+                                    let crossv = crosseds.item;
                                         console.log(crossv);
+                                    // NOW if bool item === true set the css
+                                        // textDecoration to line-through
+                                    if (crossv === true){
                                         // change the css of the input
                                         deliverable_input_element.style.textDecoration = "line-through";
-                                        // change the innerHTML of cross-off
+                                        // change the innerHTML of cross-off button
                                         deliverable_cross_button.innerText = "uncross";
                                         // make edit button dissapear
                                         deliverable_edit_button.style.display = "none";
+                                    } else {
+                                        // if bool item === false set the css
+                                            // textDecoration to none
+                                        if (crossv === false){
+                                            // change the css of the input
+                                            deliverable_input_element.style.textDecoration = "none";
+                                            // change the innerHTML of cross-off button
+                                            deliverable_cross_button.innerText = "cross-off";
+                                            // make edit button dissapear
+                                            deliverable_edit_button.style.display = "block";
+                                        }
                                     }
                                 }
-                            }
                     // this is where you:
-                        // change the style to line through and then back again
-                        // I need to reference the input item by id
-                        // then change the status of it
-                        // so it could be read as an item that needs to be crossed
+                    // change the style to line through and then back again
+                    // I need to reference the input item by id
+                    // then change the status of it
+                    // so it could be read as an item that needs to be crossed
                     // first add an event listener
                     deliverable_cross_button.addEventListener('click', (e) =>{
                         // store the id in a variable that is the target of event
                         let id = e.target.id;
-                        // change the innerText of the cross off button to uncross
-                            // use an if statement
+                        // read the innerText of the cross button
+                            // use an if statement to determine
                         if (deliverable_cross_button.innerText.toLowerCase() === "cross-off"){
                             // test print the cross button
                             console.log("cross-off button pressed");
                             // test print the location in the db
-                            console.log(`The key value for this cross-off deliverable is: ${id}`);
-                            // NOW we need a function to change the name value to be read as crossed
-                            // update(doc(db, 'deliverable', deliverable.id),
-                            //          crossed: true;
-                            //  });
+                            console.log(`The key value for this cross-off deliverable is: ${id}`); 
+                            // print the crossed var
+                            console.log(crosseds);
+                            // NOW just apply an update to the crossed item
+                                // through the firebase db
+                            firebase.database().ref(`deliverables/${id}`).update({crossed: true});
+                        } else {
+                            // read the innerText of the cross button
+                                // use an if statement to determine
+                            if (deliverable_cross_button.innerText.toLowerCase() === "uncross"){
+                                // test print uncross button
+                                console.log("uncross button pressed");
+                                // test print the location in the db
+                                console.log(`The key value for this cross-off deliverable is: ${id}`);
+                                // print the crossed var
+                                console.log(crosseds);
+                                // NOW just apply an update to the crossed item
+                                    // through the firebase db
+                                firebase.database().ref(`deliverables/${id}`).update({crossed: false});
+                            }
                         }
 
                     });
+                }
+                    
             }
         }
 });
