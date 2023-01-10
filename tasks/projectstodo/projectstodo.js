@@ -382,6 +382,15 @@ window.addEventListener('load', () => {
                         project_cross_button.innerText = "uncross";
                         // change the CSS
                         project_input_element.style.textDecoration = "line-through";
+                        // for FIREBASE
+                        // IF LINE-THROUGH CSS
+                        // SEND THE DATA NAME AS PROJECTCOMPLETE
+                        // READ THE DATA NAME AS PROJECTCOMPLETE
+                            // SET THE CSS ACCORDING TO THE NEW NAME
+                            // OR
+                        // USE A BOOLEAN TO SAVE THE STATE OF THE CROSSED OFF DATA
+                            // projectcomplete  = projects.BooleanField(default=False)
+                        // RETURN IT
                         // eliminate the edit button
                         project_edit_button.style.display = "none";
                     } else {

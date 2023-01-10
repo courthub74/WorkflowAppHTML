@@ -321,6 +321,30 @@ window.addEventListener('load', () => {
                         }
                     }
                 });
+
+                // DELETE BUTTON
+                    // this is where you:
+                        // remove the input element from the display
+                        // remove the data element from firebase
+                deliverable_delete_button.addEventListener('click', (e) => {
+                    // keep from bubbling up
+                    e.stopPropagation();
+                    // store the id in a variable that is the target of event
+                    let id = e.target.id;
+                    // test print the delete button
+                    console.log("delete button pressed", id);
+                    // remove the child input (DELIVERABLE ITEMS or CONTENT) from the (DELIVERABLES BLOCK)
+                    deliverable_list_element.removeChild(deliverable_items);
+                    // NOW to remove the data element from firebase
+                    // test print the location in the db
+                    console.log(`The key value for this deliverable is: ${id}`);
+                    // NOW delete it in the firebase 
+                    firebase.database().ref(`deliverables/${id}`).remove();
+                });
+
+                // CROSS OFF BUTTON
+                    // this is where you:
+                        // change the style to line through and then back again
             }
         }
 });
