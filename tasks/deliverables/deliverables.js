@@ -62,9 +62,11 @@ window.addEventListener('load', () => {
             // clear the input field after button pressed
             input.value = '';
 
+            // TO DATABASE
+
             // NOW this is where we push the todo variable to the firebaseTodo db reference
             // HERE is where you set the list for deliverable and crossed
-                // set crossed as false
+                // set crossed as false by default
             // firebaseDeliverablesRef.push({deliverable});
             // store the push of fb ref into a variable
             var newDeliverableRef = firebaseDeliverablesRef.push();
@@ -73,7 +75,7 @@ window.addEventListener('load', () => {
                 crossed: false
             });
 
-            // test print the deliverable and crossed
+            // test print the deliverable and crossed status
             console.log('DELIVERABLE ===', deliverable);
             console.log('CROSSED ===', crossed);
         });
@@ -359,19 +361,32 @@ window.addEventListener('load', () => {
                 });
 
                 // CROSS OFF BUTTON
-                // FIRST get the boolean value of the deliverable item 'crossed'
+
+                // FIRST use the once method on the original DB reference 
+                    // to get the boolean value of the deliverable item 'crossed'
+                        // LATER it will be toggled to true or false 
                 firebaseDeliverablesRef.once('value', getbool);
 
+                            // NOW create a function to get the boolean value 
+                                // of the arguement in the above method
                             function getbool(deliverablebool){
+                                // print the value of the boolean
                                 console.log(deliverablebool.val());
+                                // store it in a variable
                                 var delivbool = deliverablebool.val();
+                                // test print
                                 console.log('boolean ===', delivbool);
+                                // create an empty array to push the booleans in
                                 var bools = [];
+                                // iterate through the booleans by their key
                                 Object.keys(delivbool).forEach(element => {
                                     bools.push({
+                                        // pushing the id #
                                         id: element,
+                                        // pushin the boolean to 'crossed' item
                                         item: delivbool[element]['crossed']
                                     });
+                                    // test print the boolean list
                                     console.log('bools ===', bools);
                                 });
                                 // // NOW iterate through and then 
@@ -379,10 +394,13 @@ window.addEventListener('load', () => {
                                 //         // to compare to.
                                 //         // dont forget to create the key value first
                                 for (let b = 0; b < bools.length; b++){
+                                    // store the iterations in a variable
                                     var crosseds = bools[i];
+                                    // test print
                                     console.log('boolsall ===', crosseds);
                                     let crossv = crosseds.item;
-                                        console.log(crossv);
+                                    // store the item value in a variable
+                                    console.log(crossv);
                                     // NOW if bool item === true set the css
                                         // textDecoration to line-through
                                     if (crossv === true){
@@ -405,47 +423,47 @@ window.addEventListener('load', () => {
                                         }
                                     }
                                 }
-                    // this is where you:
-                    // change the style to line through and then back again
-                    // I need to reference the input item by id
-                    // then change the status of it
-                    // so it could be read as an item that needs to be crossed
-                    // first add an event listener
-                    deliverable_cross_button.addEventListener('click', (e) =>{
-                        // store the id in a variable that is the target of event
-                        let id = e.target.id;
-                        // read the innerText of the cross button
-                            // use an if statement to determine
-                        if (deliverable_cross_button.innerText.toLowerCase() === "cross-off"){
-                            // test print the cross button
-                            console.log("cross-off button pressed");
-                            // test print the location in the db
-                            console.log(`The key value for this cross-off deliverable is: ${id}`); 
-                            // print the crossed var
-                            console.log(crosseds);
-                            // NOW just apply an update to the crossed item
-                                // through the firebase db
-                            firebase.database().ref(`deliverables/${id}`).update({crossed: true});
-                        } else {
-                            // read the innerText of the cross button
-                                // use an if statement to determine
-                            if (deliverable_cross_button.innerText.toLowerCase() === "uncross"){
-                                // test print uncross button
-                                console.log("uncross button pressed");
-                                // test print the location in the db
-                                console.log(`The key value for this cross-off deliverable is: ${id}`);
-                                // print the crossed var
-                                console.log(crosseds);
-                                // NOW just apply an update to the crossed item
-                                    // through the firebase db
-                                firebase.database().ref(`deliverables/${id}`).update({crossed: false});
-                            }
-                        }
+                                    // this is where you:
+                                    // change the style to line through and then back again
+                                    // I need to reference the input item by id
+                                    // then change the status of it
+                                    // so it could be read as an item that needs to be crossed
+                                    // first add an event listener
+                                    deliverable_cross_button.addEventListener('click', (e) =>{
+                                        // store the id in a variable that is the target of event
+                                        let id = e.target.id;
+                                        // read the innerText of the cross button
+                                            // use an if statement to determine
+                                        if (deliverable_cross_button.innerText.toLowerCase() === "cross-off"){
+                                            // test print the cross button
+                                            console.log("cross-off button pressed");
+                                            // test print the location in the db
+                                            console.log(`The key value for this cross-off deliverable is: ${id}`); 
+                                            // print the crossed var
+                                            console.log('CROSSEDS ===', crosseds);
+                                            // NOW just apply an update to the crossed item
+                                                // through the firebase db
+                                            firebase.database().ref(`deliverables/${id}`).update({crossed: true});
+                                        } else {
+                                            // read the innerText of the cross button
+                                                // use an if statement to determine
+                                            if (deliverable_cross_button.innerText.toLowerCase() === "uncross"){
+                                                // test print uncross button
+                                                console.log("uncross button pressed");
+                                                // test print the location in the db
+                                                console.log(`The key value for this cross-off deliverable is: ${id}`);
+                                                // print the crossed var
+                                                console.log(crosseds);
+                                                // NOW just apply an update to the crossed item
+                                                    // through the firebase db
+                                                firebase.database().ref(`deliverables/${id}`).update({crossed: false});
+                                            }
+                                        }
 
-                    });
-                }
+                                });
+                        }
                     
-            }
+                }
         }
 });
 
