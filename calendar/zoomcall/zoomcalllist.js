@@ -265,13 +265,71 @@ window.addEventListener('load', () => {
 
             // NOW FOR THE BUTTONS
 
+            // FIRST create the BUTTONS div
+            const zoom_buttons_div = document.createElement('div');
+
+            // test print
+            console.log(zoom_buttons_div);
+
+            // set it's class
+            zoom_buttons_div.classList.add('buttons');
+
+            // append the buttons div to the zoom_items div
+            zooms.appendChild(zoom_buttons_div);
+
             // DELETE BUTTON
 
             // create the button
-            const zoomdelete = document.createElement('button');
+            const zoom_delete_button = document.createElement('button');
 
             // test print
-            console.log(zoomdelete);
+            console.log(zoom_delete_button);
+
+            // set it's class
+            zoom_delete_button.classList.add('delete');
+
+            // set the id (for the key of the firebase item)
+                // the id is the actual key
+            zoom_delete_button.setAttribute('id', zoomsall.id);
+
+            // set the style background
+            // zoom_delete_button.style.background = "url('/img/deletex.png')"; 
+
+            // set the innerText
+            zoom_delete_button.innerText = "DELETE";
+
+            // set the style background color
+            zoom_delete_button.style.backgroundColor = "#ffffff";
+
+            // append to the buttons div
+            zoom_buttons_div.appendChild(zoom_delete_button);
+
+            // EDIT BUTTON
+
+            // create the button
+            const zoom_edit_button = document.createElement('button');
+
+            // test print
+            console.log(zoom_edit_button);
+
+            // set it's class
+            zoom_edit_button.classList.add('edit');
+
+            // set the id (for the key of the firebase item)
+                // the id is the actual key
+            zoom_edit_button.setAttribute('id', zoomsall.id);
+
+            // set the innerText
+            zoom_edit_button.innerText = "EDIT";
+
+            // set the style background color
+            zoom_edit_button.style.backgroundColor = "#243F67";
+
+            // set the text color
+            zoom_edit_button.style.color = "#ffffff";
+
+            // append to the buttons div
+            zoom_buttons_div.appendChild(zoom_edit_button);
         }
 
     };
