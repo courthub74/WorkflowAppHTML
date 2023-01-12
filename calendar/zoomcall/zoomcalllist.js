@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
             const zoom_items = document.createElement('div');
 
             // test print it
-            console.log(zoom_items);
+            console.log("ZOOM ITEM:",zoom_items);
 
             // give it the id zoom_items 
             zoom_items.id = "zoom_items";
@@ -275,7 +275,7 @@ window.addEventListener('load', () => {
             zoom_buttons_div.classList.add('buttons');
 
             // append the buttons div to the zoom_items div
-            zooms.appendChild(zoom_buttons_div);
+            zoom_items.appendChild(zoom_buttons_div);
 
             // DELETE BUTTON
 
@@ -330,6 +330,25 @@ window.addEventListener('load', () => {
 
             // append to the buttons div
             zoom_buttons_div.appendChild(zoom_edit_button);
+
+            // EVENT LISTENER TIME
+
+            // DELETE BUTTON
+            // this is where you:
+                // remove the input element from the display
+                    // remove the data element from firebase
+            zoom_delete_button.addEventListener('click', (e) =>{
+                // keep from bubbling up
+                e.stopPropagation();
+                // store the id in a variable that is the target of event
+                let id = e.target.id;
+                // test print the delete button
+                console.log(`delete button pressed for: ${id}`);
+                // remove the child input (ZOOM ITEM (zoom_items)) from the (ZOOMS) parent
+                zooms.removeChild(zoom_items);
+                // NOW delete it in the firebase 
+                firebase.database().ref(`zooms/${id}`).remove();
+            })
         }
 
     };
