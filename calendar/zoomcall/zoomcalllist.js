@@ -262,6 +262,16 @@ window.addEventListener('load', () => {
 
             // append to the content div
             zoomcontent.appendChild(zoomlink);
+
+            // NOW FOR THE BUTTONS
+
+            // DELETE BUTTON
+
+            // create the button
+            const zoomdelete = document.createElement('button');
+
+            // test print
+            console.log(zoomdelete);
         }
 
     };
