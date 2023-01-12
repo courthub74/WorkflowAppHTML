@@ -33,7 +33,7 @@
   height: 120px;
 }
 * .sidebar .menu {
-  padding-top: 90px;
+  padding-top: 30px;
   padding-left: 40px;
 }
 * .sidebar .menu ul li a {
@@ -55,7 +55,7 @@
   width: 25px;
 }
 * .sidebar .logoutbutton {
-  padding-top: 200px;
+  padding-top: 90px;
   height: 20px;
   text-align: center;
 }
