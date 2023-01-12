@@ -424,10 +424,8 @@ window.addEventListener('load', () => {
                                     }
                                 }
                                     // this is where you:
-                                    // change the style to line through and then back again
                                     // I need to reference the input item by id
-                                    // then change the status of it
-                                    // so it could be read as an item that needs to be crossed
+                                    // then change the 'crossed' item between true and false
                                     // first add an event listener
                                     deliverable_cross_button.addEventListener('click', (e) =>{
                                         // store the id in a variable that is the target of event
@@ -461,7 +459,7 @@ window.addEventListener('load', () => {
                                         }
 
                                 });
-                        }
+                            }
                     
                 }
         }

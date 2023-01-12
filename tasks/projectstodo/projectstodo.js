@@ -284,9 +284,9 @@ window.addEventListener('load', () => {
                     // set it's class
                     project_cross_button.classList.add('cross');
 
-                    // NOTE this one doesn't need an ID 
-                        // since it's just a css change
-                            // nothing to do with the database
+                    /// set the id (for the key of the firebase item)
+                        // the id is the actual key
+                    project_cross_button.setAttribute('id', projectsall.id);
 
                     // set the innerText
                     project_cross_button.innerText = "cross-off";
@@ -398,10 +398,17 @@ window.addEventListener('load', () => {
                             // test print the boolean list
                             console.log('bools ===', bools);
                         });
-                       // // NOW iterate through and then 
-                             // create a variable for the boolean value
-                                 // to compare to.
-                                 // dont forget to create the key value first
+
+                        // clear the project block each time
+                            // NOW you locate the list items id variable
+                        // if (project_list_element){
+                        //     project_list_element.innerHTML = '';
+                        // }
+
+                        // NOW iterate through and then 
+                            // create a variable for the boolean value
+                                // to compare to.
+                                // dont forget to create the key value first
                        for (let c = 0; c < bools.length; c++){
                             // store the iterations in a variable
                             var crosseds = bools[i];
@@ -436,21 +443,38 @@ window.addEventListener('load', () => {
                        }
 
                         // NOW for the cross-button event listener
-                        project_cross_button.addEventListener('click', (e) => {
-                            // FIRST store the target id into a variable
+                        project_cross_button.addEventListener('click', (e) =>{
+                            // store the id in a variable that is the target of event
                             let id = e.target.id;
-                            // if statement to check for innerText of cross button
+                            // read the innerText of the cross button
+                                // use an if statement to determine
                             if (project_cross_button.innerText.toLowerCase() === "cross-off"){
                                 // test print cross button press
                                 console.log("cross-off button pressed");
                                 // test print the location in the db
                                 console.log(`The key value for this cross-off project is: ${id}`);
                                 // print the crossed var
-                                // console.log(crosseds);
+                                console.log(crosseds);
                                 // NOW just apply an update to the crossed item
-                                // through the firebase db
-                                    // set 'crossed' to true
-                                    firebase.database().ref(`projects/${id}`).update({crossed: true});
+                                    // through the firebase db
+                                        // set 'crossed' to true
+                                firebase.database().ref(`projects/${id}`).update({crossed: true});
+                            } else {
+                                // read the innerText of the cross button
+                                    // use an if statement to determine
+                                if (project_cross_button.innerText.toLowerCase() === "uncross"){
+                                    // test print text here you don't need the id
+                                    console.log("uncross button pressed");
+                                    // set innerText of the uncross button back to cross
+                                    project_cross_button.innerText = "cross-off";
+                                    // unset the line-through style
+                                    project_input_element.style.textDecoration = "none";
+                                    // bring the edit button back
+                                    project_edit_button.style.display = "block";
+                                    // NOW just apply an update to the crossed item
+                                        // through the firebase db
+                                    firebase.database().ref(`projects/${id}`).update({crossed: false});
+                                }
                             }
                         });
                     };
