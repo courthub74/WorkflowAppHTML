@@ -11,6 +11,13 @@ $textfield: #4375C0;
 $phonefield: #FEFC00;
 // TOPIC FIELD COLOR
 $topicfield: #6cce63;
+// EDIT CREAM
+$editcream: #DEE36D;
+
+// ACTION BUTTON COLORS
+$editbuttongreen: #11B386;
+$crossbuttoncream:#FFF7D6;
+$deletebuttonblue:#3292FA;
 
 * {
     list-style: none;
@@ -208,6 +215,7 @@ $topicfield: #6cce63;
                         // border: #243F67 1px solid;
                         border: none;
                         font-size: 10px;
+                        color: white;
                     }
                     .edit {
                         cursor: pointer;
@@ -217,6 +225,7 @@ $topicfield: #6cce63;
                         border: none;
                         font-size: 10px;
                         background-color: $textfield;
+                        color: $textfield;
                     }
                 }
                 // zooms scrollbar

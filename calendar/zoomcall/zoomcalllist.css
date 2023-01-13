@@ -166,6 +166,7 @@
   border-radius: 50px;
   border: none;
   font-size: 10px;
+  color: white;
 }
 * body .page .outline .buttons .edit {
   cursor: pointer;
@@ -175,6 +176,7 @@
   border: none;
   font-size: 10px;
   background-color: #4375C0;
+  color: #4375C0;
 }
 * body .page .outline .zooms::-webkit-scrollbar {
   border: 1px solid #4375C0;
