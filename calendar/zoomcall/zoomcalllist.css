@@ -82,7 +82,7 @@
   color: #4375C0;
   font-size: 3.5rem;
   padding-bottom: 80px;
-  padding-left: 20px;
+  padding-right: 70px;
 }
 * body .page .outline {
   border: 2px solid #243F67;
@@ -145,20 +145,19 @@
   font-weight: bold;
   font-size: 1.2rem;
   width: 300px;
-  padding-left: 10px;
 }
 * body .page .outline .zooms #zoom_items #content #zoomlink {
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 5px;
   width: 350px;
 }
 * body .page .outline .buttons {
   display: flex;
   gap: 10px;
+  padding-right: 20px;
 }
 * body .page .outline .buttons .delete {
   cursor: pointer;
@@ -175,6 +174,7 @@
   border-radius: 50px;
   border: none;
   font-size: 10px;
+  background-color: #4375C0;
 }
 * body .page .outline .zooms::-webkit-scrollbar {
   border: 1px solid #4375C0;

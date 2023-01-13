@@ -294,14 +294,10 @@ window.addEventListener('load', () => {
                 // the id is the actual key
             zoom_edit_button.setAttribute('id', zoomsall.id);
 
-            // set the innerText
-            zoom_edit_button.innerText = "EDIT";
+            // set the edit icon
+            zoom_edit_button.style.background = "url('/img/editwhite.png')";
 
-            // set the style background color
-            zoom_edit_button.style.backgroundColor = "#243F67";
-
-            // set the text color
-            zoom_edit_button.style.color = "#ffffff";
+            zoom_edit_button.style.backgroundSize = "29px";
 
             // append to the buttons div
             zoom_buttons_div.appendChild(zoom_edit_button);
@@ -322,18 +318,13 @@ window.addEventListener('load', () => {
             zoom_delete_button.setAttribute('id', zoomsall.id);
 
             // set the style background
-            zoom_delete_button.style.background = "url('/img/delete.png')"; 
+            zoom_delete_button.style.background = "url('/img/deletewhite.png')";
+            
+            // set the color of the icon
+            // zoom_delete_button.style.backgroundColor = "#ffffff";
 
             // set the img size
             zoom_delete_button.style.backgroundSize = "29px"
-
-            // zoom_delete_button.style.
-
-            // set the innerText
-            // zoom_delete_button.innerText = "X";
-
-            // set the style background color
-            zoom_delete_button.style.backgroundColor = "#ffffff";
 
             // append to the buttons div
             zoom_buttons_div.appendChild(zoom_delete_button);
@@ -378,7 +369,7 @@ window.addEventListener('load', () => {
                 } else {
                     // check the text in order to change it
                     if (zoom_edit_button.innerText.toLowerCase() === "save"){
-                        
+
                     }
                 }
             });
