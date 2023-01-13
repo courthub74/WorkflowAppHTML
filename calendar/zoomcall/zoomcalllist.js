@@ -277,32 +277,7 @@ window.addEventListener('load', () => {
             // append the buttons div to the zoom_items div
             zoom_items.appendChild(zoom_buttons_div);
 
-            // DELETE BUTTON
-
-            // create the button
-            const zoom_delete_button = document.createElement('button');
-
-            // test print
-            console.log(zoom_delete_button);
-
-            // set it's class
-            zoom_delete_button.classList.add('delete');
-
-            // set the id (for the key of the firebase item)
-                // the id is the actual key
-            zoom_delete_button.setAttribute('id', zoomsall.id);
-
-            // set the style background
-            // zoom_delete_button.style.background = "url('/img/deletex.png')"; 
-
-            // set the innerText
-            zoom_delete_button.innerText = "DELETE";
-
-            // set the style background color
-            zoom_delete_button.style.backgroundColor = "#ffffff";
-
-            // append to the buttons div
-            zoom_buttons_div.appendChild(zoom_delete_button);
+            
 
             // EDIT BUTTON
 
@@ -331,6 +306,38 @@ window.addEventListener('load', () => {
             // append to the buttons div
             zoom_buttons_div.appendChild(zoom_edit_button);
 
+            // DELETE BUTTON
+
+            // create the button
+            const zoom_delete_button = document.createElement('button');
+
+            // test print
+            console.log(zoom_delete_button);
+
+            // set it's class
+            zoom_delete_button.classList.add('delete');
+
+            // set the id (for the key of the firebase item)
+                // the id is the actual key
+            zoom_delete_button.setAttribute('id', zoomsall.id);
+
+            // set the style background
+            zoom_delete_button.style.background = "url('/img/delete.png')"; 
+
+            // set the img size
+            zoom_delete_button.style.backgroundSize = "29px"
+
+            // zoom_delete_button.style.
+
+            // set the innerText
+            // zoom_delete_button.innerText = "X";
+
+            // set the style background color
+            zoom_delete_button.style.backgroundColor = "#ffffff";
+
+            // append to the buttons div
+            zoom_buttons_div.appendChild(zoom_delete_button);
+
             // EVENT LISTENER TIME
 
             // DELETE BUTTON
@@ -348,7 +355,33 @@ window.addEventListener('load', () => {
                 zooms.removeChild(zoom_items);
                 // NOW delete it in the firebase 
                 firebase.database().ref(`zooms/${id}`).remove();
-            })
+            });
+
+            // EDIT BUTTON
+                // this is where you:
+                    // set the innertext change on the button
+                    // toggle the readonly attribute
+                    // edit the changes in firebase
+            zoom_edit_button.addEventListener('click', (e) =>{
+                // store the id in a variable that is the target of event (the key)
+                let id = e.target.id;
+                // check the text in order to change it
+                if (zoom_edit_button.innerText.toLowerCase() === "edit"){
+                    // test print text with the id
+                    console.log(`zoom_edit_button: ${id}`);
+                    // change the innerText
+                    zoom_edit_button.innerText = "SAVE";
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoom_edit_button.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoom_edit_button.focus();
+                } else {
+                    // check the text in order to change it
+                    if (zoom_edit_button.innerText.toLowerCase() === "save"){
+                        
+                    }
+                }
+            });
         }
 
     };
