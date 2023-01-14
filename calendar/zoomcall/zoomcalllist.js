@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
             const zoom_items = document.createElement('div');
 
             // test print it
-            console.log(zoom_items);
+            console.log("ZOOM ITEM:",zoom_items);
 
             // give it the id zoom_items 
             zoom_items.id = "zoom_items";
@@ -262,6 +262,226 @@ window.addEventListener('load', () => {
 
             // append to the content div
             zoomcontent.appendChild(zoomlink);
+
+            // NOW FOR THE BUTTONS
+
+            // FIRST create the BUTTONS div
+            const zoom_buttons_div = document.createElement('div');
+
+            // test print
+            console.log(zoom_buttons_div);
+
+            // set it's class
+            zoom_buttons_div.classList.add('buttons');
+
+            // append the buttons div to the zoom_items div
+            zoom_items.appendChild(zoom_buttons_div);
+
+            
+
+            // EDIT BUTTON
+
+            // create the button
+            const zoom_edit_button = document.createElement('button');
+
+            // test print
+            console.log(zoom_edit_button);
+
+            // set it's class
+            zoom_edit_button.classList.add('edit');
+
+            // set it's name for later toggling
+            zoom_edit_button.setAttribute('name', 'edit');
+
+            // set the id (for the key of the firebase item)
+                // the id is the actual key
+            zoom_edit_button.setAttribute('id', zoomsall.id);
+
+            // set the edit icon
+            zoom_edit_button.style.background = "url('/img/editwhite.png')";
+
+            // set the icon size
+            zoom_edit_button.style.backgroundSize = "29px";
+
+            // append to the buttons div
+            zoom_buttons_div.appendChild(zoom_edit_button);
+
+            // DELETE BUTTON
+
+            // create the button
+            const zoom_delete_button = document.createElement('button');
+
+            // test print
+            console.log(zoom_delete_button);
+
+            // set it's class
+            zoom_delete_button.classList.add('delete');
+
+            // set the id (for the key of the firebase item)
+                // the id is the actual key
+            zoom_delete_button.setAttribute('id', zoomsall.id);
+
+            // set the style background
+            zoom_delete_button.style.background = "url('/img/deletewhite.png')";
+
+            // set the img size
+            zoom_delete_button.style.backgroundSize = "29px"
+
+            // append to the buttons div
+            zoom_buttons_div.appendChild(zoom_delete_button);
+
+            // EVENT LISTENER TIME
+
+            // DELETE BUTTON
+            // this is where you:
+                // remove the input element from the display
+                    // remove the data element from firebase
+            zoom_delete_button.addEventListener('click', (e) =>{
+                // keep from bubbling up
+                e.stopPropagation();
+                // store the id in a variable that is the target of event
+                let id = e.target.id;
+                // test print the delete button
+                console.log(`delete button pressed for: ${id}`);
+                // remove the child input (ZOOM ITEM (zoom_items)) from the (ZOOMS) parent
+                zooms.removeChild(zoom_items);
+                // NOW delete it in the firebase 
+                firebase.database().ref(`zooms/${id}`).remove();
+            });
+
+            // EDIT BUTTON
+                // this is where you:
+                    // set the innertext change on the button
+                    // toggle the readonly attribute
+                    // edit the changes in firebase
+            zoom_edit_button.addEventListener('click', (e) =>{
+                // store the id in a variable that is the target of event (the key)
+                let id = e.target.id;
+                // check the text in order to change it
+                if (zoom_edit_button.name === 'edit'){
+                    // test print text with the id
+                    console.log(`zoom_edit_button: ${id}`);
+                    // set an id for the button for later toggle purpose
+                    zoom_edit_button.setAttribute('name', 'editing');
+                    // test print
+                    console.log(zoom_edit_button);
+
+                    // NAME FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomname.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomname.focus();
+                    // change the color of the name field
+                    zoomname.style.color = "#DEE36D";
+
+                    // DATE FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomdate.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomdate.focus();
+                    // change the color of the name field
+                    zoomdate.style.color = "#DEE36D";
+
+                    // TIME FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomtime.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomtime.focus();
+                    // change the color of the name field
+                    zoomtime.style.color = "#DEE36D";
+
+                    // PHONE FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomnumber.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomnumber.focus();
+                    // change the color of the name field
+                    zoomnumber.style.color = "#DEE36D";
+
+                    // TOPIC FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomtopic.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomtopic.focus();
+                    // change the color of the name field
+                    zoomtopic.style.color = "#DEE36D";
+
+                    // ZOOMLINK FIELD
+                    // remove the readonly attribute from the input field so you can edit the field
+                    zoomlink.removeAttribute('readonly', true);
+                    // place the cursor inside the field to be edited
+                    zoomlink.focus();
+                    // change the color of the name field
+                    zoomlink.style.color = "#DEE36D";
+
+                } else {
+                    if (zoom_edit_button.name === "editing"){
+                        // test print text with the id
+                        console.log(`zoom_edit_button: ${id}`);
+                        // set an id for the button for later toggle purpose
+                        zoom_edit_button.setAttribute('name', 'edit');
+                        // test print
+                        console.log(zoom_edit_button);
+
+                        // NAME FIELD
+                        // remove the readonly attribute from the input field so you can edit the field
+                        zoomname.setAttribute('readonly', true);
+                        // change the color of the name field
+                        zoomname.style.color = "#ffffff";
+
+                        // DATE FIELD
+                        zoomdate.setAttribute('readonly', true);
+                        // change the color of the date field
+                        zoomdate.style.color = "#ffffff";
+
+                        // TIME FIELD
+                        zoomtime.setAttribute('readonly', true);
+                        zoomtime.style.color = "#ffffff";
+
+                        // PHONE FIELD
+                        zoomnumber.setAttribute('readonly', true);
+                        zoomnumber.style.color = "#FEFC00";
+
+                        // TOPIC FIELD
+                        zoomtopic.setAttribute('readonly', true);
+                        zoomtopic.style.color = "#6cce63";
+
+                        // ZOOM LINK FIELD
+                        zoomlink.setAttribute('readonly', true);
+                        zoomlink.style.color = "#ffffff";
+
+                        // Get the Values of each field
+                        // NAME FIELD
+                        let updatename = zoomname.value;
+                        // DATE FIELD
+                        let updatedate = zoomdate.value;
+                        // TIME FIELD
+                        let updatetime = zoomtime.value;
+                        // PHONE FIELD
+                        let updatephone = zoomnumber.value;
+                        // TOPIC FIELD
+                        let updatetopic = zoomtopic.value;
+                        // LINK FIELD
+                        let updatelink = zoomlink.value;
+
+                        // NOW edit in firebase
+                            // locate the firebase reference by each item id
+                                // apply the update function
+                                    // it sets updated value with a new key
+                                        // that is declared earlier in the data.push ['project']
+                            // you will place every input into the update library
+                            // key is the where you want to replace it
+                            // name is what you want to send
+                        firebase.database().ref(`zooms/${id}`).update({
+                            name: updatename, 
+                            date: updatedate, 
+                            time: updatetime, 
+                            phone: updatephone, 
+                            topic: updatetopic, 
+                            link: updatelink});
+                    }
+                }
+            });
         }
 
     };

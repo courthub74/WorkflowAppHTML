@@ -298,7 +298,7 @@ window.addEventListener('load', () => {
                     project_buttons_div.appendChild(project_cross_button);
 
 
-                    // EVENT LISTENER TIME
+                // EVENT LISTENER TIME
 
                 // EDIT BUTTON
                 // this is where you:
