@@ -450,12 +450,35 @@ window.addEventListener('load', () => {
                         zoomlink.setAttribute('readonly', true);
                         zoomlink.style.color = "#ffffff";
 
+                        // Get the Values of each field
+                        // NAME FIELD
+                        let updatename = zoomname.value;
+                        // DATE FIELD
+                        let updatedate = zoomdate.value;
+                        // TIME FIELD
+                        let updatetime = zoomtime.value;
+                        // PHONE FIELD
+                        let updatephone = zoomnumber.value;
+                        // TOPIC FIELD
+                        let updatetopic = zoomtopic.value;
+                        // LINK FIELD
+                        let updatelink = zoomlink.value;
+
                         // NOW edit in firebase
                             // locate the firebase reference by each item id
                                 // apply the update function
                                     // it sets updated value with a new key
                                         // that is declared earlier in the data.push ['project']
                             // you will place every input into the update library
+                            // key is the where you want to replace it
+                            // name is what you want to send
+                        firebase.database().ref(`zooms/${id}`).update({
+                            name: updatename, 
+                            date: updatedate, 
+                            time: updatetime, 
+                            phone: updatephone, 
+                            topic: updatetopic, 
+                            link: updatelink});
                     }
                 }
             });
