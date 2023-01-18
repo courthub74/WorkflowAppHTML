@@ -214,6 +214,14 @@
   gap: 12px;
   padding: 90px 0px 0px 20px;
 }
+* body .page form .apptbox .buttondiv .calendar {
+  text-align: center;
+  padding: 80px 160px 0px 0px;
+}
+* body .page form .apptbox .buttondiv .calendar .back a {
+  color: white;
+  font-size: 2.1vh;
+}
 * body .page form .apptbox .buttondiv .subbutton {
   padding-left: 12px;
 }
@@ -227,14 +235,6 @@
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
-}
-* body .page form .apptbox .buttondiv .calendar {
-  text-align: center;
-  padding: 80px 160px 0px 0px;
-}
-* body .page form .apptbox .buttondiv .calendar .back a {
-  color: white;
-  font-size: 2.1vh;
 }
 * body .page form .apptbox .buttondiv .list {
   text-align: center;
