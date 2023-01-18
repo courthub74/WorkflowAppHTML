@@ -71,25 +71,22 @@
             <!-- The Phone Call Box -->
             <div class="apptbox">
                 <!-- The Name Line -->
-                <div id="phonename">
-
-                    <h3 class="name">name:</h3>
-
+                <div class="phoneentry">
+                    <h3 class="title">name:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="phone"
+                            class="phonename"
                             id="name"
-                        />
+                            required/>
                     </div>
-
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonedate">
-                    <h3 class="date">date:</h3>
-                    <div class="dateentry">
+                <!-- The Date Line -->
+                <div class="phoneentry">
+                    <h3 class="title">date:</h3>
+                    <div class="phonedate">
                         <!-- datepicker here -->
                         <!-- Month -->
                         <select name="month" id="month">
@@ -106,17 +103,12 @@
                             <option value="January">Jan 10 2023</option>
                         </select>
                     </div>
-
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonetimes">
-
-                    <h3 class="time">time:</h3>
-
-                    <!-- <input type="time" id="timeclock"> -->
-
+                <!-- The Time Line -->
+                <div class="phoneentry">
+                    <h3 class="title">time:</h3>
                     <!-- Section of all the time buttons -->
                     <div id="timebuttons">
 
@@ -166,37 +158,30 @@
                                 <label for="7pm" id="labelseven">7:00PM</label>
                             </div>
                         </div>
-                        <!-- <button type="button" id="two" class="hour" value="2:00PM">2:00PM</button>
-                        <button type="button" id="three" class="hour" value="3:00PM">3:00PM</button>
-                        <button type="button" id="four" class="hour" value="4:00PM">4:00PM</button>
-                        <button type="button" id="five" class="hour" value="5:00PM">5:00PM</button>
-                        <button type="button" id="six" class="hour" value="6:00PM">6:00PM</button>
-                        <button type="button" id="seven" class="hour" value="7:00PM">7:00PM</button> -->
                     </div>
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonenumber">
-                    <h3 class="number">phone:</h3>
+                <!-- The Phone Line -->
+                <div class="phoneentry">
+                    <h3 class="title">phone:</h3>
                     <div class="inputfield">
                         <input 
                             type="tel"
-                            class="phone"
+                            class="phonephone"
                             id="phone"
-                            required
-                        />
+                            required/>
                     </div>
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonetopic">
-                    <h3 class="topic">topic:</h3>
+                <!-- The Topic Line -->
+                <div class="phoneentry">
+                    <h3 class="title">topic:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="topic"
+                            class="phonetopic"
                             id="name"
                         />
                     </div>
@@ -205,8 +190,11 @@
                 <hr>
 
                 <div class="buttondiv">
+                    <!-- Back to Calendar Link-->
                     <p class="back"><a href="/calendar/calendar.html">Back to Calendar</a></p>
+                    <!-- Submit Button -->
                     <button class="submit" type="submit">Submit</button>
+                    <!-- Go to phone Call List Link -->
                     <p class="callslist"><a href="#">Go to Phone Calls List</a></p>
                 </div>
                 
