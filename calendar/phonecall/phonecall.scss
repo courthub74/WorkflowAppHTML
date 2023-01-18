@@ -142,147 +142,88 @@ $textfield: #96B0D3;
                                 border: none;
                                 outline: none; 
                             }
-                        }
-                    }
-                    #phonedate {
-                        // background-color: green;
-                        display: flex;
-                        justify-content: space-between;
-                        align-content: center;
-                        padding-right: 23rem;
-                        padding-bottom: 8px;
-                        padding-top: 30px;
-                        // Date label
-                        .date{
-                            color: $darkblue;
-                            font-weight: bold;
-                            font-size: 2.5vh;
-                            
-                        }
-                        // Date Picker
-                        .dateentry{
-                            select {
-                                cursor: pointer;
-                                appearance: none;
-                            }
-                            select:focus{
-                                outline: none;
-                            }
-                            #month {
+                            input:-webkit-autofill,
+                            input:-webkit-autofill:hover,
+                            input:-webkit-autofill:focus {
                                 border: none;
-                                background-color: $textfield;
-                                font-size: 1.5rem;
-                                font-weight: bold;
-                                color: $darkblue;
-                                text-align: center;
-                                margin-right: -19px;
-                            }
-                            #date {
-                                border: none;
-                                background-color: $textfield;
-                                font-size: 1.4rem;
-                                font-weight: bold;
-                                color: $darkblue;
-                                padding-right: 20px;
-                                text-align: center;
-                                margin-right: -20px;
-                            }
-                            #date:focus {
-                                outline: none;
-                            }
-                            #year {
-                                border: none;
-                                background-color: $textfield;
-                                font-size: 1.4rem;
-                                font-weight: bold;
-                                color: $darkblue;
-                            }
-                            #year:focus {
-                                outline: none;
-                            }
-                        }
-                        input {
-                            border: none;
-                            background-color: $textfield;
-                            color: $darkblue;
-                            width: 500rem;
-                            height: 2rem;
-                        }
-                    }
-                    #phonenumber {
-                        // background-color: green;
-                        display: flex;
-                        padding-right: 21rem;
-                        padding-bottom: 10px;
-                        padding-top: 20px;
-                        .number {
-                            color: $darkblue;
-                            font-weight: bold;
-                            font-size: 2.5vh;
-                        }
-                        .inputfield {
-                            display: flex;
-                            // justify-content: center
-                                 
-                            .phone {
-                                border: none;
-                                background-color: $textfield;
-                                color: $darkblue;
+                                -webkit-text-fill-color: white;
+                                -webkit-box-shadow: 0 0 10px 1000px $textfield inset;
+                                transition: background-color 5000s ease-in-out 2s;
                                 font-size: 2.3vh;
-                                width: 780px;
-                                text-align: center;
-                                margin: 0 auto;  
-                                padding-right: 60px;
                             }
-                            input:focus {
-                                outline: none;
+                            input:-webkit-autofill::first-line {
+                                font-size: 2.3vh;
                             }
                         }
                     }
-                    #phonetimes {
-                        // background-color: aqua;
-                        display: flex;
-                        justify-content: space-between;
-                        align-content: center;
-                        padding-right: 25rem;
-                        .time {
-                            font-size: 2.5vh;
-                            padding-top: 20px;
-                            // background-color: goldenrod;
-                            padding-bottom: 20px;
-                            color: $darkblue;
-                            text-align: left;
+                    .phonedate {
+                        padding-top: 5px;
+                        padding-left: 300px; 
+                        // background-color: green;
+                        // display: flex;
+                        // justify-content: space-between;
+                        // align-content: center;
+                        // padding-right: 23rem;
+                        // padding-bottom: 8px;
+                        // padding-top: 30px;
+                        // Date label
+                        select {
+                            cursor: pointer;
+                            appearance: none;
                         }
-                        input {
-                            border: none;
-                            background-color: $textfield;
-                            width: 160px;
-                            font-size: 2.5vh;
-                            color: $darkblue;
-                            font-weight: bold;
-                        }
-                        input:focus {
+                        select:focus{
                             outline: none;
                         }
-                        input[type="time"]::-webkit-calendar-picker-indicator {
-                            filter: invert(21%) sepia(16%) saturate(1959%) hue-rotate(177deg) brightness(100%) contrast(93%);
+                        #date {
+                            border: none;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            background-color: $textfield;
+                            color: $darkblue;
+                            text-align: center;
                         }
-                        // BELOW are the buttons
-                        #timebuttons {
-                            // background-color: aqua;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 10px;
-                            padding: 10px 10px 0px 90px;
-                            button {
-                                width: 90px;
-                                height: 30px;
-                                background-color: $darkblue;
-                                color: $background;
-                                border: none;
-                                border-radius: 5px;
+                    }
+                    // the TIME section
+                    #timebuttons {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 10px 5px 90px;
+                        .input-container {
+                            position: relative;
+                            width: 90px;
+                            height: 30px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: $darkblue;
+                            color: $textfield;
+                            input {
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                margin: 0;
                                 cursor: pointer;
+                                z-index: 2;
+                                opacity: 0;
+                            }
+                            input[type="radio"]{
+                                display: inline-block;
+                                position: absolute;
+                                left: 10px;
+                                opacity: 0;
+                                color: $textfield;
+                            }
+                            .radio-tile {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                transition: all 300s ease;
+                                label {
+                                    color: $textfield;
+                                }
                             }
                         }
                     }
@@ -293,40 +234,12 @@ $textfield: #96B0D3;
                     }
                     p {
                         a {
-                            font-weight: 2VH;
+                            font-weight: 2vh;
                             text-decoration: none;
                             color: white;
                         }
                     }
-                    #phonetopic {
-                        display: flex;
-                        // justify-content: space-around;
-                        // align-content: center;
-                        padding-right: 21rem;
-                        padding-bottom: 10px;
-                        padding-top: 20px;
-                        .topic {
-                            color: $darkblue;
-                            // font-weight: bold;
-                            font-size: 2.5vh;
-                            // padding-right: 80px;
-                            background-color: $textfield;
-                        }
-                        .inputfield {
-                            display: flex;
-                            .topic {
-                                border: none;
-                                text-align: center;
-                                width: 790px;
-                                margin: 0 auto;
-                                padding-right: 50px;
-                                font-size: 2.3vh;
-                            }
-                            input:focus {
-                                outline: none;
-                            }
-                        }
-                    }
+                    // The Submit Button Section
                     .buttondiv {
                         display: flex;
                         justify-content: center;
@@ -336,29 +249,39 @@ $textfield: #96B0D3;
                         padding-top: 100px;
                         padding-bottom: 20px;
                         padding-left: 5px;
-                        button {
-                            background-color: $darkblue;
-                            border: 1px $darkblue solid ;
-                            border-radius: 50%;
-                            width: 120px;
-                            height: 120px;
-                            color: white;
-                            font-weight: bold;
-                            font-size: 1.3rem;
-                            cursor: pointer;
-                        }
-                        .back {
-                            padding: 80px 190px 0px 0px;
-                            a {
-                                color: $darkblue;
-                                font-size: 2.1vh;
+                        .calendar {
+                            // background-color: red;
+                            .back {
+                                padding: 80px 190px 0px 0px;
+                                a {
+                                    color: $darkblue;
+                                    font-size: 2.1vh;
+                                }
                             }
                         }
-                        .callslist {
-                            padding: 80px 0px 0px 150px;
-                            a {
-                                color: $darkblue;
-                                font-size: 2.1vh;
+                        .subbutton {
+                            // background-color: green;
+                            button {
+                                background-color: $darkblue;
+                                border: none;
+                                // border: 1px $darkblue solid;
+                                border-radius: 50%;
+                                width: 120px;
+                                height: 120px;
+                                color: $textfield;
+                                font-weight: bold;
+                                font-size: 1.3rem;
+                                cursor: pointer;
+                            }
+                        }
+                        .list {
+                            // background-color: blue;
+                            .callslist {
+                                padding: 80px 0px 0px 150px;
+                                a {
+                                    color: $darkblue;
+                                    font-size: 2.1vh;
+                                }
                             }
                         }
                     }

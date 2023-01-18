@@ -89,18 +89,18 @@
                     <div class="phonedate">
                         <!-- datepicker here -->
                         <!-- Month -->
-                        <select name="month" id="month">
+                        <select name="date" id="date">
                             <option disabled selected>Select Here</option>
-                            <option value="January">Jan 1 2023</option>
-                            <option value="January">Jan 2 2023</option>
-                            <option value="January">Jan 3 2023</option>
-                            <option value="January">Jan 4 2023</option>
-                            <option value="January">Jan 5 2023</option>
-                            <option value="January">Jan 6 2023</option>
-                            <option value="January">Jan 7 2023</option>
-                            <option value="January">Jan 8 2023</option>
-                            <option value="January">Jan 9 2023</option>
-                            <option value="January">Jan 10 2023</option>
+                            <option value="1/1/2023">Jan 1 2023</option>
+                            <option value="1/2/2023">Jan 2 2023</option>
+                            <option value="1/3/2023">Jan 3 2023</option>
+                            <option value="1/4/2023">Jan 4 2023</option>
+                            <option value="1/5/2023">Jan 5 2023</option>
+                            <option value="1/6/2023">Jan 6 2023</option>
+                            <option value="1/7/2023">Jan 7 2023</option>
+                            <option value="1/8/2023">Jan 8 2023</option>
+                            <option value="1/9/2023">Jan 9 2023</option>
+                            <option value="1/10/2023">Jan 10 2023</option>
                         </select>
                     </div>
                 </div>
@@ -190,12 +190,18 @@
                 <hr>
 
                 <div class="buttondiv">
+                    <div class="calendar">
                     <!-- Back to Calendar Link-->
-                    <p class="back"><a href="/calendar/calendar.html">Back to Calendar</a></p>
+                        <p class="back"><a href="/calendar/calendar.html">Back to Calendar</a></p>
+                    </div>
                     <!-- Submit Button -->
-                    <button class="submit" type="submit">Submit</button>
+                    <div class="subbutton">
+                        <button class="submit" type="submit" id="submit">Submit</button>
+                    </div>
                     <!-- Go to phone Call List Link -->
-                    <p class="callslist"><a href="#">Go to Phone Calls List</a></p>
+                    <div class="list">
+                        <p class="callslist"><a href="#">Go to Phone Calls List</a></p>
+                    </div>
                 </div>
                 
             </div>
