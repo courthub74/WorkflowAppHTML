@@ -45,6 +45,7 @@ window.addEventListener('load', () => {
         // if 2pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id === "two"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -66,6 +67,7 @@ window.addEventListener('load', () => {
         // if 3pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id === "three"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -87,6 +89,7 @@ window.addEventListener('load', () => {
         // if 4pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id == "four"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -153,6 +156,7 @@ window.addEventListener('load', () => {
         // if 7pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id == "seven"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -187,9 +191,6 @@ window.addEventListener('load', () => {
     const topic = document.querySelector("#topic");
     // LINK field
     const link = document.querySelector("#link");
-   
-    // const twopm = document.querySelector("#two");
-    // const threepm = document.querySelector("#three");
 
     // FORM field
     // query select the form in order to 
@@ -252,7 +253,7 @@ window.addEventListener('load', () => {
             return;
         }
 
-
+        // CLEAR THE TIME BUTTONS
         // NOW change the style to original colors after submit button pressed
 
         // 2PM
@@ -403,7 +404,7 @@ window.addEventListener('load', () => {
         // clear the timefield field button (perhaps)
 
         // NOW grab the Zoom Call Submitted div by id and change the HTML
-        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!"
+        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!";
 
         // push to firebase from here
         // create a new variable

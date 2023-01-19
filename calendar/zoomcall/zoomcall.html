@@ -45,12 +45,21 @@
                     <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                     <span class="item">spreadsheet</span>
                 </a></li>
+                <li><a href="#">
+                    <span class="icon"><img src="/img/contracts.png" alt="calendar"></span>
+                    <span class="item">contracts</span>
+                </a></li>
+
+                <li><a href="#">
+                    <span class="icon"><img src="/img/coins.png" id="coins" alt="calendar"></span>
+                    <span class="item">payments</span>
+                </a></li>
             </ul>
         </div>
 
         <!-- Logout Button -->
         <div class="logoutbutton">
-            <button class="logout"><a href="../loginpage/login.html">Logout</a></button>
+            <button class="logout"><a href="/loginpage/login.html">Logout</a></button>
         </div>
     </div>
 
@@ -150,11 +159,9 @@
                             <div class="radio-tile">
                                 <label for="7pm" id="labelseven">7:00PM</label>
                             </div>
-                        </div>
-                                            
+                        </div>                          
                     </div>
                 </div>
-
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Phone Line -->
@@ -164,7 +171,8 @@
                         <input 
                             type="tel"
                             class="zoomphone"
-                            id="phone"/>
+                            id="phone"
+                            required/>
                     </div>
                 </div>
                 <!-- UnderLine -->
@@ -202,12 +210,9 @@
                     </div>
                     <!-- Submit Button -->
                     <div class="subbutton">
-                        <button class="submit" type="submit">Submit</button>
+                        <button class="submit" type="submit" id="submit">Submit</button>
                     </div>
-                    <!-- Submitted Alert -->
-                    <div class="subalert">
-                        <span id="subalert"></span>
-                    </div>
+                    
                     <!-- List Items -->
                     <div class="list">
                         <p class="zoomslist"><a href="zoomcalllist.html">Go to Zoom Calls List</a></p>
