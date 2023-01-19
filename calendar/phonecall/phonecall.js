@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     // NAME field
     const name = document.querySelector("#name");
     // DATE field
-    const date = document.querySelector("month");
+    const date = document.querySelector("#date");
     // PHONE field
     const phone = document.querySelector("#phone");
     // TOPIC field
@@ -284,6 +284,193 @@ window.addEventListener('load', () => {
         e.preventDefault();
         // test print the submit button
         console.log("Zoom submit button pressed");
+        // for NAME
+        // get the value of the 'name' variable
+            // store it in a variable
+        const phonename = name.value;
+        // Error handling
+            // if no value entered just alert
+        if (!phonename){
+            alert("Please fill out the name field");
+            return;
+        }
+        // clear the name field after button pressed
+        name.value = '';
+
+        // test print
+        console.log(phonename);
+
+        // for DATE
+        // get the value of the 'date' variable
+            // store it in a variable
+        const phonedate = date.value;
+        // Error handling
+            // if no value entered just alert
+        if (!phonedate){
+            alert("Please fill out the date field");
+            return;
+        }
+        // clear the date field after button pressed
+        date.value = 'Select Here';
+
+        // test print
+        console.log(phonedate);
+
+        // for TIME VALUES
+
+        // TIME input fields go under the same variable
+        const phonetimes = document.querySelector('input[name="timebutt"]:checked').value;
+        // Error handling
+            // if no value entered just alert
+        if (!phonetimes) {
+            alert("Please select a time");
+            return;
+        }
+
+
+        // NOW CLEAR THE TIME BUTTONS
+        // NOW change the style to original colors after submit button pressed
+
+        // 2PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containtwo = document.getElementById("containertwo");
+        // change the style back
+        containtwo.style.backgroundColor = "#243F67";
+        // change the label 
+        containtwo.style.border = "none";
+        // change the text back
+        // get the label
+        var labeltwo = document.getElementById("labeltwo");
+        // change the text style back
+        labeltwo.style.color = "#96B0D3";
+
+        // 3PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containthree = document.getElementById("containerthree");
+        // change the style back
+        containthree.style.backgroundColor = "#243F67";
+        // change the label 
+        containthree.style.border = "none";
+        // change the text back
+        // get the label
+        var labelthree = document.getElementById("labelthree");
+        // change the text style back
+        labelthree.style.color = "#96B0D3";
+
+        // 4PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containfour = document.getElementById("containerfour");
+        // change the style back
+        containfour.style.backgroundColor = "#243F67";
+        // change the label 
+        containfour.style.border = "none";
+        // change the text back
+        // get the label
+        var labelfour = document.getElementById("labelfour");
+        // change the text style back
+        labelfour.style.color = "#96B0D3";
+
+        // 5PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containfive = document.getElementById("containerfive");
+        // change the style back
+        containfive.style.backgroundColor = "#243F67";
+        // change the label 
+        containfive.style.border = "none";
+        // change the text back
+        // get the label
+        var labelfive = document.getElementById("labelfive");
+        // change the text style back
+        labelfive.style.color = "#96B0D3";
+
+        // 6PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containsix = document.getElementById("containersix");
+        // change the style back
+        containsix.style.backgroundColor = "#243F67";
+        // change the label 
+        containsix.style.border = "none";
+        // change the text back
+        // get the label
+        var labelsix = document.getElementById("labelsix");
+        // change the text style back
+        labelsix.style.color = "#96B0D3";
+
+        // 7PM
+        // HERE we get the input container 
+                // and change the background and border
+        // get the container for 2pm
+        var containseven = document.getElementById("containerseven");
+        // change the style back
+        containseven.style.backgroundColor = "#243F67";
+        // change the label 
+        containseven.style.border = "none";
+        // change the text back
+        // get the label
+        var labelseven = document.getElementById("labelseven");
+        // change the text style back
+        labelseven.style.color = "#96B0D3";
+
+        // test print the phonetime checked
+        console.log('Phone time submitted is:', phonetimes);
+
+        // for PHONE
+        // get the value of the 'date' variable
+            // store it in a variable
+            const phonephone = phone.value;
+            // Error handling
+                // if no value entered just alert
+            if (!phonephone) {
+                alert("Please fill out the phone field");
+                return;
+            }
+            // clear the date field after button pressed
+            phone.value = '';
+    
+            // test print
+            console.log(phonephone);
+
+        // for TOPIC
+        // get the value of the 'topic' variable
+            // store it in a variable
+            const phonetopic = topic.value;
+            // Error handling
+                // if no value entered just alert
+            if (!phonetopic) {
+                alert("Please fill out the topic field");
+                return;
+            }
+            // clear the date field after button pressed
+            topic.value = '';
+    
+            // test print
+            console.log(phonetopic);
+
+        // NOW grab the Phone call Submitted button by id and change the HTML
+        document.getElementById("submit").innerHTML = "Submitted!";
+
+        // push to firebase from here
+        // create a new variable
+        // push to fb list but in the new variable 
+            // set all of the inputs into a library
+        var newPhoneRef = firebasePhoneCallRef.push();
+        newPhoneRef.set({
+            name: phonename,
+            date: phonedate,
+            time: phonetimes,
+            phone: phonephone,
+            topic: phonetopic,
+        });
     });
 });
 

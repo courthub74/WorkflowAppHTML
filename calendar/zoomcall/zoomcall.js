@@ -253,7 +253,7 @@ window.addEventListener('load', () => {
             return;
         }
 
-
+        // CLEAR THE TIME BUTTONS
         // NOW change the style to original colors after submit button pressed
 
         // 2PM
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
         // clear the timefield field button (perhaps)
 
         // NOW grab the Zoom Call Submitted div by id and change the HTML
-        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!"
+        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!";
 
         // push to firebase from here
         // create a new variable
