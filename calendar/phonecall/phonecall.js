@@ -41,77 +41,140 @@ window.addEventListener('load', () => {
     const property = document.getElementById("timebuttons");
     // add event listener to each button
     property.addEventListener('click', (e) => {
-        // // if 2pm change the button style to opposite colors
+        // if 2pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id == "two"){
+            // test print the target
+             console.log(e.target.value);
+             // HERE we get the input container 
+                // and change the background and border
+            // NOW get the input-container
+            var containtwo = document.getElementById("containertwo");
+            // test print
+            console.log('Container Two:', containtwo);
+            // NOW change the background color
+            containtwo.style.backgroundColor = "#243F67";
+            // change the border
+            containtwo.style.border = "#243F67 solid 1px";
+            // NOW change it's style
+            containtwo.style.backgroundColor = "#96B0D3";
+            // change the border
+            containtwo.style.border = "#243F67 solid 1px";
+            // in order to change the label 
+                // retrieve it by id
+            var labeltwo = document.getElementById("labeltwo");
+            // change the text color
+            labeltwo.style.color = "#243F67";
+        } else {
+            if (e.target && e.target.id !== "two"){
+                // change color back
+            }
+        }
+        // if 3pm change the button style to opposite colors
+            // when clicked the first time
+        if(e.target && e.target.id == "three"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
-            var two = e.target;
-            // NOW change it's style
-            two.style.backgroundColor = "#96B0D3";
+            // NOW let's get the input-container
+            var containthree = document.getElementById("containerthree");
+            // test print
+            console.log('Container Three:', containthree);
+            // NOW change the background color
+            containthree.style.backgroundColor = "#96B0D3";
             // change the border
-            two.style.border = "#243F67 solid 1px";
+            containthree.style.border = "#243F67 solid 1px";
+            // NOW get the label by id
+            var labelthree = document.getElementById("labelthree");
             // change the text color
-            two.style.color = "#243F67";
+            labelthree.style.color = "#243F67";
         }
-        // if 3pm
-        if(e.target && e.target.id == "three"){
-            console.log(e.target.value);
-            // store 3pm target in a variable
-            var three = e.target;
-            // NOW change it's style
-            three.style.backgroundColor = "#96B0D3";
-            // change the border
-            three.style.border = "#243F67 solid 1px";
-            // change the text color
-            three.style.color = "#243F67";
-        }
-        // if 4pm
+        // if 4pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "four"){
+            // test print the target
             console.log(e.target.value);
-            // store 4pm target in a variable
-            var four = e.target;
-            four.style.backgroundColor = "#96B0D3";
+             // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containfour = document.getElementById("containerfour");
+            // test print
+            console.log('Container Four:', containfour);
+            containfour.style.backgroundColor = "#96B0D3";
             // change the border
-            four.style.border = "#243F67 solid 1px";
+            containfour.style.border = "#243F67 solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelfour = document.getElementById("labelfour");
             // change the text color
-            four.style.color = "#243F67";
+            labelfour.style.color = "#243F67";
         }
-        // if 5pm
+        // if 5pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "five"){
+            // test print the target
             console.log(e.target.value);
-            // store 5pm target in a variable
-            var five = e.target;
-            five.style.backgroundColor = "#96B0D3";
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containfive = document.getElementById("containerfive");
+            // test print
+            console.log('Container Five:', containfive);
+            containfive.style.backgroundColor = "#96B0D3";
             // change the border
-            five.style.border = "#243F67 solid 1px";
-            // change the text color
-            five.style.color = "#243F67";
+            containfive.style.border = "#243F67 solid 1px";
+            // NOW get the label by id
+            var labelfive = document.getElementById("labelfive");
+            // test print
+            console.log('Label Five:', labelfive);
+            // change the text color through label
+            labelfive.style.color = "#243F67";
         }
-        // if 6pm
+        // if 6pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "six"){
+            // test print
             console.log(e.target.value);
-            // store 6pm target in a variable
-            var six = e.target;
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containsix = document.getElementById("containersix");
+            // test print
+            console.log('Container Six:', containsix);
             // NOW change it's style
-            six.style.backgroundColor = "#96B0D3";
+            containsix.style.backgroundColor = "#96B0D3";
             // change the border
-            six.style.border = "#243F67 solid 1px";
+            containsix.style.border = "#243F67 solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelsix = document.getElementById("labelsix");
+            // test print
+            console.log('Label Six:', labelsix);
             // change the text color
-            six.style.color = "#243F67";
+            labelsix.style.color = "#243F67";
         }
         // if 7pm
         if(e.target && e.target.id == "seven"){
+            // test print the target
             console.log(e.target.value);
-            // store 7pm target in a variable
-            var seven = e.target;
+            // HERE we get the input container 
+                // and change the background and border
+            // NOW let's get the input-container
+            var containseven = document.getElementById("containerseven");
+            // test print
+            console.log('Container Seven:', containseven);
             // NOW change it's style
-            seven.style.backgroundColor = "#96B0D3";
+            containseven.style.backgroundColor = "#96B0D3";
             // change the border
-            seven.style.border = "#243F67 solid 1px";
+            containseven.style.border = "#243F67 solid 1px";
+            // HERE we change the text color for the label
+            // NOW get the label by id
+            var labelseven = document.getElementById("labelseven");
+            // test print
+            console.log('Label Seven:', labelseven);
             // change the text color
-            seven.style.color = "#243F67";
+            labelseven.style.color = "#243F67";
         }
     })
 })

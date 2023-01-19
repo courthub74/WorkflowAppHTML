@@ -45,6 +45,7 @@ window.addEventListener('load', () => {
         // if 2pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id === "two"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -66,6 +67,7 @@ window.addEventListener('load', () => {
         // if 3pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id === "three"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -87,6 +89,7 @@ window.addEventListener('load', () => {
         // if 4pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id == "four"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
@@ -153,6 +156,7 @@ window.addEventListener('load', () => {
         // if 7pm change the button style to opposite colors
             // when clicked the first time
         if(e.target && e.target.id == "seven"){
+            // test print the target
             console.log(e.target.value);
             // HERE we get the input container 
                 // and change the background and border
