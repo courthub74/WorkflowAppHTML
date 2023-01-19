@@ -41,10 +41,12 @@ window.addEventListener('load', () => {
     const property = document.getElementById("timebuttons");
     // add event listener to each button
     property.addEventListener('click', (e) => {
-        // if 2pm
+        // // if 2pm change the button style to opposite colors
+            // when clicked the first time
         if(e.target && e.target.id == "two"){
             console.log(e.target.value);
-            // store 2pm target in a variable
+            // HERE we get the input container 
+                // and change the background and border
             var two = e.target;
             // NOW change it's style
             two.style.backgroundColor = "#96B0D3";
