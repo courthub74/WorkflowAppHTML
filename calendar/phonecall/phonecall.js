@@ -139,8 +139,6 @@ window.addEventListener('load', () => {
             if(e.target && e.target.id != "four"){
                 // change color back
                 var containfour = document.getElementById("containerfour");
-                // test print
-                console.log('Uncontainer Four:', containfour);
                 // change back background color
                 containfour.style.backgroundColor = "#243F67";
                 // no need to change border
@@ -171,6 +169,19 @@ window.addEventListener('load', () => {
             console.log('Label Five:', labelfive);
             // change the text color through label
             labelfive.style.color = "#243F67";
+        } else {
+            if (e.target && e.target.id != "five"){
+                // change color back
+                var containfive = document.getElementById("containerfive");
+                // change back background color
+                containfive.style.backgroundColor = "#243F67";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelfive = document.getElementById("labelfive");
+                // change the label text color
+                labelfive.style.color = "#96B0D3";
+            }
         }
         // if 6pm change the button style to opposite colors
             // when clicked the first time
@@ -194,6 +205,19 @@ window.addEventListener('load', () => {
             console.log('Label Six:', labelsix);
             // change the text color
             labelsix.style.color = "#243F67";
+        } else {
+            if (e.target && e.target.id != "six"){
+                // change color back
+                var containsix = document.getElementById("containersix");
+                // change back background color
+                containsix.style.backgroundColor = "#243F67";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelsix = document.getElementById("labelsix");
+                // change the label text color
+                labelsix.style.color = "#96B0D3";
+            }
         }
         // if 7pm
         if(e.target && e.target.id == "seven"){
@@ -216,6 +240,19 @@ window.addEventListener('load', () => {
             console.log('Label Seven:', labelseven);
             // change the text color
             labelseven.style.color = "#243F67";
+        } else {
+            if (e.target && e.target.id != "seven"){
+                // change color back
+                var containseven = document.getElementById("containerseven");
+                // change back background color
+                containseven.style.backgroundColor = "#243F67";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelseven = document.getElementById("labelseven");
+                // change the label text color
+                labelseven.style.color = "#96B0D3";
+            }
         }
         // NOW print that value to the div like the other fields
         // somehow send it to the form
