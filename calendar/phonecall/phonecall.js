@@ -53,10 +53,6 @@ window.addEventListener('load', () => {
             // test print
             console.log('Container Two:', containtwo);
             // NOW change the background color
-            containtwo.style.backgroundColor = "#243F67";
-            // change the border
-            containtwo.style.border = "#243F67 solid 1px";
-            // NOW change it's style
             containtwo.style.backgroundColor = "#96B0D3";
             // change the border
             containtwo.style.border = "#243F67 solid 1px";
@@ -66,8 +62,21 @@ window.addEventListener('load', () => {
             // change the text color
             labeltwo.style.color = "#243F67";
         } else {
+            // if target NOT 2 (or another button pressed)
+            //     then change it back
             if (e.target && e.target.id !== "two"){
                 // change color back
+                // NOW get the input-container
+                var containtwo = document.getElementById("containertwo");
+                // NOW change the background color
+                containtwo.style.backgroundColor = "#243F67";
+                // change the border
+                containtwo.style.border = "none";
+                // in order to change the label 
+                // retrieve it by id
+                var labeltwo = document.getElementById("labeltwo");
+                 // change the text color
+                labeltwo.style.color = "#96B0D3";
             }
         }
         // if 3pm change the button style to opposite colors
@@ -89,6 +98,23 @@ window.addEventListener('load', () => {
             var labelthree = document.getElementById("labelthree");
             // change the text color
             labelthree.style.color = "#243F67";
+        } else {
+            // if target NOT 3 (or another button pressed)
+                // then change it back
+            if (e.target && e.target.id !== "three"){
+                // change color back
+                // NOW get the input-container
+                var containthree = document.getElementById("containerthree");
+                // NOW change the background color
+                containthree.style.backgroundColor = "#243F67";
+                // change the border
+                containthree.style.border = "none";
+                // in order to change the label 
+                // retrieve it by id
+                var labelthree = document.getElementById("labelthree");
+                 // change the text color
+                labelthree.style.color = "#96B0D3";
+            }
         }
         // if 4pm change the button style to opposite colors
             // when clicked the first time
@@ -109,6 +135,21 @@ window.addEventListener('load', () => {
             var labelfour = document.getElementById("labelfour");
             // change the text color
             labelfour.style.color = "#243F67";
+        } else {
+            if(e.target && e.target.id != "four"){
+                // change color back
+                var containfour = document.getElementById("containerfour");
+                // test print
+                console.log('Uncontainer Four:', containfour);
+                // change back background color
+                containfour.style.backgroundColor = "#243F67";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelfour = document.getElementById("labelfour");
+                // change the label text color
+                labelfour.style.color = "#96B0D3";
+            }
         }
         // if 5pm change the button style to opposite colors
             // when clicked the first time
@@ -176,6 +217,13 @@ window.addEventListener('load', () => {
             // change the text color
             labelseven.style.color = "#243F67";
         }
+        // NOW print that value to the div like the other fields
+        // somehow send it to the form
+        const timevar = e.target.value;
+        console.log("This is the time pressed: ",timevar);
+        // function for the Timebuttons
+        // get's the value from the button by id
+        // send it with the press of the submit button
     })
 })
 
