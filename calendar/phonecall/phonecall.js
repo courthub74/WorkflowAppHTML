@@ -36,6 +36,11 @@ window.addEventListener('load', () => {
     const name = document.querySelector("#name");
     // DATE field
     const date = document.querySelector("month");
+    // PHONE field
+    const phone = document.querySelector("#phone");
+    // TOPIC field
+    const topic = document.querySelector("#topic");
+
     // TIME field 
         // rendered by parent div
     const property = document.getElementById("timebuttons");
@@ -261,6 +266,24 @@ window.addEventListener('load', () => {
         // function for the Timebuttons
         // get's the value from the button by id
         // send it with the press of the submit button
-    })
-})
+    });
+
+    // THIS IS NOW FORM FIELD TERRITORY
+
+    // FORM field
+    // query select the form in order to 
+    // add event listener to the submit button repping the form
+        // when clicked, send data from each queried input
+            // to the firebase db
+                // most likely you will place it in key value form
+        // FOR THE TIME BUTTONS you will change the color back to original
+    
+    // add event listener to the form submit button
+    form.addEventListener('submit', (e) => {
+        // keeps page from refreshing
+        e.preventDefault();
+        // test print the submit button
+        console.log("Zoom submit button pressed");
+    });
+});
 

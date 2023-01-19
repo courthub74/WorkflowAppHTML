@@ -191,9 +191,6 @@ window.addEventListener('load', () => {
     const topic = document.querySelector("#topic");
     // LINK field
     const link = document.querySelector("#link");
-   
-    // const twopm = document.querySelector("#two");
-    // const threepm = document.querySelector("#three");
 
     // FORM field
     // query select the form in order to 
