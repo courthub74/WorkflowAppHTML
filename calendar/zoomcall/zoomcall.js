@@ -490,7 +490,7 @@ window.addEventListener('load', () => {
         // clear the timefield field button (perhaps)
 
         // NOW grab the Zoom Call Submitted div by id and change the HTML
-        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!";
+        document.getElementById("submit").innerHTML = "Submitted!";
 
         // push to firebase from here
         // create a new variable

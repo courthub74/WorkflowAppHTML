@@ -71,7 +71,6 @@
   color: #243F67;
 }
 * body .container {
-  background-color: yellow;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -87,7 +86,6 @@
   padding-left: 280px;
   line-height: 40px;
   text-align: center;
-  background-color: blue;
 }
 * body .container .page h1 {
   color: #4375C0;
@@ -102,7 +100,6 @@
   align-items: center;
   border: 2px solid #243F67;
   border-radius: 5px;
-  background-color: aqua;
   height: 650px;
   padding: 40px;
 }
@@ -113,7 +110,6 @@
   padding: 20px 30px 0px 0px;
   height: 550px;
   overflow-y: scroll;
-  background-color: yellow;
 }
 * body .container .page .outline .zooms #zoom_items {
   display: flex;
@@ -210,6 +206,7 @@
 }
 * body .container .page .outline .settings {
   display: flex;
+  width: 100%;
   justify-content: right;
   padding: 5px 50px 0px 0px;
 }
