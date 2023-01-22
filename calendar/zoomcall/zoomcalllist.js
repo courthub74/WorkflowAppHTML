@@ -1,6 +1,6 @@
 // JS for zoom calls list
 
-// set up firebase
+// create a variable that stores the firebase db configuration
 const firebaseConfig = {
     apiKey: "AIzaSyATc5lxId7q3aWvm2bTy2oVjX3JzqJJszE",
     authDomain: "workflowapp-c191d.firebaseapp.com",
@@ -11,7 +11,7 @@ const firebaseConfig = {
     appId: "1:205004352373:web:89d233c2cdc4e4ccbf413c"
 };
 
-// initialize firebase
+// initialize firebase to that configuration
 firebase.initializeApp(firebaseConfig);
 
 // create a reference for your database (give it a name to id by in firebase)
@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
             // getProject locates fb db
             // errProject test for errors
                 // i.e. permissions, other blocks
-    firebaseZoomcallsRef.on('value', getZoom, errZoom)
+    firebaseZoomcallsRef.on('value', getZoom, errZoom);
 
     // get project
     function getZoom(zoomitem){
@@ -345,6 +345,7 @@ window.addEventListener('load', () => {
                 console.log(`delete button pressed for: ${id}`);
                 // remove the child input (ZOOM ITEM (zoom_items)) from the (ZOOMS) parent
                 zooms.removeChild(zoom_items);
+                console.log('DATABASE REF ===', firebase.database().ref(id));
                 // NOW delete it in the firebase 
                 firebase.database().ref(`zooms/${id}`).remove();
             });

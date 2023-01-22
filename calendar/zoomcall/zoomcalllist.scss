@@ -98,7 +98,7 @@ $deletebuttonblue:#3292FA;
         // PAGE PART
         // Put this in a container and center it
         .container {
-            background-color: yellow;
+            // background-color: yellow;
             height: 100vh;
             width: 100%;
             display: flex;
@@ -113,7 +113,7 @@ $deletebuttonblue:#3292FA;
                 padding-left: 280px;
                 line-height: 40px;
                 text-align: center;
-                background-color: blue;
+                // background-color: blue;
                     h1 {
                         color: $textfield;
                         font-size: 3.5rem;
@@ -128,7 +128,7 @@ $deletebuttonblue:#3292FA;
                         align-items: center;
                         border: 2px solid $darkblue;
                         border-radius: 5px;
-                        background-color: aqua;
+                        // background-color: aqua;
                         height: 650px;
                         padding: 40px;
                         .zooms {
@@ -143,7 +143,7 @@ $deletebuttonblue:#3292FA;
                             // ADD A SCROLLAR FEATURE TO THIS DIV
                             overflow-y: scroll;
                             // Here is where you place the zoom call list items
-                            background-color: yellow;
+                            // background-color: yellow;
                             #zoom_items {
                                 display: flex;
                                 
@@ -260,6 +260,7 @@ $deletebuttonblue:#3292FA;
                         }
                         .settings {
                             display: flex;
+                            width: 100%;
                             // background-color: #6cce63;
                             justify-content: right;
                             padding: 5px 50px 0px 0px;

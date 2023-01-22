@@ -63,6 +63,23 @@ window.addEventListener('load', () => {
             console.log('Label Two:', labeltwo);
             // NOW change the text color through label
             labeltwo.style.color = "#ffffff";
+        } else {
+            // if target NOT 2 (or another button pressed)
+            //then change it back
+            if (e.target && e.target.id !== "two"){
+                // change color back
+                // NOW get the input-container
+                var containtwo = document.getElementById("containertwo");
+                // NOW change the background color
+                containtwo.style.backgroundColor = "#ffffff";
+                // change the border
+                containtwo.style.border = "none";
+                // in order to change the label 
+                // retrieve it by id
+                var labeltwo = document.getElementById("labeltwo");
+                 // change the text color
+                labeltwo.style.color = "#4375C0";
+            }
         }
         // if 3pm change the button style to opposite colors
             // when clicked the first time
@@ -85,6 +102,23 @@ window.addEventListener('load', () => {
             console.log('Label Three:', labelthree);
             // change the text color through label
             labelthree.style.color = "#ffffff";
+        } else {
+            // if target NOT 3 (or another button pressed)
+                // then change it back
+            if (e.target && e.target.id !== "three"){
+                // change color back
+                // NOW get the input-container
+                var containthree = document.getElementById("containerthree");
+                // NOW change the background color
+                containthree.style.backgroundColor = "#ffffff";
+                // change the border
+                containthree.style.border = "none";
+                // in order to change the label 
+                // retrieve it by id
+                var labelthree = document.getElementById("labelthree");
+                    // change the text color
+                labelthree.style.color = "#4375C0";
+                }
         }
         // if 4pm change the button style to opposite colors
             // when clicked the first time
@@ -108,6 +142,19 @@ window.addEventListener('load', () => {
             console.log('Label Four:', labelfour);
             // change the text color through label
             labelfour.style.color = "#ffffff";
+        } else {
+            if(e.target && e.target.id != "four"){
+                // change color back
+                var containfour = document.getElementById("containerfour");
+                // change back background color
+                containfour.style.backgroundColor = "#ffffff";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelfour = document.getElementById("labelfour");
+                // change the label text color
+                labelfour.style.color = "#4375C0";
+            }
         }
         // if 5pm change the button style to opposite colors
             // when clicked the first time
@@ -130,6 +177,19 @@ window.addEventListener('load', () => {
             console.log('Label Five:', labelfive);
             // change the text color through label
             labelfive.style.color = "#ffffff";
+        } else {
+            if (e.target && e.target.id != "five"){
+                // change color back
+                var containfive = document.getElementById("containerfive");
+                // change back background color
+                containfive.style.backgroundColor = "#ffffff";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelfive = document.getElementById("labelfive");
+                // change the label text color
+                labelfive.style.color = "#4375C0";
+            }
         }
         // if 6pm change the button style to opposite colors
             // when clicked the first time
@@ -152,6 +212,19 @@ window.addEventListener('load', () => {
             console.log('Label Six:', labelsix);
             // change the text color through label
             labelsix.style.color = "#ffffff";
+        } else {
+            if (e.target && e.target.id != "six"){
+                // change color back
+                var containsix = document.getElementById("containersix");
+                // change back background color
+                containsix.style.backgroundColor = "#ffffff";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelsix = document.getElementById("labelsix");
+                // change the label text color
+                labelsix.style.color = "#4375C0";
+            }
         }
         // if 7pm change the button style to opposite colors
             // when clicked the first time
@@ -175,6 +248,19 @@ window.addEventListener('load', () => {
             console.log('Label Seven:', labelseven);
             // change the text color through label
             labelseven.style.color = "#ffffff";
+        } else {
+            if (e.target && e.target.id != "seven"){
+                // change color back
+                var containseven = document.getElementById("containerseven");
+                // change back background color
+                containseven.style.backgroundColor = "#ffffff";
+                // no need to change border
+                // HERE we change the text color for the label
+                // NOW get the label by id
+                var labelseven = document.getElementById("labelseven");
+                // change the label text color
+                labelseven.style.color = "#4375C0";
+            }
         }
         // NOW print that value to the div like the other fields
             // somehow send it to the form
@@ -404,7 +490,7 @@ window.addEventListener('load', () => {
         // clear the timefield field button (perhaps)
 
         // NOW grab the Zoom Call Submitted div by id and change the HTML
-        document.getElementById("subalert").innerHTML = "Zoom Call Submitted!";
+        document.getElementById("submit").innerHTML = "Submitted!";
 
         // push to firebase from here
         // create a new variable
