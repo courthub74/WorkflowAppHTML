@@ -130,7 +130,7 @@ $timeblue: #2572C6;
                                         color: $topicgreen;
                                         // font-weight: bold;
                                         font-size: 1.2rem;
-                                        width: 140px;
+                                        width: 205px;
                                         margin: auto;
                                     }
                                 }
@@ -141,21 +141,22 @@ $timeblue: #2572C6;
                             display: flex;
                             gap: 10px;
                             padding-right: 20px;
+                            // background-color: lightgreen;
                             .delete {
                                 cursor: pointer;
+                                margin-top: 15px;
                                 width: 30px;
                                 height: 30px;
                                 border-radius: 50px;
-                                // border: #243F67 1px solid;
                                 border: none;
                                 font-size: 10px;
                                 color: $darkblue;
                             }
                             .edit {
                                 cursor: pointer;
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50px;
+                                width: 28px;
+                                height: 25px;
+                                margin-bottom: 70px;
                                 border: none;
                                 font-size: 10px;
                                 background-color: $textfield;
