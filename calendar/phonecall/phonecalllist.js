@@ -1,4 +1,4 @@
-// JS for phone calls list
+// JS for phonedate calls list
 
 // create a variable that stores the firebase db configuration
 const firebaseConfig = {
@@ -147,7 +147,7 @@ window.addEventListener('load', () => {
             console.log('Name ===',callsall.item.name);
             console.log('Date ===',callsall.item.date);
             console.log('Time ===',callsall.item.time);
-            console.log('Phone ===',callsall.item.phone);
+            console.log('Phone ===',callsall.item.phonedate);
             console.log('Topic ===',callsall.item.topic);
 
             // set the attribute to readonly
@@ -173,7 +173,7 @@ window.addEventListener('load', () => {
             // set the value
                 // take the value from zoomsall 4 loop
             phonedate.value = callsall.item.date;
-
+            console.log('phonedate ===', phonedate.value);
             // set the attribute to readonly
             phonedate.setAttribute('readonly', true);
 
@@ -221,6 +221,8 @@ window.addEventListener('load', () => {
             // set the value
                 // take the value from zoomsall 4 loop
             phonenumber.value = callsall.item.phone;
+
+            console.log('PHONENUMBER ===', phonenumber.value);
 
             // set the attribute to readonly
             phonenumber.setAttribute('readonly', true);
@@ -361,6 +363,148 @@ window.addEventListener('load', () => {
 
             // append to the buttons div
             phone_delete_div.appendChild(phone_delete_button);
+
+            // EVENT LISTENER TIME
+
+            // DELETE BUTTON
+            // this is where you:
+                // remove the input element from the display
+                    // remove the data element from firebase
+            phone_delete_button.addEventListener('click', (e) => {
+                // keep from bubbling up
+                e.stopPropagation();
+                // store the id in a variable that is the target of event
+                let id = e.target.id;
+                // test print the delete button
+                console.log(`delete button pressed for: ${id}`);
+                // remove the child input (CALL ITEM (call_items)) from the (ZOOMS) parent
+                calls.removeChild(call_items);
+                console.log(firebase.database().ref(id));
+                // NOW delete it in the firebase 
+                firebase.database().ref(`phones/${id}`).remove();
+            });
+
+            // EDIT BUTTON
+                // this is where you:
+                    // set the innertext change on the button
+                    // toggle the readonly attribute
+                    // edit the changes in firebase
+                    phone_edit_button.addEventListener('click', (e) =>{
+                        // store the id in a variable that is the target of event (the key)
+                        let id = e.target.id;
+                        // check the text in order to change it
+                        if (phone_edit_button.name === 'edit'){
+                            // test print text with the id
+                            console.log(`phone_edit_button: ${id}`);
+                            // set an id for the button for later toggle purpose
+                            phone_edit_button.setAttribute('name', 'editing');
+                            // test print
+                            console.log(phone_edit_button);
+        
+                            // NAME FIELD
+                            // remove the readonly attribute from the input field so you can edit the field
+                            phonename.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            phonename.focus();
+                            // change the color of the name field
+                            phonename.style.color = "#DEE36D";
+        
+                            // DATE FIELD
+                            // remove the readonly attribute from the input field so you can edit the field
+                            phonedate.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            phonedate.focus();
+                            // change the color of the name field
+                            phonedate.style.color = "#DEE36D";
+        
+                            // TIME FIELD
+                            // remove the readonly attribute from the input field so you can edit the field
+                            phonetime.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            phonetime.focus();
+                            // change the color of the name field
+                            phonetime.style.color = "#DEE36D";
+        
+                            // PHONE FIELD
+                            // remove the readonly attribute from the input field so you can edit the field
+                            phonenumber.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            phonenumber.focus();
+                            // change the color of the name field
+                            phonenumber.style.color = "#DEE36D";
+        
+                            // TOPIC FIELD
+                            // remove the readonly attribute from the input field so you can edit the field
+                            phonetopic.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            phonetopic.focus();
+                            // change the color of the name field
+                            phonetopic.style.color = "#DEE36D";
+        
+        
+                        } else {
+                            if (phone_edit_button.name === "editing"){
+                                // test print text with the id
+                                console.log(`phone_edit_button: ${id}`);
+                                // set an id for the button for later toggle purpose
+                                phone_edit_button.setAttribute('name', 'edit');
+                                // test print
+                                console.log(phone_edit_button);
+        
+                                // NAME FIELD
+                                // remove the readonly attribute from the input field so you can edit the field
+                                phonename.setAttribute('readonly', true);
+                                // change the color of the name field
+                                phonename.style.color = "#243F67";
+        
+                                // DATE FIELD
+                                phonedate.setAttribute('readonly', true);
+                                // change the color of the date field
+                                phonedate.style.color = "#243F67";
+        
+                                // TIME FIELD
+                                phonetime.setAttribute('readonly', true);
+                                phonetime.style.color = "#243F67";
+        
+                                // PHONE FIELD
+                                phonenumber.setAttribute('readonly', true);
+                                phonenumber.style.color = "#2572C6";
+        
+                                // TOPIC FIELD
+                                phonetopic.setAttribute('readonly', true);
+                                phonetopic.style.color = "#296124";
+        
+        
+                                // Get the Values of each field
+                                // NAME FIELD
+                                let updatename = phonename.value;
+                                // DATE FIELD
+                                let updatedate = phonedate.value;
+                                // TIME FIELD
+                                let updatetime = phonetime.value;
+                                // PHONE FIELD
+                                let updatenumber = phonenumber.value;
+                                // TOPIC FIELD
+                                let updatetopic = phonetopic.value;
+        
+                                // NOW edit in firebase
+                                    // locate the firebase reference by each item id
+                                        // apply the update function
+                                            // it sets updated value with a new key
+                                                // that is declared earlier in the data.push ['project']
+                                    // you will place every input into the update library
+                                    // key is the where you want to replace it
+                                    // name is what you want to send
+                                firebase.database().ref(`phones/${id}`).update({
+                                    name: updatename, 
+                                    date: updatedate, 
+                                    time: updatetime, 
+                                    phone: updatenumber, 
+                                    topic: updatetopic, 
+                                });
+                            }
+                        }
+                    });
         }
     }
 

@@ -345,6 +345,7 @@ window.addEventListener('load', () => {
                 console.log(`delete button pressed for: ${id}`);
                 // remove the child input (ZOOM ITEM (zoom_items)) from the (ZOOMS) parent
                 zooms.removeChild(zoom_items);
+                console.log('DATABASE REF ===', firebase.database().ref(id));
                 // NOW delete it in the firebase 
                 firebase.database().ref(`zooms/${id}`).remove();
             });
