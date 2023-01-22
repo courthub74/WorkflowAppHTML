@@ -112,28 +112,20 @@
 }
 * body .container .page .outline .buttons {
   display: flex;
-  gap: 10px;
-  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 20px;
 }
-* body .container .page .outline .buttons .delete {
-  cursor: pointer;
-  margin-top: 15px;
-  width: 30px;
+* body .container .page .outline .buttons .deletediv .deletebutton {
+  width: 33px;
   height: 30px;
-  border-radius: 50px;
   border: none;
-  font-size: 10px;
-  color: #243F67;
 }
-* body .container .page .outline .buttons .edit {
-  cursor: pointer;
-  width: 28px;
-  height: 25px;
-  margin-bottom: 70px;
+* body .container .page .outline .buttons .editdiv .editbutton {
+  width: 32px;
+  height: 30px;
   border: none;
-  font-size: 10px;
-  background-color: #96B0D3;
-  color: #243F67;
 }
 * body .container .page .outline .calls::-webkit-scrollbar {
   border: 1px solid #96B0D3;

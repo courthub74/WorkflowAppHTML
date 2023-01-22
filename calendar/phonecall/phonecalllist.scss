@@ -139,29 +139,54 @@ $timeblue: #2572C6;
                         // Phone Buttons
                         .buttons {
                             display: flex;
-                            gap: 10px;
-                            padding-right: 20px;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 5px;
+                            margin-left: 20px;
                             // background-color: lightgreen;
-                            .delete {
-                                cursor: pointer;
-                                margin-top: 15px;
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50px;
-                                border: none;
-                                font-size: 10px;
-                                color: $darkblue;
+                            .deletediv {
+                                // background-color: lightblue;
+                                .deletebutton {
+                                    width: 33px;
+                                    height: 30px;
+                                    border: none;
+                                }
                             }
-                            .edit {
-                                cursor: pointer;
-                                width: 28px;
-                                height: 25px;
-                                margin-bottom: 70px;
-                                border: none;
-                                font-size: 10px;
-                                background-color: $textfield;
-                                color: $darkblue;
+                            .editdiv {
+                                // background-color: lightcoral;
+                                .editbutton {
+                                    width: 32px;
+                                    height: 30px;
+                                    border: none;
+                                }
                             }
+                            // .delete {
+                            //     cursor: pointer;
+                            //     width: 30px;
+                            //     height: 30px;
+                            //     border: none;
+                            //     // background-color: blue;
+                            //     // margin-top: 15px;
+                            //     // width: 30px;
+                            //     // height: 30px;
+                            //     // border-radius: 50px;
+                            //     // border: none;
+                            //     // font-size: 10px;
+                            //     // color: $darkblue;
+                            // }
+                            // .edit {
+                            //     cursor: pointer;
+                            //     width: 30px;
+                            //     height: 30px;
+                            //     border: none;
+                            //     // width: 28px;
+                            //     // height: 25px;
+                            //     // margin-bottom: 70px;
+                            //     // border: none;
+                            //     // font-size: 10px;
+                            //     // background-color: $textfield;
+                            //     // color: $darkblue;
+                            // }
                         }
                         // zooms scrollbar
                         .calls::-webkit-scrollbar {

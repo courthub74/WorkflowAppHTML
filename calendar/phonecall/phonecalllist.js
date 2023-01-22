@@ -267,6 +267,23 @@ window.addEventListener('load', () => {
             // append the buttons div to the zoom_items div
             call_items.appendChild(phone_buttons_div);
 
+            // EDIT BUTTON DIV
+            
+            // create the div
+            const phone_edit_div = document.createElement('div');
+
+            // test print
+            console.log(phone_edit_div);
+
+            // set it's class
+            phone_edit_div.classList.add('editdiv');
+
+            // set it's name for later toggling
+            phone_edit_div.setAttribute('id', 'editdiv');
+
+            // append to buttons div
+            phone_buttons_div.appendChild(phone_edit_div);
+
             // EDIT BUTTON
 
             // create the button
@@ -276,7 +293,7 @@ window.addEventListener('load', () => {
             console.log(phone_edit_button);
 
             // set it's class
-            phone_edit_button.classList.add('edit');
+            phone_edit_button.classList.add('editbutton');
 
             // set it's name for later toggling
             phone_edit_button.setAttribute('name', 'edit');
@@ -292,10 +309,27 @@ window.addEventListener('load', () => {
             phone_edit_button.style.backgroundSize = "29px";
 
             // set margin
-            phone_edit_button.style.margin = "20px";
+            // phone_edit_button.style.margin = "20px";
 
             // append to the buttons div
-            phone_buttons_div.appendChild(phone_edit_button);
+            phone_edit_div.appendChild(phone_edit_button);
+
+            // DELETE BUTTON DIV
+
+            // create the div
+            const phone_delete_div = document.createElement('div');
+
+            // test print
+            console.log(phone_delete_div);
+
+             // set it's class
+             phone_delete_div.classList.add('deletediv');
+
+             // set it's name for later toggling
+             phone_delete_div.setAttribute('id', 'deletediv');
+ 
+             // append to buttons div
+             phone_buttons_div.appendChild(phone_delete_div);
 
             // DELETE BUTTON
 
@@ -306,7 +340,7 @@ window.addEventListener('load', () => {
             console.log(phone_delete_button);
 
             // set it's class
-            phone_delete_button.classList.add('delete');
+            phone_delete_button.classList.add('deletebutton');
 
             // set the id (for the key of the firebase item)
                 // the id is the actual key
@@ -319,7 +353,7 @@ window.addEventListener('load', () => {
             phone_delete_button.style.backgroundSize = "29px"
 
             // append to the buttons div
-            phone_buttons_div.appendChild(phone_delete_button);
+            phone_delete_div.appendChild(phone_delete_button);
         }
     }
 
