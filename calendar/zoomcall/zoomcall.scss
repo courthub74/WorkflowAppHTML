@@ -216,39 +216,11 @@ $textfield: #4375C0;
                                         align-items: center;
                                         height: 100%;
                                         transition: all 300s ease;
+                                        label {
+                                            color: $textfield;
+                                        }
                                     }
                                 }
-                            }
-                            // the PHONE NUMBER section
-                            .zoomphone {
-                                // border: none;
-                                // background-color: $textfield;
-                                // color: white;
-                                // font-size: 2.3vh;
-                                // width: 780px;
-                                // text-align: center;
-                                // margin: 0 auto;
-                                // padding-right: 78px;
-                            }
-                            // the TOPIC section
-                            .zoomtopic {
-                                // border: none;
-                                // background-color: $textfield;
-                                // color: white;
-                                // font-size: 2.3vh;
-                                // width: 790px;
-                                // text-align: center;
-                                // margin: 0 auto;
-                                // padding-right: 59.5px;
-                            }
-                            // the LINK section
-                            .zoomlink {
-                                // border: none;
-                                // background-color: $textfield;
-                                // color: white;
-                                // font-size: 2.3vh;
-                                // width: 780px;
-                                // text-align: center;
                             }
                         }
                         hr {
@@ -264,16 +236,26 @@ $textfield: #4375C0;
                             gap: 12px;
                             padding: 90px 0px 0px 20px;
                             // background-color: aqua;
+                            .calendar {
+                                // background-color: aqua;
+                                text-align: center;
+                                padding: 80px 160px 0px 0px;
+                                // width: 600px;
+                                .back {
+                                    a {
+                                        color: white;
+                                        font-size: 2.1vh;
+                                    }
+                                }
+                            }
                             .subbutton {
                                 // background-color: aqua;
                                 padding-left: 12px;
-                                // padding-left: 60px;
                                 button {
-                                    position: relative;
                                     border: none;
                                     border-radius: 50%;
-                                    width: 100px;
-                                    height: 100px;
+                                    width: 120px;
+                                    height: 120px;
                                     color: $textfield;
                                     background-color: white;
                                     font-weight: bold;
@@ -281,36 +263,10 @@ $textfield: #4375C0;
                                     cursor: pointer;
                                 }
                             }
-                            .subalert {
-                                background-color: green; 
-                                height: 40px;              
-                                // padding-left: 80px;
-                                // width: 200px;
-                                #subalert {
-                                    position: sticky;
-                                    color: white;
-                                    font-size: small;
-                                    // width: 100px;
-                                }
-                            }
-                            .calendar {
-                                // background-color: aqua;
-                                text-align: center;
-                                padding: 80px 160px 0px 0px;
-                                // width: 600px;
-                                .back {
-                                    
-                                    a {
-                                        color: white;
-                                        font-size: 2.1vh;
-                                    }
-                                }
-                            }
                             .list {
                                 // background-color: aqua;
                                 text-align: center;
                                 padding: 80px 10px 0px 145px;
-                                // width: 700px;
                                 .zoomslist {
                                     a {
                                         color: white;

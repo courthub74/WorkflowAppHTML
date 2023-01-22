@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+* body {
+  height: 100vh;
+}
 * body .sidebar {
   background-color: #243F67;
   width: 280px;
@@ -67,47 +70,64 @@
 * body .sidebar .logoutbutton .logout a {
   color: #243F67;
 }
-* body .page {
+* body .container {
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+* body .container .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 70px;
   padding-left: 280px;
   line-height: 40px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-* body .page h1 {
+* body .container .page h1 {
   color: #4375C0;
   font-size: 3.5rem;
   padding-bottom: 80px;
-  padding-left: 20px;
+  padding-right: 70px;
 }
-* body .page .outline {
+* body .container .page .outline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #243F67;
   border-radius: 5px;
   height: 650px;
   padding: 40px;
 }
-* body .page .outline .zooms {
+* body .container .page .outline .zooms {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 20px 30px 0px 0px;
   height: 550px;
   overflow-y: scroll;
 }
-* body .page .outline .zooms #zoom_items {
+* body .container .page .outline .zooms #zoom_items {
+  display: flex;
   background-color: #4375C0;
   padding: 2rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease-in;
   border-radius: 5px;
 }
-* body .page .outline .zooms #zoom_items #content input {
+* body .container .page .outline .zooms #zoom_items #content {
+  width: 100%;
+}
+* body .container .page .outline .zooms #zoom_items #content input {
   background-color: #4375C0;
   border: none;
   text-align: center;
 }
-* body .page .outline .zooms #zoom_items #content input:focus {
+* body .container .page .outline .zooms #zoom_items #content input:focus {
   background-color: #4375C0;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -116,66 +136,89 @@
   outline: none;
   text-align: center;
 }
-* body .page .outline .zooms #zoom_items #content #zoomname {
+* body .container .page .outline .zooms #zoom_items #content #zoomname {
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
   width: 220px;
 }
-* body .page .outline .zooms #zoom_items #content #zoomdate {
+* body .container .page .outline .zooms #zoom_items #content #zoomdate {
   color: white;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .outline .zooms #zoom_items #content #zoomtime {
+* body .container .page .outline .zooms #zoom_items #content #zoomtime {
   color: #FFF7D6;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .outline .zooms #zoom_items #content #zoomnumber {
+* body .container .page .outline .zooms #zoom_items #content #zoomnumber {
   color: #FEFC00;
   font-size: 1.1rem;
   width: 150px;
 }
-* body .page .outline .zooms #zoom_items #content #zoomtopic {
+* body .container .page .outline .zooms #zoom_items #content #zoomtopic {
   color: #6cce63;
   font-weight: bold;
   font-size: 1.2rem;
   width: 300px;
-  padding-left: 10px;
 }
-* body .page .outline .zooms #zoom_items #content #zoomlink {
+* body .container .page .outline .zooms #zoom_items #content #zoomlink {
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 5px;
   width: 350px;
 }
-* body .page .outline .zooms::-webkit-scrollbar {
+* body .container .page .outline .buttons {
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+}
+* body .container .page .outline .buttons .delete {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 10px;
+  color: white;
+}
+* body .container .page .outline .buttons .edit {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 10px;
+  background-color: #4375C0;
+  color: #4375C0;
+}
+* body .container .page .outline .zooms::-webkit-scrollbar {
   border: 1px solid #4375C0;
   border-radius: 10px;
 }
-* body .page .outline .zooms::-webkit-scrollbar-thumb {
+* body .container .page .outline .zooms::-webkit-scrollbar-thumb {
   background: #4375C0;
   border: 1px #4375C0 solid;
   border-radius: 10px;
 }
-* body .page .outline .settings {
+* body .container .page .outline .settings {
   display: flex;
+  width: 100%;
   justify-content: right;
   padding: 5px 50px 0px 0px;
 }
-* body .page .outline .settings #gear {
+* body .container .page .outline .settings #gear {
   height: 40px;
   padding: 5px 5px 5px 0px;
 }
-* body .page .outline .settings #gear img {
+* body .container .page .outline .settings #gear img {
   width: 25px;
   height: 25px;
 }
-* body .page .outline .settings a {
+* body .container .page .outline .settings a {
   color: #243F67;
   font-weight: bold;
   font-size: 1.3rem;

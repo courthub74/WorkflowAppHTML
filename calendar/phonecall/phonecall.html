@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="10"> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="phonecall.css">
@@ -45,6 +46,16 @@
                     <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                     <span class="item">spreadsheet</span>
                 </a></li>
+                
+                <li><a href="#">
+                    <span class="icon"><img src="/img/contracts.png" alt="calendar"></span>
+                    <span class="item">contracts</span>
+                </a></li>
+
+                <li><a href="#">
+                    <span class="icon"><img src="/img/coins.png" id="coins" alt="calendar"></span>
+                    <span class="item">payments</span>
+                </a></li>
             </ul>
         </div>
 
@@ -54,94 +65,126 @@
         </div>
     </div>
 
+    <!-- PAGE PART -->
     <div class="page">
         <form id="phoneform" action="POST">
             <h1>Phone Call</h1>
 
+            <!-- The Phone Call Box -->
             <div class="apptbox">
-
-                <div id="phonename">
-
-                    <h3 class="name">name:</h3>
-
+                <!-- The Name Line -->
+                <div class="phoneentry">
+                    <h3 class="title">name:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="phone"
+                            class="phonename"
                             id="name"
-                        />
+                            required/>
                     </div>
-
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonedate">
-                    <h3 class="date">date:</h3>
-                    <div class="dateentry">
+                <!-- The Date Line -->
+                <div class="phoneentry">
+                    <h3 class="title">date:</h3>
+                    <div class="phonedate">
                         <!-- datepicker here -->
                         <!-- Month -->
-                        <select name="month" id="month">
+                        <select name="date" id="date">
                             <option disabled selected>Select Here</option>
-                            <option value="January">Jan 1 2023</option>
-                            <option value="January">Jan 2 2023</option>
-                            <option value="January">Jan 3 2023</option>
-                            <option value="January">Jan 4 2023</option>
-                            <option value="January">Jan 5 2023</option>
-                            <option value="January">Jan 6 2023</option>
-                            <option value="January">Jan 7 2023</option>
-                            <option value="January">Jan 8 2023</option>
-                            <option value="January">Jan 9 2023</option>
-                            <option value="January">Jan 10 2023</option>
+                            <option value="1/1/2023">Jan 1 2023</option>
+                            <option value="1/2/2023">Jan 2 2023</option>
+                            <option value="1/3/2023">Jan 3 2023</option>
+                            <option value="1/4/2023">Jan 4 2023</option>
+                            <option value="1/5/2023">Jan 5 2023</option>
+                            <option value="1/6/2023">Jan 6 2023</option>
+                            <option value="1/7/2023">Jan 7 2023</option>
+                            <option value="1/8/2023">Jan 8 2023</option>
+                            <option value="1/9/2023">Jan 9 2023</option>
+                            <option value="1/10/2023">Jan 10 2023</option>
                         </select>
                     </div>
-
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonetimes">
-
-                    <h3 class="time">time:</h3>
-
-                    <!-- <input type="time" id="timeclock"> -->
-
+                <!-- The Time Line -->
+                <div class="phoneentry">
+                    <h3 class="title">time:</h3>
+                    <!-- Section of all the time buttons -->
                     <div id="timebuttons">
-                        <button type="button" id="two" class="hour" value="2:00PM">2:00PM</button>
-                        <button type="button" id="three" class="hour" value="3:00PM">3:00PM</button>
-                        <button type="button" id="four" class="hour" value="4:00PM">4:00PM</button>
-                        <button type="button" id="five" class="hour" value="5:00PM">5:00PM</button>
-                        <button type="button" id="six" class="hour" value="6:00PM">6:00PM</button>
-                        <button type="button" id="seven" class="hour" value="7:00PM">7:00PM</button>
+
+                        <!-- 2 PM -->
+                        <div class="input-container" id="containertwo">
+                            <input type="radio" name="timebutt" id="two" class="hour" value="2:00PM"></input>
+                            <div class="radio-tile" id="tiletwo">
+                                <label for="2pm" id="labeltwo">2:00PM</label>
+                            </div>
+                        </div>
+                        <!-- 3 PM -->
+                        <div class="input-container" id="containerthree">
+                            <input type="radio" name="timebutt" id="three" class="hour" value="3:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="3pm" id="labelthree">3:00PM</label>
+                            </div>
+                        </div>
+
+                        <!-- 4 PM -->
+                        <div class="input-container" id="containerfour">
+                            <input type="radio" name="timebutt" id="four" class="hour" value="4:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="4pm" id="labelfour">4:00PM</label>
+                            </div>
+                        </div>
+                        
+                        <!-- 5 PM -->
+                        <div class="input-container" id="containerfive">
+                            <input type="radio" name="timebutt" id="five" class="hour" value="5:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="5pm" id="labelfive">5:00PM</label>
+                            </div>
+                        </div>
+                        
+                        <!-- 6 PM -->
+                        <div class="input-container" id="containersix">
+                            <input type="radio" name="timebutt" id="six" class="hour" value="6:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="6pm" id="labelsix">6:00PM</label>
+                            </div>
+                        </div>
+
+                        <!-- 7 PM -->
+                        <div class="input-container" id="containerseven">
+                            <input type="radio" name="timebutt" id="seven" class="hour" value="7:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="7pm" id="labelseven">7:00PM</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonenumber">
-
-                    <h3 class="number">phone:</h3>
+                <!-- The Phone Line -->
+                <div class="phoneentry">
+                    <h3 class="title">phone:</h3>
                     <div class="inputfield">
                         <input 
                             type="tel"
-                            class="phone"
+                            class="phonephone"
                             id="phone"
-                            required
-                        />
+                            required/>
                     </div>
                 </div>
-
+                <!-- UnderLine -->
                 <hr>
-
-                <div id="phonetopic">
-
-                    <h3 class="topic">topic:</h3>
-                    
+                <!-- The Topic Line -->
+                <div class="phoneentry">
+                    <h3 class="title">topic:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="topic"
-                            id="name"
+                            class="phonetopic"
+                            id="topic"
                         />
                     </div>
                 </div>
@@ -149,9 +192,18 @@
                 <hr>
 
                 <div class="buttondiv">
-                    <p class="back"><a href="/calendar/calendar.html">Back to Calendar</a></p>
-                    <button class="submit" type="submit">Submit</button>
-                    <p class="callslist"><a href="#">Go to Phone Calls List</a></p>
+                    <div class="calendar">
+                    <!-- Back to Calendar Link-->
+                        <p class="back"><a href="/calendar/calendar.html">Back to Calendar</a></p>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="subbutton">
+                        <button class="submit" type="submit" id="submit">Submit</button>
+                    </div>
+                    <!-- Go to phone Call List Link -->
+                    <div class="list">
+                        <p class="callslist"><a href="/calendar/phonecall/phonecalllist.html">Go to Phone Calls List</a></p>
+                    </div>
                 </div>
                 
             </div>
