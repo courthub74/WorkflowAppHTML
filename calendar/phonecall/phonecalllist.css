@@ -108,14 +108,13 @@
   color: #296124;
   font-size: 1.2rem;
   width: 205px;
-  margin: auto;
 }
 * body .container .page .outline .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 40px;
   gap: 5px;
 }
 * body .container .page .outline .buttons .deletediv .deletebutton {
