@@ -298,6 +298,9 @@ window.addEventListener('load', () => {
             // set it's name for later toggling
             phone_edit_button.setAttribute('name', 'edit');
 
+            // set the alt
+            phone_edit_button.setAttribute('alt', 'Edit');
+
             // set the id (for the key of the firebase item)
                 // the id is the actual key
             phone_edit_button.setAttribute('id', callsall.id);
@@ -325,6 +328,7 @@ window.addEventListener('load', () => {
              // set it's class
              phone_delete_div.classList.add('deletediv');
 
+
              // set it's name for later toggling
              phone_delete_div.setAttribute('id', 'deletediv');
  
@@ -341,6 +345,9 @@ window.addEventListener('load', () => {
 
             // set it's class
             phone_delete_button.classList.add('deletebutton');
+
+            // set the alt
+            phone_delete_button.setAttribute('alt', 'Delete');
 
             // set the id (for the key of the firebase item)
                 // the id is the actual key

@@ -143,10 +143,12 @@ $timeblue: #2572C6;
                             align-items: center;
                             margin-top: 5px;
                             margin-left: 20px;
+                            gap: 5px;
                             // background-color: lightgreen;
                             .deletediv {
                                 // background-color: lightblue;
                                 .deletebutton {
+                                    cursor: pointer;
                                     width: 33px;
                                     height: 30px;
                                     border: none;
@@ -155,6 +157,7 @@ $timeblue: #2572C6;
                             .editdiv {
                                 // background-color: lightcoral;
                                 .editbutton {
+                                    cursor: pointer;
                                     width: 32px;
                                     height: 30px;
                                     border: none;
