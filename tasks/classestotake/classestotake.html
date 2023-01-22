@@ -65,7 +65,7 @@
             <h1>Classes to take</h1>
 
             <!-- Form Field in Header -->
-            <form id="classes-form">
+            <form id="classes-fill-form">
 
                 <!-- Input Field -->
                 <input 
@@ -82,28 +82,47 @@
         </header>
 
         <main>
-
             <!-- The List -->
-            <section class="task-list">
-                <p>the list:</p>
+            <section class="classes-list">
+                
+                <div class="outline">
 
+                    <div id="classes_block">
 
-                <div id="tasks">
+                            <!-- THIS IS CREATED IN THE DOM  -->
+                            <!-- CONTENT and BUTTONS go in here -->
 
-                    <!-- Created in the DOM -->
-                    <!-- <input class="text" id="task"/> -->
+                            <!-- THIS IS WHATS CREATED EVERY TIME A TODO IS ENTERED -->
+                            <!-- THESE EXIST IN AND OF ITSELF -->
 
-                    <!-- <p class="task">Something</p> -->
+                            <div id="classes_items">
+                                <!-- CONTENT PART -->
+                                <div id="content">
+                                    <input type="text"
+                                        class="text"
+                                        id="classtotake"
+                                        value="${Todo Item}"
+                                        readonly/>
+                                </div>
+                                <!-- BUTTONS PART -->
+                                <div id="buttons">
+                                    <button class="edit">edit</button>
+                                    <button class="delete">delete</button>
+                                    <button class="cross">cross-off</button>
+                                </div>
+                            </div>
+                    </div>
 
-                    <!-- The Action Buttons -->
-
-                    <!--  
-                    <button class="edit">Edit</button>
-                    <button class="crossoff">Cross Off</button>
-                    <button class="delete">Delete</button>
-                    -->
+                    <!-- Go Back Button -->
+                    <div class="back">
+                        <div id="arrow">
+                            <img src="/img/go-back-arrow.png" alt="go-back-arrow">
+                        </div>
+                        <span><a href="/tasks/tasks.html">Back to Tasks Menu</a></span>
+                    </div>
 
                 </div>
+
 
             </section>
         </main>

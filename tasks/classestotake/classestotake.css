@@ -85,7 +85,7 @@
   font-weight: 400;
   margin-bottom: 1rem;
 }
-* body .wrapper .header #classes-form {
+* body .wrapper .header #classes-fill-form {
   display: flex;
 }
 * body .wrapper .header #classes-input {
@@ -129,40 +129,42 @@
   max-width: 800px;
   margin: 0 auto;
 }
-* body .wrapper main .task-list {
+* body .wrapper main .classes-list {
   padding: 1rem;
 }
-* body .wrapper main .task-list #tasks {
+* body .wrapper main .classes-list .outline {
   border: 2px solid #243F67;
-  padding: 30px;
+  height: 655px;
+  padding: 40px;
 }
-* body .wrapper main .task-list #tasks .classes {
-  display: flex;
-  justify-content: space-between;
+* body .wrapper main .classes-list .outline #classes_block {
+  padding: 30px;
+  overflow-y: scroll;
+  height: 550px;
+}
+* body .wrapper main .classes-list .outline #classes_block #classes_items {
   background-color: #243F67;
-  color: white;
   padding: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: space-between;
 }
-* body .wrapper main .task-list #tasks .classes p #content .text {
-  font-weight: 600;
+* body .wrapper main .classes-list .outline #classes_block #classes_items #content {
+  display: flex;
+  justify-content: space-between;
 }
-* body .wrapper main .task-list #tasks .classes p #content .crossed {
-  text-decoration: line-through;
-}
-* body .wrapper main .task-list #tasks .classes p #content .uncrossed {
-  text-decoration: none;
-}
-* body .wrapper main .task-list #tasks .classes p #content input {
+* body .wrapper main .classes-list .outline #classes_block #classes_items #content input {
   background-color: #243F67;
-  border: none;
   color: white;
-  font-size: 1.5rem;
-  width: 100%;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.4s ease-in;
+  width: 300px;
 }
-* body .wrapper main .task-list #tasks .classes p #content input:not(:-moz-read-only) {
-  color: #E1F5F3;
+* body .wrapper main .classes-list .outline #classes_block #classes_items #content input:not(:-moz-read-only) {
+  color: #3C908B;
   -moz-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   -moz-appearance: none;
@@ -170,8 +172,8 @@
   border: none;
   outline: none;
 }
-* body .wrapper main .task-list #tasks .classes p #content input:not(:read-only) {
-  color: #E1F5F3;
+* body .wrapper main .classes-list .outline #classes_block #classes_items #content input:not(:read-only) {
+  color: #3C908B;
   transition: all 0.4s ease-in;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -179,11 +181,11 @@
   border: none;
   outline: none;
 }
-* body .wrapper main .task-list #tasks .classes .actions {
+* body .wrapper main .classes-list .outline #classes_block #buttons {
   display: flex;
   margin: 0 -0.5rem;
 }
-* body .wrapper main .task-list #tasks .classes .actions button {
+* body .wrapper main .classes-list .outline #classes_block #buttons button {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 1rem;
@@ -191,21 +193,44 @@
   text-transform: uppercase;
   transition: 0.4s;
 }
-* body .wrapper main .task-list #tasks .classes .actions .edit {
+* body .wrapper main .classes-list .outline #classes_block #buttons .edit {
   background-color: #243F67;
   color: #11B386;
   border: none;
   font-size: 15px;
 }
-* body .wrapper main .task-list #tasks .classes .actions .delete {
+* body .wrapper main .classes-list .outline #classes_block #buttons .delete {
   color: #3292FA;
   background-color: #243F67;
   border: none;
   font-size: 15px;
 }
-* body .wrapper main .task-list #tasks .classes .actions .cross {
+* body .wrapper main .classes-list .outline #classes_block #buttons .cross {
   color: #FFF7D6;
   background-color: #243F67;
   border: none;
   font-size: 15px;
+}
+* body .wrapper main .classes-list #classes_block::-webkit-scrollbar {
+  border: 1px solid #243F67;
+  border-radius: 10px;
+}
+* body .wrapper main .classes-list #classes_block::-webkit-scrollbar-thumb {
+  background: #243F67;
+  border-radius: 10px;
+}
+* body .wrapper main .classes-list .back {
+  display: flex;
+  justify-content: right;
+  padding: 20px 50px 0px 0px;
+}
+* body .wrapper main .classes-list .back #arrow img {
+  width: 20px;
+  height: 20px;
+}
+* body .wrapper main .classes-list .back a {
+  color: #243F67;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-left: 5px;
 }/*# sourceMappingURL=classestotake.css.map */
