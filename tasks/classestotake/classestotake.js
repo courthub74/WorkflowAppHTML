@@ -63,18 +63,18 @@ window.addEventListener('load', () => {
             // TO DATABASE
 
             // NOW this is where we push the todo variable to the firebaseTodo db reference
-            // HERE is where you set the list for deliverable and crossed
+            // HERE is where you set the list for classes and crossed
                 // set crossed as false by default
             // firebaseClassesRef.push({class});
             // store the push of fb ref into a variable
             var newClassRef = firebaseClassesRef.push();
-            // now set the variable to the deliverable and crossed library
+            // now set the variable to the classes and crossed library
             newClassRef.set({
                 classtotake,
                 crossed: false
             });
 
-            // test print the deliverable and crossed status
+            // test print the classes and crossed status
             console.log('CLASS ===', classtotake);
             console.log('CROSSED ===', crossed);
         });
@@ -301,10 +301,62 @@ window.addEventListener('load', () => {
                         // store the id in a variable that is the target of event (the key)
                         let id = e.target.id;
                         // test print
-                        console.log('editbutton id for this deliverable ===', id);
+                        console.log('editbutton id for this classes ===', id);
                         // check the text in order to change it
+                        if (classes_edit_button.innerText.toLowerCase() === "edit"){
+                            // test print text with the id
+                            // console.log(project_edit_button, id);
+                            // change the innerText
+                            classes_edit_button.innerText = "SAVE";
+                            // remove the readonly attribute from the input field so you can edit the field
+                            classes_input_element.removeAttribute('readonly', true);
+                            // place the cursor inside the field to be edited
+                            classes_input_element.focus();
+                        } else {
+                            // check the text in order to change it
+                        if (classes_edit_button.innerText.toLowerCase() === "save"){
+                            // test print text with the id
+                            // console.log("save button pressed", id);
+                            // change the innerText
+                            classes_edit_button.innerText = "EDIT";
+                            // set the readonly attribute to the input field so you can't edit
+                            classes_input_element.setAttribute('readonly', true);
+                            // NOW save the change to firebase
+                            // NOW keep the edit in firebase
+                            let updated = classes_input_element.value;
+                            // test print
+                            console.log(`The key value for this classes is: ${id}`);
+                            console.log('The input value for this classes is now:', updated);
+                             // NOW edit in firebase
+                                // locate the firebase reference by each item id
+                                    // apply the update function
+                                        // it sets updated value with a new key
+                                            // that is declared earlier in the data.push ['classtotake']
+                            firebase.database().ref(`classes/${id}`).update({classtotake: updated});
+                        }
+                    }
+                });
+
+                // DELETE BUTTON
+                // this is where you:
+                    // remove the input element from the display
+                    // remove the data element from firebase
+                    classes_delete_button.addEventListener('click', (e) => {
+                        // keep from bubbling up
+                        e.stopPropagation();
+                        // store the id in a variable that is the target of event
+                        let id = e.target.id;
+                        // test print the delete button
+                        console.log("delete button pressed", id);
+                        // remove the child input (DELIVERABLE ITEMS or CONTENT) from the (DELIVERABLES BLOCK)
+                        classes_list_element.removeChild(class_items);
+                        // NOW to remove the data element from firebase
+                        // test print the location in the db
+                        console.log(`The key value for this deliverable is: ${id}`);
+                        // NOW delete it in the firebase 
+                        firebase.database().ref(`classes/${id}`).remove();
                     });
-                }
+            }
         }
         // TO DATABASE
         // Event Listener to submit button(get the submit button ID)
