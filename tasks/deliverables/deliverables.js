@@ -123,6 +123,7 @@ window.addEventListener('load', () => {
                         // firebase todo db list which happens to be deliverables
                             // the last bracket is for the render to locate the new key set 
                                 // push the item with the key into the project key name['deliverable']
+                                    // this is the name that was orig pushed to the fb db
                     item: deliverables[element]['deliverable'],
                 });
                 // test print the data array

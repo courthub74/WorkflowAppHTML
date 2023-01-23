@@ -142,19 +142,17 @@
   overflow-y: scroll;
   height: 550px;
 }
-* body .wrapper main .classes-list .outline #classes_block #classes_items {
+* body .wrapper main .classes-list .outline #classes_block .class_items {
   background-color: #243F67;
   padding: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in;
+}
+* body .wrapper main .classes-list .outline #classes_block .class_items #content {
   display: flex;
   justify-content: space-between;
 }
-* body .wrapper main .classes-list .outline #classes_block #classes_items #content {
-  display: flex;
-  justify-content: space-between;
-}
-* body .wrapper main .classes-list .outline #classes_block #classes_items #content input {
+* body .wrapper main .classes-list .outline #classes_block .class_items #content input {
   background-color: #243F67;
   color: white;
   border: none;
@@ -163,7 +161,7 @@
   transition: all 0.4s ease-in;
   width: 300px;
 }
-* body .wrapper main .classes-list .outline #classes_block #classes_items #content input:not(:-moz-read-only) {
+* body .wrapper main .classes-list .outline #classes_block .class_items #content input:not(:-moz-read-only) {
   color: #3C908B;
   -moz-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
@@ -172,7 +170,7 @@
   border: none;
   outline: none;
 }
-* body .wrapper main .classes-list .outline #classes_block #classes_items #content input:not(:read-only) {
+* body .wrapper main .classes-list .outline #classes_block .class_items #content input:not(:read-only) {
   color: #3C908B;
   transition: all 0.4s ease-in;
   -webkit-appearance: none;
@@ -181,11 +179,11 @@
   border: none;
   outline: none;
 }
-* body .wrapper main .classes-list .outline #classes_block #buttons {
+* body .wrapper main .classes-list .outline #classes_block .buttons {
   display: flex;
   margin: 0 -0.5rem;
 }
-* body .wrapper main .classes-list .outline #classes_block #buttons button {
+* body .wrapper main .classes-list .outline #classes_block .buttons button {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 1rem;
@@ -193,20 +191,20 @@
   text-transform: uppercase;
   transition: 0.4s;
 }
-* body .wrapper main .classes-list .outline #classes_block #buttons .edit {
+* body .wrapper main .classes-list .outline #classes_block .buttons .edit {
   background-color: #243F67;
   color: #11B386;
   border: none;
   font-size: 15px;
 }
-* body .wrapper main .classes-list .outline #classes_block #buttons .delete {
+* body .wrapper main .classes-list .outline #classes_block .buttons .delete {
   color: #3292FA;
   background-color: #243F67;
   border: none;
   font-size: 15px;
 }
-* body .wrapper main .classes-list .outline #classes_block #buttons .cross {
-  color: #FFF7D6;
+* body .wrapper main .classes-list .outline #classes_block .buttons .cross {
+  color: white;
   background-color: #243F67;
   border: none;
   font-size: 15px;

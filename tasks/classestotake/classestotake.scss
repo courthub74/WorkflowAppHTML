@@ -172,20 +172,11 @@ $cream: #FFF7D6;
                             padding: 30px;
                             overflow-y: scroll;
                             height: 550px;
-                            // display: flex;
-                            // justify-content: space-between;
-                            // background-color: $darkblue;
-                            // color: white;
-                            // padding: 1rem;
-                            // margin-bottom: 1rem;
-                            // transition: all .3s ease-in;
-                            #classes_items {
+                            .class_items {
                                 background-color: $darkblue;
                                 padding: 1rem;
                                 margin-bottom: 1rem;
                                 transition: all .3s ease-in;
-                                display: flex;
-                                justify-content: space-between;
                                 #content {
                                     display: flex;
                                     justify-content: space-between;
@@ -208,7 +199,7 @@ $cream: #FFF7D6;
                                     }
                                 }
                             }
-                            #buttons {
+                            .buttons {
                                 display: flex;
                                 margin: 0 -0.5rem;
                                 button {
@@ -234,7 +225,7 @@ $cream: #FFF7D6;
                                     // padding: 1rem;
                                 }
                                 .cross {
-                                    color: $cream;
+                                    color: white;
                                     background-color: $darkblue;
                                     border: none;
                                     font-size: 15px;
