@@ -4,6 +4,7 @@
 // COLORS
 $darkblue: #243F67;
 $background: #F3F9FF;
+$deliverablesgreen: rgb(6, 65, 6);
 
 * {
     list-style: none;
@@ -126,29 +127,35 @@ $background: #F3F9FF;
                 gap: 100px;
                 #deliverables {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #deliverables:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
                 #projects {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #projects:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
                 #practices {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #practices:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
             }
@@ -159,29 +166,35 @@ $background: #F3F9FF;
                 // padding-left: 150px;
                 #classes {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #classes:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
                 #freelance {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #freelance:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
                 #appointments {
                     border: 3px solid $darkblue;
-                    color: $darkblue;
+                    border-radius: 5px;
+                    color: $background;
+                    background-color: $darkblue;
                 }
                 #appointments:hover {
-                    background-color: $darkblue;
-                    color: $background;
+                    background-color: $background;
+                    color: $darkblue;
                     transition: all .5s ease-in;
                 }
             }

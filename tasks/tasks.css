@@ -116,29 +116,35 @@
 }
 * .wrapper .page .buttons .col1 #deliverables {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col1 #deliverables:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col1 #projects {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col1 #projects:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col1 #practices {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col1 #practices:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 {
@@ -148,28 +154,34 @@
 }
 * .wrapper .page .buttons .col2 #classes {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col2 #classes:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 #freelance {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col2 #freelance:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }
 * .wrapper .page .buttons .col2 #appointments {
   border: 3px solid #243F67;
-  color: #243F67;
+  border-radius: 5px;
+  color: #F3F9FF;
+  background-color: #243F67;
 }
 * .wrapper .page .buttons .col2 #appointments:hover {
-  background-color: #243F67;
-  color: #F3F9FF;
+  background-color: #F3F9FF;
+  color: #243F67;
   transition: all 0.5s ease-in;
 }/*# sourceMappingURL=tasks.css.map */
