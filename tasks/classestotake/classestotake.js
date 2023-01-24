@@ -356,6 +356,111 @@ window.addEventListener('load', () => {
                         // NOW delete it in the firebase 
                         firebase.database().ref(`classes/${id}`).remove();
                     });
+
+                    // CROSS OFF BUTTON
+
+                // FIRST use the once method on the original DB reference 
+                    // to get the boolean value of the deliverable item 'crossed'
+                        // LATER it will be toggled to true or false 
+                firebaseClassesRef.once('value', getbool);
+                // NOW create a function to get the boolean value 
+                    // of the arguement in the above method
+                function getbool(classbool){
+                    // print the value of the boolean
+                    console.log(classbool.val());
+                    // store it in a variable
+                    var classbool = classbool.val();
+                    // test print
+                    console.log('boolean ===', classbool);
+                    // create an empty array to push the booleans in
+                    var bools = [];
+                    // iterate through the booleans by their key
+                    Object.keys(classbool).forEach(element => {
+                        // push to bools
+                        bools.push({
+                            // pushing the id #
+                            id: element,
+                            // pushin the boolean to 'crossed' item
+                            item: classbool[element]['crossed']
+                        });
+                        // test print the boolean list
+                        console.log('bools ===', bools);
+                    });
+                    // // NOW iterate through and then 
+                        // create a variable for the boolean value
+                            // to compare to.
+                                // dont forget to create the key value first
+                    for (let b = 0; b < bools.length; b++){
+                        // store the iterations in a variable
+                        var crosseds = bools[i];
+                        // test print
+                        console.log('boolsall ===', crosseds);
+                        // store the item value in a variable
+                        let crossv = crosseds.item;
+                        // test print
+                        console.log(crossv);
+                        // NOW if bool item === true set the css
+                            // textDecoration to line-through
+                        if(crossv === true){
+                            // change the css of the input
+                            classes_input_element.style.textDecoration = "line-through";
+                            // change the innerHTML of cross-off button
+                            classes_cross_button.innerText = "uncross";
+                            // make edit button dissapear
+                            classes_edit_button.style.display = "none";
+                            // test print innerText
+                            console.log('CROSSV ===',crossv);
+                        } else {
+                            // if bool item === false set the css
+                                // textDecoration to none
+                            if(crossv === false){
+                                // change the css of the input
+                                classes_input_element.style.textDecoration = "none";
+                                // change the innerHTML of cross-off button
+                                classes_cross_button.innerText = "cross-off";
+                                // make edit button dissapear
+                                classes_edit_button.style.display = "block";
+                                // test print innerText
+                                console.log('CROSSV ===',crossv);
+                            }
+                        }
+                    }
+                    // this is where you:
+                        // I need to reference the input item by id
+                        // then change the 'crossed' item between true and false
+                        // first add an event listener
+                    classes_cross_button.addEventListener('click', (e) => {
+                        // store the id in a variable that is the target of event
+                        let id = e.target.id;
+                        // read the innerText of the cross button
+                            // use an if statement to determine
+                            if (classes_cross_button.innerText.toLowerCase() === "cross-off"){
+                                // test print the cross button
+                                console.log("cross-off button pressed");
+                                // test print the location in the db
+                                console.log(`The key value for this cross-off deliverable is: ${id}`);
+                                // print the crossed var
+                                console.log('CROSSEDS ===', crosseds);
+                                // NOW just apply an update to the crossed item
+                                    // through the firebase db
+                                firebase.database().ref(`classes/${id}`).update({crossed: true});
+                            } else {
+                                // read the innerText of the cross button
+                                    // use an if statement to determine
+                                if (classes_cross_button.innerText.toLowerCase() === "uncross"){
+                                    // test print uncross button
+                                    console.log("uncross button pressed");
+                                    // test print the location in the db
+                                    console.log(`The key value for this cross-off deliverable is: ${id}`);
+                                    // print the crossed var
+                                    console.log(crosseds);
+                                    // NOW just apply an update to the crossed item
+                                        // through the firebase db
+                                    firebase.database().ref(`classes/${id}`).update({crossed: false});
+                                }
+                            }
+                    });
+                }
             }
         }
         // TO DATABASE

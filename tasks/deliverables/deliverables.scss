@@ -116,6 +116,7 @@ $deletebuttonblue:#3292FA;
             #deliverables-input {
                 flex: 1 1 0%;
                 background-color: $darkblue;
+                border-radius: 5px;
                 color: white;
                 padding: 1rem;
                 margin-right: 1rem;
@@ -136,12 +137,22 @@ $deletebuttonblue:#3292FA;
                 cursor: pointer;
                 color: $darkblue;
                 border: $darkblue 2px solid;
+                border-radius: 5px;
                 background: none;
                 text-align: center;
                 width: 175px;
             }
             #deliverables-submit:active {
+                opacity: 0.6;
+                background-color: $darkblue;
+                color: $background;
+                transition: all .1s ease-in;
                 border-radius: 10px;
+            }
+            #deliverables-submit:hover {
+                background-color: $darkblue;
+                color: $background;
+                transition: all .1s ease-in;
             }
         }
 
@@ -167,6 +178,7 @@ $deletebuttonblue:#3292FA;
                             .deliverable_items{
                                 // background and slicing for each item
                                 background-color: $darkblue;
+                                border-radius: 5px;
                                 padding: 1rem;
                                 margin-bottom: 1rem;
                                 transition: all .3s ease-in;

@@ -91,6 +91,7 @@
 * .wrapper .header #deliverables-input {
   flex: 1 1 0%;
   background-color: #243F67;
+  border-radius: 5px;
   color: white;
   padding: 1rem;
   margin-right: 1rem;
@@ -117,12 +118,22 @@
   cursor: pointer;
   color: #243F67;
   border: #243F67 2px solid;
+  border-radius: 5px;
   background: none;
   text-align: center;
   width: 175px;
 }
 * .wrapper .header #deliverables-submit:active {
+  opacity: 0.6;
+  background-color: #243F67;
+  color: #F3F9FF;
+  transition: all 0.1s ease-in;
   border-radius: 10px;
+}
+* .wrapper .header #deliverables-submit:hover {
+  background-color: #243F67;
+  color: #F3F9FF;
+  transition: all 0.1s ease-in;
 }
 * .wrapper main {
   flex: 1 1 0%;
@@ -145,6 +156,7 @@
 }
 * .wrapper main .deliverables-list .outline #deliverables_block .deliverable_items {
   background-color: #243F67;
+  border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in;

@@ -91,6 +91,7 @@
 * body .wrapper .header #classes-input {
   flex: 1 1 0%;
   background-color: #243F67;
+  border-radius: 5px;
   color: white;
   padding: 1rem;
   margin-right: 1rem;
@@ -112,6 +113,7 @@
   background-color: #243F67;
 }
 * body .wrapper .header #classes-submit {
+  border-radius: 5px;
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
@@ -120,7 +122,16 @@
   background: none;
   padding: 5px;
 }
+* body .wrapper .header #classes-submit:hover {
+  background-color: #243F67;
+  color: #F3F9FF;
+  transition: all 0.1s ease-in;
+}
 * body .wrapper .header #classes-submit:active {
+  opacity: 0.6;
+  background-color: #243F67;
+  color: #F3F9FF;
+  transition: all 0.1s ease-in;
   border-radius: 10px;
 }
 * body .wrapper main {
@@ -144,6 +155,7 @@
 }
 * body .wrapper main .classes-list .outline #classes_block .class_items {
   background-color: #243F67;
+  border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in;
