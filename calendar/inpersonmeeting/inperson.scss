@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+// COLORS
+$darkblue: #243F67;
+$background: #F3F9FF;
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    body {
+        background-color: $background;
+        .wrapper {
+            display: flex;
+            .sidebar {
+                background-color: $darkblue;
+                width: 18vw;
+                height: 100vh;
+                padding: 2rem 0;
+                top: 0;
+                left: 0;
+                transition: all 0.5s ease-in;
+                .header {
+                    text-align: center;
+                    h2 {
+                        color: white;
+                        padding: 2rem;
+                    }
+                    img {
+                        width: 7vw;
+                        height: 13vh;
+                        // max-width: 120px;
+                        // min-width: 120px;
+                    }
+                }
+                .menu {
+                    padding: 6rem 0 0 1rem;
+                    ul {
+                        li {
+                            a {
+                                padding-left: 2rem;
+                                font-size: 1.3vw;
+                                color: white;
+                                text-decoration: none;
+                                // background-color: aqua;
+                                .icon {
+                                    img {
+                                        // background-color: purple;
+                                        margin-top: 2rem;
+                                        width: 25px;
+                                    }
+                                }
+                                .check {
+                                    height: 2vh;
+                                    img {
+                                        width: 3vh;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .logoutbutton {
+                    padding: 10rem 0 0 0;
+                    height: 2rem;
+                    text-align: center;
+                    .logout {
+                        width: 4vw;
+                        height: 4vw;
+                        border-radius: 50%;
+                        background-color: white;
+                        border: none;
+                        font-weight: bold;
+                        a {
+                            color: $darkblue;
+                            font-size: .7vw;
+                        }
+                    }
+                }
+            }
+            // PAGE PART
+            .page {
+                height: 100vh;
+                width: 100%;
+                padding: 8rem 15rem 15rem 15rem;
+                form {
+                    h1 {
+                        color: $darkblue;
+                        font-size: 2vw;
+                        padding: 0 0 3rem 0;
+                    }
+                    .apptbox {
+                        background-color: $darkblue;
+                        padding: 3rem;
+                        border-radius: 5px;
+                        .personentry {
+                            display: flex;
+                            padding: 1rem 1rem 1rem 0;
+                            .title {
+                                color: white;
+                                font-size: 1.3vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

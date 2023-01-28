@@ -1,1 +1,94 @@
-/*# sourceMappingURL=inperson.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+* body {
+  background-color: #F3F9FF;
+}
+* body .wrapper {
+  display: flex;
+}
+* body .wrapper .sidebar {
+  background-color: #243F67;
+  width: 18vw;
+  height: 100vh;
+  padding: 2rem 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in;
+}
+* body .wrapper .sidebar .header {
+  text-align: center;
+}
+* body .wrapper .sidebar .header h2 {
+  color: white;
+  padding: 2rem;
+}
+* body .wrapper .sidebar .header img {
+  width: 7vw;
+  height: 13vh;
+}
+* body .wrapper .sidebar .menu {
+  padding: 6rem 0 0 1rem;
+}
+* body .wrapper .sidebar .menu ul li a {
+  padding-left: 2rem;
+  font-size: 1.3vw;
+  color: white;
+  text-decoration: none;
+}
+* body .wrapper .sidebar .menu ul li a .icon img {
+  margin-top: 2rem;
+  width: 25px;
+}
+* body .wrapper .sidebar .menu ul li a .check {
+  height: 2vh;
+}
+* body .wrapper .sidebar .menu ul li a .check img {
+  width: 3vh;
+}
+* body .wrapper .sidebar .logoutbutton {
+  padding: 10rem 0 0 0;
+  height: 2rem;
+  text-align: center;
+}
+* body .wrapper .sidebar .logoutbutton .logout {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+* body .wrapper .sidebar .logoutbutton .logout a {
+  color: #243F67;
+  font-size: 0.7vw;
+}
+* body .wrapper .page {
+  height: 100vh;
+  width: 100%;
+  padding: 8rem 15rem 15rem 15rem;
+}
+* body .wrapper .page form h1 {
+  color: #243F67;
+  font-size: 2vw;
+  padding: 0 0 3rem 0;
+}
+* body .wrapper .page form .apptbox {
+  background-color: #243F67;
+  padding: 3rem;
+  border-radius: 5px;
+}
+* body .wrapper .page form .apptbox .personentry {
+  display: flex;
+  padding: 1rem 1rem 1rem 0;
+}
+* body .wrapper .page form .apptbox .personentry .title {
+  color: white;
+  font-size: 1.3vw;
+}/*# sourceMappingURL=inperson.css.map */

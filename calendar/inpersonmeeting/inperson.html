@@ -7,10 +7,12 @@
     <title>Zoom Call</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="zoomcall.css">
+    <link rel="stylesheet" href="inperson.css">
 </head>
 <body>
 
+    <!-- WRAPPER -->
+    <div class="wrapper">
      <!-- SIDEBAR -->
 
      <div class="sidebar">
@@ -58,12 +60,12 @@
     <div class="page">
 
         <form id="zoomform" action="POST">
-            <h1>Zoom Call</h1>
+            <h1>Meetings in person</h1>
 
             <!-- The Blue Zoom Box -->
             <div class="apptbox">
                 <!-- The Name Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">name:</h3>
                     <div class="inputfield">
                         <input 
@@ -75,9 +77,9 @@
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Date Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">date:</h3>
-                    <div class="zoomdate">
+                    <div class="persondate">
                         <!-- datepicker here -->
                         <!-- Month -->
                         <select name="date" id="date">
@@ -98,7 +100,7 @@
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Time Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">time:</h3>
                     <div id="timebuttons">
                         <button type="button" name="timebutt" id="two" class="hour" value="2:00PM">2:00PM</button>
@@ -113,36 +115,36 @@
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Phone Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">phone:</h3>
                     <div class="inputfield">
                         <input 
                             type="tel"
-                            class="zoomphone"
+                            class="personphone"
                             id="phone"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Topic Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">topic:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="zoomtopic"
+                            class="persontopic"
                             id="topic"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Zoom Link Line -->
-                <div class="zoomentry">
+                <div class="personentry">
                     <h3 class="title">link:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="zoomlink"
+                            class="personlink"
                             id="link"/>
                     </div>
                 </div>
@@ -159,7 +161,7 @@
                         <button class="submit" type="submit">Submit</button>
                     </div>
                     <div class="list">
-                        <p class="zoomslist"><a href="#">Go to Zoom Calls List</a></p>
+                        <p class="personslist"><a href="#">Go to Zoom Calls List</a></p>
                     </div>
                 </div>
             </div>
@@ -167,6 +169,8 @@
         </form>
 
     </div>
+
+</div>
 
 <!-- FIREBASE Connection -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
