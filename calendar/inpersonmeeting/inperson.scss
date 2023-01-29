@@ -27,7 +27,7 @@ $background: #F3F9FF;
                     text-align: center;
                     h2 {
                         color: white;
-                        padding: 2rem;
+                        padding: 1.5rem;
                     }
                     img {
                         width: 7vw;
@@ -64,7 +64,7 @@ $background: #F3F9FF;
                     }
                 }
                 .logoutbutton {
-                    padding: 10rem 0 0 0;
+                    padding: 7rem 0 0 0;
                     height: 2rem;
                     text-align: center;
                     .logout {
@@ -101,7 +101,129 @@ $background: #F3F9FF;
                             padding: 1rem 1rem 1rem 0;
                             .title {
                                 color: white;
-                                font-size: 1.3vw;
+                                font-size: 1.2vw;
+                            }
+                            // ALL the inputs
+                            .inputfield {
+                                width: 90%;
+                                margin: 0 3rem 0 3rem;
+                                // Position the inputs here
+                                // background-color: aqua;
+                                padding: .01rem;
+                                input {
+                                    border: none;
+                                    text-align: center;
+                                    width: 100%;
+                                    margin: .3rem 0 0 0;
+                                    padding: .3rem;
+                                    background-color: $darkblue;
+                                    color: white;
+                                }
+                                input:focus {
+                                    background-color: transparent;
+                                    appearance: none;
+                                    border: none;
+                                    outline: none;
+                                }
+                                input:-webkit-autofill,
+                                input:-webkit-autofill:hover,
+                                input:-webkit-autofill:focus {
+                                    border: none;
+                                    -webkit-text-fill-color: white;
+                                    -webkit-box-shadow: 0 0 10px 1000px $darkblue inset;
+                                    transition: background-color 5000s ease-in-out 2s;
+                                    font-size: 1.5vw;
+                                }
+                                input:-webkit-autofill::first-line {
+                                    font-size: 1.2vw;
+                                }
+                            }
+                            // the DATE section
+                            .persondate {
+                                // background-color: yellow;
+                                width: 100%;
+                                // padding: 0rem 0rem 0rem 10rem;
+                                text-align: center;
+                                select {
+                                    cursor: pointer;
+                                    appearance: none;
+                                }
+                                select:focus {
+                                    outline: none;
+                                }
+                                #date {
+                                    border: none;
+                                    font-size: 1vw;
+                                    font-weight: bold;
+                                    background-color: $darkblue;
+                                    padding-right: 1rem;
+                                    // background-color: red;
+                                    color: white;
+                                    text-align: center;
+                                }
+                            }
+                            #timebuttons {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 10px;
+                                // background-color: yellow;
+                                width: 100%;
+                                .input-container {
+                                    position: relative;
+                                    width: 5vw;
+                                    height: 2vw;
+                                    border-radius: 5px;
+                                    border: none;
+                                    background-color: white;
+                                    color: $darkblue;
+                                    input {
+                                        // setting the Radio Dial
+                                        cursor: pointer;
+                                        position:absolute;
+                                        width: 5vw;
+                                        height: 2vw;
+                                        margin: 0;
+                                        z-index: 2;
+                                        opacity: 0;
+                                    }
+                                    // if checked
+                                    input[type="radio"]{
+                                        display: inline-block;
+                                        position:absolute;
+                                        left: 10px;
+                                        opacity: 0;
+                                        color: $darkblue;
+                                    }
+                                    .radio-tile {
+                                        // background-color: green;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100%;
+                                        transition: all 300s ease;
+                                        label {
+                                            color:$darkblue;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // the BUTTONS section
+                        .buttondiv {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10vw;
+                            padding: 5rem 0 2rem 0;
+                            .calendar {
+                                text-align: center;
+                                .back {
+                                    a {
+                                        color: white;
+                                        font-size: 1.3vw;
+                                    }
+                                }
                             }
                         }
                     }

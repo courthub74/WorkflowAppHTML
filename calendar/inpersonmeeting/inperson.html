@@ -47,6 +47,15 @@
                     <span class="icon"><img src="/img/bi_file-earmark-spreadsheet.png" alt="calendar"></span>
                     <span class="item">spreadsheet</span>
                 </a></li>
+                <li><a href="#">
+                    <span class="icon"><img src="/img/contracts.png" alt="calendar"></span>
+                    <span class="item">contracts</span>
+                </a></li>
+
+                <li><a href="#">
+                    <span class="icon"><img src="/img/coins.png" id="coins" alt="calendar"></span>
+                    <span class="item">payments</span>
+                </a></li>
             </ul>
         </div>
 
@@ -66,16 +75,30 @@
             <div class="apptbox">
                 <!-- The Name Line -->
                 <div class="personentry">
+                    <h3 class="title">location:</h3>
+                    <div class="inputfield">
+                        <input 
+                            type="text"
+                            class="personlocation"
+                            id="location"/>
+                    </div>
+                </div>
+                <!-- UnderLine -->
+                <hr>
+
+                <!-- The Name Phone Line -->
+                <div class="personentry">
                     <h3 class="title">name:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="zoomname"
+                            class="personname"
                             id="name"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
+
                 <!-- The Date Line -->
                 <div class="personentry">
                     <h3 class="title">date:</h3>
@@ -103,12 +126,53 @@
                 <div class="personentry">
                     <h3 class="title">time:</h3>
                     <div id="timebuttons">
-                        <button type="button" name="timebutt" id="two" class="hour" value="2:00PM">2:00PM</button>
-                        <button type="button" name="timebutt" id="three" class="hour" value="3:00PM">3:00PM</button>
-                        <button type="button" name="timebutt" id="four" class="hour" value="4:00PM">4:00PM</button>
-                        <button type="button" name="timebutt" id="five" class="hour" value="5:00PM">5:00PM</button>
-                        <button type="button" name="timebutt" id="six" class="hour" value="6:00PM">6:00PM</button>
-                        <button type="button" name="timebutt" id="seven" class="hour" value="7:00PM">7:00PM</button>
+                         <!-- 2 PM -->
+                         <div class="input-container" id="containertwo">
+                            <input type="radio" name="timebutt" id="two" class="hour" value="2:00PM"></input>
+                            <div class="radio-tile" id="tiletwo">
+                                <label for="2pm" id="labeltwo">2:00PM</label>
+                            </div>
+                        </div>
+                        
+                        <!-- 3 PM -->
+                        <div class="input-container" id="containerthree">
+                            <input type="radio" name="timebutt" id="three" class="hour" value="3:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="3pm" id="labelthree">3:00PM</label>
+                            </div>
+                        </div>
+
+                        <!-- 4 PM -->
+                        <div class="input-container" id="containerfour">
+                            <input type="radio" name="timebutt" id="four" class="hour" value="4:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="4pm" id="labelfour">4:00PM</label>
+                            </div>
+                        </div>
+                        
+                        <!-- 5 PM -->
+                        <div class="input-container" id="containerfive">
+                            <input type="radio" name="timebutt" id="five" class="hour" value="5:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="5pm" id="labelfive">5:00PM</label>
+                            </div>
+                        </div>
+                        
+                        <!-- 6 PM -->
+                        <div class="input-container" id="containersix">
+                            <input type="radio" name="timebutt" id="six" class="hour" value="6:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="6pm" id="labelsix">6:00PM</label>
+                            </div>
+                        </div>
+
+                        <!-- 7 PM -->
+                        <div class="input-container" id="containerseven">
+                            <input type="radio" name="timebutt" id="seven" class="hour" value="7:00PM"></input>
+                            <div class="radio-tile">
+                                <label for="7pm" id="labelseven">7:00PM</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -138,18 +202,7 @@
                 </div>
                 <!-- UnderLine -->
                 <hr>
-                <!-- The Zoom Link Line -->
-                <div class="personentry">
-                    <h3 class="title">link:</h3>
-                    <div class="inputfield">
-                        <input 
-                            type="text"
-                            class="personlink"
-                            id="link"/>
-                    </div>
-                </div>
-                <!-- UnderLine -->
-                <hr>
+                
                 <!-- Button and other selections -->
                 <div class="buttondiv">
                     <div class="calendar">
