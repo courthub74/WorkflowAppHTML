@@ -1,1 +1,226 @@
-/*# sourceMappingURL=inperson.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+* body {
+  background-color: #F3F9FF;
+}
+* body .wrapper {
+  display: flex;
+}
+* body .wrapper .sidebar {
+  background-color: #243F67;
+  width: 18vw;
+  height: 100vh;
+  padding: 2rem 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in;
+}
+* body .wrapper .sidebar .header {
+  text-align: center;
+}
+* body .wrapper .sidebar .header h2 {
+  color: white;
+  padding: 1.5rem;
+}
+* body .wrapper .sidebar .header img {
+  width: 7vw;
+  height: 13vh;
+}
+* body .wrapper .sidebar .menu {
+  padding: 6rem 0 0 1rem;
+}
+* body .wrapper .sidebar .menu ul li a {
+  padding-left: 2rem;
+  font-size: 1.3vw;
+  color: white;
+  text-decoration: none;
+}
+* body .wrapper .sidebar .menu ul li a .icon img {
+  margin-top: 2rem;
+  width: 25px;
+}
+* body .wrapper .sidebar .menu ul li a .check {
+  height: 2vh;
+}
+* body .wrapper .sidebar .menu ul li a .check img {
+  width: 3vh;
+}
+* body .wrapper .sidebar .logoutbutton {
+  padding: 7rem 0 0 0;
+  height: 2rem;
+  text-align: center;
+}
+* body .wrapper .sidebar .logoutbutton .logout {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+* body .wrapper .sidebar .logoutbutton .logout a {
+  color: #243F67;
+  font-size: 0.7vw;
+}
+* body .wrapper .page {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 15rem 15rem 15rem;
+}
+* body .wrapper .page form h1 {
+  color: #243F67;
+  font-size: 2vw;
+  padding: 0 0 3rem 0;
+}
+* body .wrapper .page form .apptbox {
+  background-color: #243F67;
+  padding: 3rem;
+  border-radius: 5px;
+}
+* body .wrapper .page form .apptbox .personentry {
+  display: flex;
+  padding: 1rem 1rem 1rem 0;
+}
+* body .wrapper .page form .apptbox .personentry .title {
+  color: white;
+  font-size: 1.2vw;
+}
+* body .wrapper .page form .apptbox .personentry .inputfield {
+  width: 90%;
+  margin: 0 3rem 0 3rem;
+  padding: 0.01rem;
+}
+* body .wrapper .page form .apptbox .personentry .inputfield input {
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin: 0.3rem 0 0 0;
+  padding: 0.3rem;
+  background-color: #243F67;
+  color: white;
+}
+* body .wrapper .page form .apptbox .personentry .inputfield input:focus {
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+}
+* body .wrapper .page form .apptbox .personentry .inputfield input:-webkit-autofill,
+* body .wrapper .page form .apptbox .personentry .inputfield input:-webkit-autofill:hover,
+* body .wrapper .page form .apptbox .personentry .inputfield input:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 10px 1000px #243F67 inset;
+  -webkit-transition: background-color 5000s ease-in-out 2s;
+  transition: background-color 5000s ease-in-out 2s;
+  font-size: 1.5vw;
+}
+* body .wrapper .page form .apptbox .personentry .inputfield input:-webkit-autofill::first-line {
+  font-size: 1.2vw;
+}
+* body .wrapper .page form .apptbox .personentry .persondate {
+  width: 100%;
+  text-align: center;
+}
+* body .wrapper .page form .apptbox .personentry .persondate select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+* body .wrapper .page form .apptbox .personentry .persondate select:focus {
+  outline: none;
+}
+* body .wrapper .page form .apptbox .personentry .persondate #date {
+  border: none;
+  font-size: 1.5vw;
+  font-weight: bold;
+  background-color: #243F67;
+  padding-right: 1rem;
+  color: white;
+  text-align: center;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons .input-container {
+  position: relative;
+  width: 5vw;
+  height: 1.7vw;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #243F67;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons .input-container input {
+  cursor: pointer;
+  position: absolute;
+  width: 5vw;
+  height: 2vw;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons .input-container input[type=radio] {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  opacity: 0;
+  color: #243F67;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons .input-container .radio-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 300s ease;
+}
+* body .wrapper .page form .apptbox .personentry #timebuttons .input-container .radio-tile label {
+  color: #243F67;
+}
+* body .wrapper .page form .apptbox .buttondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  padding: 5rem 0 0 2.5rem;
+}
+* body .wrapper .page form .apptbox .buttondiv .calendar {
+  margin: 0 5rem 0 0;
+}
+* body .wrapper .page form .apptbox .buttondiv .calendar .back a {
+  color: white;
+  font-size: 1.1vw;
+}
+* body .wrapper .page form .apptbox .buttondiv .subbutton {
+  margin: 0 0 0 0;
+}
+* body .wrapper .page form .apptbox .buttondiv .subbutton button {
+  border: none;
+  border-radius: 50%;
+  width: 6vw;
+  height: 12vh;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #243F67;
+}
+* body .wrapper .page form .apptbox .buttondiv .list .personslist {
+  margin: 0 0 0 3rem;
+}
+* body .wrapper .page form .apptbox .buttondiv .list .personslist a {
+  color: white;
+  font-size: 1.1vw;
+}/*# sourceMappingURL=inperson.css.map */

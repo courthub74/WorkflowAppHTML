@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+// COLORS
+$darkblue: #243F67;
+$background: #F3F9FF;
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    body {
+        background-color: $background;
+        .wrapper {
+            display: flex;
+            .sidebar {
+                background-color: $darkblue;
+                width: 18vw;
+                height: 100vh;
+                padding: 2rem 0;
+                top: 0;
+                left: 0;
+                transition: all 0.5s ease-in;
+                .header {
+                    text-align: center;
+                    h2 {
+                        color: white;
+                        padding: 1.5rem;
+                    }
+                    img {
+                        width: 7vw;
+                        height: 13vh;
+                        // max-width: 120px;
+                        // min-width: 120px;
+                    }
+                }
+                .menu {
+                    padding: 6rem 0 0 1rem;
+                    ul {
+                        li {
+                            a {
+                                padding-left: 2rem;
+                                font-size: 1.3vw;
+                                color: white;
+                                text-decoration: none;
+                                // background-color: aqua;
+                                .icon {
+                                    img {
+                                        // background-color: purple;
+                                        margin-top: 2rem;
+                                        width: 25px;
+                                    }
+                                }
+                                .check {
+                                    height: 2vh;
+                                    img {
+                                        width: 3vh;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .logoutbutton {
+                    padding: 7rem 0 0 0;
+                    height: 2rem;
+                    text-align: center;
+                    .logout {
+                        width: 4vw;
+                        height: 4vw;
+                        border-radius: 50%;
+                        background-color: white;
+                        border: none;
+                        font-weight: bold;
+                        a {
+                            color: $darkblue;
+                            font-size: .7vw;
+                        }
+                    }
+                }
+            }
+            // PAGE PART
+            .page {
+                height: 100vh;
+                width: 100%;
+                padding: 5rem 15rem 15rem 15rem;
+                form {
+                    h1 {
+                        color: $darkblue;
+                        font-size: 2vw;
+                        padding: 0 0 3rem 0;
+                    }
+                    .apptbox {
+                        background-color: $darkblue;
+                        padding: 3rem;
+                        border-radius: 5px;
+                        .personentry {
+                            display: flex;
+                            padding: 1rem 1rem 1rem 0;
+                            .title {
+                                color: white;
+                                font-size: 1.2vw;
+                            }
+                            // ALL the inputs
+                            .inputfield {
+                                width: 90%;
+                                margin: 0 3rem 0 3rem;
+                                // Position the inputs here
+                                // background-color: aqua;
+                                padding: .01rem;
+                                input {
+                                    border: none;
+                                    text-align: center;
+                                    width: 100%;
+                                    margin: .3rem 0 0 0;
+                                    padding: .3rem;
+                                    background-color: $darkblue;
+                                    color: white;
+                                }
+                                input:focus {
+                                    background-color: transparent;
+                                    appearance: none;
+                                    border: none;
+                                    outline: none;
+                                }
+                                input:-webkit-autofill,
+                                input:-webkit-autofill:hover,
+                                input:-webkit-autofill:focus {
+                                    border: none;
+                                    -webkit-text-fill-color: white;
+                                    -webkit-box-shadow: 0 0 10px 1000px $darkblue inset;
+                                    transition: background-color 5000s ease-in-out 2s;
+                                    font-size: 1.5vw;
+                                }
+                                input:-webkit-autofill::first-line {
+                                    font-size: 1.2vw;
+                                }
+                            }
+                            // the DATE section
+                            .persondate {
+                                // background-color: yellow;
+                                width: 100%;
+                                // padding: 0rem 0rem 0rem 10rem;
+                                text-align: center;
+                                select {
+                                    cursor: pointer;
+                                    appearance: none;
+                                }
+                                select:focus {
+                                    outline: none;
+                                }
+                                #date {
+                                    border: none;
+                                    font-size: 1.5vw;
+                                    font-weight: bold;
+                                    background-color: $darkblue;
+                                    padding-right: 1rem;
+                                    // background-color: red;
+                                    color: white;
+                                    text-align: center;
+                                }
+                            }
+                            #timebuttons {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 10px;
+                                // background-color: yellow;
+                                width: 100%;
+                                .input-container {
+                                    position: relative;
+                                    width: 5vw;
+                                    height: 1.7vw;
+                                    border-radius: 5px;
+                                    border: none;
+                                    background-color: white;
+                                    color: $darkblue;
+                                    input {
+                                        // setting the Radio Dial
+                                        cursor: pointer;
+                                        position:absolute;
+                                        width: 5vw;
+                                        height: 2vw;
+                                        margin: 0;
+                                        z-index: 2;
+                                        opacity: 0;
+                                    }
+                                    // if checked
+                                    input[type="radio"]{
+                                        display: inline-block;
+                                        position:absolute;
+                                        left: 10px;
+                                        opacity: 0;
+                                        color: $darkblue;
+                                    }
+                                    .radio-tile {
+                                        // background-color: green;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100%;
+                                        transition: all 300s ease;
+                                        label {
+                                            color:$darkblue;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // the BUTTONS section
+                        .buttondiv {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10vw;
+                            padding: 5rem 0 0 2.5rem;
+                            // background-color: lightcoral;
+                            .calendar {
+                                // background-color: lightcoral;
+                                margin: 0 5rem 0 0;
+                                .back {
+                                    a {
+                                        color: white;
+                                        font-size: 1.1vw;
+                                    }
+                                }
+                            }
+                            .subbutton {
+                                // background-color: aqua;
+                                margin: 0 0 0 0;
+                                button {
+                                    border: none;
+                                    border-radius: 50%;
+                                    width: 6vw;
+                                    height: 12vh;
+                                    font-weight: bold;
+                                    font-size: 1.2rem;
+                                    color: $darkblue;
+                                }
+                            }
+                            .list {
+                                .personslist {
+                                    // background-color: yellowgreen;
+                                    // width: 90%;
+                                    margin: 0 0 0 3rem;
+                                    a {
+                                        color: white;
+                                        font-size: 1.1vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
