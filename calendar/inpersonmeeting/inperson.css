@@ -72,7 +72,7 @@
 * body .wrapper .page {
   height: 100vh;
   width: 100%;
-  padding: 8rem 15rem 15rem 15rem;
+  padding: 5rem 15rem 15rem 15rem;
 }
 * body .wrapper .page form h1 {
   color: #243F67;
@@ -142,7 +142,7 @@
 }
 * body .wrapper .page form .apptbox .personentry .persondate #date {
   border: none;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: bold;
   background-color: #243F67;
   padding-right: 1rem;
@@ -159,7 +159,7 @@
 * body .wrapper .page form .apptbox .personentry #timebuttons .input-container {
   position: relative;
   width: 5vw;
-  height: 2vw;
+  height: 1.7vw;
   border-radius: 5px;
   border: none;
   background-color: white;
@@ -196,12 +196,31 @@
   justify-content: center;
   align-items: center;
   gap: 10vw;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 0 0 2.5rem;
 }
 * body .wrapper .page form .apptbox .buttondiv .calendar {
-  text-align: center;
+  margin: 0 5rem 0 0;
 }
 * body .wrapper .page form .apptbox .buttondiv .calendar .back a {
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
+}
+* body .wrapper .page form .apptbox .buttondiv .subbutton {
+  margin: 0 0 0 0;
+}
+* body .wrapper .page form .apptbox .buttondiv .subbutton button {
+  border: none;
+  border-radius: 50%;
+  width: 6vw;
+  height: 12vh;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #243F67;
+}
+* body .wrapper .page form .apptbox .buttondiv .list .personslist {
+  margin: 0 0 0 3rem;
+}
+* body .wrapper .page form .apptbox .buttondiv .list .personslist a {
+  color: white;
+  font-size: 1.1vw;
 }/*# sourceMappingURL=inperson.css.map */
