@@ -4,6 +4,8 @@
 $darkblue: #243F67;
 $background: #F3F9FF;
 
+// ALL LENGTHS WIDTHS TEXT PADDING SHOULD BE IN VW
+
 *{
     list-style: none;
     text-decoration: none;
@@ -17,9 +19,10 @@ $background: #F3F9FF;
             display: flex;
             .sidebar {
                 background-color: $darkblue;
-                width: 18vw;
+                // width: 18vw;
+                width: 20vw;
                 height: 100vh;
-                padding: 2rem 0;
+                padding: 2vw 0;
                 top: 0;
                 left: 0;
                 transition: all 0.5s ease-in;
@@ -27,7 +30,7 @@ $background: #F3F9FF;
                     text-align: center;
                     h2 {
                         color: white;
-                        padding: 1.5rem;
+                        padding: 1.5vw;
                     }
                     img {
                         width: 7vw;
@@ -37,11 +40,11 @@ $background: #F3F9FF;
                     }
                 }
                 .menu {
-                    padding: 6rem 0 0 1rem;
+                    padding: 3vw 0 0 1vw;
                     ul {
                         li {
                             a {
-                                padding-left: 2rem;
+                                padding-left: 2vw;
                                 font-size: 1.3vw;
                                 color: white;
                                 text-decoration: none;
@@ -49,7 +52,7 @@ $background: #F3F9FF;
                                 .icon {
                                     img {
                                         // background-color: purple;
-                                        margin-top: 2rem;
+                                        margin-top: 2vw;
                                         width: 25px;
                                     }
                                 }
@@ -64,8 +67,8 @@ $background: #F3F9FF;
                     }
                 }
                 .logoutbutton {
-                    padding: 7rem 0 0 0;
-                    height: 2rem;
+                    padding: 5rem 0 0 0;
+                    height: 2vw;
                     text-align: center;
                     .logout {
                         width: 4vw;
@@ -85,20 +88,20 @@ $background: #F3F9FF;
             .page {
                 height: 100vh;
                 width: 100%;
-                padding: 5rem 15rem 15rem 15rem;
+                padding: 2vw 15vw 15vw 15vw;
                 form {
                     h1 {
                         color: $darkblue;
                         font-size: 2vw;
-                        padding: 0 0 3rem 0;
+                        padding: 0 0 3vw 0;
                     }
                     .apptbox {
                         background-color: $darkblue;
-                        padding: 3rem;
+                        padding: 3vw;
                         border-radius: 5px;
                         .personentry {
                             display: flex;
-                            padding: 1rem 1rem 1rem 0;
+                            padding: 1vw 1vw 1vw 0;
                             .title {
                                 color: white;
                                 font-size: 1.2vw;
@@ -106,16 +109,16 @@ $background: #F3F9FF;
                             // ALL the inputs
                             .inputfield {
                                 width: 90%;
-                                margin: 0 3rem 0 3rem;
+                                margin: 0 3vw 0 3vw;
                                 // Position the inputs here
                                 // background-color: aqua;
-                                padding: .01rem;
+                                padding: .01vw;
                                 input {
                                     border: none;
                                     text-align: center;
                                     width: 100%;
                                     margin: .3rem 0 0 0;
-                                    padding: .3rem;
+                                    padding: .3vw;
                                     background-color: $darkblue;
                                     color: white;
                                 }
@@ -156,7 +159,7 @@ $background: #F3F9FF;
                                     font-size: 1.5vw;
                                     font-weight: bold;
                                     background-color: $darkblue;
-                                    padding-right: 1rem;
+                                    padding-right: 1vw;
                                     // background-color: red;
                                     color: white;
                                     text-align: center;
@@ -214,16 +217,16 @@ $background: #F3F9FF;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            gap: 10vw;
+                            gap: 8vw;
                             padding: 5rem 0 0 2.5rem;
                             // background-color: lightcoral;
                             .calendar {
                                 // background-color: lightcoral;
-                                margin: 0 5rem 0 0;
+                                margin: 0 3rem 0 0;
                                 .back {
                                     a {
                                         color: white;
-                                        font-size: 1.1vw;
+                                        font-size: 1.2vw;
                                     }
                                 }
                             }
@@ -236,18 +239,18 @@ $background: #F3F9FF;
                                     width: 6vw;
                                     height: 12vh;
                                     font-weight: bold;
-                                    font-size: 1.2rem;
+                                    font-size: 1.2vw;
                                     color: $darkblue;
                                 }
                             }
                             .list {
                                 .personslist {
                                     // background-color: yellowgreen;
-                                    // width: 90%;
+                                    // width: 100%;
                                     margin: 0 0 0 3rem;
                                     a {
                                         color: white;
-                                        font-size: 1.1vw;
+                                        font-size: 1.2vw;
                                     }
                                 }
                             }
