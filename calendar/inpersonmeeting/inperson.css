@@ -20,7 +20,6 @@
   padding: 2vw 0;
   top: 0;
   left: 0;
-  transition: all 0.5s ease-in;
 }
 * body .wrapper .sidebar .header {
   text-align: center;
@@ -28,6 +27,7 @@
 * body .wrapper .sidebar .header h2 {
   color: white;
   padding: 1.5vw;
+  font-size: 1.4vw;
 }
 * body .wrapper .sidebar .header img {
   width: 7vw;
@@ -198,6 +198,7 @@
 }
 * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container .radio-tile label {
   color: #243F67;
+  font-size: 1vw;
 }
 * body .wrapper .page #personform .apptbox .buttondiv {
   display: flex;

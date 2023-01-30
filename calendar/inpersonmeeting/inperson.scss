@@ -23,12 +23,13 @@ $background: #F3F9FF;
                 padding: 2vw 0;
                 top: 0;
                 left: 0;
-                transition: all 0.5s ease-in;
+                // transition: all 0.5s ease-in;
                 .header {
                     text-align: center;
                     h2 {
                         color: white;
                         padding: 1.5vw;
+                        font-size: 1.4vw;
                     }
                     img {
                         width: 7vw;
@@ -222,6 +223,7 @@ $background: #F3F9FF;
                                         transition: all 300s ease;
                                         label {
                                             color:$darkblue;
+                                            font-size: 1vw;
                                         }
                                     }
                                 }
