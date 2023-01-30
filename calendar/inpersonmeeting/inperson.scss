@@ -14,47 +14,45 @@ $background: #F3F9FF;
     body {
         background-color: $background;
         .wrapper {
+            // for both the sidebar and page form
             display: flex;
             .sidebar {
                 background-color: $darkblue;
-                width: 18vw;
+                width: 16vw;
                 height: 100vh;
-                padding: 2rem 0;
+                padding: 2vw 0;
                 top: 0;
                 left: 0;
-                transition: all 0.5s ease-in;
+                // transition: all 0.5s ease-in;
                 .header {
                     text-align: center;
                     h2 {
                         color: white;
-                        padding: 1.5rem;
+                        padding: 1.5vw;
+                        font-size: 1.4vw;
                     }
                     img {
                         width: 7vw;
                         height: 13vh;
-                        // max-width: 120px;
-                        // min-width: 120px;
                     }
                 }
                 .menu {
-                    padding: 6rem 0 0 1rem;
+                    padding: 2vw 0 0 1.6vw;
+                    text-align: left;
                     ul {
                         li {
                             a {
-                                padding-left: 2rem;
+                                padding-left: 2vw;
                                 font-size: 1.3vw;
                                 color: white;
                                 text-decoration: none;
-                                // background-color: aqua;
                                 .icon {
                                     img {
-                                        // background-color: purple;
-                                        margin-top: 2rem;
-                                        width: 25px;
+                                        margin-top: 2vw;
+                                        width: 1.4vw;
                                     }
                                 }
                                 .check {
-                                    height: 2vh;
                                     img {
                                         width: 3vh;
                                     }
@@ -64,8 +62,8 @@ $background: #F3F9FF;
                     }
                 }
                 .logoutbutton {
-                    padding: 7rem 0 0 0;
-                    height: 2rem;
+                    padding: 5vw 0 0 0;
+                    height: 2vw;
                     text-align: center;
                     .logout {
                         width: 4vw;
@@ -73,51 +71,61 @@ $background: #F3F9FF;
                         border-radius: 50%;
                         background-color: white;
                         border: none;
-                        font-weight: bold;
                         a {
                             color: $darkblue;
-                            font-size: .7vw;
+                            font-size: .8vw;
+                            font-weight: bold;
                         }
                     }
                 }
             }
-            // PAGE PART
+            // NOW Page part
             .page {
                 height: 100vh;
-                width: 100%;
-                padding: 5rem 15rem 15rem 15rem;
-                form {
+                width: 70vw;
+                padding: 5vw 15vw 15vw 15vw;
+                // The form to be filled
+                #personform {
                     h1 {
                         color: $darkblue;
                         font-size: 2vw;
-                        padding: 0 0 3rem 0;
+                        padding: 0 0 2vw 0;
                     }
                     .apptbox {
                         background-color: $darkblue;
-                        padding: 3rem;
+                        padding: 3vw;
                         border-radius: 5px;
+                        width: 50vw;
                         .personentry {
-                            display: flex;
-                            padding: 1rem 1rem 1rem 0;
+                            // each line that needs to be type entered
+                            // display: flex;
+                            // padding: 0 1vw 1vw 0;
+                            // background-color: yellow;
                             .title {
+                                // ALL the titles
                                 color: white;
                                 font-size: 1.2vw;
                             }
-                            // ALL the inputs
+                            #name, #datetitle, #time, #phone, #topic {
+                                margin-top: 1vw;
+                            }
                             .inputfield {
-                                width: 90%;
-                                margin: 0 3rem 0 3rem;
-                                // Position the inputs here
+                                width: 100%;
+                                // height: 5vh;
                                 // background-color: aqua;
-                                padding: .01rem;
+                                // margin: 0 3vw 0 3vw;
+                                // padding: .01vw;
                                 input {
                                     border: none;
                                     text-align: center;
                                     width: 100%;
-                                    margin: .3rem 0 0 0;
-                                    padding: .3rem;
+                                    height: 3vh;
+                                    font-size: 1.2vw;
+                                    // margin: .3rem 0 0 0;
+                                    // padding: 2vw;
                                     background-color: $darkblue;
                                     color: white;
+                                    padding-bottom: 1vh;
                                 }
                                 input:focus {
                                     background-color: transparent;
@@ -130,19 +138,30 @@ $background: #F3F9FF;
                                 input:-webkit-autofill:focus {
                                     border: none;
                                     -webkit-text-fill-color: white;
-                                    -webkit-box-shadow: 0 0 10px 1000px $darkblue inset;
+                                    -webkit-box-shadow: 0 0 10vw 1000vw $darkblue inset;
                                     transition: background-color 5000s ease-in-out 2s;
-                                    font-size: 1.5vw;
+                                    font-size: 2.5vw;
                                 }
                                 input:-webkit-autofill::first-line {
                                     font-size: 1.2vw;
                                 }
                             }
-                            // the DATE section
+                        }
+                        // DATE Section
+                        .dateentry {
+                            display: flex;
+                            padding: 1vw 0 0 0;
+                            .title {
+                                // ALL the titles
+                                color: white;
+                                font-size: 1.2vw;
+                                margin-bottom: 1vw;
+                            }
                             .persondate {
-                                // background-color: yellow;
                                 width: 100%;
-                                // padding: 0rem 0rem 0rem 10rem;
+                                // background-color: yellow;
+                                margin-right: 3vw;
+                                margin-top: 1vh;
                                 text-align: center;
                                 select {
                                     cursor: pointer;
@@ -153,50 +172,51 @@ $background: #F3F9FF;
                                 }
                                 #date {
                                     border: none;
-                                    font-size: 1.5vw;
-                                    font-weight: bold;
+                                    font-size: 1vw;
                                     background-color: $darkblue;
-                                    padding-right: 1rem;
-                                    // background-color: red;
-                                    color: white;
                                     text-align: center;
+                                    color: white;
+                                    padding-bottom: .8vw;
+                                    // padding-left: 1vw;
                                 }
                             }
-                            #timebuttons {
+                        }
+                        // TIME Section
+                        .timeentry {
+                            display: flex;
+                            padding: 1vw 0 0 0;
+                            // background-color: wheat;
+                            .title {
+                                // ALL the titles
+                                color: white;
+                                font-size: 1.2vw;
+                                margin-bottom: 1.3vw;
+                            }
+                             #timebuttons {
                                 display: flex;
                                 justify-content: center;
-                                align-items: center;
-                                gap: 10px;
-                                // background-color: yellow;
-                                width: 100%;
+                                padding: 0 0 0 4.6vw;
+                                margin-top: .3vh;
+                                gap: .8vw;
+                                // background-color: aquamarine;
                                 .input-container {
-                                    position: relative;
-                                    width: 5vw;
+                                    background-color: white;
+                                    color: $darkblue;
+                                    width: 4.4vw;
                                     height: 1.7vw;
                                     border-radius: 5px;
                                     border: none;
-                                    background-color: white;
-                                    color: $darkblue;
+                                    position: relative;
                                     input {
-                                        // setting the Radio Dial
                                         cursor: pointer;
-                                        position:absolute;
+                                        position: absolute;
                                         width: 5vw;
                                         height: 2vw;
                                         margin: 0;
                                         z-index: 2;
                                         opacity: 0;
                                     }
-                                    // if checked
-                                    input[type="radio"]{
-                                        display: inline-block;
-                                        position:absolute;
-                                        left: 10px;
-                                        opacity: 0;
-                                        color: $darkblue;
-                                    }
                                     .radio-tile {
-                                        // background-color: green;
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
@@ -204,6 +224,7 @@ $background: #F3F9FF;
                                         transition: all 300s ease;
                                         label {
                                             color:$darkblue;
+                                            font-size: 1vw;
                                         }
                                     }
                                 }
@@ -214,40 +235,37 @@ $background: #F3F9FF;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            gap: 10vw;
-                            padding: 5rem 0 0 2.5rem;
-                            // background-color: lightcoral;
+                            padding: 2vw 2vw 0 2vw;
+                            gap: 8vw;
+                            // background-color: aqua;
                             .calendar {
-                                // background-color: lightcoral;
-                                margin: 0 5rem 0 0;
                                 .back {
+                                    // background-color: lightseagreen;
                                     a {
                                         color: white;
-                                        font-size: 1.1vw;
+                                        font-size: 1vw;
                                     }
                                 }
                             }
                             .subbutton {
-                                // background-color: aqua;
-                                margin: 0 0 0 0;
+                                // background-color: royalblue;
+                                margin: 0 2vw 0 0;
                                 button {
                                     border: none;
                                     border-radius: 50%;
-                                    width: 6vw;
-                                    height: 12vh;
+                                    width: 5vw;
+                                    height: 10vh;
                                     font-weight: bold;
-                                    font-size: 1.2rem;
+                                    font-size: 1vw;
                                     color: $darkblue;
                                 }
                             }
                             .list {
                                 .personslist {
                                     // background-color: yellowgreen;
-                                    // width: 90%;
-                                    margin: 0 0 0 3rem;
                                     a {
                                         color: white;
-                                        font-size: 1.1vw;
+                                        font-size: 1vw;
                                     }
                                 }
                             }
@@ -256,6 +274,5 @@ $background: #F3F9FF;
                 }
             }
         }
-        
     }
 }

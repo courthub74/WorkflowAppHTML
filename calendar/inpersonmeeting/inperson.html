@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Call</title>
+    <title>In Person Call</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="inperson.css">
@@ -68,7 +68,7 @@
     <!-- PAGE PART -->
     <div class="page">
 
-        <form id="zoomform" action="POST">
+        <form id="personform" action="POST">
             <h1>Meetings in person</h1>
 
             <!-- The Blue Zoom Box -->
@@ -76,11 +76,10 @@
                 <!-- The Name Line -->
                 <div class="personentry">
                     <h3 class="title">location:</h3>
-                    <div class="inputfield">
+                    <div id="location" class="inputfield">
                         <input 
                             type="text"
-                            class="personlocation"
-                            id="location"/>
+                            class="personlocation"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
@@ -88,20 +87,20 @@
 
                 <!-- The Name Phone Line -->
                 <div class="personentry">
-                    <h3 class="title">name:</h3>
+                    <h3 id="name" class="title">name:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="personname"
-                            id="name"/>
+                            class="personname"/>
+                            
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
 
                 <!-- The Date Line -->
-                <div class="personentry">
-                    <h3 class="title">date:</h3>
+                <div class="dateentry">
+                    <h3 id="datetitle" class="title">date:</h3>
                     <div class="persondate">
                         <!-- datepicker here -->
                         <!-- Month -->
@@ -123,8 +122,8 @@
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Time Line -->
-                <div class="personentry">
-                    <h3 class="title">time:</h3>
+                <div class="timeentry">
+                    <h3 id="time" class="title">time:</h3>
                     <div id="timebuttons">
                          <!-- 2 PM -->
                          <div class="input-container" id="containertwo">
@@ -180,24 +179,22 @@
                 <hr>
                 <!-- The Phone Line -->
                 <div class="personentry">
-                    <h3 class="title">phone:</h3>
+                    <h3 id="phone" class="title">phone:</h3>
                     <div class="inputfield">
                         <input 
                             type="tel"
-                            class="personphone"
-                            id="phone"/>
+                            class="personphone"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
                 <hr>
                 <!-- The Topic Line -->
                 <div class="personentry">
-                    <h3 class="title">topic:</h3>
+                    <h3 id="topic" class="title">topic:</h3>
                     <div class="inputfield">
                         <input 
                             type="text"
-                            class="persontopic"
-                            id="topic"/>
+                            class="persontopic"/>
                     </div>
                 </div>
                 <!-- UnderLine -->
@@ -214,7 +211,7 @@
                         <button class="submit" type="submit">Submit</button>
                     </div>
                     <div class="list">
-                        <p class="personslist"><a href="#">Go to Zoom Calls List</a></p>
+                        <p class="personslist"><a href="#">To in Person List</a></p>
                     </div>
                 </div>
             </div>
