@@ -276,3 +276,170 @@ $background: #F3F9FF;
         }
     }
 }
+
+// TABLET SETTINGS
+@media screen and (max-width: 800px) {
+    // Set the IPad screen settings
+    // basic color bkgrd test
+    * {
+        // background-color: red;
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        body {
+            background-color: $background;
+            .wrapper {
+                // THIS will be a display column
+                display: flex;
+                flex-direction: column;
+                .sidebar {
+                    display: flex;
+                    justify-content: left;
+                    padding: 2vw 0 3vw 4vw;
+                    background-color: $darkblue;
+                    height: 10vh;
+                    width: 100vw;
+                    top: 0;
+                    // transition: all 0.5s ease-in;
+                    .header {
+                        h2 {
+                            display: none;
+                        }
+                        img {
+                            width: 10vw;
+                            height: 10vw;
+                        }
+                    }
+                    .menu {
+                    display: none;
+                    }
+                    .logoutbutton {
+                        display: none;
+                    }
+                }
+                .page {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // height: 100vh;
+                    width: 100vw;
+                    #personform {
+                        h1 {
+                            color: $darkblue;
+                            font-size: 5vw;
+                        }
+                        .apptbox {
+                            width: 80vw;
+                            height: 100vw;
+                            padding: 8vw;
+                            .personentry {
+                                .title {
+                                    font-size: 2.5vw;
+                                }
+                                #name, #datetitle, #time, #phone, #topic {
+                                margin-top: 5vw;
+                                }
+                                .inputfield {
+                                    // width: 100%;
+                                    input {
+                                        // background-color: aqua;
+                                        height: 3vh;
+                                        font-size: 3vw;
+                                    }
+                                }
+                            }
+                            // DATE Section
+                            .dateentry {
+                                display: flex;
+                                padding: 4vw 0 2vw 0;
+                                // background-color: aqua;
+                                .title {
+                                    font-size: 2.5vw;
+                                }
+                                .persondate {
+                                    select {
+                                        cursor: pointer;
+                                        appearance: none;
+                                    }
+                                    select:focus {
+                                        outline: none;
+                                    }
+                                    #date {
+                                       font-size: 3vw; 
+                                       padding: 0 3.9vw 1vw 0;
+                                    }
+                                }
+                            }
+                            // TIME Section
+                            .timeentry {
+                                padding: 4vw 0 2vw 0;
+                                // background-color: aqua;
+                                .title {
+                                    font-size: 2.5vw;
+                                }
+                                #timebuttons {
+                                    padding: 0 0 0 3vw;
+                                    .input-container {
+                                        width: 8vw;
+                                        height: 2.5vw;
+                                    }
+                                }
+                            }
+                            // the BUTTONS section
+                            .buttondiv {
+                                padding: 12vw 0 0 0;
+                                // background-color: yellowgreen;
+                                .calendar {
+                                    .back {
+                                        // background-color: lightseagreen;
+                                        a {
+                                            color: white;
+                                            font-size: 2vw;
+                                        }
+                                    }
+                                }
+                                .subbutton {
+                                    button {
+                                        width: 8vw;
+                                        height: 8vw;
+                                        font-size: 1.5vw;
+                                    }
+                                }
+                                .list {
+                                .personslist {
+                                    // background-color: yellowgreen;
+                                    a {
+                                        color: white;
+                                        font-size: 2vw;
+                                    }
+                                }
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+// SMARTPHONE SETTINGS
+@media screen and (max-width: 500px) {
+    // Set the IPhone screen settings
+    // basic color bkgrd test
+    * {
+        // background-color: green;
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        body {
+            background-color: $background;
+        }
+    }
+}
