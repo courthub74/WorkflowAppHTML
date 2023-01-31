@@ -31,7 +31,7 @@
 }
 * body .wrapper .sidebar .header img {
   width: 7vw;
-  height: 13vh;
+  height: 7vw;
 }
 * body .wrapper .sidebar .menu {
   padding: 2vw 0 0 1.6vw;
@@ -199,7 +199,7 @@
 }
 * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container .radio-tile label {
   color: #243F67;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
 * body .wrapper .page #personform .apptbox .buttondiv {
   display: flex;
@@ -219,7 +219,7 @@
   border: none;
   border-radius: 50%;
   width: 5vw;
-  height: 10vh;
+  height: 5vw;
   font-weight: bold;
   font-size: 1vw;
   color: #243F67;
@@ -227,4 +227,219 @@
 * body .wrapper .page #personform .apptbox .buttondiv .list .personslist a {
   color: white;
   font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  * body {
+    background-color: #F3F9FF;
+  }
+  * body .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  * body .wrapper .sidebar {
+    display: flex;
+    justify-content: left;
+    padding: 2vw 0 3vw 4vw;
+    background-color: #243F67;
+    height: 10vh;
+    width: 100vw;
+    top: 0;
+  }
+  * body .wrapper .sidebar .header h2 {
+    display: none;
+  }
+  * body .wrapper .sidebar .header img {
+    width: 10vw;
+    height: 10vw;
+  }
+  * body .wrapper .sidebar .menu {
+    display: none;
+  }
+  * body .wrapper .sidebar .logoutbutton {
+    display: none;
+  }
+  * body .wrapper .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  * body .wrapper .page #personform h1 {
+    color: #243F67;
+    font-size: 5vw;
+  }
+  * body .wrapper .page #personform .apptbox {
+    width: 80vw;
+    height: 100vw;
+    padding: 8vw;
+  }
+  * body .wrapper .page #personform .apptbox .personentry .title {
+    font-size: 2.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .personentry #name, * body .wrapper .page #personform .apptbox .personentry #datetitle, * body .wrapper .page #personform .apptbox .personentry #time, * body .wrapper .page #personform .apptbox .personentry #phone, * body .wrapper .page #personform .apptbox .personentry #topic {
+    margin-top: 5vw;
+  }
+  * body .wrapper .page #personform .apptbox .personentry .inputfield input {
+    height: 3vh;
+    font-size: 3vw;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry {
+    display: flex;
+    padding: 4vw 0 2vw 0;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry .title {
+    font-size: 2.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry .persondate select {
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry .persondate select:focus {
+    outline: none;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry .persondate #date {
+    font-size: 3vw;
+    padding: 0 3.9vw 1vw 0;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry {
+    padding: 4vw 0 2vw 0;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry .title {
+    font-size: 2.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry #timebuttons {
+    padding: 0 0 0 3vw;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container {
+    width: 8vw;
+    height: 2.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv {
+    padding: 12vw 0 0 0;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .calendar .back a {
+    color: white;
+    font-size: 2vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .subbutton button {
+    width: 8vw;
+    height: 8vw;
+    font-size: 1.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .list .personslist a {
+    color: white;
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  * {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  * body {
+    background-color: #243F67;
+  }
+  * body .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  * body .wrapper .sidebar .header img {
+    width: 15vw;
+    height: 15vw;
+  }
+  * body .wrapper .page {
+    padding: 0 0 80vw 0;
+  }
+  * body .wrapper .page #personform h1 {
+    color: white;
+    margin-left: 8vw;
+    font-size: 6vw;
+  }
+  * body .wrapper .page #personform .apptbox {
+    width: 100vw;
+  }
+  * body .wrapper .page #personform .apptbox hr {
+    display: none;
+  }
+  * body .wrapper .page #personform .apptbox .personentry .title {
+    font-size: 4vw;
+    font-weight: 100;
+    margin-bottom: 2vw;
+  }
+  * body .wrapper .page #personform .apptbox .personentry .inputfield {
+    height: 4.5vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 80vw;
+    padding-top: 1.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw 0 1vw 0;
+    width: 80vw;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry #datetitle .title {
+    font-size: 4vw;
+    font-weight: 100;
+  }
+  * body .wrapper .page #personform .apptbox .dateentry .persondate {
+    height: 4.5vh;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 2vw 0 0 3vw;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry {
+    display: flex;
+    flex-direction: column;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry .title {
+    font-size: 4vw;
+    font-weight: 100;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry #timebuttons {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 80vw;
+    height: 4.5vh;
+    padding: 1.5vw 0 0 0;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container {
+    width: 12vw;
+    height: 2.5vh;
+  }
+  * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container .radio-tile label {
+    font-size: 2vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv {
+    padding: 14vw 0 0 0;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .calendar .back a {
+    color: white;
+    font-size: 3vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .subbutton button {
+    width: 12vw;
+    height: 12vw;
+    font-size: 2.5vw;
+  }
+  * body .wrapper .page #personform .apptbox .buttondiv .list .personslist a {
+    color: white;
+    font-size: 3vw;
+  }
 }/*# sourceMappingURL=inperson.css.map */
