@@ -31,7 +31,7 @@
 }
 * body .wrapper .sidebar .header img {
   width: 7vw;
-  height: 13vh;
+  height: 7vw;
 }
 * body .wrapper .sidebar .menu {
   padding: 2vw 0 0 1.6vw;
@@ -199,7 +199,7 @@
 }
 * body .wrapper .page #personform .apptbox .timeentry #timebuttons .input-container .radio-tile label {
   color: #243F67;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
 * body .wrapper .page #personform .apptbox .buttondiv {
   display: flex;
@@ -219,7 +219,7 @@
   border: none;
   border-radius: 50%;
   width: 5vw;
-  height: 10vh;
+  height: 5vw;
   font-weight: bold;
   font-size: 1vw;
   color: #243F67;

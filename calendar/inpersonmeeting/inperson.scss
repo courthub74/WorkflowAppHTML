@@ -33,7 +33,7 @@ $background: #F3F9FF;
                     }
                     img {
                         width: 7vw;
-                        height: 13vh;
+                        height: 7vw;
                     }
                 }
                 .menu {
@@ -224,7 +224,7 @@ $background: #F3F9FF;
                                         transition: all 300s ease;
                                         label {
                                             color:$darkblue;
-                                            font-size: 1vw;
+                                            font-size: .8vw;
                                         }
                                     }
                                 }
@@ -254,7 +254,7 @@ $background: #F3F9FF;
                                     border: none;
                                     border-radius: 50%;
                                     width: 5vw;
-                                    height: 10vh;
+                                    height: 5vw;
                                     font-weight: bold;
                                     font-size: 1vw;
                                     color: $darkblue;
