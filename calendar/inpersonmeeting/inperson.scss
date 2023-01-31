@@ -408,15 +408,15 @@ $background: #F3F9FF;
                                         font-size: 1.5vw;
                                     }
                                 }
-                                .list {
-                                .personslist {
-                                    // background-color: yellowgreen;
-                                    a {
-                                        color: white;
-                                        font-size: 2vw;
+                                    .list {
+                                    .personslist {
+                                        // background-color: yellowgreen;
+                                        a {
+                                            color: white;
+                                            font-size: 2vw;
+                                        }
                                     }
                                 }
-                            }
                             }
                         }
                     }
@@ -439,7 +439,143 @@ $background: #F3F9FF;
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
         body {
-            background-color: $background;
+            background-color: $darkblue;
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                .sidebar {
+                    .header {
+                       img {
+                        width: 15vw;
+                        height: 15vw;
+                       }
+                    }
+                }
+                .page {
+                    // background-color: aquamarine;
+                    padding: 0 0 80vw 0;
+                    #personform {
+                        h1 {
+                            color: white;
+                            margin-left: 8vw;
+                            font-size: 6vw;
+                        }
+                        .apptbox {
+                            // fill here
+                            width: 100vw;
+                            // padding: 1vw;
+                            hr {
+                                display: none;
+                            }
+                            .personentry {
+                                // background-color: aquamarine;
+                                // display: flex;
+                                .title {
+                                    font-size: 4vw;
+                                    font-weight: 100;
+                                    // background-color: red;
+                                    margin-bottom: 2vw;
+                                }
+                                #name, #datetitle, #time, #phone, #topic {
+                                    // margin-top: 5vw;
+                                }
+                                .inputfield {
+                                    // background-color: aqua;
+                                    height: 4.5vh;
+                                    border: 2px solid white;
+                                    border-radius: 5px;
+                                    width: 80vw;
+                                    padding-top: 1.5vw;
+                                }
+                            }
+                            // DATE Section
+                            .dateentry {
+                                // background-color: mediumaquamarine;
+                                display: flex;
+                                flex-direction: column;
+                                margin: 1vw 0 1vw 0;
+                                width: 80vw;
+                                #datetitle {
+                                    // background-color: red;
+                                    .title {
+                                        font-size: 4vw;
+                                        font-weight: 100;
+                                        // margin-bottom: 10vw;
+                                    }
+                                }
+                                .persondate {
+                                        // background-color: magenta;
+                                        // width: 100vw;
+                                        height: 4.5vh;
+                                        border: 2px solid white;
+                                        border-radius: 5px;
+                                        padding: 2vw 0 0 3vw;
+                                    }
+                            }
+                            // TIME Section
+                            .timeentry {
+                                // background-color: aqua;
+                                display: flex;
+                                flex-direction: column;
+                                .title {
+                                    font-size: 4vw;
+                                    font-weight: 100;
+                                }
+                                #timebuttons {
+                                    border: 2px solid white;
+                                    border-radius: 5px;
+                                    width: 80vw;
+                                    height: 4.5vh;
+                                    padding: 1.5vw 0 0 0;
+                                    .input-container {
+                                        width: 12vw;
+                                        height: 2.5vh;
+                                        // background-color: $darkblue;
+                                        // color: white;
+                                        // border: 2px solid white;
+                                        // font-size: 2vw;
+                                        .radio-tile {
+                                            label {
+                                                // color: white;
+                                                font-size: 2vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            // the BUTTONS section
+                            .buttondiv {
+                                padding: 14vw 0 0 0;
+                                .calendar {
+                                    .back {
+                                        // background-color: lightseagreen;
+                                        a {
+                                            color: white;
+                                            font-size: 3vw;
+                                        }
+                                    }
+                                }
+                                .subbutton {
+                                    button {
+                                        width: 12vw;
+                                        height: 12vw;
+                                        font-size: 2.5vw;
+                                    }
+                                }
+                                .list {
+                                    .personslist {
+                                        // background-color: yellowgreen;
+                                        a {
+                                            color: white;
+                                            font-size: 3vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
